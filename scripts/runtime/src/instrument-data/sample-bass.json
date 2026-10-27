@@ -1,0 +1,17 @@
+{
+  "id": "sample-bass",
+  "engine": "sample",
+  "role": "bass",
+  "range": [
+    28,
+    67
+  ],
+  "attack": 0.004,
+  "release": 0.035,
+  "description": "Procedural sustained bass sample",
+  "sample": {
+    "kind": "procedural",
+    "wave": "bass"
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

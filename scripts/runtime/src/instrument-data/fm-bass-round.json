@@ -1,0 +1,19 @@
+{
+  "id": "fm-bass-round",
+  "engine": "fm",
+  "role": "bass",
+  "range": [
+    28,
+    65
+  ],
+  "attack": 0.003,
+  "release": 0.045,
+  "description": "Short, warm FM bass",
+  "synthesis": {
+    "pulseWidth": 0,
+    "harmonicity": 1,
+    "sustain": 0.65,
+    "volumeDb": -7
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

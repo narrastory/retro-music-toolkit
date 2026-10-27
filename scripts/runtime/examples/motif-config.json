@@ -1,0 +1,12 @@
+{
+  "trackId": "lead",
+  "clipId": "lead-a1",
+  "newPattern": "A-developed",
+  "fromBeat": 0,
+  "toBeat": 2,
+  "operators": [
+    { "op": "transpose", "degrees": 2 },
+    { "op": "velocityShape", "amount": 0.4 }
+  ],
+  "replaceClip": true
+}

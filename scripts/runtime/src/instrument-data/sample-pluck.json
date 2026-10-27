@@ -1,0 +1,20 @@
+{
+  "id": "sample-pluck",
+  "engine": "sample",
+  "role": "arp",
+  "range": [
+    45,
+    96
+  ],
+  "attack": 0.002,
+  "release": 0.07,
+  "description": "Procedural plucked sample with one-shot decay",
+  "sample": {
+    "kind": "procedural",
+    "wave": "pluck"
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets.",
+  "synthesis": {
+    "sustain": 0.12
+  }
+}

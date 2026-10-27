@@ -1,0 +1,13 @@
+{
+  "id": "chip-drums",
+  "engine": "drums",
+  "role": "drums",
+  "range": [
+    0,
+    127
+  ],
+  "attack": 0,
+  "release": 0,
+  "description": "Seeded synthetic kick, filtered-noise snare and hat",
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

@@ -1,0 +1,43 @@
+{
+  "operations": [
+    {
+      "op": "set-song",
+      "set": {
+        "title": "Pixel Trail \u2014 v0.2 variation"
+      }
+    },
+    {
+      "op": "clone-pattern-for-clip",
+      "trackId": "lead",
+      "clipId": "lead-clip-4",
+      "newPattern": "a2-answer"
+    },
+    {
+      "op": "transpose-phrase",
+      "trackId": "lead",
+      "pattern": "a2-answer",
+      "fromBeat": 2,
+      "toBeat": 4,
+      "semitones": -2
+    },
+    {
+      "op": "delete-events",
+      "trackId": "arp",
+      "pattern": "arp-0",
+      "eventIds": [
+        "arp-b0-n0",
+        "arp-b0-n2"
+      ]
+    },
+    {
+      "op": "set-track",
+      "trackId": "arp",
+      "set": {
+        "gainDb": -15,
+        "controls": {
+          "brightness": 0.35
+        }
+      }
+    }
+  ]
+}

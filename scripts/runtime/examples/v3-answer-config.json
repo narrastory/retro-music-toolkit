@@ -1,0 +1,35 @@
+{
+  "leadTrackId": "lead",
+  "leadClipId": "melody-section-1",
+  "answerTrackId": "answer",
+  "newPattern": "A-response",
+  "candidates": [
+    {
+      "id": "busy",
+      "kind": "note",
+      "at": 1,
+      "pitch": "G4",
+      "duration": 0.125,
+      "gate": 0.8,
+      "velocity": 0.7
+    },
+    {
+      "id": "reply-1",
+      "kind": "note",
+      "at": 3.6,
+      "pitch": "E4",
+      "duration": 0.125,
+      "gate": 0.8,
+      "velocity": 0.7
+    },
+    {
+      "id": "reply-2",
+      "kind": "note",
+      "at": 7.6,
+      "pitch": "G4",
+      "duration": 0.125,
+      "gate": 0.8,
+      "velocity": 0.7
+    }
+  ]
+}

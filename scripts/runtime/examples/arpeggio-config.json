@@ -1,0 +1,12 @@
+{
+  "trackId": "lead",
+  "clipId": "lead-a1",
+  "newPattern": "arp-updown",
+  "pattern": "updown",
+  "stepBeats": 0.25,
+  "gate": 0.9,
+  "octaves": 2,
+  "velocity": 0.55,
+  "accent": 0.12,
+  "idPrefix": "arp"
+}

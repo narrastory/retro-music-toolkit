@@ -1,0 +1,19 @@
+{
+  "id": "pulse-pluck",
+  "engine": "pulse",
+  "role": "arp",
+  "range": [
+    48,
+    88
+  ],
+  "attack": 0.002,
+  "release": 0.018,
+  "description": "Short pulse accompaniment; keep below lead",
+  "synthesis": {
+    "pulseWidth": -0.5,
+    "harmonicity": 2,
+    "sustain": 0.12,
+    "volumeDb": -7
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

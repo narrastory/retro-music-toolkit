@@ -1,0 +1,320 @@
+{
+  "schemaVersion": "1.2",
+  "title": "Starfall Causeway",
+  "profile": "genesis-inspired",
+  "tempo": 120,
+  "meter": [
+    4,
+    4
+  ],
+  "lengthBeats": 64,
+  "seed": 1,
+  "harmony": [],
+  "sections": [
+    {
+      "id": "A-1",
+      "at": 0,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.45
+    },
+    {
+      "id": "A-5",
+      "at": 16,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.6
+    },
+    {
+      "id": "B-9",
+      "at": 32,
+      "lengthBeats": 16,
+      "label": "B",
+      "energy": 0.3
+    },
+    {
+      "id": "A-13",
+      "at": 48,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.75
+    }
+  ],
+  "tracks": [
+    {
+      "id": "lead",
+      "role": "melody",
+      "instrument": "fm-brass",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": []
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": []
+        }
+      },
+      "clips": [
+        {
+          "id": "melody-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "instrument": "fm-bass-round",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": []
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": []
+        }
+      },
+      "clips": [
+        {
+          "id": "bass-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "arp",
+      "role": "arp",
+      "instrument": "fm-epiano",
+      "gainDb": -14,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": []
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": []
+        }
+      },
+      "clips": [
+        {
+          "id": "arp-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "instrument": "chip-drums",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": []
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": []
+        }
+      },
+      "clips": [
+        {
+          "id": "drums-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    }
+  ],
+  "mixer": {
+    "masterDb": -6,
+    "delayBeats": 0.75,
+    "feedback": 0.22,
+    "returnDb": -12
+  },
+  "export": {
+    "sampleRate": 44100,
+    "format": "pcm16-wav",
+    "mode": "loop",
+    "tailSeconds": 2,
+    "warmupCycles": 4,
+    "dither": false,
+    "limiter": {
+      "enabled": false,
+      "ceilingDbfs": -1,
+      "lookaheadSeconds": 0.005
+    }
+  }
+}

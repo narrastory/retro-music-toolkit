@@ -1,0 +1,10 @@
+{
+  "disabledRules": [
+    "MOTIF_VARIETY"
+  ],
+  "thresholds": {
+    "crowdingSemitones": 5,
+    "crowdingNotesPerBeat": 1,
+    "hatHitsPerBeat": 3
+  }
+}

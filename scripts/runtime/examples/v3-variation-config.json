@@ -1,0 +1,45 @@
+{
+  "trackId": "lead",
+  "clipId": "melody-section-2",
+  "newPattern": "A-ending",
+  "mode": "ending",
+  "fromBeat": 12,
+  "replacementEvents": [
+    {
+      "id": "new-end-1",
+      "kind": "note",
+      "at": 12,
+      "pitch": "F5",
+      "duration": 0.75,
+      "gate": 0.8,
+      "velocity": 0.7
+    },
+    {
+      "id": "new-end-2",
+      "kind": "note",
+      "at": 13,
+      "pitch": "A5",
+      "duration": 1,
+      "gate": 0.8,
+      "velocity": 0.7
+    },
+    {
+      "id": "new-end-3",
+      "kind": "note",
+      "at": 14.5,
+      "pitch": "G5",
+      "duration": 0.5,
+      "gate": 0.8,
+      "velocity": 0.7
+    },
+    {
+      "id": "new-end-4",
+      "kind": "note",
+      "at": 15.25,
+      "pitch": "B4",
+      "duration": 0.5,
+      "gate": 0.8,
+      "velocity": 0.7
+    }
+  ]
+}

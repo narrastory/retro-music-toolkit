@@ -1,0 +1,14 @@
+interface:
+  display_name: Retro Music Composer
+  short_description: Compose, revise and render 8bit and 16bit game music
+  default_prompt: Use $retro-music to compose and render an original looping game
+    soundtrack.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

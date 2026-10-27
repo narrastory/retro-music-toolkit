@@ -1,0 +1,19 @@
+{
+  "id": "triangle-bass",
+  "engine": "triangle",
+  "role": "bass",
+  "range": [
+    36,
+    67
+  ],
+  "attack": 0.003,
+  "release": 0.025,
+  "description": "Restrained triangle bass; not a NES triangle emulator",
+  "synthesis": {
+    "pulseWidth": 0,
+    "harmonicity": 2,
+    "sustain": 0.65,
+    "volumeDb": -7
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}
