@@ -1,0 +1,2186 @@
+{
+  "schemaVersion": "1.2",
+  "instrumentDefinitions": [
+    {
+      "id": "fm-celestial-lead",
+      "engine": "fm",
+      "role": "melody",
+      "range": [
+        60,
+        96
+      ],
+      "attack": 0.01,
+      "release": 0.07,
+      "description": "Original two-operator lead with velocity-dependent brightness and modulation.",
+      "synthesis": {
+        "pulseWidth": 0,
+        "harmonicity": 2,
+        "modulationIndex": 2.8,
+        "sustain": 0.6,
+        "volumeDb": -5
+      },
+      "velocityResponse": {
+        "filterOctaves": 1.5,
+        "fmIndexScale": 1
+      },
+      "provenance": "Original procedural example; no game samples."
+    }
+  ],
+  "sampleAssets": {},
+  "title": "Starfall Causeway",
+  "profile": "genesis-inspired",
+  "tempo": 120,
+  "meter": [
+    4,
+    4
+  ],
+  "lengthBeats": 64,
+  "seed": 731,
+  "harmony": [],
+  "sections": [
+    {
+      "id": "A-1",
+      "at": 0,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.45
+    },
+    {
+      "id": "A-5",
+      "at": 16,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.6
+    },
+    {
+      "id": "B-9",
+      "at": 32,
+      "lengthBeats": 16,
+      "label": "B",
+      "energy": 0.3
+    },
+    {
+      "id": "A-13",
+      "at": 48,
+      "lengthBeats": 16,
+      "label": "A",
+      "energy": 0.75
+    }
+  ],
+  "tracks": [
+    {
+      "id": "lead",
+      "role": "melody",
+      "instrument": "fm-celestial-lead",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0.18,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "automation": [
+        {
+          "parameter": "brightness",
+          "points": [
+            {
+              "at": 0,
+              "value": 0.3
+            },
+            {
+              "at": 16,
+              "value": 0.45
+            },
+            {
+              "at": 32,
+              "value": 0.25
+            },
+            {
+              "at": 48,
+              "value": 0.5
+            },
+            {
+              "at": 64,
+              "value": 0.3
+            }
+          ]
+        },
+        {
+          "parameter": "send",
+          "points": [
+            {
+              "at": 0,
+              "value": 0.12
+            },
+            {
+              "at": 32,
+              "value": 0.25
+            },
+            {
+              "at": 48,
+              "value": 0.15
+            },
+            {
+              "at": 64,
+              "value": 0.12
+            }
+          ]
+        }
+      ],
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "lead-A-0-0",
+              "kind": "note",
+              "at": 0,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "lead-A-0-1",
+              "kind": "note",
+              "at": 1,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "lead-A-0-2",
+              "kind": "note",
+              "at": 2,
+              "pitch": "A5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "lead-A-0-3",
+              "kind": "note",
+              "at": 3,
+              "pitch": "G5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-A-1-0",
+              "kind": "note",
+              "at": 4,
+              "pitch": "C5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "lead-A-1-1",
+              "kind": "note",
+              "at": 5,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "lead-A-1-2",
+              "kind": "note",
+              "at": 6,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "lead-A-1-3",
+              "kind": "note",
+              "at": 7,
+              "pitch": "E5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-A-2-0",
+              "kind": "note",
+              "at": 8,
+              "pitch": "D5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "lead-A-2-1",
+              "kind": "note",
+              "at": 9,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "lead-A-2-2",
+              "kind": "note",
+              "at": 10,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "lead-A-2-3",
+              "kind": "note",
+              "at": 11,
+              "pitch": "A5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-A-3-0",
+              "kind": "note",
+              "at": 12,
+              "pitch": "F5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "lead-A-3-1",
+              "kind": "note",
+              "at": 13,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "lead-A-3-2",
+              "kind": "note",
+              "at": 14,
+              "pitch": "D5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "lead-A-3-3",
+              "kind": "note",
+              "at": 15,
+              "pitch": "B4",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            }
+          ]
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "lead-B-0-0",
+              "kind": "note",
+              "at": 0,
+              "pitch": "A5",
+              "duration": 1.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false,
+              "vibrato": {
+                "depthCents": 9,
+                "rateHz": 5,
+                "delayBeats": 0.5
+              }
+            },
+            {
+              "id": "lead-B-0-1",
+              "kind": "note",
+              "at": 2,
+              "pitch": "G5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-0-2",
+              "kind": "note",
+              "at": 3,
+              "pitch": "E5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-1-0",
+              "kind": "note",
+              "at": 4,
+              "pitch": "A5",
+              "duration": 1.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false,
+              "vibrato": {
+                "depthCents": 9,
+                "rateHz": 5,
+                "delayBeats": 0.5
+              }
+            },
+            {
+              "id": "lead-B-1-1",
+              "kind": "note",
+              "at": 6,
+              "pitch": "C6",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-1-2",
+              "kind": "note",
+              "at": 7,
+              "pitch": "A5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-2-0",
+              "kind": "note",
+              "at": 8,
+              "pitch": "F5",
+              "duration": 1.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false,
+              "vibrato": {
+                "depthCents": 9,
+                "rateHz": 5,
+                "delayBeats": 0.5
+              }
+            },
+            {
+              "id": "lead-B-2-1",
+              "kind": "note",
+              "at": 10,
+              "pitch": "A5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-2-2",
+              "kind": "note",
+              "at": 11,
+              "pitch": "G5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-3-0",
+              "kind": "note",
+              "at": 12,
+              "pitch": "D5",
+              "duration": 1.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false,
+              "vibrato": {
+                "depthCents": 9,
+                "rateHz": 5,
+                "delayBeats": 0.5
+              }
+            },
+            {
+              "id": "lead-B-3-1",
+              "kind": "note",
+              "at": 14,
+              "pitch": "F5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "lead-B-3-2",
+              "kind": "note",
+              "at": 15,
+              "pitch": "B4",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            }
+          ]
+        },
+        "A-ending": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "A-ending:lead-A-0-0",
+              "kind": "note",
+              "at": 0,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A-ending:lead-A-0-1",
+              "kind": "note",
+              "at": 1,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "A-ending:lead-A-0-2",
+              "kind": "note",
+              "at": 2,
+              "pitch": "A5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "A-ending:lead-A-0-3",
+              "kind": "note",
+              "at": 3,
+              "pitch": "G5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:lead-A-1-0",
+              "kind": "note",
+              "at": 4,
+              "pitch": "C5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A-ending:lead-A-1-1",
+              "kind": "note",
+              "at": 5,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "A-ending:lead-A-1-2",
+              "kind": "note",
+              "at": 6,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "A-ending:lead-A-1-3",
+              "kind": "note",
+              "at": 7,
+              "pitch": "E5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:lead-A-2-0",
+              "kind": "note",
+              "at": 8,
+              "pitch": "D5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "expression": {
+                "pitchBendCents": [
+                  {
+                    "offsetBeats": 0,
+                    "value": -35
+                  },
+                  {
+                    "offsetBeats": 0.125,
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A-ending:lead-A-2-1",
+              "kind": "note",
+              "at": 9,
+              "pitch": "E5",
+              "duration": 1,
+              "gate": 1,
+              "velocity": 0.7,
+              "hold": false,
+              "articulation": "legato",
+              "expression": {
+                "portamentoBeats": 0.125
+              }
+            },
+            {
+              "id": "A-ending:lead-A-2-2",
+              "kind": "note",
+              "at": 10,
+              "pitch": "G5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.8,
+              "hold": false
+            },
+            {
+              "id": "A-ending:lead-A-2-3",
+              "kind": "note",
+              "at": 11,
+              "pitch": "A5",
+              "duration": 0.5,
+              "gate": 0.75,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:new-end-1",
+              "kind": "note",
+              "at": 12,
+              "pitch": "F5",
+              "duration": 0.75,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:new-end-2",
+              "kind": "note",
+              "at": 13,
+              "pitch": "A5",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:new-end-3",
+              "kind": "note",
+              "at": 14.5,
+              "pitch": "G5",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-ending:new-end-4",
+              "kind": "note",
+              "at": 15.25,
+              "pitch": "B4",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "melody-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-2",
+          "pattern": "A-ending",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "melody-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "instrument": "fm-bass-round",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "bass-A-0-0",
+              "kind": "note",
+              "at": 0,
+              "pitch": "C3",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-A-0-1",
+              "kind": "note",
+              "at": 1.5,
+              "pitch": "C3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-0-2",
+              "kind": "note",
+              "at": 2,
+              "pitch": "C3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-0-3",
+              "kind": "note",
+              "at": 3,
+              "pitch": "C3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-1-0",
+              "kind": "note",
+              "at": 4,
+              "pitch": "A2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-A-1-1",
+              "kind": "note",
+              "at": 5.5,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-1-2",
+              "kind": "note",
+              "at": 6,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-1-3",
+              "kind": "note",
+              "at": 7,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-2-0",
+              "kind": "note",
+              "at": 8,
+              "pitch": "F2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-A-2-1",
+              "kind": "note",
+              "at": 9.5,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-2-2",
+              "kind": "note",
+              "at": 10,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-2-3",
+              "kind": "note",
+              "at": 11,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-3-0",
+              "kind": "note",
+              "at": 12,
+              "pitch": "G2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-A-3-1",
+              "kind": "note",
+              "at": 13.5,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-3-2",
+              "kind": "note",
+              "at": 14,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-A-3-3",
+              "kind": "note",
+              "at": 15,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            }
+          ]
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "bass-B-0-0",
+              "kind": "note",
+              "at": 0,
+              "pitch": "A2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-B-0-1",
+              "kind": "note",
+              "at": 1.5,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-0-2",
+              "kind": "note",
+              "at": 2,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-0-3",
+              "kind": "note",
+              "at": 3,
+              "pitch": "A2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-1-0",
+              "kind": "note",
+              "at": 4,
+              "pitch": "F2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-B-1-1",
+              "kind": "note",
+              "at": 5.5,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-1-2",
+              "kind": "note",
+              "at": 6,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-1-3",
+              "kind": "note",
+              "at": 7,
+              "pitch": "F2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-2-0",
+              "kind": "note",
+              "at": 8,
+              "pitch": "D3",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-B-2-1",
+              "kind": "note",
+              "at": 9.5,
+              "pitch": "D3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-2-2",
+              "kind": "note",
+              "at": 10,
+              "pitch": "D3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-2-3",
+              "kind": "note",
+              "at": 11,
+              "pitch": "D3",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-3-0",
+              "kind": "note",
+              "at": 12,
+              "pitch": "G2",
+              "duration": 1,
+              "gate": 0.8,
+              "velocity": 0.85,
+              "hold": false
+            },
+            {
+              "id": "bass-B-3-1",
+              "kind": "note",
+              "at": 13.5,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-3-2",
+              "kind": "note",
+              "at": 14,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            },
+            {
+              "id": "bass-B-3-3",
+              "kind": "note",
+              "at": 15,
+              "pitch": "G2",
+              "duration": 0.5,
+              "gate": 0.8,
+              "velocity": 0.65,
+              "hold": false
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "bass-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "bass-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "arp",
+      "role": "arp",
+      "instrument": "fm-epiano",
+      "gainDb": -16,
+      "pan": -0.2,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "arp-A-0-0",
+              "kind": "note",
+              "at": 0.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-0-1",
+              "kind": "note",
+              "at": 1.5,
+              "pitch": "E4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-0-2",
+              "kind": "note",
+              "at": 2.5,
+              "pitch": "G4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-0-3",
+              "kind": "note",
+              "at": 3.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-1-0",
+              "kind": "note",
+              "at": 4.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-1-1",
+              "kind": "note",
+              "at": 5.5,
+              "pitch": "E4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-1-2",
+              "kind": "note",
+              "at": 6.5,
+              "pitch": "A4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-1-3",
+              "kind": "note",
+              "at": 7.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-2-0",
+              "kind": "note",
+              "at": 8.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-2-1",
+              "kind": "note",
+              "at": 9.5,
+              "pitch": "F4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-2-2",
+              "kind": "note",
+              "at": 10.5,
+              "pitch": "A4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-2-3",
+              "kind": "note",
+              "at": 11.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-3-0",
+              "kind": "note",
+              "at": 12.5,
+              "pitch": "B3",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-3-1",
+              "kind": "note",
+              "at": 13.5,
+              "pitch": "D4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-3-2",
+              "kind": "note",
+              "at": 14.5,
+              "pitch": "G4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-A-3-3",
+              "kind": "note",
+              "at": 15.5,
+              "pitch": "B3",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            }
+          ]
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "arp-B-0-0",
+              "kind": "note",
+              "at": 0.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-0-1",
+              "kind": "note",
+              "at": 1.5,
+              "pitch": "E4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-0-2",
+              "kind": "note",
+              "at": 2.5,
+              "pitch": "A4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-0-3",
+              "kind": "note",
+              "at": 3.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-1-0",
+              "kind": "note",
+              "at": 4.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-1-1",
+              "kind": "note",
+              "at": 5.5,
+              "pitch": "F4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-1-2",
+              "kind": "note",
+              "at": 6.5,
+              "pitch": "A4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-1-3",
+              "kind": "note",
+              "at": 7.5,
+              "pitch": "C4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-2-0",
+              "kind": "note",
+              "at": 8.5,
+              "pitch": "D4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-2-1",
+              "kind": "note",
+              "at": 9.5,
+              "pitch": "F4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-2-2",
+              "kind": "note",
+              "at": 10.5,
+              "pitch": "A4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-2-3",
+              "kind": "note",
+              "at": 11.5,
+              "pitch": "D4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-3-0",
+              "kind": "note",
+              "at": 12.5,
+              "pitch": "B3",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-3-1",
+              "kind": "note",
+              "at": 13.5,
+              "pitch": "D4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-3-2",
+              "kind": "note",
+              "at": 14.5,
+              "pitch": "G4",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            },
+            {
+              "id": "arp-B-3-3",
+              "kind": "note",
+              "at": 15.5,
+              "pitch": "B3",
+              "duration": 0.25,
+              "gate": 0.65,
+              "velocity": 0.45,
+              "hold": false
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "arp-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "arp-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "instrument": "chip-drums",
+      "gainDb": -6,
+      "pan": 0,
+      "send": 0,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.5,
+        "pluckiness": 0.5
+      },
+      "patterns": {
+        "A": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "drums-A-0-0",
+              "kind": "hit",
+              "at": 0,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-1",
+              "kind": "hit",
+              "at": 0.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-2",
+              "kind": "hit",
+              "at": 1,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-3",
+              "kind": "hit",
+              "at": 1.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-4",
+              "kind": "hit",
+              "at": 2,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-5",
+              "kind": "hit",
+              "at": 2.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-6",
+              "kind": "hit",
+              "at": 3,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-0-7",
+              "kind": "hit",
+              "at": 3.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-0",
+              "kind": "hit",
+              "at": 4,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-1",
+              "kind": "hit",
+              "at": 4.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-2",
+              "kind": "hit",
+              "at": 5,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-3",
+              "kind": "hit",
+              "at": 5.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-4",
+              "kind": "hit",
+              "at": 6,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-5",
+              "kind": "hit",
+              "at": 6.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-6",
+              "kind": "hit",
+              "at": 7,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-1-7",
+              "kind": "hit",
+              "at": 7.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-0",
+              "kind": "hit",
+              "at": 8,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-1",
+              "kind": "hit",
+              "at": 8.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-2",
+              "kind": "hit",
+              "at": 9,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-3",
+              "kind": "hit",
+              "at": 9.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-4",
+              "kind": "hit",
+              "at": 10,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-5",
+              "kind": "hit",
+              "at": 10.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-6",
+              "kind": "hit",
+              "at": 11,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-2-7",
+              "kind": "hit",
+              "at": 11.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-0",
+              "kind": "hit",
+              "at": 12,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-1",
+              "kind": "hit",
+              "at": 12.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-2",
+              "kind": "hit",
+              "at": 13,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-3",
+              "kind": "hit",
+              "at": 13.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-4",
+              "kind": "hit",
+              "at": 14,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-5",
+              "kind": "hit",
+              "at": 14.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-6",
+              "kind": "hit",
+              "at": 15,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-A-3-7",
+              "kind": "hit",
+              "at": 15.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            }
+          ]
+        },
+        "B": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "drums-B-0-0",
+              "kind": "hit",
+              "at": 0,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-1",
+              "kind": "hit",
+              "at": 0.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-2",
+              "kind": "hit",
+              "at": 1,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-3",
+              "kind": "hit",
+              "at": 1.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-4",
+              "kind": "hit",
+              "at": 2,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-5",
+              "kind": "hit",
+              "at": 2.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-6",
+              "kind": "hit",
+              "at": 3,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-0-7",
+              "kind": "hit",
+              "at": 3.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-0",
+              "kind": "hit",
+              "at": 4,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-1",
+              "kind": "hit",
+              "at": 4.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-2",
+              "kind": "hit",
+              "at": 5,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-3",
+              "kind": "hit",
+              "at": 5.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-4",
+              "kind": "hit",
+              "at": 6,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-5",
+              "kind": "hit",
+              "at": 6.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-6",
+              "kind": "hit",
+              "at": 7,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-1-7",
+              "kind": "hit",
+              "at": 7.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-0",
+              "kind": "hit",
+              "at": 8,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-1",
+              "kind": "hit",
+              "at": 8.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-2",
+              "kind": "hit",
+              "at": 9,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-3",
+              "kind": "hit",
+              "at": 9.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-4",
+              "kind": "hit",
+              "at": 10,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-5",
+              "kind": "hit",
+              "at": 10.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-6",
+              "kind": "hit",
+              "at": 11,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-2-7",
+              "kind": "hit",
+              "at": 11.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-0",
+              "kind": "hit",
+              "at": 12,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-1",
+              "kind": "hit",
+              "at": 12.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-2",
+              "kind": "hit",
+              "at": 13,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-3",
+              "kind": "hit",
+              "at": 13.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-4",
+              "kind": "hit",
+              "at": 14,
+              "sound": "kick",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-5",
+              "kind": "hit",
+              "at": 14.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-6",
+              "kind": "hit",
+              "at": 15,
+              "sound": "snare",
+              "velocity": 0.65,
+              "detuneCents": 0
+            },
+            {
+              "id": "drums-B-3-7",
+              "kind": "hit",
+              "at": 15.5,
+              "sound": "hat",
+              "velocity": 0.25,
+              "detuneCents": 0
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "drums-section-1",
+          "pattern": "A",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-2",
+          "pattern": "A",
+          "at": 16,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-3",
+          "pattern": "B",
+          "at": 32,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        },
+        {
+          "id": "drums-section-4",
+          "pattern": "A",
+          "at": 48,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "role": "arp",
+      "instrument": "fm-epiano",
+      "gainDb": -15,
+      "pan": 0.2,
+      "send": 0.1,
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "swing": 0,
+      "swingUnit": 0.5,
+      "controls": {
+        "brightness": 0.4,
+        "pluckiness": 0.7
+      },
+      "patterns": {
+        "A-response": {
+          "lengthBeats": 16,
+          "events": [
+            {
+              "id": "A-response:reply-1",
+              "kind": "note",
+              "at": 3.6,
+              "pitch": "E4",
+              "duration": 0.125,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            },
+            {
+              "id": "A-response:reply-2",
+              "kind": "note",
+              "at": 7.6,
+              "pitch": "G4",
+              "duration": 0.125,
+              "gate": 0.8,
+              "velocity": 0.7,
+              "hold": false
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "A-response:clip",
+          "pattern": "A-response",
+          "at": 0,
+          "repeats": 1,
+          "transpose": 0,
+          "velocityScale": 1,
+          "mute": false
+        }
+      ]
+    }
+  ],
+  "mixer": {
+    "masterDb": -5,
+    "delayBeats": 0.75,
+    "feedback": 0.22,
+    "returnDb": -12
+  },
+  "export": {
+    "sampleRate": 44100,
+    "format": "pcm16-wav",
+    "mode": "loop",
+    "tailSeconds": 2,
+    "warmupCycles": 2,
+    "dither": false,
+    "limiter": {
+      "enabled": false,
+      "ceilingDbfs": -1,
+      "lookaheadSeconds": 0.005
+    }
+  }
+}

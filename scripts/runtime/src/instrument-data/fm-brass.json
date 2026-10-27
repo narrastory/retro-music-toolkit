@@ -1,0 +1,19 @@
+{
+  "id": "fm-brass",
+  "engine": "fm",
+  "role": "melody",
+  "range": [
+    52,
+    90
+  ],
+  "attack": 0.012,
+  "release": 0.08,
+  "description": "Bright FM lead; not a YM2612 four-operator patch",
+  "synthesis": {
+    "pulseWidth": 0,
+    "harmonicity": 2,
+    "sustain": 0.65,
+    "volumeDb": -7
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

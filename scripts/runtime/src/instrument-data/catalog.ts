@@ -1,0 +1,12 @@
+import p0 from "./pulse-lead-soft.json" with { type: "json" };
+import p1 from "./pulse-pluck.json" with { type: "json" };
+import p2 from "./triangle-bass.json" with { type: "json" };
+import p3 from "./chip-drums.json" with { type: "json" };
+import p4 from "./fm-epiano.json" with { type: "json" };
+import p5 from "./fm-bass-round.json" with { type: "json" };
+import p6 from "./fm-brass.json" with { type: "json" };
+import p7 from "./sample-flute.json" with { type: "json" };
+import p8 from "./sample-strings.json" with { type: "json" };
+import p9 from "./sample-bass.json" with { type: "json" };
+import p10 from "./sample-pluck.json" with { type: "json" };
+export const catalog = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];

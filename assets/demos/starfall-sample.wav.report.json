@@ -1,0 +1,223 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 1568000,
+  "durationSeconds": 35.55555555555556,
+  "peak": 0.31632372736930847,
+  "peakDbfs": -9.99736461068486,
+  "truePeakDbfs": -9.992283390685701,
+  "rms": 0.0630957344504131,
+  "rmsDbfs": -23.999999999670468,
+  "loudnessLufs": -22.03,
+  "dcMean": 0.00012522165518423208,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.00015715789049863815,
+  "maxAdjacentStep": 0.06369095109403133,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 6.175123365516275e-9,
+  "cycleComparison": {
+    "differenceRms": 6.175123365516275e-9,
+    "signalRms": 0.040310476487746535,
+    "relativeDifference": 1.5318904422758117e-7
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": {
+    "targetRmsDbfs": -24,
+    "peakCeilingDbfs": -3,
+    "maxBoostDb": 18,
+    "requestedGainDb": 3.891641365256529,
+    "appliedGainDb": 3.891641365256529,
+    "limitedBy": "target",
+    "before": {
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 1568000,
+      "durationSeconds": 35.55555555555556,
+      "peak": 0.2020922601222992,
+      "peakDbfs": -13.889006381900122,
+      "truePeakDbfs": -13.883924866264163,
+      "rms": 0.040310476487746535,
+      "rmsDbfs": -27.89164136525653,
+      "loudnessLufs": -25.93,
+      "dcMean": 0.00008000136035067521,
+      "clippedSamples": 0,
+      "nonFiniteSamples": 0,
+      "silent": false,
+      "boundaryJump": 0.00010040472261607647,
+      "maxAdjacentStep": 0.040690746158361435,
+      "boundarySuspicious": false,
+      "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness."
+    },
+    "after": {
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 1568000,
+      "durationSeconds": 35.55555555555556,
+      "peak": 0.31632372736930847,
+      "peakDbfs": -9.99736461068486,
+      "truePeakDbfs": -9.992283390685701,
+      "rms": 0.0630957344504131,
+      "rmsDbfs": -23.999999999670468,
+      "loudnessLufs": -22.03,
+      "dcMean": 0.00012522165518423208,
+      "clippedSamples": 0,
+      "nonFiniteSamples": 0,
+      "silent": false,
+      "boundaryJump": 0.00015715789049863815,
+      "maxAdjacentStep": 0.06369095109403133,
+      "boundarySuspicious": false,
+      "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness."
+    },
+    "limitations": "Full-file RMS matching, including rests. Not perceptual loudness matching, LUFS normalization, compression or subjective audition."
+  },
+  "limiter": null,
+  "dither": false,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 64,
+    "warmupCycles": 2,
+    "loopFrames": 1568000,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": false,
+    "limiter": null
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-0-1 is cut at beat 2; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-1/0/lead-A-0-1",
+        "melody-section-1/0/lead-A-0-2"
+      ],
+      "beat": 2
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-1-1 is cut at beat 6; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-1/0/lead-A-1-1",
+        "melody-section-1/0/lead-A-1-2"
+      ],
+      "beat": 6
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-2-1 is cut at beat 10; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-1/0/lead-A-2-1",
+        "melody-section-1/0/lead-A-2-2"
+      ],
+      "beat": 10
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-3-1 is cut at beat 14; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-1/0/lead-A-3-1",
+        "melody-section-1/0/lead-A-3-2"
+      ],
+      "beat": 14
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of A-ending:lead-A-0-1 is cut at beat 18; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-2/0/A-ending:lead-A-0-1",
+        "melody-section-2/0/A-ending:lead-A-0-2"
+      ],
+      "beat": 18
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of A-ending:lead-A-1-1 is cut at beat 22; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-2/0/A-ending:lead-A-1-1",
+        "melody-section-2/0/A-ending:lead-A-1-2"
+      ],
+      "beat": 22
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of A-ending:lead-A-2-1 is cut at beat 26; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-2/0/A-ending:lead-A-2-1",
+        "melody-section-2/0/A-ending:lead-A-2-2"
+      ],
+      "beat": 26
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-0-1 is cut at beat 50; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-4/0/lead-A-0-1",
+        "melody-section-4/0/lead-A-0-2"
+      ],
+      "beat": 50
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-1-1 is cut at beat 54; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-4/0/lead-A-1-1",
+        "melody-section-4/0/lead-A-1-2"
+      ],
+      "beat": 54
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-2-1 is cut at beat 58; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-4/0/lead-A-2-1",
+        "melody-section-4/0/lead-A-2-2"
+      ],
+      "beat": 58
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-A-3-1 is cut at beat 62; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "melody-section-4/0/lead-A-3-1",
+        "melody-section-4/0/lead-A-3-2"
+      ],
+      "beat": 62
+    }
+  ],
+  "title": "Starfall Causeway — sample arrangement",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 731,
+  "toolkitVersion": "1.0.0",
+  "schemaVersion": "1.1",
+  "loopDiagnostics": null,
+  "sourceHash": "9905c0429aacdb82b5ac9441095f271924f973f3f36116c942c0eec38a5cf0ac",
+  "audioHash": "a5566b1574e4af957dfcf46826d6f361955d79669ea08ebac4380ce2b27aca16",
+  "sourceFile": "/Users/ming/MDocument/retro-music/scripts/runtime/examples/v3-starfall-sample.json"
+}

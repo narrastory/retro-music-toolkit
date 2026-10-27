@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.2",
+  "title": "Minimal phrase",
+  "profile": "nes-inspired",
+  "tempo": 120,
+  "meter": [
+    4,
+    4
+  ],
+  "lengthBeats": 4,
+  "seed": 1,
+  "key": {
+    "tonic": "C",
+    "mode": "major"
+  },
+  "harmony": [
+    {
+      "at": 0,
+      "chord": "C"
+    },
+    {
+      "at": 2,
+      "chord": "G"
+    }
+  ],
+  "sections": [
+    {
+      "id": "A1",
+      "label": "A",
+      "at": 0,
+      "lengthBeats": 4
+    }
+  ],
+  "tracks": [
+    {
+      "id": "lead",
+      "role": "melody",
+      "instrument": "pulse-lead-soft",
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "patterns": {
+        "A": {
+          "lengthBeats": 4,
+          "events": [
+            {
+              "id": "n1",
+              "kind": "note",
+              "at": 0,
+              "pitch": "E5",
+              "duration": 0.5,
+              "velocity": 0.85
+            },
+            {
+              "id": "n2",
+              "kind": "note",
+              "at": 0.5,
+              "pitch": "G5",
+              "duration": 0.5
+            },
+            {
+              "id": "n3",
+              "kind": "note",
+              "at": 1,
+              "pitch": "C6",
+              "duration": 1,
+              "velocity": 0.9
+            },
+            {
+              "id": "n4",
+              "kind": "note",
+              "at": 2,
+              "pitch": "B5",
+              "duration": 0.5
+            },
+            {
+              "id": "n5",
+              "kind": "note",
+              "at": 2.5,
+              "pitch": "G5",
+              "duration": 0.5
+            },
+            {
+              "id": "n6",
+              "kind": "note",
+              "at": 3,
+              "pitch": "D5",
+              "duration": 0.5
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "lead-a1",
+          "pattern": "A",
+          "at": 0
+        }
+      ]
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "instrument": "triangle-bass",
+      "maxVoices": 1,
+      "voicePolicy": "cut",
+      "patterns": {
+        "A": {
+          "lengthBeats": 4,
+          "events": [
+            {
+              "id": "b1",
+              "kind": "note",
+              "at": 0,
+              "pitch": "C3",
+              "duration": 1,
+              "gate": 0.9
+            },
+            {
+              "id": "b2",
+              "kind": "note",
+              "at": 1,
+              "pitch": "C3",
+              "duration": 1,
+              "gate": 0.9
+            },
+            {
+              "id": "b3",
+              "kind": "note",
+              "at": 2,
+              "pitch": "G2",
+              "duration": 1,
+              "gate": 0.9
+            },
+            {
+              "id": "b4",
+              "kind": "note",
+              "at": 3,
+              "pitch": "G2",
+              "duration": 1,
+              "gate": 0.9
+            }
+          ]
+        }
+      },
+      "clips": [
+        {
+          "id": "bass-a1",
+          "pattern": "A",
+          "at": 0
+        }
+      ]
+    }
+  ],
+  "mixer": {
+    "masterDb": -6,
+    "delayBeats": 0.75,
+    "feedback": 0.2,
+    "returnDb": -14
+  },
+  "export": {
+    "mode": "loop",
+    "sampleRate": 44100,
+    "tailSeconds": 1,
+    "warmupCycles": 3
+  }
+}
+

@@ -1,0 +1,44 @@
+{
+  "gaps": [
+    {
+      "fromBeat": 2.94,
+      "toBeat": 3
+    },
+    {
+      "fromBeat": 3.515,
+      "toBeat": 4
+    },
+    {
+      "fromBeat": 6.9399999999999995,
+      "toBeat": 7
+    },
+    {
+      "fromBeat": 7.515,
+      "toBeat": 8
+    },
+    {
+      "fromBeat": 10.940000000000001,
+      "toBeat": 11
+    },
+    {
+      "fromBeat": 11.515,
+      "toBeat": 12
+    },
+    {
+      "fromBeat": 14.540000000000001,
+      "toBeat": 15
+    },
+    {
+      "fromBeat": 15.515,
+      "toBeat": 16
+    }
+  ],
+  "acceptedCandidateIds": [
+    "reply-1",
+    "reply-2"
+  ],
+  "rejectedCandidateIds": [
+    "busy"
+  ],
+  "limitations": "Conservative gaps include release and all compiled lead clips, including loop tails. Check harmony and non-lead masking by listening."
+}

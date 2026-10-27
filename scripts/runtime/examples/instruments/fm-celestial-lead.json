@@ -1,0 +1,26 @@
+{
+  "instrument": {
+    "id": "fm-celestial-lead",
+    "engine": "fm",
+    "role": "melody",
+    "range": [
+      60,
+      96
+    ],
+    "attack": 0.01,
+    "release": 0.07,
+    "description": "Original two-operator lead with velocity-dependent brightness and modulation.",
+    "synthesis": {
+      "harmonicity": 2,
+      "modulationIndex": 2.8,
+      "sustain": 0.6,
+      "volumeDb": -5
+    },
+    "velocityResponse": {
+      "filterOctaves": 1.5,
+      "fmIndexScale": 1
+    },
+    "provenance": "Original procedural example; no game samples."
+  },
+  "assets": []
+}

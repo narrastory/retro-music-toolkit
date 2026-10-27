@@ -1,0 +1,9 @@
+# Dependencies and build output
+node_modules/
+dist/
+output/
+scripts/runtime/dist/
+
+# Local scratch
+*.log
+.DS_Store

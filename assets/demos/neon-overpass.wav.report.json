@@ -1,0 +1,563 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 1459862,
+  "durationSeconds": 33.10344671201814,
+  "peak": 0.12123209238052368,
+  "peakDbfs": -18.327647983122908,
+  "truePeakDbfs": -18.321852255763048,
+  "rms": 0.01729854115962698,
+  "rmsDbfs": -35.2398104149253,
+  "loudnessLufs": -33.25,
+  "dcMean": -0.0006383335502303678,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.000041665975004434586,
+  "maxAdjacentStep": 0.028744807466864586,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.005345184186325302,
+  "cycleComparison": {
+    "differenceRms": 0.005345184186325302,
+    "signalRms": 0.01729854115962698,
+    "relativeDifference": 0.30899624060787356
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": null,
+  "dither": false,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 64,
+    "warmupCycles": 3,
+    "loopFrames": 1459862,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": false,
+    "limiter": null
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"arp\" differs from preset role \"harmony\" for fm-epiano",
+      "trackId": "arp",
+      "path": "tracks.2"
+    },
+    {
+      "severity": "info",
+      "code": "DRUM_VOICE_HINT",
+      "message": "Drum tracks ignore maxVoices; each hit is an independent one-shot",
+      "trackId": "drums",
+      "path": "tracks.3"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b0-n0 is cut at beat 0.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-0/0/lead-b0-n0",
+        "lead-clip-0/0/lead-b0-n1"
+      ],
+      "beat": 0.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b0-n1 is cut at beat 1; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-0/0/lead-b0-n1",
+        "lead-clip-0/0/lead-b0-n2"
+      ],
+      "beat": 1
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b0-n3 is cut at beat 2.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-0/0/lead-b0-n3",
+        "lead-clip-0/0/lead-b0-n4"
+      ],
+      "beat": 2.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b0-n4 is cut at beat 3; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-0/0/lead-b0-n4",
+        "lead-clip-0/0/lead-b0-n5"
+      ],
+      "beat": 3
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b1-n1 is cut at beat 5.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-1/0/lead-b1-n1",
+        "lead-clip-1/0/lead-b1-n2"
+      ],
+      "beat": 5.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b1-n2 is cut at beat 6; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-1/0/lead-b1-n2",
+        "lead-clip-1/0/lead-b1-n3"
+      ],
+      "beat": 6
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b2-n0 is cut at beat 8.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-2/0/lead-b2-n0",
+        "lead-clip-2/0/lead-b2-n1"
+      ],
+      "beat": 8.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b2-n1 is cut at beat 9; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-2/0/lead-b2-n1",
+        "lead-clip-2/0/lead-b2-n2"
+      ],
+      "beat": 9
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b2-n3 is cut at beat 11; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-2/0/lead-b2-n3",
+        "lead-clip-2/0/lead-b2-n4"
+      ],
+      "beat": 11
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b3-n1 is cut at beat 13.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-3/0/lead-b3-n1",
+        "lead-clip-3/0/lead-b3-n2"
+      ],
+      "beat": 13.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b3-n2 is cut at beat 14; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-3/0/lead-b3-n2",
+        "lead-clip-3/0/lead-b3-n3"
+      ],
+      "beat": 14
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b4-n0 is cut at beat 16.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-4/0/lead-b4-n0",
+        "lead-clip-4/0/lead-b4-n1"
+      ],
+      "beat": 16.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b4-n1 is cut at beat 17; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-4/0/lead-b4-n1",
+        "lead-clip-4/0/lead-b4-n2"
+      ],
+      "beat": 17
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b4-n3 is cut at beat 18.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-4/0/lead-b4-n3",
+        "lead-clip-4/0/lead-b4-n4"
+      ],
+      "beat": 18.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b4-n4 is cut at beat 19; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-4/0/lead-b4-n4",
+        "lead-clip-4/0/lead-b4-n5"
+      ],
+      "beat": 19
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b5-n1 is cut at beat 21.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-5/0/lead-b5-n1",
+        "lead-clip-5/0/lead-b5-n2"
+      ],
+      "beat": 21.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b5-n2 is cut at beat 22; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-5/0/lead-b5-n2",
+        "lead-clip-5/0/lead-b5-n3"
+      ],
+      "beat": 22
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b6-n0 is cut at beat 24.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-6/0/lead-b6-n0",
+        "lead-clip-6/0/lead-b6-n1"
+      ],
+      "beat": 24.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b6-n1 is cut at beat 25; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-6/0/lead-b6-n1",
+        "lead-clip-6/0/lead-b6-n2"
+      ],
+      "beat": 25
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b6-n3 is cut at beat 27; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-6/0/lead-b6-n3",
+        "lead-clip-6/0/lead-b6-n4"
+      ],
+      "beat": 27
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b7-n0 is cut at beat 28.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-7/0/lead-b7-n0",
+        "lead-clip-7/0/lead-b7-n1"
+      ],
+      "beat": 28.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b7-n1 is cut at beat 29; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-7/0/lead-b7-n1",
+        "lead-clip-7/0/lead-b7-n2"
+      ],
+      "beat": 29
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b7-n3 is cut at beat 31; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-7/0/lead-b7-n3",
+        "lead-clip-7/0/lead-b7-n4"
+      ],
+      "beat": 31
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b8-n0 is cut at beat 32.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-8/0/lead-b8-n0",
+        "lead-clip-8/0/lead-b8-n1"
+      ],
+      "beat": 32.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b8-n1 is cut at beat 33; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-8/0/lead-b8-n1",
+        "lead-clip-8/0/lead-b8-n2"
+      ],
+      "beat": 33
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b8-n3 is cut at beat 34.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-8/0/lead-b8-n3",
+        "lead-clip-8/0/lead-b8-n4"
+      ],
+      "beat": 34.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b8-n4 is cut at beat 35; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-8/0/lead-b8-n4",
+        "lead-clip-8/0/lead-b8-n5"
+      ],
+      "beat": 35
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b9-n1 is cut at beat 37.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-9/0/lead-b9-n1",
+        "lead-clip-9/0/lead-b9-n2"
+      ],
+      "beat": 37.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b9-n3 is cut at beat 39; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-9/0/lead-b9-n3",
+        "lead-clip-9/0/lead-b9-n4"
+      ],
+      "beat": 39
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b10-n1 is cut at beat 42; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-10/0/lead-b10-n1",
+        "lead-clip-10/0/lead-b10-n2"
+      ],
+      "beat": 42
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b11-n0 is cut at beat 44.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-11/0/lead-b11-n0",
+        "lead-clip-11/0/lead-b11-n1"
+      ],
+      "beat": 44.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b11-n1 is cut at beat 45; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-11/0/lead-b11-n1",
+        "lead-clip-11/0/lead-b11-n2"
+      ],
+      "beat": 45
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b11-n3 is cut at beat 47; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-11/0/lead-b11-n3",
+        "lead-clip-11/0/lead-b11-n4"
+      ],
+      "beat": 47
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b12-n0 is cut at beat 48.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-12/0/lead-b12-n0",
+        "lead-clip-12/0/lead-b12-n1"
+      ],
+      "beat": 48.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b12-n1 is cut at beat 49; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-12/0/lead-b12-n1",
+        "lead-clip-12/0/lead-b12-n2"
+      ],
+      "beat": 49
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b12-n3 is cut at beat 50.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-12/0/lead-b12-n3",
+        "lead-clip-12/0/lead-b12-n4"
+      ],
+      "beat": 50.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b12-n4 is cut at beat 51; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-12/0/lead-b12-n4",
+        "lead-clip-12/0/lead-b12-n5"
+      ],
+      "beat": 51
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b13-n1 is cut at beat 53.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-13/0/lead-b13-n1",
+        "lead-clip-13/0/lead-b13-n2"
+      ],
+      "beat": 53.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b13-n2 is cut at beat 54; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-13/0/lead-b13-n2",
+        "lead-clip-13/0/lead-b13-n3"
+      ],
+      "beat": 54
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b14-n0 is cut at beat 56.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-14/0/lead-b14-n0",
+        "lead-clip-14/0/lead-b14-n1"
+      ],
+      "beat": 56.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b14-n1 is cut at beat 57; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-14/0/lead-b14-n1",
+        "lead-clip-14/0/lead-b14-n2"
+      ],
+      "beat": 57
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b14-n3 is cut at beat 59; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-14/0/lead-b14-n3",
+        "lead-clip-14/0/lead-b14-n4"
+      ],
+      "beat": 59
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b15-n0 is cut at beat 60.5; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-15/0/lead-b15-n0",
+        "lead-clip-15/0/lead-b15-n1"
+      ],
+      "beat": 60.5
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b15-n1 is cut at beat 61; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-15/0/lead-b15-n1",
+        "lead-clip-15/0/lead-b15-n2"
+      ],
+      "beat": 61
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: release tail of lead-b15-n3 is cut at beat 63; the note itself finished",
+      "trackId": "lead",
+      "eventIds": [
+        "lead-clip-15/0/lead-b15-n3",
+        "lead-clip-15/0/lead-b15-n4"
+      ],
+      "beat": 63
+    }
+  ],
+  "title": "Neon Overpass",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 427,
+  "toolkitVersion": "1.0.0",
+  "schemaVersion": "1.0",
+  "loopDiagnostics": null,
+  "sourceHash": "3eceba227dead1ae5fc24437bf28b0dc7172f9bd25b8249c3c70820bb219eecf",
+  "audioHash": "e8fe6e8af6054baeaa01fc8a4c3fb9d210cb3097e43eafbec86127e4832b66f6",
+  "sourceFile": "/Users/ming/MDocument/retro-music/scripts/runtime/examples/neon-overpass.json"
+}

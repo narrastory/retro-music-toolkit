@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retro Music Lab</title>
+<style>
+body{max-width:1000px;margin:40px auto;padding:0 20px;background:#111725;color:#e4edf8;font:16px/1.65 system-ui}
+h1{color:#8ef0cb}
+textarea{width:100%;box-sizing:border-box;height:340px;background:#192336;color:#dce7ff;border:1px solid #40516c;border-radius:12px;padding:16px;font:13px/1.5 monospace}
+button,a{background:#8ef0cb;color:#10221c;padding:10px 18px;border:0;border-radius:8px;cursor:pointer;font:inherit}
+button:disabled{opacity:.5}
+button.secondary{background:#2b3a52;color:#cfe0f5}
+audio{display:block;width:100%;margin:24px 0}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#192336;padding:16px;border-radius:12px;font-size:13px}
+fieldset{border:1px solid #2b3a52;border-radius:10px;margin:12px 0;padding:10px 14px}
+label{margin-right:16px;white-space:nowrap}
+input[type=number]{width:5em}
+</style>
+<h1>Retro Music Lab · 1.0</h1>
+<p>载入一份乐谱，编译并渲染为 8bit / FM / 采样风格 WAV。所有处理都在本页完成，不上传任何数据。</p>
+<p><input id="file" type="file" accept=".json"> <button id="example" class="secondary">载入最小示例</button></p>
+<p><textarea id="score" aria-label="音乐工程 JSON" placeholder="选择文件、载入示例，或直接粘贴乐谱 JSON"></textarea></p>
+<fieldset>
+  <label>输出 <select id="effects"><option value="mix">完整混音</option><option value="dry">干声</option><option value="wet">仅效果返回</option></select></label>
+  <label>模式 <select id="mode"><option value="">按乐谱设置</option><option value="loop">loop</option><option value="one-shot">one-shot</option></select></label>
+  <label><input id="match" type="checkbox">匹配至 -24 dBFS RMS</label>
+  <label><input id="limiter" type="checkbox">峰值限幅 -1 dBFS</label>
+  <label>循环交叉淡化 <input id="crossfade" type="number" min="0" max="2" step="0.005" value="0"> 拍</label>
+</fieldset>
+<p><button id="diagnose" class="secondary">编曲与和声诊断</button> <button id="render">编译与渲染</button> <a id="download" hidden>下载 WAV</a></p>
+<audio id="audio" controls></audio>
+<pre id="status">准备就绪。诊断指标不能代替音乐试听。</pre>
+<script type="module" src="app.js"></script></html>

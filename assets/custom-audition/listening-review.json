@@ -1,0 +1,14 @@
+{
+  "status": "unreviewed",
+  "instruments": [
+    {
+      "id": "sample-original-flute",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "status": "unreviewed",
+  "instruments": [
+    {
+      "id": "pulse-lead-soft",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "pulse-pluck",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "triangle-bass",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "chip-drums",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "fm-epiano",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "fm-bass-round",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "fm-brass",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "sample-flute",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "sample-strings",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "sample-bass",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    },
+    {
+      "id": "sample-pluck",
+      "listener": null,
+      "registerBalance": null,
+      "shortNoteClarity": null,
+      "longNoteFatigue": null,
+      "velocityResponse": null,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "sample-strings",
+  "engine": "sample",
+  "role": "harmony",
+  "range": [
+    45,
+    88
+  ],
+  "attack": 0.09,
+  "release": 0.22,
+  "description": "Procedural sustained string-like sample; use long notes",
+  "sample": {
+    "kind": "procedural",
+    "wave": "strings"
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

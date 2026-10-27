@@ -1,0 +1,27 @@
+{
+  "operations": [
+    {
+      "op": "set-song",
+      "set": {
+        "title": "Pixel Trail \u2014 sparse variation"
+      }
+    },
+    {
+      "op": "set-track",
+      "trackId": "arp",
+      "set": {
+        "gainDb": -18
+      }
+    },
+    {
+      "op": "set-note",
+      "trackId": "lead",
+      "pattern": "melody-4",
+      "eventId": "lead-b4-n5",
+      "set": {
+        "pitch": "G5",
+        "duration": 0.75
+      }
+    }
+  ]
+}

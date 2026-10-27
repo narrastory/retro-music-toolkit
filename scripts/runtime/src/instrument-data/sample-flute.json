@@ -1,0 +1,17 @@
+{
+  "id": "sample-flute",
+  "engine": "sample",
+  "role": "melody",
+  "range": [
+    60,
+    96
+  ],
+  "attack": 0.018,
+  "release": 0.1,
+  "description": "Procedural periodic flute sample with sustained looping",
+  "sample": {
+    "kind": "procedural",
+    "wave": "flute"
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

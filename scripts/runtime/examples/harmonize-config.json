@@ -1,0 +1,16 @@
+{
+  "style": "drop2",
+  "anchorMidi": 60,
+  "idPrefix": "harm",
+  "output": {
+    "kind": "new-track",
+    "trackId": "harmony",
+    "role": "harmony",
+    "instrument": "fm-epiano",
+    "gainDb": -16,
+    "maxVoices": 4,
+    "voicePolicy": "cut",
+    "pan": 0.1,
+    "send": 0.15
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "@retro-music/toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI-oriented symbolic retro music compiler and offline Tone.js renderer",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "schema",
+    "web",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./compiler": {
+      "types": "./dist/compiler.d.ts",
+      "default": "./dist/compiler.js"
+    },
+    "./harmony": {
+      "types": "./dist/harmony.d.ts",
+      "default": "./dist/harmony.js"
+    },
+    "./cli": "./dist/cli.js"
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "retro-music": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && node scripts/build-web.mjs",
+    "prepare": "npm run build",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:audio": "node --import tsx --test --test-concurrency=1 tests/audio.integration.ts tests/v3-audio.integration.ts",
+    "test:web": "npm run build && node --import tsx --test tests/web.integration.ts",
+    "test:all": "npm test && npm run test:audio && npm run test:web",
+    "music": "node --import tsx src/cli.ts",
+    "demo": "node --import tsx src/cli.ts render examples/pixel-trail.json --out output/pixel-trail.wav",
+    "demo:v3": "node --import tsx src/cli.ts render examples/v3-starfall-fm.json --out output/starfall-fm.wav",
+    "example": "node --import tsx src/cli.ts example",
+    "browser:install": "playwright install chromium --only-shell",
+    "schema": "node --import tsx src/cli.ts schema --out schema/score.schema.json",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.mjs\"",
+    "audition": "node --import tsx src/cli.ts audition --out output/auditions",
+    "examples:v3": "npm run build && node scripts/create-v3-examples.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.56.1",
+    "tone": "15.1.22",
+    "zod": "4.6.7",
+    "esbuild": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "3.6.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3"
+  }
+}

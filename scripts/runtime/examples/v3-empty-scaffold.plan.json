@@ -1,0 +1,99 @@
+{
+  "kind": "empty-composition-scaffold",
+  "config": {
+    "title": "Starfall Causeway",
+    "scene": "exploration",
+    "profile": "genesis-inspired",
+    "form": "AABA",
+    "barsPerSection": 4,
+    "tempo": 120,
+    "meter": [
+      4,
+      4
+    ],
+    "seed": 1
+  },
+  "barBeats": 4,
+  "sections": [
+    {
+      "id": "A-1",
+      "label": "A",
+      "at": 0,
+      "lengthBeats": 16,
+      "energy": 0.45,
+      "focus": "melody",
+      "activeRoles": [
+        "melody",
+        "bass",
+        "arp",
+        "drums"
+      ],
+      "harmony": [],
+      "tasks": [
+        "Write a recognisable motif and a clear phrase ending.",
+        "Write bass and harmony parts explicitly; energy metadata does not generate notes.",
+        "Leave space for an answering voice (see `answer`)."
+      ]
+    },
+    {
+      "id": "A-5",
+      "label": "A",
+      "at": 16,
+      "lengthBeats": 16,
+      "energy": 0.6,
+      "focus": "melody",
+      "activeRoles": [
+        "melody",
+        "bass",
+        "arp",
+        "drums"
+      ],
+      "harmony": [],
+      "tasks": [
+        "Keep the motif identity; consider a changed ending via `vary`.",
+        "Write bass and harmony parts explicitly; energy metadata does not generate notes.",
+        "Leave space for an answering voice (see `answer`)."
+      ]
+    },
+    {
+      "id": "B-9",
+      "label": "B",
+      "at": 32,
+      "lengthBeats": 16,
+      "energy": 0.3,
+      "focus": "melody",
+      "activeRoles": [
+        "melody",
+        "bass",
+        "drums"
+      ],
+      "harmony": [],
+      "tasks": [
+        "Create contrast through subtraction, register or rhythm rather than new material.",
+        "Write bass and harmony parts explicitly; energy metadata does not generate notes.",
+        "Leave space for an answering voice (see `answer`)."
+      ]
+    },
+    {
+      "id": "A-13",
+      "label": "A",
+      "at": 48,
+      "lengthBeats": 16,
+      "energy": 0.75,
+      "focus": "melody",
+      "activeRoles": [
+        "melody",
+        "bass",
+        "arp",
+        "drums"
+      ],
+      "harmony": [],
+      "tasks": [
+        "Keep the motif identity; consider a changed ending via `vary`.",
+        "Write bass and harmony parts explicitly; energy metadata does not generate notes.",
+        "Connect the final phrase back to the loop opening."
+      ]
+    }
+  ],
+  "limitations": "Empty score skeleton, not automatically composed music. Repeated letters share a pattern; use `vary` or `motif` to differentiate an instance."
+}
