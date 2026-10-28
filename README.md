@@ -1,15 +1,27 @@
 <div align="center">
 
-<img src="assets/logo.svg" width="120" alt="Retro Music Toolkit">
+**简体中文** · [English](README.en.md)
+
+<img src="assets/logo.svg" width="96" alt="Retro Music Toolkit">
 
 # Retro Music Toolkit
 
-**给 AI 用的 8bit / 16bit 游戏音乐工作台。**
+### 给 AI 用的 8bit / 16bit 游戏音乐工作台
+
 写乐谱，不是抽卡。每一颗音符都由你决定，每一次导出都可复现。
 
-[快速开始](#快速开始) · [为什么不用音乐大模型](#为什么不直接把需求丢给音乐生成大模型) · [能力](#能力) · [English](README.en.md)
+[![version 1.1.0](https://img.shields.io/badge/version-1.1.0-d6293a?style=flat-square)](#快速开始) [![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#快速开始) [![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](scripts/runtime) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE) [![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#为什么它适合-ai-agent) [![44.1 / 48 kHz WAV](https://img.shields.io/badge/output-44.1%20%2F%2048%20kHz%20WAV-6b7280?style=flat-square)](#交付)
+
+[快速开始](#快速开始) · [能力](#能力) · [试听](#看一眼实际输出) · [技术细节](#技术细节) · [路线](#路线)
+
+<code>git clone https://github.com/narrastory/retro-music-toolkit.git</code><br>
+<code>cd retro-music-toolkit/scripts/runtime &amp;&amp; npm ci &amp;&amp; npm run build</code>
 
 </div>
+
+<p align="center">
+  <img src="assets/hero.svg" width="1040" alt="示意图：左侧是 score.json 乐谱，中间是确定性编译器与离线渲染器，右侧是 starfall-fm.wav 的钢琴卷帘、波形和渲染指标（−21.59 LUFS、−6.18 dBFS 真峰值、1,411,200 帧、0 削波）。">
+</p>
 
 ---
 
@@ -19,9 +31,9 @@
 
 它不猜你想要什么。它只负责把你写下的东西，**准确地、按 8/16bit 的方式**发出来。
 
----
-
 ## 为什么不直接把需求丢给音乐生成大模型
+
+先把差别说清楚：
 
 | | 音乐生成大模型 | Retro Music Toolkit |
 | --- | --- | --- |
@@ -34,8 +46,6 @@
 | **成本** | 按次计费 | 零，跑多少次都一样 |
 
 音乐大模型擅长**从零给一个灵感**；这个工具擅长**把灵感做成能进游戏、能改、能过审的成品**。两者不冲突，但后者才是实际交付时会用到的那一个。
-
----
 
 ## 为什么它适合 AI Agent
 
@@ -52,9 +62,9 @@
 cat song.json | node dist/cli.js validate - --compact
 ```
 
----
-
 ## 能力
+
+从写谱到交付，四件事都在同一条本地工具链里。
 
 ### 写
 - **跨小节延音**（`hold`）与 **clip 裁剪**——不用为了一个长音把整个 pattern 拉长。
@@ -81,9 +91,9 @@ cat song.json | node dist/cli.js validate - --compact
 - 可选 TPDF 抖动、前瞻峰值限幅、循环边界等功率交叉淡化。
 - `compare` 把两版等响拼接成一个 A/B 文件。
 
----
-
 ## 看一眼实际输出
+
+先看 `describe` 的文字结构，再看渲染报告里的测量值。
 
 ```text
 $ node dist/cli.js describe examples/v3-starfall-fm.json
@@ -108,16 +118,17 @@ Sections:
 | 真峰值 | −6.18 dBFS |
 | 削波 / 非有限样本 | 0 / 0 |
 
-试听：[FM 版](assets/demos/starfall-fm.wav) · [同主题采样改编](assets/demos/starfall-sample.wav)
-
----
+> [!TIP]
+> 直接试听：[FM 版](assets/demos/starfall-fm.wav) / [同主题采样改编](assets/demos/starfall-sample.wav)
 
 ## 快速开始
 
-需要 Node.js 22+。首次安装要联网下载依赖与 Chromium，之后**全程离线**。
+> [!NOTE]
+> 需要 Node.js 22+。首次安装要联网下载依赖与 Chromium，之后**全程离线**。
 
 ```bash
-git clone <this-repo> && cd retro-music/scripts/runtime
+git clone https://github.com/narrastory/retro-music-toolkit.git
+cd retro-music-toolkit/scripts/runtime
 npm ci
 npm run browser:install     # 仅渲染需要；纯编译/诊断不需要 Chromium
 npm run build
@@ -142,21 +153,20 @@ node dist/cli.js compare minimal.wav v2.wav --out ab.wav
 
 完整流程见 [快速开始](references/quickstart.zh-CN.md)、[1.1 指南](references/v1.1-guide.zh-CN.md)、[乐谱格式](references/score-format.zh-CN.md)。
 
----
-
 ## 它不做什么
 
 诚实地说明边界，比夸大能力更有用：
 
-- **不自动作曲**。它不会替你想旋律。你给音符，它负责正确性、约束与发声。
-- **不是芯片仿真**。`hardware` 模式是听感近似，不宣称 2A03 / YM2612 / BRR 位精确。
+> [!IMPORTANT]
+> **不自动作曲，也不是芯片仿真。** 它不会替你想旋律；`hardware` 模式是听感近似，不宣称 2A03 / YM2612 / BRR 位精确。
+
 - **不做主观审美判断**。诊断只说"这里可能有和声冲突"，不说"这里不好听"。
 - **暂不含简写记谱、MIDI、tempo map、MCP server**（见[路线](#路线)）。
 - **没有主观听审记录**。仓库里的示例都只做过信号层面验证，不是"我们觉得很好听"。
 
----
-
 ## 技术细节
+
+实现细节默认收起，展开可看架构、命令和库用法。
 
 <details>
 <summary>架构与实现</summary>
@@ -255,8 +265,6 @@ const { wav } = await renderScore(score, { solo: ["lead", "bass"] });
 目前没有随包提供 MCP server；直接用 CLI 或函数调用已能形成完整闭环。
 
 </details>
-
----
 
 ## 路线
 
