@@ -1,14 +1,14 @@
-# 乐谱格式与修改协议 v1.2
+# 乐谱格式与修改协议 v1.3
 
 精确字段以 `scripts/runtime/schema/score.schema.json` 为准；运行 `node dist/cli.js schema` 可重新输出，`npm run schema -- --force` 可直接覆盖。本规范采用严格对象，未知字段会报错，避免 AI 拼错参数却被静默忽略。
 
-`"1.0"`、`"1.1"`、`"1.2"` 三种 `schemaVersion` 都被接受。新工程写 `"1.2"`；旧谱无需迁移。
+`"1.0"`、`"1.1"`、`"1.2"`、`"1.3"` 四种 `schemaVersion` 都被接受。新工程写 `"1.3"`；旧谱无需迁移。
 
 ## 1. 顶层字段
 
 | 字段 | 含义 |
 | --- | --- |
-| schemaVersion | `"1.0"` / `"1.1"` / `"1.2"` |
+| schemaVersion | `"1.0"` / `"1.1"` / `"1.2"` / `"1.3"` |
 | title | 作品标题 |
 | profile | `nes-inspired` / `genesis-inspired` / `snes-inspired` |
 | tempo | 固定 BPM，范围 30–300 |

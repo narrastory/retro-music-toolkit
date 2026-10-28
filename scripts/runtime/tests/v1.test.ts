@@ -11,9 +11,14 @@ import {
   arpeggiatePattern,
 } from "../src/composition.js";
 import { patchScoreWithReport } from "../src/patch.js";
+import {
+  describeScore,
+  renderPianoRoll,
+  buildReportHtml,
+} from "../src/report.js";
 
 const base = (overrides: Record<string, unknown> = {}) => ({
-  schemaVersion: "1.2",
+  schemaVersion: "1.3",
   title: "Test",
   profile: "nes-inspired",
   tempo: 120,
@@ -495,4 +500,170 @@ test("drum kits require slots that exist in the kit", () => {
     const diags = (e as ScoreError).diagnostics;
     assert.ok(diags.some((d) => d.code === "SAMPLE_REFERENCE"));
   }
+});
+
+/* ---------------- 1.0 first-tier additions ---------------- */
+
+const chordScore = (over: Record<string, unknown> = {}) => {
+  const score: any = base();
+  score.lengthBeats = 8;
+  score.tracks[0].patterns.A = {
+    lengthBeats: 8,
+    events: [
+      { id: "c", kind: "note", at: 0, pitch: "C5", duration: 2, gate: 1 },
+      { id: "e", kind: "note", at: 0, pitch: "E5", duration: 2, gate: 1 },
+      { id: "g", kind: "note", at: 0, pitch: "G5", duration: 2, gate: 1 },
+    ],
+  };
+  score.tracks[0].clips = [{ id: "c1", pattern: "A", at: 0 }];
+  return { ...score, ...over };
+};
+
+test("single-voice arpeggio turns a chord into one sounding voice", () => {
+  const plain = compileScore(chordScore());
+  assert.ok(
+    plain.diagnostics.some((d) => d.code === "VOICE_STEAL"),
+    "without arpeggio the one-voice track must steal",
+  );
+  const score = chordScore();
+  score.tracks[0].arpeggio = {
+    enabled: true,
+    rate: 16,
+    gate: 1,
+    order: "up",
+  };
+  const c = compileScore(score);
+  // 16 steps per beat over 2 beats.
+  assert.equal(c.events.length, 32);
+  assert.equal(new Set(c.events.map((e) => e.voice)).size, 1);
+  assert.equal(c.diagnostics.filter((d) => d.code === "VOICE_STEAL").length, 0);
+  // Steps are one sixteenth apart and cycle the chord tones.
+  assert.deepEqual(
+    c.events.slice(0, 4).map((e) => e.tick),
+    [0, 60, 120, 180],
+  );
+  assert.deepEqual(
+    [...new Set(c.events.slice(0, 3).map((e) => e.midi))],
+    [72, 76, 79],
+  );
+});
+
+test("arpeggio order controls the pitch cycle", () => {
+  const score = chordScore();
+  score.tracks[0].arpeggio = {
+    enabled: true,
+    rate: 8,
+    gate: 1,
+    order: "down",
+  };
+  const c = compileScore(score);
+  assert.deepEqual(
+    c.events.slice(0, 3).map((e) => e.midi),
+    [79, 76, 72],
+  );
+});
+
+test("arpeggio can be disabled without changing anything else", () => {
+  const score = chordScore();
+  score.tracks[0].arpeggio = {
+    enabled: false,
+    rate: 16,
+    gate: 1,
+    order: "up",
+  };
+  const c = compileScore(score);
+  assert.equal(c.events.length, 3);
+});
+
+test("authenticity defaults to modern and is echoed by the compiled score", () => {
+  assert.equal(compileScore(base()).score.authenticity, "modern");
+  const c = compileScore({ ...base(), authenticity: "hardware" });
+  assert.equal(c.score.authenticity, "hardware");
+});
+
+test("loop closure flags a seam that does not lead back to the opening chord", () => {
+  const bad = diagnoseScore({
+    ...base(),
+    export: { mode: "loop" },
+    harmony: [
+      { at: 0, chord: "C" },
+      { at: 4, chord: "Am" },
+    ],
+  });
+  const finding = bad.findings.find((f) => f.rule === "LOOP_HARMONY_RETURN");
+  assert.ok(finding, "expected LOOP_HARMONY_RETURN");
+  assert.equal(finding.severity, "warning");
+
+  const good = diagnoseScore({
+    ...base(),
+    export: { mode: "loop" },
+    harmony: [
+      { at: 0, chord: "C" },
+      { at: 4, chord: "G7" },
+    ],
+  });
+  assert.ok(!good.findings.some((f) => f.rule === "LOOP_HARMONY_RETURN"));
+});
+
+test("loop closure is not checked for one-shot exports", () => {
+  const result = diagnoseScore({
+    ...base(),
+    export: { mode: "one-shot" },
+    harmony: [
+      { at: 0, chord: "C" },
+      { at: 4, chord: "Am" },
+    ],
+  });
+  assert.ok(!result.findings.some((f) => f.rule === "LOOP_HARMONY_RETURN"));
+});
+
+test("describeScore reports register, density and section change", () => {
+  const text = describeScore(compileScore(base()));
+  assert.match(text, /C major/);
+  assert.match(text, /lead \(pulse-lead-soft, melody\)/);
+  assert.match(text, /range C5–E5/);
+  assert.match(text, /Sections:/);
+  assert.match(text, /Harmony: C@0 → G@4/);
+});
+
+test("piano roll SVG contains notes, bar lines and a legend", () => {
+  const svg = renderPianoRoll(compileScore(base()));
+  assert.match(svg, /^<svg /);
+  assert.match(svg, /<rect /);
+  assert.match(svg, /class="bar"/);
+  assert.match(svg, /lead<\/text>/);
+});
+
+test("piano roll renders drum kits on their own rows", () => {
+  const score: any = base();
+  score.tracks.push({
+    id: "drums",
+    role: "drums",
+    instrument: "chip-drums",
+    maxVoices: 1,
+    voicePolicy: "cut",
+    patterns: {
+      d: {
+        lengthBeats: 8,
+        events: [
+          { id: "k", kind: "hit", at: 0, sound: "kick" },
+          { id: "h", kind: "hit", at: 1, sound: "hat" },
+        ],
+      },
+    },
+    clips: [{ id: "dc", pattern: "d", at: 0 }],
+  });
+  const svg = renderPianoRoll(compileScore(score));
+  assert.match(svg, />kick<\/text>/);
+  assert.match(svg, />hat<\/text>/);
+});
+
+test("report HTML embeds the roll and escapes the title", () => {
+  const score: any = base();
+  score.title = "<script>alert(1)</script>";
+  const html = buildReportHtml(compileScore(score));
+  assert.ok(!html.includes("<script>alert(1)</script>"));
+  assert.match(html, /&lt;script&gt;/);
+  assert.match(html, /<svg /);
+  assert.match(html, /Structure/);
 });

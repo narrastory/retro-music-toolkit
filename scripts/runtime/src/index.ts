@@ -7,6 +7,7 @@ export * from "./motif.js";
 export * from "./voicing.js";
 export * from "./dsp.js";
 export * from "./compare.js";
+export * from "./report.js";
 export * from "./version.js";
 export * from "./wav.js";
 export * from "./analysis.js";

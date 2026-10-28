@@ -137,7 +137,7 @@ export function createArrangement(input: unknown = {}) {
     : [];
 
   const score = ScoreSchema.parse({
-    schemaVersion: "1.2",
+    schemaVersion: "1.3",
     title: config.title,
     profile: config.profile,
     tempo: config.tempo,
@@ -295,7 +295,7 @@ export function varyMotif(input: unknown, options: unknown) {
     .sort((a, b) => a.at - b.at || a.id.localeCompare(b.id));
   score.tracks.find((t) => t.id === o.trackId)!.patterns[o.newPattern]!.events =
     renumbered;
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   const compiled = compileScore(score);
   return {
     score: compiled.score,
@@ -418,7 +418,7 @@ export function placeAnswers(input: unknown, options: unknown) {
     velocityScale: 1,
     mute: false,
   });
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   const result = compileScore(score);
   return {
     score: result.score,
@@ -493,7 +493,7 @@ export function developMotif(input: unknown, options: unknown) {
       velocityScale: 1,
       mute: false,
     });
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   const compiled = compileScore(score);
   return {
     score: compiled.score,
@@ -593,7 +593,7 @@ export function harmonizeScore(input: unknown, options: unknown) {
       ],
     });
   }
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   const compiled = compileScore(score);
   return {
     score: compiled.score,
@@ -635,7 +635,7 @@ export function arpeggiatePattern(input: unknown, options: unknown) {
     events: generated.map((e) => ({ ...e, id: freshId(e.id, used) })),
   };
   clip.pattern = o.newPattern;
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   const compiled = compileScore(score);
   return {
     score: compiled.score,

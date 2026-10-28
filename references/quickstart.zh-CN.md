@@ -147,7 +147,7 @@ node dist/cli.js render examples/neon-overpass.json --match-rms -24 --out output
 
 ## 9. 1.0 入口
 
-详见 [v1.0-guide.zh-CN.md](v1.0-guide.zh-CN.md)。Schema 1.0 / 1.1 继续支持，新工程写 `"1.2"`。
+详见 [v1.1-guide.zh-CN.md](v1.1-guide.zh-CN.md)。Schema 1.0–1.3 继续支持，新工程写 `"1.3"`。
 
 ```bash
 # 最小可用乐谱（约 40 行），比完整示例更适合作为起点

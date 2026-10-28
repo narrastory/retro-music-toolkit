@@ -1,8 +1,8 @@
-# Retro Music Toolkit 1.0
+# Retro Music Toolkit 1.1
 
 面向 AI 的 TypeScript + Tone.js 8bit / 16bit 作曲工具包。输入是可版本管理的 JSON 乐谱，输出是 WAV、渲染报告和可继续编辑的工程。
 
-1.0 的重点不是增加音色，而是让 AI 能写出**跨小节、有和声方向、有主题发展**的音乐，并且能自己发现最常见的和声错误。
+1.1 的重点不是增加音色，而是让 AI 能写出**跨小节、有和声方向、有主题发展**的音乐，并且能自己发现最常见的和声错误。
 
 ## 先试听
 
@@ -10,7 +10,7 @@
 - [同主题采样改编](assets/demos/starfall-sample.wav)
 - [自定义多音区音色试听台](assets/custom-audition/index.html)
 
-## 1.0 能力
+## 1.1 能力
 
 **作曲**
 - `hold: true` 跨小节延音；clip 级 `lengthBeats` 裁剪，不再为每个变体复制 pattern。
@@ -82,8 +82,8 @@ node dist/cli.js compare v1.wav final.wav --out ab.wav
 
 ## 文档
 
-- [1.0 变更与新增能力](references/v1.0-guide.zh-CN.md)
-- [乐谱格式 v1.2](references/score-format.zh-CN.md)
+- [1.1 变更与新增能力](references/v1.1-guide.zh-CN.md)
+- [乐谱格式 v1.3](references/score-format.zh-CN.md)
 - [快速开始](references/quickstart.zh-CN.md)
 - [AI 作曲手册](references/composition-playbook.zh-CN.md)
 - [工程架构](references/architecture.zh-CN.md)

@@ -346,7 +346,7 @@ test("local WAV packaging embeds portable PCM and records provenance", async () 
       result.sampleAssets!.asset!.provenance,
       "Original test sample",
     );
-    assert.equal(result.schemaVersion, "1.2");
+    assert.equal(result.schemaVersion, "1.3");
     assert.ok(result.sampleAssets!.asset!.dataBase64.length);
   } finally {
     await rm(dir, { recursive: true, force: true });

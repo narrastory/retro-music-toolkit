@@ -21,6 +21,9 @@ export const RULES = [
   "HARMONY_GAP",
   "HARMONY_ZERO_LENGTH",
   "BASS_SLASH_CHORD",
+  "LOOP_HARMONY_RETURN",
+  "LOOP_MELODY_UNRESOLVED",
+  "LOOP_RHYTHM_OPEN",
 ] as const;
 export type RuleName = (typeof RULES)[number];
 
@@ -48,6 +51,22 @@ export type ArrangementFinding = Omit<HarmonyFinding, "rule"> & {
   rule: RuleName;
   clipIds: string[];
 };
+
+/** Harmony rules are a subset of the diagnostic rule names. */
+const HARMONY_RULE_SET = new Set<string>([
+  "HARMONY_NON_CHORD_TONE",
+  "BASS_NON_CHORD_TONE",
+  "BASS_SLASH_CHORD",
+  "PARALLEL_FIFTHS",
+  "PARALLEL_OCTAVES",
+  "UNRESOLVED_LEAP",
+  "OUT_OF_KEY",
+  "MINOR_SECOND_CLASH",
+  "HARMONY_GAP",
+  "HARMONY_ZERO_LENGTH",
+  "LOOP_HARMONY_RETURN",
+  "LOOP_MELODY_UNRESOLVED",
+]);
 
 const median = (a: number[]) => {
   if (!a.length) return null;
@@ -100,7 +119,8 @@ export function diagnoseScore(input: unknown, options: unknown = {}) {
 
   // Harmony rules come from the dedicated module.
   for (const f of harmonyFindings(c))
-    if (!skip(f.rule)) findings.push({ ...f, clipIds: [] });
+    if (!skip(f.rule) && HARMONY_RULE_SET.has(f.rule))
+      findings.push({ ...f, rule: f.rule as RuleName, clipIds: [] });
 
   const rows = [];
   for (const t of s.tracks) {

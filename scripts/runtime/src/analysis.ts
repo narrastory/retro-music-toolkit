@@ -203,18 +203,21 @@ export function integratedLoudness(
       for (let i = start; i < start + blockFrames; i++) sum += c[i]! * c[i]!;
     // BS.1770 sums the weighted mean-square across channels (weights 1.0 for
     // L/R); averaging would read a stereo pair 3 dB quieter than it is.
-    const meanSquare = sum / blockFrames;
-    const lufs = -0.691 + 10 * Math.log10(Math.max(meanSquare, 1e-20));
-    blocks.push(lufs);
+    blocks.push(sum / blockFrames);
   }
-  const aboveAbsolute = blocks.filter((b) => b > -70);
+  // Gate in the energy domain: BS.1770 averages block energies, not decibels.
+  // Averaging dB values biases quiet blocks upward and skewed the result by
+  // more than 10 LU on sparse, echo-heavy material.
+  const toLufs = (energy: number) =>
+    -0.691 + 10 * Math.log10(Math.max(energy, 1e-20));
+  const aboveAbsolute = blocks.filter((b) => toLufs(b) > -70);
   if (!aboveAbsolute.length) return null;
   const meanOf = (list: number[]) =>
     list.reduce((a, b) => a + b, 0) / list.length;
-  const relativeGate = meanOf(aboveAbsolute) - 10;
-  const gated = aboveAbsolute.filter((b) => b > relativeGate);
+  const relativeGate = toLufs(meanOf(aboveAbsolute)) - 10;
+  const gated = aboveAbsolute.filter((b) => toLufs(b) > relativeGate);
   if (!gated.length) return null;
-  return Number(meanOf(gated).toFixed(2));
+  return Number(toLufs(meanOf(gated)).toFixed(2));
 }
 
 export function compareCycles(a: Float32Array[], b: Float32Array[]) {
