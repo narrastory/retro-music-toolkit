@@ -1,37 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="Retro Music Toolkit">
   <title>Retro Music Toolkit</title>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#16223a"/>
-      <stop offset="1" stop-color="#080d16"/>
-    </linearGradient>
-    <linearGradient id="mint" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#b6ffe6"/>
-      <stop offset="1" stop-color="#4fd1a5"/>
-    </linearGradient>
-    <linearGradient id="bass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7fb0f0"/>
-      <stop offset="1" stop-color="#39608f"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="128" height="128" rx="24" fill="url(#bg)"/>
-  <rect x="1" y="1" width="126" height="126" rx="23" fill="none" stroke="#31486b" stroke-width="2"/>
-
-  <!-- Melody: five chunky blocks, one amber peak. -->
-  <g fill="url(#mint)">
-    <rect x="16" y="50" width="14" height="14" rx="2"/>
-    <rect x="36" y="38" width="14" height="14" rx="2"/>
-    <rect x="76" y="38" width="14" height="14" rx="2"/>
-    <rect x="96" y="50" width="14" height="14" rx="2"/>
-  </g>
-  <rect x="56" y="26" width="14" height="14" rx="2" fill="#ffca57"/>
-
-  <!-- Bass: three blocks, lower and wider to read at 16px. -->
-  <g fill="url(#bass)">
-    <rect x="16" y="94" width="18" height="14" rx="2"/>
-    <rect x="42" y="86" width="18" height="14" rx="2"/>
-    <rect x="94" y="94" width="18" height="14" rx="2"/>
-  </g>
-  <rect x="68" y="86" width="18" height="14" rx="2" fill="url(#bass)"/>
+  <defs><linearGradient id="tile" x1="0" y1="0" x2="0.55" y2="1">
+    <stop offset="0" stop-color="#2b1d21"/><stop offset="1" stop-color="#130c0f"/>
+  </linearGradient></defs>
+  <rect width="128" height="128" rx="24" fill="url(#tile)"/>
+  <rect x=".5" y=".5" width="127" height="127" rx="23.5" fill="none" stroke="#3e2b30"/>
+  <path fill="#000000" fill-opacity="0.5" d="M80 44h4v4h-4zM80 48h4v4h-4zM80 52h4v4h-4zM80 56h4v4h-4zM80 60h4v4h-4zM80 64h4v4h-4zM116 64h4v4h-4zM80 68h4v4h-4zM116 68h4v4h-4zM80 72h4v4h-4zM112 72h8v4h-8zM80 76h4v4h-4zM80 80h4v4h-4zM80 84h4v4h-4zM80 88h4v4h-4zM80 92h4v4h-4zM72 96h12v4h-12zM72 100h4v4h-4zM68 104h8v4h-8zM60 108h12v4h-12zM36 112h28v4h-28z"/>
+  <path fill="#480d13" d="M64 4h20v4h-20zM60 8h8v4h-8zM80 8h8v4h-8zM60 12h4v4h-4zM84 12h8v4h-8zM60 16h4v4h-4zM88 16h4v4h-4zM60 20h4v4h-4zM88 20h8v4h-8zM60 24h4v4h-4zM92 24h8v4h-8zM60 28h4v4h-4zM96 28h8v4h-8zM60 32h4v4h-4zM100 32h4v4h-4zM60 36h4v4h-4zM76 36h8v4h-8zM100 36h8v4h-8zM60 40h4v4h-4zM76 40h12v4h-12zM104 40h8v4h-8zM60 44h4v4h-4zM76 44h4v4h-4zM84 44h8v4h-8zM108 44h4v4h-4zM60 48h4v4h-4zM76 48h4v4h-4zM88 48h4v4h-4zM108 48h4v4h-4zM60 52h4v4h-4zM76 52h4v4h-4zM88 52h8v4h-8zM108 52h8v4h-8zM60 56h4v4h-4zM76 56h4v4h-4zM92 56h8v4h-8zM112 56h4v4h-4zM60 60h4v4h-4zM76 60h4v4h-4zM96 60h4v4h-4zM112 60h4v4h-4zM44 64h20v4h-20zM76 64h4v4h-4zM96 64h8v4h-8zM112 64h4v4h-4zM28 68h20v4h-20zM56 68h8v4h-8zM76 68h4v4h-4zM100 68h16v4h-16zM24 72h8v4h-8zM76 72h4v4h-4zM20 76h8v4h-8zM76 76h4v4h-4zM16 80h8v4h-8zM76 80h4v4h-4zM16 84h4v4h-4zM76 84h4v4h-4zM16 88h4v4h-4zM76 88h4v4h-4zM16 92h4v4h-4zM68 92h12v4h-12zM16 96h4v4h-4zM68 96h4v4h-4zM16 100h8v4h-8zM64 100h8v4h-8zM20 104h8v4h-8zM56 104h12v4h-12zM24 108h36v4h-36z"/>
+  <path fill="#d6293a" d="M68 8h12v4h-12zM64 12h20v4h-20zM64 16h24v4h-24zM64 20h24v4h-24zM64 24h28v4h-28zM64 28h32v4h-32zM64 32h36v4h-36zM64 36h12v4h-12zM84 36h16v4h-16zM64 40h12v4h-12zM88 40h16v4h-16zM64 44h12v4h-12zM92 44h16v4h-16zM64 48h12v4h-12zM92 48h16v4h-16zM64 52h12v4h-12zM96 52h12v4h-12zM64 56h12v4h-12zM100 56h12v4h-12zM64 60h12v4h-12zM100 60h12v4h-12zM64 64h12v4h-12zM104 64h8v4h-8zM48 68h8v4h-8zM64 68h12v4h-12zM32 72h44v4h-44zM28 76h48v4h-48zM24 80h52v4h-52zM20 84h56v4h-56zM20 88h56v4h-56zM20 92h48v4h-48zM20 96h48v4h-48zM24 100h40v4h-40zM28 104h28v4h-28z"/>
+  <path fill="#ff5560" d="M76 8h4v4h-4zM80 12h4v4h-4zM84 16h4v4h-4zM88 24h4v4h-4zM92 28h4v4h-4zM96 32h4v4h-4zM84 36h4v4h-4zM88 40h4v4h-4zM100 40h4v4h-4zM104 44h4v4h-4zM92 48h4v4h-4zM96 52h4v4h-4zM108 56h4v4h-4zM100 60h4v4h-4zM104 64h4v4h-4zM52 68h4v4h-4zM20 96h4v4h-4zM24 100h4v4h-4zM28 104h4v4h-4z"/>
+  <path fill="#ffa8a8" d="M68 8h8v4h-8zM64 12h8v4h-8zM64 16h4v4h-4zM64 20h4v4h-4zM64 24h4v4h-4zM64 28h4v4h-4zM64 32h4v4h-4zM64 36h4v4h-4zM64 40h4v4h-4zM64 44h4v4h-4zM92 44h4v4h-4zM64 48h4v4h-4zM64 52h4v4h-4zM64 56h4v4h-4zM100 56h4v4h-4zM64 60h4v4h-4zM64 64h4v4h-4zM48 68h4v4h-4zM64 68h4v4h-4zM32 72h20v4h-20zM56 72h12v4h-12zM28 76h8v4h-8zM24 80h8v4h-8zM20 84h8v4h-8zM20 88h4v4h-4zM20 92h4v4h-4z"/>
 </svg>
