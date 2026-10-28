@@ -189,7 +189,10 @@ export type HarmonyRule =
   | "OUT_OF_KEY"
   | "MINOR_SECOND_CLASH"
   | "HARMONY_GAP"
-  | "HARMONY_ZERO_LENGTH";
+  | "HARMONY_ZERO_LENGTH"
+  | "LOOP_HARMONY_RETURN"
+  | "LOOP_MELODY_UNRESOLVED"
+  | "LOOP_RHYTHM_OPEN";
 
 export type HarmonyFinding = {
   rule: HarmonyRule;
@@ -527,6 +530,88 @@ export function harmonyFindings(c: CompiledScore): HarmonyFinding[] {
           "info",
         );
     }
+
+  // ------------------------------------------------------------------
+  // Loop closure: does the last bar lead back to the first?
+  // ------------------------------------------------------------------
+  if (s.export.mode === "loop" && windows.length) {
+    const first = windows[0]!;
+    const last = windows[windows.length - 1]!;
+    const lastBar = Math.floor((s.lengthBeats - 1e-6) / barBeats);
+    const finalWindow = chordAt(windows, s.lengthBeats - 1e-6) ?? last;
+    // A loop is musically closed when the closing chord leads to the opening
+    // one: identical chord, or a dominant-tonic relationship.
+    const rootGap = (first.root - finalWindow.root + 12) % 12;
+    const endsOnTonic = first.root === finalWindow.root;
+    const dominantPrep = rootGap === 5 || rootGap === 7;
+    if (!endsOnTonic && !dominantPrep)
+      emit(
+        "LOOP_HARMONY_RETURN",
+        [],
+        finalWindow.at,
+        s.lengthBeats,
+        [],
+        {
+          firstChord: first.symbol,
+          lastChord: finalWindow.symbol,
+          intervalSemitones: rootGap,
+        },
+        `Loop ends on ${finalWindow.symbol} but reopens on ${first.symbol}; the seam may sound like a restart`,
+        [
+          "End on the opening chord, a dominant of it, or a suspended version that resolves at beat 0.",
+          "If the abrupt return is intentional, keep it and ignore this finding.",
+        ],
+        "warning",
+      );
+
+    // Melody should not be cut off mid-phrase at the seam.
+    const melodyTracks = s.tracks.filter((t) => t.role === "melody");
+    for (const track of melodyTracks) {
+      const evs = (byTrack.get(track.id) ?? [])
+        .slice()
+        .sort((a, b) => a.tick - b.tick);
+      const lastNote = evs.at(-1);
+      if (!lastNote) continue;
+      const tailStart = beatOf(lastNote);
+      const barStart = Math.floor(tailStart / barBeats) * barBeats;
+      const isLastBar = Math.floor(tailStart / barBeats) === lastBar;
+      const longHeld = lastNote.durationTicks / c.ppq > barBeats / 2;
+      if (!isLastBar && s.lengthBeats - tailStart > barBeats / 2)
+        emit(
+          "LOOP_MELODY_UNRESOLVED",
+          [track.id],
+          barStart,
+          s.lengthBeats,
+          [lastNote],
+          {
+            silenceAtEndBeats: s.lengthBeats - tailStart,
+            lastPitch: pitchName(lastNote.midi!),
+          },
+          `Melody goes quiet for the last ${(s.lengthBeats - tailStart).toFixed(2)} beats before the loop point`,
+          [
+            "Write a phrase ending that hands back to the opening motif, or make the silence deliberate.",
+          ],
+          "info",
+        );
+      else if (isLastBar && longHeld && !lastNote.cutTick)
+        emit(
+          "LOOP_MELODY_UNRESOLVED",
+          [track.id],
+          tailStart,
+          s.lengthBeats,
+          [lastNote],
+          {
+            heldIntoLoop: (lastNote.endTick - lastNote.tick) / c.ppq,
+            lastPitch: pitchName(lastNote.midi!),
+          },
+          `A ${pitchName(lastNote.midi!)} is held across the loop point`,
+          [
+            "A long note over the seam blurs the downbeat; shorten it or let it resolve on the opening chord.",
+          ],
+          "info",
+        );
+    }
+  }
 
   return findings;
 }

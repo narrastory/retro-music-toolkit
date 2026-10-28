@@ -2,6 +2,7 @@
   "schemaVersion": "1.0",
   "title": "Neon Overpass",
   "profile": "genesis-inspired",
+  "authenticity": "modern",
   "tempo": 116,
   "meter": [
     4,

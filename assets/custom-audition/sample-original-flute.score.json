@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "instrumentDefinitions": [
     {
       "id": "fm-celestial-lead",
@@ -84,6 +84,7 @@
   },
   "title": "Audition: sample-original-flute",
   "profile": "snes-inspired",
+  "authenticity": "modern",
   "tempo": 120,
   "meter": [
     4,

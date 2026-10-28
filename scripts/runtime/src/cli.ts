@@ -23,6 +23,7 @@ import { patchScoreWithReport } from "./patch.js";
 import { renderScore } from "./renderer.js";
 import { analyzeChannels } from "./analysis.js";
 import { compareRenders } from "./compare.js";
+import { buildReportHtml, describeScore, renderPianoRoll } from "./report.js";
 import { decodeWav } from "./wav.js";
 import { beatsPerBar } from "./model.js";
 import { TOOLKIT_VERSION } from "./version.js";
@@ -52,6 +53,10 @@ Commands
   analyze AUDIO.wav
   compare A.wav B.wav [C.wav...]    level-matched A/B export
          --out ab.wav [--match-rms -24] [--gap 0.5]
+  report SCORE.json --out report.html [--wav song.wav]
+                                    piano-roll + structure + signal report
+  describe SCORE.json               text summary of the music
+  roll SCORE.json --out roll.svg    standalone piano roll
   schema [--out FILE]               print the JSON Schema
   example                           print a minimal valid score
   version
@@ -113,6 +118,8 @@ const { positionals, values } = (() => {
         limiter: { type: "string" },
         "no-limiter": { type: "boolean" },
         gap: { type: "string" },
+        wav: { type: "string" },
+        svg: { type: "boolean" },
       },
     });
   } catch (e) {
@@ -211,7 +218,7 @@ function resolveRange(data: unknown) {
 
 function minimalExample() {
   return {
-    schemaVersion: "1.2",
+    schemaVersion: "1.3",
     title: "Minimal phrase",
     profile: "nes-inspired",
     tempo: 120,
@@ -512,6 +519,32 @@ async function main() {
       file: resolve(values.out),
       parentHash: sha(text),
       ...result.report,
+    });
+    return;
+  }
+  if (command === "describe") {
+    print({ text: describeScore(compileScore(data)) });
+    return;
+  }
+  if (command === "roll") {
+    if (!values.out) throw new ToolkitError("MISSING_OUT", "--out is required");
+    await preflight([values.out]);
+    const svg = renderPianoRoll(compileScore(data));
+    await output(values.out, svg);
+    print({ svg: resolve(values.out), bytes: svg.length });
+    return;
+  }
+  if (command === "report") {
+    if (!values.out) throw new ToolkitError("MISSING_OUT", "--out is required");
+    await preflight([values.out]);
+    const compiled = compileScore(data);
+    const audio = values.wav ? await readFile(values.wav) : undefined;
+    const html = buildReportHtml(compiled, audio);
+    await output(values.out, html);
+    print({
+      html: resolve(values.out),
+      bytes: html.length,
+      wav: values.wav ? resolve(values.wav) : null,
     });
     return;
   }

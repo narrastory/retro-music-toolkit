@@ -1,5 +1,5 @@
 {
-  "toolkitVersion": "1.0.0",
+  "toolkitVersion": "1.1.0",
   "normalization": {
     "targetRmsDbfs": -24,
     "peakCeilingDbfs": -3,
@@ -14,7 +14,7 @@
       "peakDbfs": -9.446559065735503,
       "truePeakDbfs": -9.446559065735503,
       "rmsDbfs": -24.00000000030035,
-      "loudnessLufs": -19.78,
+      "loudnessLufs": -17.69,
       "appliedGainDb": 12.677259931506804,
       "limitedBy": "target",
       "audioHash": "c651cbb45058982771fa44d8be788f44b906ac73fee9ccd06c9ca3ae3f5099b7"

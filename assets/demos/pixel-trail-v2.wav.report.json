@@ -3,26 +3,31 @@
   "channels": 2,
   "frames": 1282909,
   "durationSeconds": 29.09090702947846,
-  "peak": 0.2681727707386017,
-  "peakDbfs": -11.431706417705602,
-  "rms": 0.054182477644769765,
-  "rmsDbfs": -25.322822790468575,
-  "dcMean": -0.00046163408195363896,
+  "peak": 0.26794469356536865,
+  "peakDbfs": -11.439096787940045,
+  "truePeakDbfs": -11.439096787940045,
+  "rms": 0.054182474565954444,
+  "rmsDbfs": -25.3228232840276,
+  "loudnessLufs": -22.27,
+  "dcMean": -0.0004616465636506216,
   "clippedSamples": 0,
   "nonFiniteSamples": 0,
   "silent": false,
-  "boundaryJump": 3.65165869880002e-05,
-  "maxAdjacentStep": 0.09207077696919441,
+  "boundaryJump": 0.000036516590625979006,
+  "maxAdjacentStep": 0.09207078255712986,
   "boundarySuspicious": false,
-  "limitations": "Sample-peak and RMS only; not LUFS/true peak or aesthetic evaluation. Boundary metric alone cannot prove seamlessness.",
-  "cycleDifferenceRms": 0.03166280649583362,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.03166280749262094,
   "cycleComparison": {
-    "differenceRms": 0.03166280649583362,
-    "signalRms": 0.054182477644769765,
-    "relativeDifference": 0.5843735442188667
+    "differenceRms": 0.03166280749262094,
+    "signalRms": 0.054182474565954444,
+    "relativeDifference": 0.5843735958216324
   },
   "cycleMeasurementStage": "before-normalization",
   "normalization": null,
+  "limiter": null,
+  "dither": false,
+  "loopCrossfadeBeats": 0,
   "render": {
     "mode": "loop",
     "fromBeat": 0,
@@ -30,59 +35,19 @@
     "warmupCycles": 3,
     "loopFrames": 1282909,
     "seamPreview": false,
-    "effects": "mix"
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": false,
+    "limiter": null
   },
-  "diagnostics": [
-    {
-      "severity": "info",
-      "code": "VOICE_STEAL",
-      "message": "drums: voice 0 occupied at beat 16; explicit cut policy applied",
-      "trackId": "drums",
-      "eventIds": [
-        "drums-clip-3/0/drums-b3-fill",
-        "drums-clip-4/0/drums-b4-h0"
-      ],
-      "beat": 16
-    },
-    {
-      "severity": "info",
-      "code": "VOICE_STEAL",
-      "message": "drums: voice 0 occupied at beat 32; explicit cut policy applied",
-      "trackId": "drums",
-      "eventIds": [
-        "drums-clip-7/0/drums-b7-fill",
-        "drums-clip-8/0/drums-b8-h0"
-      ],
-      "beat": 32
-    },
-    {
-      "severity": "info",
-      "code": "VOICE_STEAL",
-      "message": "drums: voice 0 occupied at beat 48; explicit cut policy applied",
-      "trackId": "drums",
-      "eventIds": [
-        "drums-clip-11/0/drums-b11-fill",
-        "drums-clip-12/0/drums-b12-h0"
-      ],
-      "beat": 48
-    },
-    {
-      "severity": "info",
-      "code": "LOOP_VOICE_STEAL",
-      "message": "drums: tail overlaps the next loop on voice 0",
-      "trackId": "drums",
-      "eventIds": [
-        "drums-clip-15/0/drums-b15-fill",
-        "drums-clip-0/0/drums-b0-h0"
-      ]
-    }
-  ],
+  "diagnostics": [],
   "title": "Pixel Trail — v0.2 variation",
-  "engine": "Tone.js 15.1.22 / Chromium / PCM16",
+  "engine": "Tone.js / Chromium / PCM16",
   "seed": 427,
-  "toolkitVersion": "0.2.0",
+  "toolkitVersion": "1.1.0",
+  "schemaVersion": "1.0",
   "loopDiagnostics": null,
-  "sourceHash": "fb80c091c929065bd345d39fbc0ee73cdcc8c0c2a59234d397de316d8377cd7f",
-  "audioHash": "56d9de9243324ca162537369f32943dbd9bcf56a5b5b5e97cbb7b9663fe44c2f",
-  "sourceFile": "scripts/runtime/examples/pixel-trail.json (patched by examples/v2-variation.patch.json)"
+  "sourceHash": "7288801644176f54ca3209155c102c7e7a359f842a47165a641665a04aaf3a84",
+  "audioHash": "72202da6fa718d70f333c056d218ed2f1d44fac0829cbce10698be2f494630eb",
+  "sourceFile": "/tmp/rm-verify/out/pv2.json"
 }

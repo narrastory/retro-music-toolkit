@@ -86,9 +86,11 @@ export async function renderInBrowser(
     return node;
   };
   let result: Tone.ToneAudioBuffer | undefined;
+  let echoBus: Tone.Gain | undefined;
   try {
     result = await Tone.Offline(
       () => {
+        const hardware = s.authenticity === "hardware";
         const master = own(
           new Tone.Gain(Tone.dbToGain(s.mixer.masterDb)),
         ).toDestination();
@@ -105,6 +107,41 @@ export async function renderInBrowser(
           ),
         ).connect(master);
         delay.connect(ret);
+        // SNES-style eight-tap FIR echo: a multi-tap delay whose summed taps
+        // feed back, which is what gives the platform its signature tail.
+        const echoCfg = s.mixer.echo;
+        const echoOn =
+          !!echoCfg?.enabled &&
+          options.effects !== "dry" &&
+          (hardware || echoCfg !== undefined);
+        if (echoOn && echoCfg) {
+          const echoIn = own(new Tone.Gain(1));
+          // Feedback must be taken from the summed taps *before* the return
+          // gain; otherwise returnDb silently scales the feedback amount.
+          const echoSum = own(new Tone.Gain(1));
+          const echoOut = own(
+            new Tone.Gain(
+              options.effects === "wet" ? 0 : Tone.dbToGain(echoCfg.returnDb),
+            ),
+          ).connect(master);
+          echoSum.connect(echoOut);
+          const taps = Array.from(
+            { length: 8 },
+            (_, i) => echoCfg.taps[i] ?? 0,
+          );
+          const echoDelay = echoCfg.delayBeats * spb;
+          for (let i = 0; i < taps.length; i++) {
+            if (taps[i] === 0) continue;
+            const tap = own(
+              new Tone.Delay({ delayTime: echoDelay * (i + 1), maxDelay: 8 }),
+            ).connect(own(new Tone.Gain(taps[i]!)).connect(echoSum));
+            echoIn.connect(tap);
+          }
+          const fb = own(new Tone.Gain(echoCfg.feedback));
+          echoSum.connect(fb);
+          fb.connect(echoIn);
+          echoBus = echoIn;
+        }
         for (const t of s.tracks) {
           if (options.solo && !options.solo.includes(t.id)) continue;
           const p = preset(t.instrument, s);
@@ -113,15 +150,19 @@ export async function renderInBrowser(
             new Tone.Gain(options.effects === "wet" ? 0 : 1),
           ).connect(master);
           const bus = own(new Tone.Panner(t.pan)).connect(dry);
-          const filter = own(
-            new Tone.Filter({
-              frequency: 1200 + t.controls.brightness * 12000,
-              type: "lowpass",
-              Q: 0.3,
-            }),
-          ).connect(bus);
+          // Hardware mode removes the safety low-pass: a real 2A03 pulse channel
+          // has no filter, and the softening is what made the voices feel modern.
+          const filter = hardware
+            ? undefined
+            : own(
+                new Tone.Filter({
+                  frequency: 1200 + t.controls.brightness * 12000,
+                  type: "lowpass",
+                  Q: 0.3,
+                }),
+              ).connect(bus);
           const gain = own(new Tone.Gain(Tone.dbToGain(t.gainDb))).connect(
-            filter,
+            filter ?? bus,
           );
           const automate = (
             param: {
@@ -150,12 +191,13 @@ export async function renderInBrowser(
           };
           automate(gain.gain, "gainDb", t.gainDb, Tone.dbToGain);
           automate(bus.pan, "pan", t.pan, (v) => v);
-          automate(
-            filter.frequency,
-            "brightness",
-            t.controls.brightness,
-            (v) => 1200 + v * 12000,
-          );
+          if (filter)
+            automate(
+              filter.frequency,
+              "brightness",
+              t.controls.brightness,
+              (v) => 1200 + v * 12000,
+            );
           if (
             t.send > 0 ||
             t.automation?.some(
@@ -165,6 +207,8 @@ export async function renderInBrowser(
           ) {
             const send = own(new Tone.Gain(t.send)).connect(delay);
             gain.connect(send);
+            if (echoBus)
+              gain.connect(own(new Tone.Gain(t.send))).connect(echoBus);
             automate(send.gain, "send", t.send, (v) => v);
           }
           const trackEvents = events.filter(
@@ -239,6 +283,27 @@ export async function renderInBrowser(
                 own(toneBufferFromChannels(asset.channels, asset.sampleRate)),
               );
             }
+          // Physical-layer constraints. A 2A03 pulse channel has exactly three
+          // duty cycles (12.5 / 25 / 50 %) and 16 discrete volume levels, so
+          // hardware mode snaps to those steps; modern mode keeps them smooth.
+          const dutyCycle = (() => {
+            const w = p.synthesis?.pulseWidth ?? 0;
+            if (!hardware) return w;
+            const options = [0.5, 0.25, 0.125];
+            return options.reduce(
+              (best, o) => (Math.abs(o - w) < Math.abs(best - w) ? o : best),
+              options[0]!,
+            );
+          })();
+          const volumeStep = (db: number) => {
+            if (!hardware) return db;
+            // 16 linear steps over the full range; quantise in dB space with a
+            // floor so quiet tracks stay audible.
+            const lin = Tone.dbToGain(db);
+            const steps = 15;
+            const quantised = Math.round(lin * steps) / steps;
+            return quantised <= 0 ? -60 : Tone.gainToDb(quantised);
+          };
           const env = {
             attack: p.attack,
             decay:
@@ -286,7 +351,7 @@ export async function renderInBrowser(
                         sustain: 0.08,
                         release: 0.04,
                       },
-                      volume: p.synthesis?.volumeDb ?? -7,
+                      volume: volumeStep(p.synthesis?.volumeDb ?? -7),
                     }),
                   ).connect(expressionGain)
                 : own(
@@ -294,12 +359,9 @@ export async function renderInBrowser(
                       oscillator:
                         p.engine === "triangle"
                           ? { type: "triangle" }
-                          : {
-                              type: "pulse",
-                              width: p.synthesis?.pulseWidth ?? 0,
-                            },
+                          : { type: "pulse", width: dutyCycle },
                       envelope: env,
-                      volume: p.synthesis?.volumeDb ?? -7,
+                      volume: volumeStep(p.synthesis?.volumeDb ?? -7),
                     }),
                   ).connect(expressionGain);
             return {

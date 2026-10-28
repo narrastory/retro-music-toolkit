@@ -10,7 +10,7 @@ export { DrumSoundSchema, type DrumSound } from "./instrument-model.js";
 /** Ticks per quarter note. Triplets (3, 6, 12 subdivisions) map to exact integers. */
 export const PPQ = 960;
 /** Preferred schema for new work; 1.0 and 1.1 remain accepted. */
-export const SCORE_SCHEMA_VERSION = "1.2";
+export const SCORE_SCHEMA_VERSION = "1.3";
 
 const beat = z.number().min(0).max(4096);
 const duration = z.number().positive().max(4096);
@@ -80,6 +80,17 @@ export const ClipSchema = z.strictObject({
   velocityScale: z.number().min(0).max(2).default(1),
   mute: z.boolean().default(false),
 });
+export const ArpeggioSchema = z.strictObject({
+  enabled: z.boolean().default(true),
+  /** Pitch steps per beat. 16 at 120 BPM is 32 steps/second. */
+  rate: z.number().min(1).max(32).default(16),
+  /** Fraction of each step the pitch is held; 1 keeps the envelope continuous. */
+  gate: z.number().min(0.05).max(1).default(1),
+  /** Ascending cycle order, or "as-written" to keep the authored order. */
+  order: z.enum(["up", "down", "updown", "as-written"]).default("up"),
+});
+export type ArpeggioConfig = z.infer<typeof ArpeggioSchema>;
+
 export const HumanizeSchema = z.strictObject({
   timingBeats: z.number().min(0).max(0.25).default(0),
   velocity: z.number().min(0).max(0.5).default(0),
@@ -98,6 +109,12 @@ export const TrackSchema = z.strictObject({
   /** Grid the swing displaces; 0.5 = eighth notes, 0.25 = sixteenths. */
   swingUnit: z.number().min(0.0625).max(2).default(0.5),
   humanize: HumanizeSchema.optional(),
+  /**
+   * Single-voice chord arpeggio. Notes that start together are merged into one
+   * voice whose pitch steps rapidly through the chord tones, the standard way a
+   * one-channel sound chip fakes a chord.
+   */
+  arpeggio: ArpeggioSchema.optional(),
   controls: z
     .strictObject({
       brightness: z.number().min(0).max(1).default(0.5),
@@ -112,12 +129,33 @@ export const KeySchema = z.strictObject({
   tonic: z.string().regex(/^[A-G](?:#|b)?$/),
   mode: z.enum(["major", "minor"]),
 });
+export const EchoSchema = z.strictObject({
+  enabled: z.boolean().default(true),
+  delayBeats: z.number().min(0.0625).max(4).default(0.5),
+  feedback: z.number().min(0).max(0.9).default(0.35),
+  /** Coefficients for taps 0..7; shorter arrays are padded with zeros. */
+  taps: z
+    .array(z.number().min(-1).max(1))
+    .min(1)
+    .max(8)
+    .default([0.6, -0.3, 0.2, -0.1]),
+  returnDb: z.number().min(-60).max(0).default(-14),
+});
+export type EchoConfig = z.infer<typeof EchoSchema>;
+
 export const ScoreSchema = z.strictObject({
-  schemaVersion: z.enum(["1.0", "1.1", "1.2"]),
+  schemaVersion: z.enum(["1.0", "1.1", "1.2", "1.3"]),
   instrumentDefinitions: z.array(InstrumentDefinitionSchema).max(64).optional(),
   sampleAssets: z.record(z.string(), SampleAssetSchema).optional(),
   title: z.string().min(1).max(120),
   profile: z.enum(["nes-inspired", "genesis-inspired", "snes-inspired"]),
+  /**
+   * "modern" uses the toolkit's polished voice; "hardware" removes the safety
+   * low-pass, quantises pulse duty cycles and volume, and enables the SNES echo
+   * when the profile is snes-inspired. It is an audible approximation, not a
+   * bit-accurate emulation.
+   */
+  authenticity: z.enum(["modern", "hardware"]).default("modern"),
   tempo: z.number().min(30).max(300),
   meter: z.tuple([
     z.number().int().min(1).max(16),
@@ -158,6 +196,11 @@ export const ScoreSchema = z.strictObject({
       delayBeats: z.number().min(0.0625).max(4).default(0.75),
       feedback: z.number().min(0).max(0.65).default(0.22),
       returnDb: z.number().min(-60).max(0).default(-12),
+      /**
+       * Eight-tap FIR echo, the SNES signature. Each tap is an additional
+       * multiple of delayBeats; the summed taps feed back into the line.
+       */
+      echo: EchoSchema.optional(),
     })
     .default({ masterDb: -6, delayBeats: 0.75, feedback: 0.22, returnDb: -12 }),
   export: z

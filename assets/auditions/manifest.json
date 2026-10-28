@@ -1,5 +1,5 @@
 {
-  "toolkitVersion": "1.0.0",
+  "toolkitVersion": "1.1.0",
   "normalization": {
     "targetRmsDbfs": -24,
     "peakCeilingDbfs": -3,
@@ -14,7 +14,7 @@
       "peakDbfs": -10.72024720335887,
       "truePeakDbfs": -10.72024720335887,
       "rmsDbfs": -24.000000034171038,
-      "loudnessLufs": -19.15,
+      "loudnessLufs": -17.44,
       "appliedGainDb": 10.222289362393163,
       "limitedBy": "target",
       "audioHash": "c21b81dd881219f6f3147079a4d9ca0919840265ba8fd0ffcb4b2f33345218c9"
@@ -27,7 +27,7 @@
       "peakDbfs": -3.0000002493010487,
       "truePeakDbfs": -3.0000002493010487,
       "rmsDbfs": -25.04029380078888,
-      "loudnessLufs": -22.25,
+      "loudnessLufs": -19.75,
       "appliedGainDb": 18.06346750878027,
       "limitedBy": "peak-ceiling",
       "audioHash": "2e316b7efe6e832db7f60d3ec5102566b848f37e58ea9e0abe01ca504e8f2810"
@@ -40,7 +40,7 @@
       "peakDbfs": -9.0679121339755,
       "truePeakDbfs": -9.066029620278597,
       "rmsDbfs": -23.99999999911263,
-      "loudnessLufs": -20.94,
+      "loudnessLufs": -19.33,
       "appliedGainDb": 15.002819074138188,
       "limitedBy": "target",
       "audioHash": "041db404b1a9a4f5b8b541e9864ef1186aeb0cd62b1150d5fa0da517741a4580"
@@ -53,7 +53,7 @@
       "peakDbfs": -3.0000002493010487,
       "truePeakDbfs": -3.0000002493010487,
       "rmsDbfs": -26.533057461433533,
-      "loudnessLufs": -25.52,
+      "loudnessLufs": -21.93,
       "appliedGainDb": 16.74549881723076,
       "limitedBy": "peak-ceiling",
       "audioHash": "a3d6279cd6057508c712f66a500f821c6d74cf402062bdc017de52d431788228"
@@ -66,7 +66,7 @@
       "peakDbfs": -9.923152428802837,
       "truePeakDbfs": -9.889483320836217,
       "rmsDbfs": -24.000000000540787,
-      "loudnessLufs": -20.01,
+      "loudnessLufs": -17.92,
       "appliedGainDb": 23.061741611100757,
       "limitedBy": "target",
       "audioHash": "fd6efec036f3cec2a435931800c60633bc09e0a956644205cbeb3d7fcc027cbd"
@@ -79,7 +79,7 @@
       "peakDbfs": -10.787371419617998,
       "truePeakDbfs": -10.773064251439877,
       "rmsDbfs": -24.0000000003731,
-      "loudnessLufs": -21.59,
+      "loudnessLufs": -20.01,
       "appliedGainDb": 23.169424291621446,
       "limitedBy": "target",
       "audioHash": "44e27a1c3de5bf61e313c9ba551474478f92b5d3ebb40bfd44811a3ea760cd23"
@@ -92,7 +92,7 @@
       "peakDbfs": -10.271634006109851,
       "truePeakDbfs": -10.271634006109851,
       "rmsDbfs": -23.99999999893931,
-      "loudnessLufs": -20.22,
+      "loudnessLufs": -18.45,
       "appliedGainDb": 23.20057235120079,
       "limitedBy": "target",
       "audioHash": "b40493815eafc438a94b850057bedd060415b4fa1769263e543fa06f34043341"
@@ -105,7 +105,7 @@
       "peakDbfs": -10.44562605425521,
       "truePeakDbfs": -10.437255715903472,
       "rmsDbfs": -23.99999999965075,
-      "loudnessLufs": -19.84,
+      "loudnessLufs": -17.77,
       "appliedGainDb": 11.203455078969654,
       "limitedBy": "target",
       "audioHash": "d3906d7928f1a73748cca12f19d4d79674eba9b5ddf058200bf6644881ee5f1a"
@@ -118,7 +118,7 @@
       "peakDbfs": -9.883834653038866,
       "truePeakDbfs": -9.850365782352188,
       "rmsDbfs": -24.00000000191415,
-      "loudnessLufs": -20.48,
+      "loudnessLufs": -18.73,
       "appliedGainDb": 10.862311547038821,
       "limitedBy": "target",
       "audioHash": "e49a8e6c68eb8d92e9c9d3d59cd02ca5c8a4fc2b6422353d661d81b2bdcd1a1b"
@@ -131,7 +131,7 @@
       "peakDbfs": -10.811980743710581,
       "truePeakDbfs": -10.811980743710581,
       "rmsDbfs": -23.999999999260908,
-      "loudnessLufs": -21.42,
+      "loudnessLufs": -19.84,
       "appliedGainDb": 10.884912543378313,
       "limitedBy": "target",
       "audioHash": "3dbf157c4148c9c3bfe1dfde0af13a3fb3cd9092e6f81611a7aa851a4436d7bb"
@@ -144,7 +144,7 @@
       "peakDbfs": -3.0000002493010487,
       "truePeakDbfs": -2.9913517075112663,
       "rmsDbfs": -28.488591479437826,
-      "loudnessLufs": -24.05,
+      "loudnessLufs": -20.86,
       "appliedGainDb": 17.85959073255235,
       "limitedBy": "peak-ceiling",
       "audioHash": "3aa4c1473a34713dcdbfabe4f682288d73f774537828a85c16fc8d311b42a8aa"

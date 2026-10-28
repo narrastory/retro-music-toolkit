@@ -2,6 +2,7 @@
   "schemaVersion": "1.0",
   "title": "Moss Gate",
   "profile": "nes-inspired",
+  "authenticity": "modern",
   "tempo": 120,
   "meter": [
     4,

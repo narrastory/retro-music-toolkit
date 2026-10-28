@@ -27,7 +27,7 @@ export async function importInstrument(
 ) {
   const score = ScoreSchema.parse(input),
     pack = InstrumentPackageSchema.parse(definition);
-  score.schemaVersion = "1.2";
+  score.schemaVersion = "1.3";
   score.instrumentDefinitions ??= [];
   score.sampleAssets ??= {};
   if (score.instrumentDefinitions.some((p) => p.id === pack.instrument.id))

@@ -5,11 +5,11 @@
   "durationSeconds": 35.55555555555556,
   "peak": 0.31632372736930847,
   "peakDbfs": -9.99736461068486,
-  "truePeakDbfs": -9.992283390685701,
-  "rms": 0.0630957344504131,
-  "rmsDbfs": -23.999999999670468,
-  "loudnessLufs": -22.03,
-  "dcMean": 0.00012522165518423208,
+  "truePeakDbfs": -9.992283355001552,
+  "rms": 0.06309573444811668,
+  "rmsDbfs": -23.999999999986596,
+  "loudnessLufs": -21.6,
+  "dcMean": 0.0001252216572841284,
   "clippedSamples": 0,
   "nonFiniteSamples": 0,
   "silent": false,
@@ -17,19 +17,19 @@
   "maxAdjacentStep": 0.06369095109403133,
   "boundarySuspicious": false,
   "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
-  "cycleDifferenceRms": 6.175123365516275e-9,
+  "cycleDifferenceRms": 6.174916570026912e-9,
   "cycleComparison": {
-    "differenceRms": 6.175123365516275e-9,
-    "signalRms": 0.040310476487746535,
-    "relativeDifference": 1.5318904422758117e-7
+    "differenceRms": 6.174916570026912e-9,
+    "signalRms": 0.040310476494624534,
+    "relativeDifference": 1.5318391413334812e-7
   },
   "cycleMeasurementStage": "before-normalization",
   "normalization": {
     "targetRmsDbfs": -24,
     "peakCeilingDbfs": -3,
     "maxBoostDb": 18,
-    "requestedGainDb": 3.891641365256529,
-    "appliedGainDb": 3.891641365256529,
+    "requestedGainDb": 3.891641363774493,
+    "appliedGainDb": 3.891641363774493,
     "limitedBy": "target",
     "before": {
       "sampleRate": 44100,
@@ -38,11 +38,11 @@
       "durationSeconds": 35.55555555555556,
       "peak": 0.2020922601222992,
       "peakDbfs": -13.889006381900122,
-      "truePeakDbfs": -13.883924866264163,
-      "rms": 0.040310476487746535,
-      "rmsDbfs": -27.89164136525653,
-      "loudnessLufs": -25.93,
-      "dcMean": 0.00008000136035067521,
+      "truePeakDbfs": -13.883924851018703,
+      "rms": 0.040310476494624534,
+      "rmsDbfs": -27.891641363774493,
+      "loudnessLufs": -25.49,
+      "dcMean": 0.00008000136156001844,
       "clippedSamples": 0,
       "nonFiniteSamples": 0,
       "silent": false,
@@ -58,11 +58,11 @@
       "durationSeconds": 35.55555555555556,
       "peak": 0.31632372736930847,
       "peakDbfs": -9.99736461068486,
-      "truePeakDbfs": -9.992283390685701,
-      "rms": 0.0630957344504131,
-      "rmsDbfs": -23.999999999670468,
-      "loudnessLufs": -22.03,
-      "dcMean": 0.00012522165518423208,
+      "truePeakDbfs": -9.992283355001552,
+      "rms": 0.06309573444811668,
+      "rmsDbfs": -23.999999999986596,
+      "loudnessLufs": -21.6,
+      "dcMean": 0.0001252216572841284,
       "clippedSamples": 0,
       "nonFiniteSamples": 0,
       "silent": false,
@@ -92,132 +92,40 @@
     {
       "severity": "info",
       "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-0-1 is cut at beat 2; the note itself finished",
+      "message": "lead: 11 release tails truncated by the next note (first at beat 2, last at beat 62). The notes themselves finished; only the tails are clipped.",
       "trackId": "lead",
+      "beat": 2,
       "eventIds": [
-        "melody-section-1/0/lead-A-0-1",
-        "melody-section-1/0/lead-A-0-2"
+        "lead-A-0-1",
+        "lead-A-1-1",
+        "lead-A-2-1",
+        "lead-A-3-1",
+        "A-ending:lead-A-0-1",
+        "A-ending:lead-A-1-1",
+        "A-ending:lead-A-2-1",
+        "lead-A-0-1",
+        "lead-A-1-1",
+        "lead-A-2-1",
+        "lead-A-3-1"
       ],
-      "beat": 2
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-1-1 is cut at beat 6; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-1/0/lead-A-1-1",
-        "melody-section-1/0/lead-A-1-2"
-      ],
-      "beat": 6
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-2-1 is cut at beat 10; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-1/0/lead-A-2-1",
-        "melody-section-1/0/lead-A-2-2"
-      ],
-      "beat": 10
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-3-1 is cut at beat 14; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-1/0/lead-A-3-1",
-        "melody-section-1/0/lead-A-3-2"
-      ],
-      "beat": 14
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of A-ending:lead-A-0-1 is cut at beat 18; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-2/0/A-ending:lead-A-0-1",
-        "melody-section-2/0/A-ending:lead-A-0-2"
-      ],
-      "beat": 18
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of A-ending:lead-A-1-1 is cut at beat 22; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-2/0/A-ending:lead-A-1-1",
-        "melody-section-2/0/A-ending:lead-A-1-2"
-      ],
-      "beat": 22
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of A-ending:lead-A-2-1 is cut at beat 26; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-2/0/A-ending:lead-A-2-1",
-        "melody-section-2/0/A-ending:lead-A-2-2"
-      ],
-      "beat": 26
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-0-1 is cut at beat 50; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-4/0/lead-A-0-1",
-        "melody-section-4/0/lead-A-0-2"
-      ],
-      "beat": 50
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-1-1 is cut at beat 54; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-4/0/lead-A-1-1",
-        "melody-section-4/0/lead-A-1-2"
-      ],
-      "beat": 54
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-2-1 is cut at beat 58; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-4/0/lead-A-2-1",
-        "melody-section-4/0/lead-A-2-2"
-      ],
-      "beat": 58
-    },
-    {
-      "severity": "info",
-      "code": "RELEASE_CUT",
-      "message": "lead: release tail of lead-A-3-1 is cut at beat 62; the note itself finished",
-      "trackId": "lead",
-      "eventIds": [
-        "melody-section-4/0/lead-A-3-1",
-        "melody-section-4/0/lead-A-3-2"
-      ],
-      "beat": 62
+      "suggestion": {
+        "count": 11,
+        "exampleSourceIds": [
+          "lead-A-0-1",
+          "lead-A-1-1",
+          "lead-A-2-1"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
     }
   ],
   "title": "Starfall Causeway — sample arrangement",
   "engine": "Tone.js / Chromium / PCM16",
   "seed": 731,
-  "toolkitVersion": "1.0.0",
+  "toolkitVersion": "1.1.0",
   "schemaVersion": "1.1",
   "loopDiagnostics": null,
   "sourceHash": "9905c0429aacdb82b5ac9441095f271924f973f3f36116c942c0eec38a5cf0ac",
-  "audioHash": "a5566b1574e4af957dfcf46826d6f361955d79669ea08ebac4380ce2b27aca16",
+  "audioHash": "bf5a0c86f3bd91435110afc2301cf14108b69af61a9784c73b4e67e05a9bfe06",
   "sourceFile": "/Users/ming/MDocument/retro-music/scripts/runtime/examples/v3-starfall-sample.json"
 }

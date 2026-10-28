@@ -450,6 +450,91 @@ export function compileScore(input: unknown): CompiledScore {
       }
     }
   }
+  /**
+   * Single-voice chord arpeggio. Notes that begin on the same tick are merged
+   * into one voice that steps through the chord tones, which is how a
+   * one-channel sound chip sustains a chord. The merge happens before voice
+   * allocation, so the result costs exactly one voice.
+   */
+  for (const t of s.tracks) {
+    const cfg = t.arpeggio;
+    if (!cfg || !cfg.enabled) continue;
+    const stepTicks = Math.max(1, Math.round(PPQ / cfg.rate));
+    const groups = new Map<string, CompiledEvent[]>();
+    for (const e of events) {
+      if (e.trackId !== t.id || e.kind !== "note" || e.midi === undefined)
+        continue;
+      const key = `${e.clipId}@${e.tick}`;
+      const list = groups.get(key);
+      if (list) list.push(e);
+      else groups.set(key, [e]);
+    }
+    const merged = new Map<string, CompiledEvent[]>();
+    const replaced = new Set<CompiledEvent>();
+    for (const [key, group] of groups) {
+      if (group.length < 2) {
+        merged.set(key, group);
+        continue;
+      }
+      const first = group[0]!;
+      const tones = [...new Set(group.map((e) => e.midi!))];
+      let order: number[];
+      switch (cfg.order) {
+        case "down":
+          order = [...tones].sort((a, b) => b - a);
+          break;
+        case "updown":
+          order =
+            tones.length > 2
+              ? [
+                  ...tones.sort((a, b) => a - b),
+                  ...tones
+                    .sort((a, b) => a - b)
+                    .slice(1, -1)
+                    .reverse(),
+                ]
+              : [...tones].sort((a, b) => a - b);
+          break;
+        case "as-written":
+          order = tones;
+          break;
+        case "up":
+        default:
+          order = [...tones].sort((a, b) => a - b);
+          break;
+      }
+      // The merged voice may not extend past the longest authored note.
+      const span = Math.max(...group.map((e) => Math.max(e.durationTicks, 1)));
+      const steps = Math.max(1, Math.floor(span / stepTicks));
+      const generated: CompiledEvent[] = [];
+      for (let i = 0; i < steps; i++) {
+        const tick = first.tick + i * stepTicks;
+        const held = Math.max(1, Math.round(stepTicks * cfg.gate));
+        generated.push({
+          ...first,
+          id: `${first.id}~arp${i}`,
+          sourceId: first.sourceId,
+          midi: order[i % order.length]!,
+          tick,
+          durationTicks: held,
+          keyEndTick: tick + held,
+          endTick: tick + held + (first.endTick - first.keyEndTick),
+          voice: 0,
+          articulation: undefined,
+          expression: undefined,
+          vibrato: undefined,
+        });
+      }
+      for (const e of group) replaced.add(e);
+      merged.set(key, generated);
+    }
+    if (!replaced.size) continue;
+    const kept = events.filter((e) => !(e.trackId === t.id && replaced.has(e)));
+    events.length = 0;
+    events.push(...kept);
+    for (const list of merged.values()) events.push(...list);
+  }
+
   events.sort((a, b) => a.tick - b.tick || a.id.localeCompare(b.id));
 
   /**

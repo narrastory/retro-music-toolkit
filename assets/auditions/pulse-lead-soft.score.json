@@ -1,7 +1,8 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "title": "Audition: pulse-lead-soft",
   "profile": "nes-inspired",
+  "authenticity": "modern",
   "tempo": 120,
   "meter": [
     4,

@@ -28,6 +28,7 @@ JSON → Zod 结构校验 → 引用/时间/边界/采样/和声校验 → patte
 | `analysis.ts` | 峰值/真峰值/RMS/LUFS/直流/削波/边界症状、周期比较 |
 | `normalization.ts` | RMS 匹配、峰值限制 |
 | `compare.ts` | 等响 A/B 拼接导出 |
+| `report.ts` | 钢琴卷帘 SVG、乐曲文字描述、自包含 HTML 报告 |
 | `wav.ts` | PCM16/24/32、float32 解码；`smpl` 块读写；PCM16 编码 |
 | `audition.ts` / `audition-export.ts` | 标准试听谱、试听页、待人工填写的听感记录 |
 | `version.ts` | 版本、Schema 版本、引擎描述的唯一来源 |
@@ -37,6 +38,12 @@ JSON → Zod 结构校验 → 引用/时间/边界/采样/和声校验 → patte
 Node 渲染时用 esbuild 内存打包 `browser-engine`，注入 `about:blank`，再传入序列化的编译结果。每次渲染使用独立浏览器实例，因此不会与其他任务共享 Tone 默认上下文。
 
 ## 关键设计
+
+**单声部和弦在编译期展开。** `arpeggio` 把同拍起始的音符合并成一个声部，再按 `rate` 展开为音高序列。因为它发生在声部分配之前，一个三音和弦只消耗一个 voice——这正是芯片音乐的做法，也是为什么提高 `maxVoices` 不是替代方案。
+
+**硬件模式是后处理开关，不是另一套渲染器。** `authenticity: "hardware"` 只做四件事：去掉轨道安全低通、把脉冲占空比吸附到三档、把音量量化到 16 级、允许启用 SNES 八抽头 FIR 回声。它不改变调度、声部或时间模型，因此两种模式可以逐事件对照。
+
+**回声反馈取自抽头求和之后、返回增益之前。** 否则 `returnDb` 会悄悄缩放反馈量，让"调小返回音量"变成"改变回声长度"。
 
 **鼓与旋律的声部语义不同。** 旋律轨按 `maxVoices` 分配逻辑声部，超过时按 `voicePolicy` 抢占或报错。鼓轨完全不参与声部分配：每次击打是独立 one-shot，重叠由混音与真峰值检查兜底。旧版把两者混用，导致同拍鼓互相抢断。
 
@@ -80,6 +87,7 @@ Node 渲染时用 esbuild 内存打包 `browser-engine`，注入 `about:blank`�
 
 - **0.2**：试听校准、局部编辑、可关闭的编曲诊断、干湿分离的循环检查。
 - **0.3**：独立音色定义、内嵌多音区 WAV、连奏/滑音/弯音、轨道自动化、编曲骨架、受约束的主题变奏、回答放置。
+- **1.1**：硬件发声模式、单声部和弦轮换、SNES FIR 回声、循环收束诊断、钢琴卷帘与乐曲文字描述；LUFS 门限改为能量域。
 - **1.0**：跨小节 `hold`、clip 裁剪、swing/humanize、`key` 与和弦标记、和声诊断、`motif`/`harmonize`/`arpeggiate`、八种鼓件与采样鼓组、真峰值与 LUFS、抖动与限幅、A/B 对比、stdio 与 `--compact`、`patch` 变更日志。
 
 历史细节见 `v0.2-guide.zh-CN.md` 与 `v0.3-guide.zh-CN.md`。

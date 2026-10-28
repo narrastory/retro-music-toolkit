@@ -1,6 +1,6 @@
 {
   "name": "@retro-music/toolkit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "AI-oriented symbolic retro music compiler and offline Tone.js renderer",
