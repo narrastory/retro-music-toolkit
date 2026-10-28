@@ -1,15 +1,27 @@
 <div align="center">
 
-<img src="assets/logo.svg" width="120" alt="Retro Music Toolkit">
+[简体中文](README.md) · **English**
+
+<img src="assets/logo.svg" width="96" alt="Retro Music Toolkit">
 
 # Retro Music Toolkit
 
-**An 8-bit / 16-bit game music workstation built for AI agents.**
+### An 8-bit / 16-bit game music workstation built for AI agents
+
 You write the score, not a prompt. Every note is yours, and every export is reproducible.
 
-[Quick start](#quick-start) · [Why not a music model](#why-not-just-prompt-a-music-model) · [Capabilities](#capabilities) · [中文](README.md)
+[![version 1.1.0](https://img.shields.io/badge/version-1.1.0-d6293a?style=flat-square)](#quick-start) [![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#quick-start) [![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](scripts/runtime) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE) [![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#built-for-agents-not-retrofitted-for-them) [![44.1 / 48 kHz WAV](https://img.shields.io/badge/output-44.1%20%2F%2048%20kHz%20WAV-6b7280?style=flat-square)](#deliver)
+
+[Quick start](#quick-start) · [Capabilities](#capabilities) · [Listen](#what-real-output-looks-like) · [Technical details](#technical-details) · [Roadmap](#roadmap)
+
+<code>git clone https://github.com/narrastory/retro-music-toolkit.git</code><br>
+<code>cd retro-music-toolkit/scripts/runtime &amp;&amp; npm ci &amp;&amp; npm run build</code>
 
 </div>
+
+<p align="center">
+  <img src="assets/hero.svg" width="1040" alt="Diagram: a score.json score on the left passes through the deterministic compiler and offline renderer, producing the starfall-fm.wav piano roll, waveform and render report on the right (-21.59 LUFS, -6.18 dBFS true peak, 1,411,200 frames, zero clipped samples).">
+</p>
 
 ---
 
@@ -19,9 +31,9 @@ Turn "write a NES-style exploration theme" into an **editable, verifiable, repro
 
 It does not guess what you meant. It plays exactly what you wrote, the way an 8/16-bit sound chip would.
 
----
-
 ## Why not just prompt a music model
+
+The difference, stated plainly:
 
 | | Music generation model | Retro Music Toolkit |
 | --- | --- | --- |
@@ -34,8 +46,6 @@ It does not guess what you meant. It plays exactly what you wrote, the way an 8/
 | **Cost** | Per generation | Zero, run it as often as you like |
 
 Generation models are good at **giving you a first idea**. This toolkit is good at **turning that idea into something shippable, editable and reviewable**. The two are complementary — but only one of them survives a revision request.
-
----
 
 ## Built for agents, not retrofitted for them
 
@@ -50,9 +60,9 @@ Generation models are good at **giving you a first idea**. This toolkit is good 
 cat song.json | node dist/cli.js validate - --compact
 ```
 
----
-
 ## Capabilities
+
+Four jobs, one local toolchain, from first note to final export.
 
 ### Compose
 - **Cross-bar sustain** (`hold`) and **clip cropping** — no more stretching a pattern just to hold one note.
@@ -79,9 +89,9 @@ cat song.json | node dist/cli.js validate - --compact
 - Optional TPDF dither, look-ahead peak limiter and equal-power loop crossfade.
 - `compare` concatenates two takes at matched loudness into a single A/B file.
 
----
-
 ## What real output looks like
+
+Start with the `describe` structure, then the measured render report.
 
 ```text
 $ node dist/cli.js describe examples/v3-starfall-fm.json
@@ -106,16 +116,17 @@ Measured numbers from the shipped FM demo:
 | True peak | −6.18 dBFS |
 | Clipped / non-finite samples | 0 / 0 |
 
-Listen: [FM version](assets/demos/starfall-fm.wav) · [same theme, sampled](assets/demos/starfall-sample.wav)
-
----
+> [!TIP]
+> Listen: [FM version](assets/demos/starfall-fm.wav) / [same theme, sampled](assets/demos/starfall-sample.wav)
 
 ## Quick start
 
-Node.js 22 or newer. The first install needs network access for dependencies and Chromium; after that everything runs **offline**.
+> [!NOTE]
+> Node.js 22 or newer. The first install needs network access for dependencies and Chromium; after that everything runs **offline**.
 
 ```bash
-git clone <this-repo> && cd retro-music/scripts/runtime
+git clone https://github.com/narrastory/retro-music-toolkit.git
+cd retro-music-toolkit/scripts/runtime
 npm ci
 npm run browser:install     # rendering only; compile and diagnose work without Chromium
 npm run build
@@ -140,21 +151,20 @@ node dist/cli.js compare minimal.wav v2.wav --out ab.wav
 
 Full walkthrough: [quick start](references/quickstart.zh-CN.md) · [1.1 guide](references/v1.1-guide.zh-CN.md) · [score format](references/score-format.zh-CN.md).
 
----
-
 ## What it does not do
 
 Stating the boundaries is more useful than overstating the features:
 
-- **It does not compose for you.** It will not invent a melody. You supply the notes; it handles correctness, constraints and sound.
-- **It is not a chip emulator.** `hardware` mode is an audible approximation, not bit-accurate 2A03 / YM2612 / BRR reproduction.
+> [!IMPORTANT]
+> **It does not compose for you, and it is not a chip emulator.** You supply the melody; `hardware` mode is an audible approximation, not bit-accurate 2A03 / YM2612 / BRR reproduction.
+
 - **It does not judge taste.** Diagnostics say "this may clash with the chord", never "this is not good".
 - **No shorthand notation, MIDI, tempo map or MCP server yet** (see [Roadmap](#roadmap)).
 - **No subjective listening review.** The shipped examples are verified at the signal level — not by "we think it sounds great".
 
----
-
 ## Technical details
+
+Implementation notes are collapsed by default; open them for architecture, commands and library usage.
 
 <details>
 <summary>Architecture</summary>
@@ -253,8 +263,6 @@ const { wav } = await renderScore(score, { solo: ["lead", "bass"] });
 No MCP server ships with the package; the CLI and function calls already form a complete loop.
 
 </details>
-
----
 
 ## Roadmap
 
