@@ -3,8 +3,8 @@ interface:
   short_description: Compose, revise and render 8bit and 16bit game music
   default_prompt: Use $retro-music to compose and render an original looping game
     soundtrack.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  icon_small: assets/logo.svg
+  icon_large: assets/logo.svg
 policy:
   products:
   - chatgpt
