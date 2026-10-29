@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Music Toolkit · 试听</title>
+<style>
+  :root {
+    --bg: #0b0f16;
+    --panel: #141c28;
+    --line: #24303f;
+    --ink: #e8eef7;
+    --muted: #8b9bb0;
+    --accent: #ef3b4c;
+    --mint: #8ef0cb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 48px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+  header img { width: 56px; height: 56px; }
+  h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 40px; font-size: 15px; }
+  a { color: var(--mint); }
+  article {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .title strong { font-size: 17px; }
+  .tag {
+    font: 12px/1 ui-monospace, Menlo, monospace;
+    color: var(--mint);
+    border: 1px solid #2b5a4a;
+    background: #12201c;
+    border-radius: 99px;
+    padding: 3px 9px;
+  }
+  .meta {
+    color: var(--muted);
+    font: 13px/1.6 ui-monospace, Menlo, monospace;
+    margin: 0 0 12px;
+  }
+  audio { width: 100%; margin-top: 4px; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  footer {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <img src="logo.svg" alt="">
+    <h1>Retro Music Toolkit · 试听</h1>
+  </header>
+  <p class="lede">
+    以下全部由仓库内的 JSON 乐谱离线渲染，没有使用任何模型生成。
+    每个片段都可从对应工程重新导出，结果一致。
+  </p>
+
+  <article>
+    <div class="title">
+      <strong>Starfall Causeway</strong>
+      <span class="tag">Genesis · FM</span>
+    </div>
+    <p class="meta">32.0 s · 120 BPM · 16 小节 · loop · −21.59 LUFS · 真峰值 −6.18 dBFS</p>
+    <audio controls preload="none" src="audio/starfall-fm.mp3"></audio>
+    <p class="note">从零编写：独立 FM 音色、A2 句尾变奏、回答声部、连奏滑音与弯音。</p>
+  </article>
+
+  <article>
+    <div class="title">
+      <strong>Starfall Causeway（采样改编）</strong>
+      <span class="tag">SNES · sampled</span>
+    </div>
+    <p class="meta">35.6 s · 同主题 · 内嵌双音区 WAV · −21.60 LUFS</p>
+    <audio controls preload="none" src="audio/starfall-sample.mp3"></audio>
+    <p class="note">同一份乐谱换成采样音色，演示音色与乐谱解耦。</p>
+  </article>
+
+  <article>
+    <div class="title">
+      <strong>Pixel Trail</strong>
+      <span class="tag">NES · pulse</span>
+    </div>
+    <p class="meta">29.1 s · 132 BPM · 16 小节 · loop</p>
+    <audio controls preload="none" src="audio/pixel-trail.mp3"></audio>
+    <p class="note">两路脉冲 + 三角低音 + 合成鼓，AABA 结构。</p>
+  </article>
+
+  <article>
+    <div class="title">
+      <strong>Lantern Harbor</strong>
+      <span class="tag">SNES · sampled</span>
+    </div>
+    <p class="meta">38.4 s · 100 BPM · 16 小节 · loop</p>
+    <audio controls preload="none" src="audio/lantern-harbor.mp3"></audio>
+    <p class="note">五轨编配，含弦乐和声与回答声部。</p>
+  </article>
+
+  <footer>
+    音频为 MP3 160 kbps 预览副本；仓库内保留原始 PCM16 WAV 与渲染报告。
+    这些示例只做过信号层面验证，没有主观听审记录 —— 好不好听请你自己判断。
+    <br><br>
+    <a href="https://github.com/narrastory/retro-music-toolkit">← 返回 GitHub 仓库</a>
+  </footer>
+</div>
+</html>
