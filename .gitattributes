@@ -1,0 +1,13 @@
+# Normalise line endings on checkout and commit. This matters for more than
+# aesthetics: `sourceHash` / `baseHash` are SHA-256 of the score file's text, so
+# a CRLF checkout on Windows would make the same score hash differently and
+# trip PATCH_CONFLICT when the project moves between machines.
+* text=auto eol=lf
+
+# Binary assets must never be converted or diffed as text.
+*.wav binary
+*.png binary
+*.ico binary
+
+# Keep lockfiles as generated.
+package-lock.json text eol=lf

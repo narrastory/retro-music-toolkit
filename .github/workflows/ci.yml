@@ -6,8 +6,15 @@ on:
   pull_request:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  # Fast gate: type check, unit tests, schema drift, formatting.
+  # Runs on all three platforms because path handling, line endings and the
+  # CLI's executable bit are exactly the things that differ between them.
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         working-directory: scripts/runtime
@@ -20,14 +27,44 @@ jobs:
           cache-dependency-path: scripts/runtime/package-lock.json
       - run: npm ci
       - run: npm run check
+      - run: npm run build
       - run: npm run test
-      - run: npx playwright install --with-deps chromium --only-shell
-      - run: npm run test:audio
-      - run: npm run test:web
+      - run: npm run format:check
+
+      # `bin` entries are unusable on POSIX without the executable bit.
+      - name: dist/cli.js is executable
+        if: runner.os != 'Windows'
+        run: test -x dist/cli.js
+
+      - name: CLI runs through its bin entry
+        shell: bash
+        run: ./dist/cli.js version
+
       - name: Schema is in sync
+        shell: bash
         run: |
           npm run schema -- --force
           git diff --exit-code schema/score.schema.json || {
             echo "schema/score.schema.json is stale; run 'npm run schema -- --force'"
             exit 1
           }
+
+  # Rendering needs a headless browser; keep it on Linux only to stay fast,
+  # and serialise the audio tests because they launch Chromium per render.
+  audio:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scripts/runtime
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: scripts/runtime/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium --only-shell
+      - run: npm run test:audio
+      - run: npm run test:web
