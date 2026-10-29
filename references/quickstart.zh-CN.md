@@ -26,7 +26,7 @@ npm run test:web
 npm run demo
 ```
 
-解压目录名称可能不同；先定位 `SKILL.md`，再进入其下 `scripts/runtime`。Linux 若缺少浏览器系统库，可参考 Playwright 官方安装文档执行系统依赖安装；该操作可能需要系统管理员权限。也可指定已安装且兼容的浏览器：
+解压目录名称可能不同；先定位 `SKILL.md`，再进入其下 `scripts/runtime`。macOS、Linux、Windows 三平台均可运行；CI 会在三平台分别执行类型检查、构建与单元测试。Linux 若缺少浏览器系统库，可参考 Playwright 官方安装文档执行系统依赖安装；该操作可能需要系统管理员权限。也可指定已安装且兼容的浏览器：
 
 ```bash
 RETRO_CHROMIUM_EXECUTABLE=/absolute/path/to/chromium npm run demo

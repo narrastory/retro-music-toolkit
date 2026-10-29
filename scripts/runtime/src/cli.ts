@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { normalizeNumericArgs } from "./cli-args.js";
 import { parseArgs } from "node:util";
 import { readFile, writeFile, mkdir, access } from "node:fs/promises";

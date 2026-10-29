@@ -122,7 +122,7 @@ Measured numbers from the shipped FM demo:
 ## Quick start
 
 > [!NOTE]
-> Node.js 22 or newer. The first install needs network access for dependencies and Chromium; after that everything runs **offline**.
+> Node.js 22 or newer. **macOS, Linux and Windows are all supported** (verified on all three in CI). The first install needs network access for dependencies and Chromium; after that everything runs **offline**.
 
 ```bash
 git clone https://github.com/narrastory/retro-music-toolkit.git

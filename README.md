@@ -124,14 +124,14 @@ Sections:
 ## 快速开始
 
 > [!NOTE]
-> 需要 Node.js 22+。首次安装要联网下载依赖与 Chromium，之后**全程离线**。
+> 需要 Node.js 22+。**macOS、Linux、Windows 均受支持**（CI 三平台逐次验证）。首次安装要联网下载依赖与 Chromium，之后**全程离线**。
 
 ```bash
 git clone https://github.com/narrastory/retro-music-toolkit.git
 cd retro-music-toolkit/scripts/runtime
 npm ci
 npm run browser:install     # 仅渲染需要；纯编译/诊断不需要 Chromium
-npm run build
+npm run build               # 同时给 CLI 补上可执行位（Windows 上自动跳过）
 ```
 
 生成第一首：
