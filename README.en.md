@@ -129,7 +129,7 @@ git clone https://github.com/narrastory/retro-music-toolkit.git
 cd retro-music-toolkit/scripts/runtime
 npm ci
 npm run browser:install     # rendering only; compile and diagnose work without Chromium
-npm run build
+npm run build               # also marks the CLI executable (skipped on Windows)
 ```
 
 Write your first piece:
