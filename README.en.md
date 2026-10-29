@@ -8,94 +8,57 @@
 
 ### An 8-bit / 16-bit game music workstation built for AI agents
 
-You write the score, not a prompt. Every note is yours, and every export is reproducible.
+**Fully local, no API. The same score always renders the same audio.**
 
-[![version 1.1.0](https://img.shields.io/badge/version-1.1.0-d6293a?style=flat-square)](#quick-start) [![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#quick-start) [![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)](scripts/runtime) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE) [![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#built-for-agents-not-retrofitted-for-them) [![44.1 / 48 kHz WAV](https://img.shields.io/badge/output-44.1%20%2F%2048%20kHz%20WAV-6b7280?style=flat-square)](#deliver)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![115 tests](https://img.shields.io/badge/tests-115%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
-[Quick start](#quick-start) · [Capabilities](#capabilities) · [Listen](#what-real-output-looks-like) · [Technical details](#technical-details) · [Roadmap](#roadmap)
-
-<code>git clone https://github.com/narrastory/retro-music-toolkit.git</code><br>
-<code>cd retro-music-toolkit/scripts/runtime &amp;&amp; npm ci &amp;&amp; npm run build</code>
+[🎧 Listen online](https://narrastory.github.io/retro-music-toolkit/) · [Quick start](#quick-start) · [vs. music models](#how-is-this-different-from-a-music-generation-model) · [Technical details](#technical-details)
 
 </div>
 
 <p align="center">
-  <img src="assets/hero.svg" width="1040" alt="Diagram: a score.json score on the left passes through the deterministic compiler and offline renderer, producing the starfall-fm.wav piano roll, waveform and render report on the right (-21.59 LUFS, -6.18 dBFS true peak, 1,411,200 frames, zero clipped samples).">
+  <img src="assets/hero.svg" width="1040" alt="A JSON score passes through the deterministic compiler and offline renderer, producing a piano roll, waveform and render metrics">
 </p>
+
+```bash
+git clone https://github.com/narrastory/retro-music-toolkit.git
+cd retro-music-toolkit/scripts/runtime && npm ci && npm run build
+node dist/cli.js example --out song.json && node dist/cli.js render song.json --out song.wav
+```
 
 ---
 
-## The short version
+## What it does for you
 
-Turn "write a NES-style exploration theme" into an **editable, verifiable, reproducible JSON score**, then render it locally to a 44.1 kHz WAV.
+**🔒 Fully local — no model, no account**\
+No API key, no GPU, no cloud calls, no per-generation billing. Once dependencies are installed it runs with the network unplugged. Your scores and audio never leave your machine.
 
-It does not guess what you meant. It plays exactly what you wrote, the way an 8/16-bit sound chip would.
+**🔁 Reproducible output**\
+The same JSON and the same seed render the same audio — today, next year, on another computer. Drum noise, humanize jitter and random arpeggios are all derived from the seed, so you can commit a score to Git and manage music the way you manage code.
 
-## Why not just prompt a music model
+**✏️ Change one note without starting over**\
+Bass wrong in bar 9? `patch` edits that one note, leaves everything else untouched and returns a per-field change log. You never lose the parts you were happy with.
 
-The difference, stated plainly:
+**🩺 Tells you where it is wrong**\
+Non-chord tones on strong beats, bass clashing with the chord, parallel fifths, unresolved leaps, a loop seam that never returns to the opening chord — diagnostics report the bar and the note ID, and often the exact repair value.
 
-| | Music generation model | Retro Music Toolkit |
-| --- | --- | --- |
-| **Control** | Text in, audio out; changing one note means resampling | Every note, velocity and gate is a field you edit |
-| **Reproducibility** | Same prompt, different result each time | Same JSON + same seed = same audio |
-| **Revision** | Regenerate and lose the good parts | `patch` fixes bar 3, beat 2; everything else is untouched |
-| **Auditability** | You get a WAV and no explanation | You get a score and diagnostics that name the problem |
-| **Licensing** | Training data is not traceable | All instruments are procedurally generated; zero third-party samples |
-| **Deployment** | GPU, API key, account | One laptop, Node.js, offline |
-| **Cost** | Per generation | Zero, run it as often as you like |
+> [!TIP]
+> Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (four tracks, playable in the browser)
+> Every example is rendered offline from a JSON score in this repository. No model was involved.
 
-Generation models are good at **giving you a first idea**. This toolkit is good at **turning that idea into something shippable, editable and reviewable**. The two are complementary — but only one of them survives a revision request.
+---
 
-## Built for agents, not retrofitted for them
-
-- **Local and keyless.** No model service, no API key, no account. The whole toolchain is Zod + Tone.js + Playwright, running on your machine.
-- **JSON in, JSON out.** Every command returns structured data. Errors carry a machine-readable `code` so an agent can branch on it instead of regex-matching a stack trace.
-- **Meaningful exit codes.** `0` success, `1` tool or IO error, `2` invalid score.
-- **Token-aware.** Read from stdin, write to stdout, `--compact` for one-line JSON, `--bars 9-16` to render a section without resending the whole project.
-- **Self-checking.** Validation errors include the repair value (for example, "set `hold: true`, maximum duration 1 beat"). `patch` returns a per-operation diff so the agent can prove what changed.
-- **Honest about listening.** Diagnostics report verifiable structure and signal facts. The tool never claims the music sounds good.
+## See it in 60 seconds
 
 ```bash
-cat song.json | node dist/cli.js validate - --compact
+node dist/cli.js example --out song.json     # a ~40-line score that runs as-is
+node dist/cli.js render song.json --out song.wav
+node dist/cli.js describe song.json          # read the piece's structure as text
 ```
 
-## Capabilities
-
-Four jobs, one local toolchain, from first note to final export.
-
-### Compose
-- **Cross-bar sustain** (`hold`) and **clip cropping** — no more stretching a pattern just to hold one note.
-- **Motif development**: transposition (chromatic or diatonic), inversion, retrograde, duration scaling, velocity shaping, ornaments — applied to a beat range, leaving the source pattern intact.
-- **Harmony-driven arrangement**: declare `key` and chord markers, then generate accompaniment with `harmonize` or arpeggios with `arpeggiate`.
-- **Swing and humanize**, both derived from the seed, so feel is reproducible rather than random drift.
-
-### Hear what is wrong
-- **Harmony analysis**: non-chord tones on strong beats, bass clashes, parallel fifths and octaves, unresolved leaps, out-of-key notes, semitone collisions.
-- **Loop closure**: does the last bar actually lead back to the first, or does the loop restart?
-- **Arrangement analysis**: melodic breathing room, register crowding, hi-hat density, section contrast.
-- **Two layers of feedback**: `describe` emits a reasoning-friendly text structure; `roll` and `report` emit a piano roll and an HTML report. An agent can read the structure without hearing it.
-
-### Sound
-- **NES-, Genesis- and SNES-inspired profiles**, eleven built-in instruments, custom instrument definitions and embedded multi-zone WAV samples.
-- **`authenticity: "hardware"`** removes the safety low-pass, snaps pulse width to the real 12.5 / 25 / 50 % duty cycles and quantises volume to 16 steps.
-- **Single-voice chord arpeggio**: a three-note chord costs **one** voice — this is how chip music fakes a chord.
-- **SNES eight-tap FIR echo**, the platform's signature tail.
-- **Eight drum pieces**, replaceable with a sampled kit.
-
-### Deliver
-- 44.1k / 48k PCM16 WAV, loop and one-shot modes.
-- True peak (4x polyphase sinc oversampling) and BS.1770-4 loudness.
-- Optional TPDF dither, look-ahead peak limiter and equal-power loop crossfade.
-- `compare` concatenates two takes at matched loudness into a single A/B file.
-
-## What real output looks like
-
-Start with the `describe` structure, then the measured render report.
+`describe` gives a structural summary an AI can reason about without hearing anything:
 
 ```text
-$ node dist/cli.js describe examples/v3-starfall-fm.json
-
 # Starfall Causeway
 genesis-inspired, modern voice, 120 BPM, 4/4, 16 bars (64 beats), loop export
 - lead (fm-celestial-lead, melody): 60 notes, 3.8/bar, range B4–C6,
@@ -107,17 +70,103 @@ Sections:
   B-9: bar 9, 4.75 events/beat, median D4 — similar to previous
 ```
 
-Measured numbers from the shipped FM demo:
+Measured numbers from the render report (Starfall Causeway, FM version):
 
-| Metric | Value |
+| Duration | Integrated loudness | True peak | Clipped samples |
+| :---: | :---: | :---: | :---: |
+| 32.0 s | −21.59 LUFS | −6.18 dBFS | 0 |
+
+---
+
+## How is this different from a music generation model
+
+They solve different problems.
+
+| | Music generation model | Retro Music Toolkit |
+| --- | --- | --- |
+| **Input** | A text description | A JSON score |
+| **Runs on** | Cloud API / local GPU | An ordinary laptop, offline |
+| **Cost** | Per generation | Zero |
+| **Reproducibility** | Same prompt, different result | Same score, same result |
+| **Editing** | Regenerate the whole piece | Change a single note |
+| **Explainability** | You get audio | You get a score and diagnostics |
+| **Source material** | Training data is not traceable | Procedurally generated; zero third-party samples |
+
+**A generation model is good at handing you a first idea. This toolkit is good at turning an idea into something that ships in a game, can be revised, and renders the same way every time.** If you already have a melody in mind, or you are building an AI agent that needs dependable output, this is the one you will use every day.
+
+---
+
+## Who it is for
+
+| ✅ A good fit | ❌ Not a good fit |
 | --- | --- |
-| Duration / frames | 32.000 s / 1,411,200 |
-| Integrated loudness | −21.59 LUFS |
-| True peak | −6.18 dBFS |
-| Clipped / non-finite samples | 0 / 0 |
+| Building a composition or game-dev **AI agent** that needs stable, verifiable tool calls | You want one sentence in and a finished song out |
+| **Indie game developers** who need loopable, endlessly revisable BGM | You need vocals, recorded instruments or modern pop production |
+| Environments that must be **offline**, **dependency-free** and **licence-clean** | You need bit-exact chip emulation (NSF / VGM playback) |
+| Treating music like code: version control, review, CI | You never want to touch structured data |
 
-> [!TIP]
-> Listen: [FM version](assets/demos/starfall-fm.wav) / [same theme, sampled](assets/demos/starfall-sample.wav)
+> [!IMPORTANT]
+> **It does not compose for you.** You (or your agent) supply the melody; it validates, constrains, renders and reports. `hardware` mode is an audible approximation, not bit-accurate 2A03 / YM2612 / BRR emulation. The examples are verified at the signal level only, with no subjective listening review — whether they sound good is for you to judge.
+
+---
+
+## Capabilities
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**✍️ Compose**
+- Cross-bar sustain (`hold`) and clip cropping
+- Motif development: sequence, inversion, retrograde, augmentation, ornaments
+- Harmony-driven: `harmonize` for accompaniment, `arpeggiate` for arpeggios
+- Swing and humanize, derived from the seed
+
+</td>
+<td width="50%" valign="top">
+
+**🩺 Diagnose**
+- Harmony: non-chord tones, bass clashes, parallel fifths/octaves, out-of-key notes
+- Loops: does the last phrase really return to the first?
+- Arrangement: melodic breathing, register crowding, hi-hat density, section contrast
+- `describe` text structure, `roll` / `report` piano roll
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**🔊 Sound**
+- NES-, Genesis- and SNES-inspired profiles, 11 built-in instruments
+- `hardware` mode: unfiltered pulse, three duty cycles, 16-step volume
+- Single-voice chord arpeggio: a triad costs one voice
+- SNES eight-tap FIR echo, 8 drum pieces plus sampled kits
+
+</td>
+<td valign="top">
+
+**📦 Deliver**
+- 44.1 / 48 kHz PCM16 WAV, loop and one-shot
+- True peak (4x oversampled) and BS.1770-4 loudness
+- Optional dither, peak limiter and loop crossfade
+- `compare` for level-matched A/B export
+
+</td>
+</tr>
+</table>
+
+### Designed for AI agents
+
+- **JSON in, JSON out**: every command returns structured data; errors carry a machine-readable `code`
+- **Meaningful exit codes**: `0` success, `1` tool error, `2` invalid score
+- **Token-aware**: stdin / stdout, `--compact`, `--bars 9-16` to work on a section
+- **Self-verifying**: validation errors include the repair value; `patch` returns a per-field diff
+
+```bash
+cat song.json | node dist/cli.js validate - --compact
+```
+
+---
 
 ## Quick start
 
@@ -132,46 +181,29 @@ npm run browser:install     # rendering only; compile and diagnose work without 
 npm run build               # also marks the CLI executable (skipped on Windows)
 ```
 
-Write your first piece:
+Write, check, revise, export:
 
 ```bash
-node dist/cli.js example --out minimal.json     # a ~40-line, fully valid score
-node dist/cli.js validate minimal.json
-node dist/cli.js render minimal.json --out minimal.wav
-```
+node dist/cli.js example --out song.json      # a minimal, runnable score
+node dist/cli.js validate song.json           # full compile check
+node dist/cli.js diagnose song.json           # arrangement and harmony findings
+node dist/cli.js render song.json --out v1.wav
 
-Change something, then export:
-
-```bash
-node dist/cli.js diagnose minimal.json          # arrangement and harmony findings
-node dist/cli.js patch minimal.json --patch changes.json --out v2.json
+node dist/cli.js patch song.json --patch changes.json --out v2.json
 node dist/cli.js render v2.json --out v2.wav --dither
-node dist/cli.js compare minimal.wav v2.wav --out ab.wav
+node dist/cli.js compare v1.wav v2.wav --out ab.wav   # level-matched comparison
 ```
 
-Full walkthrough: [quick start](references/quickstart.zh-CN.md) · [1.1 guide](references/v1.1-guide.zh-CN.md) · [score format](references/score-format.zh-CN.md).
+Full documentation (in Chinese): [quick start](references/quickstart.zh-CN.md) · [1.1 guide](references/v1.1-guide.zh-CN.md) · [score format](references/score-format.zh-CN.md) · Agent entry point: [SKILL.md](SKILL.md) (English)
 
-## What it does not do
-
-Stating the boundaries is more useful than overstating the features:
-
-> [!IMPORTANT]
-> **It does not compose for you, and it is not a chip emulator.** You supply the melody; `hardware` mode is an audible approximation, not bit-accurate 2A03 / YM2612 / BRR reproduction.
-
-- **It does not judge taste.** Diagnostics say "this may clash with the chord", never "this is not good".
-- **No shorthand notation, MIDI, tempo map or MCP server yet** (see [Roadmap](#roadmap)).
-- **No subjective listening review.** The shipped examples are verified at the signal level — not by "we think it sounds great".
+---
 
 ## Technical details
 
-Implementation notes are collapsed by default; open them for architecture, commands and library usage.
-
 <details>
-<summary>Architecture</summary>
+<summary><b>Architecture</b></summary>
 
 **Pipeline**: JSON → strict Zod validation → semantic, sample and harmony checks → pattern/clip expansion (swing, humanize, hold, cropping, single-voice chord arpeggio) → integer-tick events → voice allocation → Tone.js offline synthesis → limiting, dither and analysis → PCM16 WAV.
-
-**Key modules**
 
 | File | Responsibility |
 | --- | --- |
@@ -189,14 +221,14 @@ Implementation notes are collapsed by default; open them for architecture, comma
 - **Integer ticks, not floating-point seconds.** Every time transform happens at compile time, so loop length, voice conflicts and diagnostic windows all refer to what actually sounds.
 - **Drums and melodic parts have different voice semantics.** Melodic tracks allocate against `maxVoices` and can steal; drums are independent one-shots that consume no voices.
 - **Release tails are reported separately from held-note conflicts.** The former is routine and harmless; only the latter needs a fix.
-- **Reproducibility.** Drum noise, humanize jitter and randomised arpeggios are all derived from the seed; runtime `Math.random` is banned. Cross-browser DSP differences can still shift individual samples, so bit-exact output is not claimed.
+- **Reproducibility.** Drum noise, humanize jitter and randomised arpeggios are derived from the seed; runtime `Math.random` is banned. Cross-browser DSP differences can still shift individual samples, so bit-exact output is not claimed.
 
 **Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 115 automated tests (90 unit, 23 real-audio, 2 web).
 
 </details>
 
 <details>
-<summary>Command reference</summary>
+<summary><b>Command reference</b></summary>
 
 ```text
 instruments                    list presets and recommended ranges
@@ -223,7 +255,7 @@ Global: `--force` `--compact` `--stdout` `--help`
 </details>
 
 <details>
-<summary>Library usage</summary>
+<summary><b>Library usage</b></summary>
 
 ```ts
 import { readFile } from "node:fs/promises";
@@ -248,7 +280,7 @@ const { wav } = await renderScore(score, { solo: ["lead", "bass"] });
 </details>
 
 <details>
-<summary>Agent integration</summary>
+<summary><b>Agent integration</b></summary>
 
 `SKILL.md` is the agent-facing entry point: full workflow, constraints and delivery standards. A host only needs shell access.
 
@@ -264,6 +296,8 @@ No MCP server ships with the package; the CLI and function calls already form a 
 
 </details>
 
+---
+
 ## Roadmap
 
 - tempo map / accelerando and ritardando
@@ -274,8 +308,6 @@ No MCP server ships with the package; the CLI and function calls already form a 
 - lower-memory sample scheduling
 
 Open an issue with the scenario you actually need.
-
----
 
 ## Credits and licence
 

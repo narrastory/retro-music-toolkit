@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="Retro Music Toolkit">
+  <title>Retro Music Toolkit</title>
+  <rect width="128" height="128" rx="24" fill="#130c0f"/>
+  <rect x=".5" y=".5" width="127" height="127" rx="23.5" fill="none" stroke="#3e2b30"/>
+  <g shape-rendering="crispEdges">
+    <g fill="#ef3b4c"><rect x="56" y="32" width="16" height="40"/><rect x="40" y="72" width="32" height="8"/><rect x="24" y="80" width="48" height="16"/><rect x="32" y="96" width="32" height="8"/></g>
+    <g fill="#8ef0cb"><rect x="56" y="24" width="32" height="8"/><rect x="80" y="32" width="16" height="8"/><rect x="88" y="40" width="16" height="8"/><rect x="96" y="48" width="8" height="8"/></g>
+  </g>
+</svg>
