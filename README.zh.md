@@ -312,7 +312,7 @@ const { wav } = await renderScore(score, { solo: ["lead", "bass"] });
 ## 致谢与许可
 
 - 代码与 Schema 文档：[MIT](LICENSE)
-- `references/source-guides/` 中的三份背景教程由使用者提供，版权归原作者，不适用 MIT。
+- 背景教程与生成音频：见 [NOTICE.md](NOTICE.md)。`references/source-guides/` 中的三份教程由使用者提供，版权归原作者，不适用 MIT。
 - 依赖：Tone.js、Zod、Playwright、esbuild，各自遵循其许可证。
 - 内置音色与鼓素材**全部程序生成**，不含任何商业游戏音色或扒带素材。
 

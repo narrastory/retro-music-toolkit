@@ -312,7 +312,7 @@ Open an issue with the scenario you actually need.
 ## Credits and licence
 
 - Code and schema documentation: [MIT](LICENSE)
-- The three background guides under `references/source-guides/` were supplied by the toolkit's user; copyright remains with their authors and the MIT licence does not apply to them.
+- Reference guides and generated audio: see [NOTICE.md](NOTICE.md). The three background guides under `references/source-guides/` were supplied by the toolkit's user; copyright remains with their authors and the MIT licence does not apply to them.
 - Dependencies: Tone.js, Zod, Playwright and esbuild, each under its own licence.
 - All built-in instruments and drum material are **procedurally generated**. No commercial game samples and no ripped assets.
 
