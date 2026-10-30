@@ -7,3 +7,6 @@ scripts/runtime/dist/
 # Local scratch
 *.log
 .DS_Store
+
+# Brainstorm session artifacts
+.superpowers/
