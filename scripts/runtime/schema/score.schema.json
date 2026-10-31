@@ -560,6 +560,12 @@
             "minimum": 0,
             "maximum": 1
           },
+          "reverbSend": {
+            "default": 0,
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
           "maxVoices": {
             "default": 1,
             "type": "integer",
@@ -992,6 +998,7 @@
           "gainDb",
           "pan",
           "send",
+          "reverbSend",
           "maxVoices",
           "voicePolicy",
           "swing",
@@ -1083,6 +1090,47 @@
             "delayBeats",
             "feedback",
             "taps",
+            "returnDb"
+          ],
+          "additionalProperties": false
+        },
+        "reverb": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": true,
+              "type": "boolean"
+            },
+            "decaySeconds": {
+              "default": 1.2,
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 4
+            },
+            "preDelaySeconds": {
+              "default": 0.02,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.2
+            },
+            "damping": {
+              "default": 0.55,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "returnDb": {
+              "default": -10,
+              "type": "number",
+              "minimum": -60,
+              "maximum": 0
+            }
+          },
+          "required": [
+            "enabled",
+            "decaySeconds",
+            "preDelaySeconds",
+            "damping",
             "returnDb"
           ],
           "additionalProperties": false

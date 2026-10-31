@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>音色实验室 · Retro Music Toolkit</title>
+    <link rel="icon" href="logo.svg" />
+    <link rel="stylesheet" href="style.css?v=red-originals-1" />
+  </head>
+  <body class="crt">
+    <div class="page">
+      <header class="masthead">
+        <a class="brand" href="./">♫ Retro Music Toolkit</a>
+        <nav>
+          <a href="./">返回音乐选集</a
+          ><a href="https://github.com/narrastory/retro-music-toolkit"
+            >GitHub ↗</a
+          >
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <p class="eyebrow">同一段旋律，听见声音的变化</p>
+          <h1>音色实验室<span class="cursor">_</span></h1>
+          <p class="intro">
+            《红叶邮便》第 9–16 小节。音符、节奏、力度与轨道音量保持一致，<br />依次比较原有音色、新采样音色，以及加入混响后的声音。
+          </p>
+        </section>
+        <section aria-label="三版对比">
+          <article class="track">
+            <div class="track-index">A</div>
+            <div>
+              <h2>原有程序音色 · 干声</h2>
+              <p class="description">
+                内置程序长笛、拨弦与弦乐。关闭延迟和回声，作为比较基线。
+              </p>
+              <audio
+                controls
+                preload="none"
+                src="audio/sound-lab-legacy.mp3"
+                style="width: 100%"
+              ></audio>
+              <p class="downloads">
+                <a download href="audio/sound-lab-legacy.wav">下载 WAV</a
+                ><a download href="scores/sound-lab-legacy.json">下载乐谱</a
+                ><a href="reports/sound-lab-legacy.json">渲染报告</a>
+              </p>
+            </div>
+          </article>
+          <article class="track">
+            <div class="track-index">B</div>
+            <div>
+              <h2>新采样音色 · 干声</h2>
+              <p class="description">
+                换用 VCSL 入门音色包的竖笛、卡林巴和钢琴；保留原有低音与鼓。
+              </p>
+              <audio
+                controls
+                preload="none"
+                src="audio/sound-lab-sampled.mp3"
+                style="width: 100%"
+              ></audio>
+              <p class="downloads">
+                <a download href="audio/sound-lab-sampled.wav">下载 WAV</a
+                ><a download href="scores/sound-lab-sampled.json">下载乐谱</a
+                ><a href="reports/sound-lab-sampled.json">渲染报告</a>
+              </p>
+            </div>
+          </article>
+          <article class="track">
+            <div class="track-index">C</div>
+            <div>
+              <h2>新采样音色 + 立体声混响</h2>
+              <p class="description">
+                在 B
+                的基础上，给旋律与伴奏添加不同程度的混响；低音与鼓保持干声。
+              </p>
+              <audio
+                controls
+                preload="none"
+                src="audio/sound-lab-reverb.mp3"
+                style="width: 100%"
+              ></audio>
+              <p class="downloads">
+                <a download href="audio/sound-lab-reverb.wav">下载 WAV</a
+                ><a download href="scores/sound-lab-reverb.json">下载乐谱</a
+                ><a href="reports/sound-lab-reverb.json">渲染报告</a>
+              </p>
+            </div>
+          </article>
+        </section>
+        <section class="take-home">
+          <span class="pixel-note">♫</span>
+          <div>
+            <h2>先听音色，再听空间。</h2>
+            <p>
+              A → B 比较乐器素材；B → C 比较空间效果。三版均以全文件 RMS −24
+              dBFS 为目标并限制峰值，具体增益与指标见报告；这并非感知响度匹配。
+            </p>
+          </div>
+          <div class="tool-note">
+            <h3>轻量、离线、可编辑</h3>
+            <p>
+              入门包包含四件乐器、12 个根音采样，约 1.9 MB，基于 CC0 VCSL
+              素材。乐谱内嵌所用采样，下载后可离线渲染。
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a class="brand" href="./">返回音乐选集</a
+        ><small
+          >音频为自动生成的技术对比，尚未经主观听审。<br />VCSL / Versilian
+          Studios · CC0-1.0</small
+        >
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll("audio").forEach((audio) =>
+        audio.addEventListener("play", () =>
+          document.querySelectorAll("audio").forEach((other) => {
+            if (other !== audio) other.pause();
+          }),
+        ),
+      );
+    </script>
+  </body>
+</html>

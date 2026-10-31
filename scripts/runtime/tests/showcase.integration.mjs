@@ -167,6 +167,35 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
       });
     }
     assert.deepEqual(errors, []);
+    await page.goto(`http://127.0.0.1:${server.address().port}/sound-lab.html`);
+    assert.equal(await page.locator("audio").count(), 3);
+    for (let index = 0; index < 3; index++) {
+      await page
+        .locator("audio")
+        .nth(index)
+        .evaluate((audio) => audio.play());
+      await page.waitForFunction((i) => {
+        const media = [...document.querySelectorAll("audio")];
+        return (
+          media[i].currentTime > 0 &&
+          media.filter((a) => !a.paused).length === 1
+        );
+      }, index);
+    }
+    for (const width of [320, 390, 1280]) {
+      await page.setViewportSize({ width, height: 900 });
+      assert.ok(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+        `sound lab overflow at ${width}px`,
+      );
+    }
+    for (const href of await page
+      .locator(".downloads a")
+      .evaluateAll((links) => links.map((link) => link.href)))
+      await readFile(new URL(`.${new URL(href).pathname}`, root));
+    assert.deepEqual(errors, []);
     console.log(
       "All three new MP3s played; downloads resolved; desktop/mobile layouts checked.",
     );

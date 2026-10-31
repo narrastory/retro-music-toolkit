@@ -6,6 +6,7 @@ import {
   findDrumSlot,
 } from "./instrument-model.js";
 import { performanceGroups, frequencyAt, interpolate } from "./performance.js";
+import { createReverbImpulse } from "./reverb.js";
 import { preset, hitDuration, DRUM_PITCH } from "./instruments.js";
 import { encodeWav } from "./wav.js";
 import {
@@ -87,6 +88,7 @@ export async function renderInBrowser(
   };
   let result: Tone.ToneAudioBuffer | undefined;
   let echoBus: Tone.Gain | undefined;
+  let reverbBus: Tone.Convolver | undefined;
   try {
     result = await Tone.Offline(
       () => {
@@ -94,6 +96,28 @@ export async function renderInBrowser(
         const master = own(
           new Tone.Gain(Tone.dbToGain(s.mixer.masterDb)),
         ).toDestination();
+        const reverb = s.mixer.reverb;
+        if (
+          reverb?.enabled &&
+          options.effects !== "dry" &&
+          s.tracks.some(
+            (t) =>
+              t.reverbSend > 0 &&
+              (!options.solo || options.solo.includes(t.id)),
+          )
+        ) {
+          const impulse = own(
+            Tone.ToneAudioBuffer.fromArray(
+              createReverbImpulse(sr, s.seed, reverb),
+            ),
+          );
+          reverbBus = own(
+            new Tone.Convolver({ url: impulse, normalize: false }),
+          );
+          reverbBus.connect(
+            own(new Tone.Gain(Tone.dbToGain(reverb.returnDb))).connect(master),
+          );
+        }
         const delay = own(
           new Tone.FeedbackDelay({
             delayTime: s.mixer.delayBeats * spb,
@@ -164,6 +188,14 @@ export async function renderInBrowser(
           const gain = own(new Tone.Gain(Tone.dbToGain(t.gainDb))).connect(
             filter ?? bus,
           );
+          // Post-filter/pre-pan send: independent stereo room, dry source keeps
+          // its authored pan. Existing delay and FIR echo routes are unchanged.
+          if (reverbBus && t.reverbSend > 0) {
+            const reverbSend = own(new Tone.Gain(t.reverbSend)).connect(
+              reverbBus,
+            );
+            (filter ?? gain).connect(reverbSend);
+          }
           const automate = (
             param: {
               setValueAtTime(v: number, t: number): unknown;

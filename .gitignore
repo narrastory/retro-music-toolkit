@@ -10,3 +10,4 @@ scripts/runtime/dist/
 
 # Brainstorm session artifacts
 .superpowers/
+.cache/

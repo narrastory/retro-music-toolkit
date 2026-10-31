@@ -1,0 +1,27 @@
+{
+  "phrase": "Redleaf Post bars 9–16",
+  "notes": "Same notes, timing, velocity and track gains. Only instruments and reverb change. Full-file RMS matched to -24 dBFS, peak constrained; this is not LUFS matching or subjective audition.",
+  "rows": [
+    {
+      "id": "legacy",
+      "rmsDbfs": -24.000000000221917,
+      "loudnessLufs": -20.72,
+      "truePeakDbfs": -11.313028127351398,
+      "appliedGainDb": -0.6198917888043027
+    },
+    {
+      "id": "sampled",
+      "rmsDbfs": -23.999999999780677,
+      "loudnessLufs": -20.79,
+      "truePeakDbfs": -10.92222350572684,
+      "appliedGainDb": 1.887055722030592
+    },
+    {
+      "id": "reverb",
+      "rmsDbfs": -24.000000000496,
+      "loudnessLufs": -20.79,
+      "truePeakDbfs": -10.93748986591567,
+      "appliedGainDb": 1.8735678698156377
+    }
+  ]
+}

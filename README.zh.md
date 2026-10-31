@@ -10,7 +10,7 @@
 
 **完全本地，零 API。同一份乐谱，永远导出同一段音频。**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![115 tests](https://img.shields.io/badge/tests-115%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![126 tests](https://img.shields.io/badge/tests-126%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 在线试听](https://narrastory.github.io/retro-music-toolkit/) · [快速开始](#快速开始) · [和音乐大模型的区别](#和音乐生成大模型有什么不同) · [技术细节](#技术细节)
 
@@ -90,7 +90,7 @@ Sections:
 | **复现** | 同一提示词，每次结果不同 | 同一乐谱，每次结果相同 |
 | **修改** | 重新生成整段 | 定点改一个音 |
 | **可解释** | 只拿到音频 | 拿到乐谱和诊断 |
-| **素材来源** | 训练数据不可追溯 | 全部程序生成，零第三方采样 |
+| **素材来源** | 训练数据不可追溯 | 程序合成 + 来源明确的 CC0 采样 |
 
 **大模型擅长从零给你一个灵感；这个工具擅长把灵感变成能进游戏、能改、能复现的成品。** 如果你已经有旋律构思，或者你在构建一个需要稳定输出的 AI Agent，后者才是你会每天用到的那个。
 
@@ -137,7 +137,7 @@ Sections:
 <td valign="top">
 
 **🔊 发声**
-- NES / Genesis / SNES 三种风格，11 个内置音色
+- NES / Genesis / SNES 三种风格，11 个程序音色 + 4 件入门采样乐器
 - `hardware` 模式：无滤波脉冲、三档占空比、16 级音量
 - 单声部和弦轮换：三音和弦只占一个声部
 - SNES 八抽头 FIR 回声，8 种鼓件 + 采样鼓组
@@ -167,6 +167,12 @@ cat song.json | node dist/cli.js validate - --compact
 ```
 
 ---
+
+## 1.2：采样乐器与混响
+
+新增约 1.9 MB 的 CC0 入门音色包：竖笛、钢琴、卡林巴和钟琴，12 个根音采样。支持按乐器导入、SHA-256 校验、可移植内嵌工程，以及独立发送的确定性立体声混响。原有乐谱默认保持干声兼容。
+
+[试听同一乐句的三版对比](https://narrastory.github.io/retro-music-toolkit/sound-lab.html) · [1.2 使用指南](references/v1.2-guide.zh-CN.md)
 
 ## 快速开始
 
@@ -223,7 +229,7 @@ node dist/cli.js compare v1.wav v2.wav --out ab.wav   # 两版等响对比
 - **release 尾音与按音冲突分开报告**。前者常见且无害，后者才需要改。
 - **可复现性**：鼓噪声、humanize、random 琶音全部由 seed 派生，禁止运行期 `Math.random`。浏览器 DSP 差异仍可能导致逐样本不一致，不宣称 bit-exact。
 
-**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；115 项自动化测试（90 单元 + 23 真实音频 + 2 网页）。
+**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；126 项自动化测试（98 单元 + 26 真实音频 + 2 网页），另有试听页专项检查。
 
 </details>
 
@@ -314,7 +320,7 @@ const { wav } = await renderScore(score, { solo: ["lead", "bass"] });
 - 代码与 Schema 文档：[MIT](LICENSE)
 - 背景教程与生成音频：见 [NOTICE.md](NOTICE.md)。`references/source-guides/` 中的三份教程由使用者提供，版权归原作者，不适用 MIT。
 - 依赖：Tone.js、Zod、Playwright、esbuild，各自遵循其许可证。
-- 内置音色与鼓素材**全部程序生成**，不含任何商业游戏音色或扒带素材。
+- 原有 11 个预设使用程序声音；新增入门包使用 **CC0 VCSL 录音**，随包附许可和来源哈希。不含商业游戏音色或扒带素材。
 
 <div align="center">
 <br>

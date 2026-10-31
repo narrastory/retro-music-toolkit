@@ -25,5 +25,7 @@ export * from "./audition-export.js";
 
 export * from "./instrument-model.js";
 export * from "./instrument-pack.js";
+export * from "./instrument-collection.js";
+export * from "./reverb.js";
 export * from "./composition.js";
 export * from "./performance.js";

@@ -14,6 +14,11 @@ import {
   arpeggiatePattern,
 } from "./composition.js";
 import { importInstrument } from "./instrument-pack.js";
+import {
+  importInstrumentCollection,
+  InstrumentCollectionSchema,
+  bundledStarterManifest,
+} from "./instrument-collection.js";
 import { INSTRUMENTS } from "./instruments.js";
 import { diagnoseScore } from "./diagnostics.js";
 import { exportAuditions } from "./audition-export.js";
@@ -38,6 +43,9 @@ Usage: retro-music COMMAND [FILE] [options]
 
 Commands
   instruments                       list presets with guidance
+  instrument-packs                  list bundled sampled instruments
+  import-pack SCORE.json --out NEW.json [--instrument ID,...]
+                                    --definition MANIFEST.json for a local pack
   validate SCORE.json               full compile check
   compile SCORE.json --out FILE     expanded integer-tick events
   diagnose SCORE.json               arrangement + harmony findings
@@ -343,12 +351,41 @@ async function main() {
     return;
   }
   if (command === "instruments") {
+    const custom = values.score
+      ? (ScoreSchema.parse((await load(values.score)).data)
+          .instrumentDefinitions ?? [])
+      : [];
     print(
-      INSTRUMENTS.map((p) => ({
+      [
+        ...new Map([...INSTRUMENTS, ...custom].map((p) => [p.id, p])).values(),
+      ].map((p) => ({
         ...p,
-        guidance: instrumentGuidance(p.id),
+        guidance: custom.some((c) => c.id === p.id)
+          ? {
+              preferredArticulation: p.description,
+              watchFor: "Audition in context; imported sample instrument.",
+              auditionStatus: "human listening review pending",
+            }
+          : instrumentGuidance(p.id),
       })),
     );
+    return;
+  }
+  if (command === "instrument-packs") {
+    const path = values.definition ?? bundledStarterManifest;
+    const pack = InstrumentCollectionSchema.parse((await load(path)).data);
+    print({
+      id: pack.id,
+      name: pack.name,
+      version: pack.version,
+      license: pack.license,
+      source: pack.source,
+      manifest: resolve(path),
+      instruments: pack.instruments.map((p) => ({
+        ...p.instrument,
+        sampleCount: p.assets.length,
+      })),
+    });
     return;
   }
   if (command === "schema") {
@@ -473,6 +510,24 @@ async function main() {
     await output(values.out, JSON.stringify(score, null, 2) + "\n");
     print({
       score: resolve(values.out),
+      embeddedAssets: Object.keys(score.sampleAssets ?? {}),
+    });
+    return;
+  }
+  if (command === "import-pack") {
+    if (!values.out) throw new ToolkitError("MISSING_OUT", "--out is required");
+    const path = values.definition ?? bundledStarterManifest;
+    const definition = await load(path);
+    const score = await importInstrumentCollection(
+      data,
+      definition.data,
+      dirname(resolve(path)),
+      splitList(values.instrument),
+    );
+    await output(values.out, JSON.stringify(score, null, 2) + "\n");
+    print({
+      score: resolve(values.out),
+      instruments: score.instrumentDefinitions?.map((p) => p.id),
       embeddedAssets: Object.keys(score.sampleAssets ?? {}),
     });
     return;
