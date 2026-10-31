@@ -7,7 +7,7 @@
 - `SKILL.md`：AI 的创作流程与工具使用说明。
 - `scripts/runtime/`：TypeScript 工程、CLI、Schema、测试、示例和网页试听器。
 - `references/`：工程文档、作曲操作手册和用户提供的三份背景教程。
-- `assets/demos/`：已渲染示例曲、工程与报告（交付 ZIP 中提供）。
+- `docs/audio/`、`docs/scores/`、`docs/reports/`：全新原创展示曲、可编辑乐谱与渲染报告。
 
 当前版本支持固定速度、4 或 8 为拍号分母的节拍、跨小节延音（`hold`）、clip 裁剪、swing、humanize、调性与和弦标记、和声诊断、伴奏/琶音生成、动机算子、采样鼓组、局部修改、片段/独奏/循环渲染与 PCM16 WAV。暂不支持 tempo map、MIDI 导入导出、原生主机格式、完整芯片仿真和自动听觉审美评估。
 

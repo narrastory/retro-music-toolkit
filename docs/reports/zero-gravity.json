@@ -1,0 +1,270 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 3024000,
+  "durationSeconds": 68.57142857142857,
+  "peak": 0.43125271797180176,
+  "peakDbfs": -7.305363095350284,
+  "truePeakDbfs": -7.305363095350284,
+  "rms": 0.06532698085944443,
+  "rmsDbfs": -23.698148252515374,
+  "loudnessLufs": -21.24,
+  "dcMean": -0.002429125404558381,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.0015626170206815004,
+  "maxAdjacentStep": 0.06051170825958252,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.02251664909556618,
+  "cycleComparison": {
+    "differenceRms": 0.02251664909556618,
+    "signalRms": 0.06532698085944443,
+    "relativeDifference": 0.34467610165564405
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": null,
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 128,
+    "warmupCycles": 2,
+    "loopFrames": 3024000,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": null
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "gravity-lead: 88 release tails truncated by the next note (first at beat 1, last at beat 126). The notes themselves finished; only the tails are clipped.",
+      "trackId": "gravity-lead",
+      "beat": 1,
+      "eventIds": [
+        "gravity-lead-0-0",
+        "gravity-lead-0-1",
+        "gravity-lead-0-2",
+        "gravity-lead-2-0",
+        "gravity-lead-2-1",
+        "gravity-lead-2-2",
+        "gravity-lead-4-0",
+        "gravity-lead-4-1",
+        "gravity-lead-4-2",
+        "gravity-lead-4-3",
+        "gravity-lead-5-0",
+        "gravity-lead-5-1",
+        "gravity-lead-5-2",
+        "gravity-lead-6-0",
+        "gravity-lead-6-1",
+        "gravity-lead-6-2",
+        "gravity-lead-7-0",
+        "gravity-lead-7-1",
+        "gravity-lead-7-2",
+        "gravity-lead-8-0",
+        "gravity-lead-8-1",
+        "gravity-lead-8-2",
+        "gravity-lead-9-0",
+        "gravity-lead-9-1",
+        "gravity-lead-9-2",
+        "gravity-lead-9-3",
+        "gravity-lead-10-0",
+        "gravity-lead-10-1",
+        "gravity-lead-10-2",
+        "gravity-lead-11-0",
+        "gravity-lead-11-1",
+        "gravity-lead-11-2"
+      ],
+      "suggestion": {
+        "count": 88,
+        "exampleSourceIds": [
+          "gravity-lead-0-0",
+          "gravity-lead-0-1",
+          "gravity-lead-0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "gravity-glass: 319 release tails truncated by the next note (first at beat 0.5, last at beat 127.75). The notes themselves finished; only the tails are clipped.",
+      "trackId": "gravity-glass",
+      "beat": 0.5,
+      "eventIds": [
+        "gravity-glass-0-0",
+        "gravity-glass-0-1",
+        "gravity-glass-0-2",
+        "gravity-glass-0-3",
+        "gravity-glass-0-4",
+        "gravity-glass-0-5",
+        "gravity-glass-0-6",
+        "gravity-glass-0-7",
+        "gravity-glass-1-0",
+        "gravity-glass-1-1",
+        "gravity-glass-1-2",
+        "gravity-glass-1-3",
+        "gravity-glass-1-4",
+        "gravity-glass-1-5",
+        "gravity-glass-1-6",
+        "gravity-glass-1-7",
+        "gravity-glass-2-0",
+        "gravity-glass-2-1",
+        "gravity-glass-2-2",
+        "gravity-glass-2-3",
+        "gravity-glass-2-4",
+        "gravity-glass-2-5",
+        "gravity-glass-2-6",
+        "gravity-glass-2-7",
+        "gravity-glass-3-0",
+        "gravity-glass-3-1",
+        "gravity-glass-3-2",
+        "gravity-glass-3-3",
+        "gravity-glass-3-4",
+        "gravity-glass-3-5",
+        "gravity-glass-3-6",
+        "gravity-glass-3-7"
+      ],
+      "suggestion": {
+        "count": 319,
+        "exampleSourceIds": [
+          "gravity-glass-0-0",
+          "gravity-glass-0-1",
+          "gravity-glass-0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "gravity-pad: 93 release tails truncated by the next note (first at beat 4, last at beat 124). The notes themselves finished; only the tails are clipped.",
+      "trackId": "gravity-pad",
+      "beat": 4,
+      "eventIds": [
+        "gravity-pad-0-0",
+        "gravity-pad-0-1",
+        "gravity-pad-0-2",
+        "gravity-pad-1-0",
+        "gravity-pad-1-1",
+        "gravity-pad-1-2",
+        "gravity-pad-2-0",
+        "gravity-pad-2-1",
+        "gravity-pad-2-2",
+        "gravity-pad-3-0",
+        "gravity-pad-3-1",
+        "gravity-pad-3-2",
+        "gravity-pad-4-0",
+        "gravity-pad-4-1",
+        "gravity-pad-4-2",
+        "gravity-pad-5-0",
+        "gravity-pad-5-1",
+        "gravity-pad-5-2",
+        "gravity-pad-6-0",
+        "gravity-pad-6-1",
+        "gravity-pad-6-2",
+        "gravity-pad-7-0",
+        "gravity-pad-7-1",
+        "gravity-pad-7-2",
+        "gravity-pad-8-0",
+        "gravity-pad-8-1",
+        "gravity-pad-8-2",
+        "gravity-pad-9-0",
+        "gravity-pad-9-1",
+        "gravity-pad-9-2",
+        "gravity-pad-10-0",
+        "gravity-pad-10-1"
+      ],
+      "suggestion": {
+        "count": 93,
+        "exampleSourceIds": [
+          "gravity-pad-0-0",
+          "gravity-pad-0-1",
+          "gravity-pad-0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "gravity-answer: 8 release tails truncated by the next note (first at beat 39.5, last at beat 127.5). The notes themselves finished; only the tails are clipped.",
+      "trackId": "gravity-answer",
+      "beat": 39.5,
+      "eventIds": [
+        "gravity-answer-9-0",
+        "gravity-answer-11-0",
+        "gravity-answer-13-0",
+        "gravity-answer-15-0",
+        "gravity-answer-25-0",
+        "gravity-answer-27-0",
+        "gravity-answer-29-0",
+        "gravity-answer-31-0"
+      ],
+      "suggestion": {
+        "count": 8,
+        "exampleSourceIds": [
+          "gravity-answer-9-0",
+          "gravity-answer-11-0",
+          "gravity-answer-13-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "gravity-glass: tail overlaps the next loop on voice 0",
+      "trackId": "gravity-glass",
+      "eventIds": [
+        "gravity-glass-clip-31/0/gravity-glass-31-15",
+        "gravity-glass-clip-0/0/gravity-glass-0-0"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "gravity-pad: tail overlaps the next loop on voice 0",
+      "trackId": "gravity-pad",
+      "eventIds": [
+        "gravity-pad-clip-31/0/gravity-pad-31-0",
+        "gravity-pad-clip-0/0/gravity-pad-0-0"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "gravity-pad: tail overlaps the next loop on voice 1",
+      "trackId": "gravity-pad",
+      "eventIds": [
+        "gravity-pad-clip-31/0/gravity-pad-31-1",
+        "gravity-pad-clip-0/0/gravity-pad-0-1"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "gravity-pad: tail overlaps the next loop on voice 2",
+      "trackId": "gravity-pad",
+      "eventIds": [
+        "gravity-pad-clip-31/0/gravity-pad-31-2",
+        "gravity-pad-clip-0/0/gravity-pad-0-2"
+      ]
+    }
+  ],
+  "title": "Zero Gravity Line",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261143,
+  "toolkitVersion": "1.1.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "3e86dea9e760e36015f10308bcea8db8c42fc480cadc765ad1875cf823cde3bf",
+  "audioHash": "1f8c091ec95e0f33857758b3da01d847b34bc95e50a3232a3fb36bd8865307b0",
+  "sourceFile": "docs/scores/zero-gravity.json"
+}
