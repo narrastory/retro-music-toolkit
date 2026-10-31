@@ -1,0 +1,271 @@
+{
+  "id": "starter",
+  "name": "Retro Starter — VCSL selection",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "source": "https://github.com/sgossner/VCSL",
+  "instruments": [
+    {
+      "instrument": {
+        "id": "starter-recorder",
+        "engine": "sample",
+        "role": "melody",
+        "range": [
+          60,
+          96
+        ],
+        "attack": 0.015,
+        "release": 0.12,
+        "description": "Alto recorder: compact multi-root VCSL sample instrument for retro game music.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "lowMidi": 60,
+              "highMidi": 78,
+              "rootMidi": 72,
+              "tuningCents": 6,
+              "assetId": "starter-recorder-60",
+              "gainDb": 0,
+              "loopStartFrame": 19200,
+              "loopEndFrame": 51200,
+              "loopCrossfadeFrames": 128
+            },
+            {
+              "lowMidi": 79,
+              "highMidi": 96,
+              "rootMidi": 84,
+              "tuningCents": 4,
+              "assetId": "starter-recorder-72",
+              "gainDb": 0,
+              "loopStartFrame": 19200,
+              "loopEndFrame": 51200,
+              "loopCrossfadeFrames": 128
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "starter-recorder-60",
+          "file": "samples/starter-recorder-60.wav",
+          "sha256": "6846cb2ba91cf6fcbc8edd90761c70848850aaa88061b8f273e05a20bd6468fe",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Baroque Alto Recorder/Sustain/AltRecorder_Sus_C4_rr1_Main.wav"
+        },
+        {
+          "id": "starter-recorder-72",
+          "file": "samples/starter-recorder-72.wav",
+          "sha256": "90072423c8aab119841af2ed9a4f2b3a564e147d6cdfcbe24ccf82939f767680",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Baroque Alto Recorder/Sustain/AltRecorder_Sus_C5_rr1_Main.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "starter-piano",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          48,
+          96
+        ],
+        "attack": 0.003,
+        "release": 0.18,
+        "description": "Compact piano: compact multi-root VCSL sample instrument for retro game music.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "lowMidi": 48,
+              "highMidi": 63,
+              "rootMidi": 60,
+              "tuningCents": -2,
+              "assetId": "starter-piano-48",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 64,
+              "highMidi": 70,
+              "rootMidi": 67,
+              "tuningCents": -6,
+              "assetId": "starter-piano-55",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 71,
+              "highMidi": 77,
+              "rootMidi": 74,
+              "tuningCents": -2,
+              "assetId": "starter-piano-62",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 78,
+              "highMidi": 82,
+              "rootMidi": 81,
+              "tuningCents": -4,
+              "assetId": "starter-piano-69",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 83,
+              "highMidi": 96,
+              "rootMidi": 84,
+              "tuningCents": 4,
+              "assetId": "starter-piano-72",
+              "gainDb": 0
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "starter-piano-48",
+          "file": "samples/starter-piano-48.wav",
+          "sha256": "3d01e38f3d29fac23e9f0b6c3416444b18d657a5be4c640a2045d216daeb4c64",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_C3_v2_rr1.wav"
+        },
+        {
+          "id": "starter-piano-55",
+          "file": "samples/starter-piano-55.wav",
+          "sha256": "20ee00e6c5021c249bce4f3ef801cf708dd93269a82a66a13586992ab4a3a1dc",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_G3_v2_rr1.wav"
+        },
+        {
+          "id": "starter-piano-62",
+          "file": "samples/starter-piano-62.wav",
+          "sha256": "fc1f089c6ec56b1f2a14e7b2d79da9394f9ab3ece766b26078560f00807872d0",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_D4_v2_rr1.wav"
+        },
+        {
+          "id": "starter-piano-69",
+          "file": "samples/starter-piano-69.wav",
+          "sha256": "d6f0eb1cee29fb7927cdff99ebeb1f4ce1595f5c53cb2b241aaa11cfb3b36b18",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_A4_v2_rr1.wav"
+        },
+        {
+          "id": "starter-piano-72",
+          "file": "samples/starter-piano-72.wav",
+          "sha256": "24045950be1d02e97351e8036c3ea495e6011437ed87ba36a106e813edf30a01",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_C5_v2_rr1.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "starter-kalimba",
+        "engine": "sample",
+        "role": "arp",
+        "range": [
+          48,
+          88
+        ],
+        "attack": 0.002,
+        "release": 0.09,
+        "description": "Kalimba: compact multi-root VCSL sample instrument for retro game music.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "lowMidi": 48,
+              "highMidi": 65,
+              "rootMidi": 59,
+              "tuningCents": -8,
+              "assetId": "starter-kalimba-47",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 66,
+              "highMidi": 73,
+              "rootMidi": 71,
+              "tuningCents": 18,
+              "assetId": "starter-kalimba-59",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 74,
+              "highMidi": 88,
+              "rootMidi": 75,
+              "tuningCents": 26,
+              "assetId": "starter-kalimba-63",
+              "gainDb": 0
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "starter-kalimba-47",
+          "file": "samples/starter-kalimba-47.wav",
+          "sha256": "e0f79e69d584dbbb94ed4302ce22a4b59fdb110172d2454389b02a4d44150ef5",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Plucked Idiophones/Kalimba, Kenya/Mbira6_Normal_MainSpirit_B2_k8_vl3_rr2.wav"
+        },
+        {
+          "id": "starter-kalimba-59",
+          "file": "samples/starter-kalimba-59.wav",
+          "sha256": "75589883c1a7946bb292ff0057e6cc7d5fc73e16ba085c54490bfbc8f0417832",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Plucked Idiophones/Kalimba, Kenya/Mbira6_Normal_MainSpirit_B3_k12_vl3_rr2.wav"
+        },
+        {
+          "id": "starter-kalimba-63",
+          "file": "samples/starter-kalimba-63.wav",
+          "sha256": "396d65c5131f92d7ab2516a4b4b88bd4b9d8a14e58828616af7fbc185f33ed8c",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Plucked Idiophones/Kalimba, Kenya/Mbira6_Normal_MainSpirit_D#4_k13_vl3_rr2.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "starter-glock",
+        "engine": "sample",
+        "role": "melody",
+        "range": [
+          72,
+          108
+        ],
+        "attack": 0.002,
+        "release": 0.12,
+        "description": "Glockenspiel: compact multi-root VCSL sample instrument for retro game music.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "lowMidi": 72,
+              "highMidi": 90,
+              "rootMidi": 84,
+              "tuningCents": 12,
+              "assetId": "starter-glock-72",
+              "gainDb": 0
+            },
+            {
+              "lowMidi": 91,
+              "highMidi": 108,
+              "rootMidi": 96,
+              "tuningCents": 16,
+              "assetId": "starter-glock-84",
+              "gainDb": 0
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "starter-glock-72",
+          "file": "samples/starter-glock-72.wav",
+          "sha256": "c1a43cc3e697cc02831c1c73683a43a89833bbab8f1a9fec27483286bc7385e9",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Glockenspiel/glock_medium_C5_01.wav"
+        },
+        {
+          "id": "starter-glock-84",
+          "file": "samples/starter-glock-84.wav",
+          "sha256": "f49a26283950ab0d4730ee8575326e77cbd3fdd9c510aae2dc696c34b5997ad0",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Glockenspiel/glock_medium_C6_01.wav"
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@
 
 **Fully local, no API. The same score always renders the same audio.**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![115 tests](https://img.shields.io/badge/tests-115%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![126 tests](https://img.shields.io/badge/tests-126%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 Listen online](https://narrastory.github.io/retro-music-toolkit/) · [Quick start](#quick-start) · [vs. music models](#how-is-this-different-from-a-music-generation-model) · [Technical details](#technical-details)
 
@@ -90,7 +90,7 @@ They solve different problems.
 | **Reproducibility** | Same prompt, different result | Same score, same result |
 | **Editing** | Regenerate the whole piece | Change a single note |
 | **Explainability** | You get audio | You get a score and diagnostics |
-| **Source material** | Training data is not traceable | Procedurally generated; zero third-party samples |
+| **Source material** | Training data is not traceable | Procedural sounds plus traceable CC0 recordings |
 
 **A generation model is good at handing you a first idea. This toolkit is good at turning an idea into something that ships in a game, can be revised, and renders the same way every time.** If you already have a melody in mind, or you are building an AI agent that needs dependable output, this is the one you will use every day.
 
@@ -137,7 +137,7 @@ They solve different problems.
 <td valign="top">
 
 **🔊 Sound**
-- NES-, Genesis- and SNES-inspired profiles, 11 built-in instruments
+- NES-, Genesis- and SNES-inspired profiles, 11 procedural presets + 4 sampled starter instruments
 - `hardware` mode: unfiltered pulse, three duty cycles, 16-step volume
 - Single-voice chord arpeggio: a triad costs one voice
 - SNES eight-tap FIR echo, 8 drum pieces plus sampled kits
@@ -167,6 +167,12 @@ cat song.json | node dist/cli.js validate - --compact
 ```
 
 ---
+
+## 1.2: sampled instruments and stereo reverb
+
+A compact (~1.9 MB) CC0 starter collection adds recorder, piano, kalimba and glockenspiel, with 12 root samples. Import selected instruments with SHA-256 checks into portable offline scores. Opt-in seeded convolution reverb has independent track sends; existing scores retain their dry sound.
+
+[Hear the same phrase in three versions](https://narrastory.github.io/retro-music-toolkit/sound-lab.html) · [1.2 guide (Chinese)](references/v1.2-guide.zh-CN.md)
 
 ## Quick start
 
@@ -223,7 +229,7 @@ Full documentation (in Chinese): [quick start](references/quickstart.zh-CN.md) �
 - **Release tails are reported separately from held-note conflicts.** The former is routine and harmless; only the latter needs a fix.
 - **Reproducibility.** Drum noise, humanize jitter and randomised arpeggios are derived from the seed; runtime `Math.random` is banned. Cross-browser DSP differences can still shift individual samples, so bit-exact output is not claimed.
 
-**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 115 automated tests (90 unit, 23 real-audio, 2 web).
+**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 126 automated tests (98 unit, 26 real-audio, 2 web), plus showcase checks.
 
 </details>
 
@@ -314,7 +320,7 @@ Open an issue with the scenario you actually need.
 - Code and schema documentation: [MIT](LICENSE)
 - Reference guides and generated audio: see [NOTICE.md](NOTICE.md). The three background guides under `references/source-guides/` were supplied by the toolkit's user; copyright remains with their authors and the MIT licence does not apply to them.
 - Dependencies: Tone.js, Zod, Playwright and esbuild, each under its own licence.
-- All built-in instruments and drum material are **procedurally generated**. No commercial game samples and no ripped assets.
+- The original 11 presets use procedural sounds. The bundled starter collection uses **CC0 VCSL recordings**, with license and source hashes included. No commercial game samples or ripped assets.
 
 <div align="center">
 <br>

@@ -569,6 +569,7 @@ export function harmonizeScore(input: unknown, options: unknown) {
       gainDb: target.gainDb,
       pan: target.pan,
       send: target.send,
+      reverbSend: 0,
       maxVoices: target.maxVoices,
       voicePolicy: target.voicePolicy,
       swing: 0,

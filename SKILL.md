@@ -14,6 +14,7 @@ Create an original, editable musical work, not just a WAV. Use the deterministic
 - Read `references/score-format.zh-CN.md` before authoring scores or patches. Inspect `scripts/runtime/schema/score.schema.json` for exact field contracts.
 - Read `references/composition-playbook.zh-CN.md` to plan and revise music.
 - Read `references/v1.1-guide.zh-CN.md` for hold/tie, swing, humanize, key and harmony, motif operators, sampled drum kits, true-peak and loudness measurement, and the A/B export.
+- Read `references/v1.2-guide.zh-CN.md` for bundled sampled instruments, portable collection imports and deterministic stereo reverb. For acoustic timbres, inspect `cli instrument-packs` and import the selected starter instruments before writing tracks.
 - Read `references/architecture.zh-CN.md` when changing the engine.
 - Read `references/v0.2-guide.zh-CN.md` / `references/v0.3-guide.zh-CN.md` only for historical context on audition calibration, diagnostics, instrument packages and expression.
 - Inspect `scripts/runtime/examples/` for valid full scores. Do not present a renamed example as a new composition.
@@ -23,7 +24,7 @@ Create an original, editable musical work, not just a WAV. Use the deterministic
 
 Use Node.js 22 or newer. In the runtime directory run `npm ci`, `npm run browser:install`, then `npm run build`. Do not reinstall if dependencies and the browser are already available. Use `RETRO_CHROMIUM_EXECUTABLE` only if a compatible local Chromium executable is known. Commands use the local browser; no music generation API or account is required.
 
-The runtime version is 1.1.0. Write `schemaVersion: "1.3"` for new work; `"1.0"`–`"1.2"` scores remain accepted. Call `node dist/cli.js instruments` to inspect preset IDs, recommended ranges and sound descriptions. `node dist/cli.js example` prints a ~40-line minimal score — prefer it over a full example as a starting point. Commands return JSON, except help. Write compositions and exports into a task directory outside this installed skill; use absolute input/output paths when convenient.
+The runtime version is 1.2.0. Write `schemaVersion: "1.3"` for new work; `"1.0"`–`"1.2"` scores remain accepted. Call `node dist/cli.js instruments` to inspect preset IDs, recommended ranges and sound descriptions. `node dist/cli.js example` prints a ~40-line minimal score — prefer it over a full example as a starting point. Commands return JSON, except help. Write compositions and exports into a task directory outside this installed skill; use absolute input/output paths when convenient.
 
 If a browser cannot be installed (offline sandbox), `validate`, `compile`, `diagnose`, `patch`, `arrange`, `motif`, `harmonize` and `arpeggiate` still work; only `render` and `audition` need Chromium. Say so instead of silently skipping audio.
 
@@ -48,6 +49,7 @@ If a browser cannot be installed (offline sandbox), `validate`, `compile`, `diag
 - Set `authenticity: "hardware"` when the user wants the raw sound: it removes the safety low-pass, snaps pulse width to the three real duty cycles and quantises volume. Still an approximation, not an emulator.
 - On a one-voice pulse track, write chords as stacked notes and enable `arpeggio` — the compiler merges them into one voice that steps through the chord tones at `rate` steps per beat. This is how chip music fakes a chord; do not raise `maxVoices` instead.
 - Render melody and bass first. Add drums and accompaniment only when they serve the scene and phrasing.
+- Use `mixer.reverb` plus independent track `reverbSend` for diffuse stereo space; existing `send` controls delay/FIR echo. Keep bass and kick mostly dry, and check the full loop after adding tails. Reverb is opt-in.
 - Use sparse answer phrases, register separation, short percussion tails and shared space. Increase contrast through subtraction before adding layers.
 - For sample strings, choose note lengths that allow their slower attack. FM here is a two-operator approximation. Do not claim exact YM2612, BRR or native ROM compatibility.
 

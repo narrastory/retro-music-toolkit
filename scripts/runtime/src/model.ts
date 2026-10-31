@@ -102,6 +102,7 @@ export const TrackSchema = z.strictObject({
   gainDb: z.number().min(-60).max(6).default(-6),
   pan: z.number().min(-1).max(1).default(0),
   send: z.number().min(0).max(1).default(0),
+  reverbSend: z.number().min(0).max(1).default(0),
   maxVoices: z.number().int().min(1).max(16).default(1),
   voicePolicy: z.enum(["error", "cut"]).default("cut"),
   /** 0 = straight, 1 = full triplet swing on the swingUnit grid. */
@@ -142,6 +143,13 @@ export const EchoSchema = z.strictObject({
   returnDb: z.number().min(-60).max(0).default(-14),
 });
 export type EchoConfig = z.infer<typeof EchoSchema>;
+export const ReverbSchema = z.strictObject({
+  enabled: z.boolean().default(true),
+  decaySeconds: z.number().min(0.1).max(4).default(1.2),
+  preDelaySeconds: z.number().min(0).max(0.2).default(0.02),
+  damping: z.number().min(0).max(1).default(0.55),
+  returnDb: z.number().min(-60).max(0).default(-10),
+});
 
 export const ScoreSchema = z.strictObject({
   schemaVersion: z.enum(["1.0", "1.1", "1.2", "1.3"]),
@@ -201,6 +209,7 @@ export const ScoreSchema = z.strictObject({
        * multiple of delayBeats; the summed taps feed back into the line.
        */
       echo: EchoSchema.optional(),
+      reverb: ReverbSchema.optional(),
     })
     .default({ masterDb: -6, delayBeats: 0.75, feedback: 0.22, returnDb: -12 }),
   export: z
