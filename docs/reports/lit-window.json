@@ -1,0 +1,140 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 3528000,
+  "durationSeconds": 80,
+  "peak": 0.4396026134490967,
+  "peakDbfs": -7.138794686975145,
+  "truePeakDbfs": -7.123378587690599,
+  "rms": 0.0729014782259923,
+  "rmsDbfs": -22.74527330774678,
+  "loudnessLufs": -19.95,
+  "dcMean": -0.00002103053618230515,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.000005074456566944718,
+  "maxAdjacentStep": 0.10851341485977173,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.004746834843414478,
+  "cycleComparison": {
+    "differenceRms": 0.004746834843414478,
+    "signalRms": 0.0729014782259923,
+    "relativeDifference": 0.0651130122313767
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": null,
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 144,
+    "warmupCycles": 2,
+    "loopFrames": 3528000,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": null
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "window-piano",
+      "path": "tracks.0"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "window-piano: 153 release tails truncated by the next note (first at beat 1, last at beat 142). The notes themselves finished; only the tails are clipped.",
+      "trackId": "window-piano",
+      "beat": 1,
+      "eventIds": [
+        "window-piano-p0-0",
+        "window-piano-p0-1",
+        "window-piano-p0-2",
+        "window-piano-p0-3",
+        "window-piano-p1-0",
+        "window-piano-p1-1",
+        "window-piano-p1-2",
+        "window-piano-p1-3",
+        "window-piano-p1-4",
+        "window-piano-p2-0",
+        "window-piano-p2-1",
+        "window-piano-p2-2",
+        "window-piano-p2-3",
+        "window-piano-p3-0",
+        "window-piano-p3-1",
+        "window-piano-p4-0",
+        "window-piano-p4-1",
+        "window-piano-p4-2",
+        "window-piano-p4-3",
+        "window-piano-p5-0",
+        "window-piano-p5-1",
+        "window-piano-p5-2",
+        "window-piano-p5-3",
+        "window-piano-p6-0",
+        "window-piano-p6-1",
+        "window-piano-p6-2",
+        "window-piano-p6-3",
+        "window-piano-p7-0",
+        "window-piano-p7-1",
+        "window-piano-p7-2",
+        "window-piano-p8-0",
+        "window-piano-p8-1"
+      ],
+      "suggestion": {
+        "count": 153,
+        "exampleSourceIds": [
+          "window-piano-p0-0",
+          "window-piano-p0-1",
+          "window-piano-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "window-answer: 11 release tails truncated by the next note (first at beat 11.625, last at beat 131.625). The notes themselves finished; only the tails are clipped.",
+      "trackId": "window-answer",
+      "beat": 11.625,
+      "eventIds": [
+        "window-answer-p0-0",
+        "window-answer-p1-0",
+        "window-answer-p2-0",
+        "window-answer-p3-0",
+        "window-answer-p4-0",
+        "window-answer-p5-0",
+        "window-answer-p6-0",
+        "window-answer-p7-0",
+        "window-answer-p8-0",
+        "window-answer-p9-0",
+        "window-answer-p10-0"
+      ],
+      "suggestion": {
+        "count": 11,
+        "exampleSourceIds": [
+          "window-answer-p0-0",
+          "window-answer-p1-0",
+          "window-answer-p2-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "title": "The Lit Window",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261209,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "1ddff8e5389a7c16904ff4d8427ef64471a660218ee70fc9592dedea69867625",
+  "audioHash": "6af716509fd74d44062d3c30e9e0021ab274fe582f1d66a0400bca3d191d961f",
+  "sourceFile": "docs/scores/lit-window.json"
+}

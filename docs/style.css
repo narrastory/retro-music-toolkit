@@ -751,3 +751,17 @@ footer small {
     scroll-behavior: auto;
   }
 }
+
+.music-credits {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.music-credits summary {
+  cursor: pointer;
+  color: var(--pale);
+}
+.music-credits p {
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}

@@ -10,7 +10,7 @@
 
 **Fully local, no API. The same score always renders the same audio.**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![137 tests](https://img.shields.io/badge/tests-137%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![135 tests](https://img.shields.io/badge/tests-135%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 Listen online](https://narrastory.github.io/retro-music-toolkit/) · [Quick start](#quick-start) · [vs. music models](#how-is-this-different-from-a-music-generation-model) · [Technical details](#technical-details)
 
@@ -43,8 +43,8 @@ Bass wrong in bar 9? `patch` edits that one note, leaves everything else untouch
 Non-chord tones on strong beats, bass clashing with the chord, parallel fifths, unresolved leaps, a loop seam that never returns to the opening chord — diagnostics report the bar and the note ID, and often the exact repair value.
 
 > [!TIP]
-> Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (three original tracks: chip battle, pastoral and electronic)
-> Every example is rendered offline from a JSON score in this repository. No model was involved.
+> Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (three original game cues: pastoral exploration, intimate piano and gentle adventure)
+> Every example is rendered offline from a JSON score in this repository. Audio synthesis uses no music generation service.
 
 ---
 
@@ -172,13 +172,13 @@ cat song.json | node dist/cli.js validate - --compact
 
 Six new common instruments add bass, short bass, clean/short guitar, piano and acoustic drums (~4.4 MB). Velocity layers and seeded round robin are selected at compile time, including stable solo, crop and loop playback. Packs are separated by CC0 / CC BY 3.0 / CC BY 4.0; retain applicable attribution and license notices.
 
-[Audition the instruments and ensemble](https://narrastory.github.io/retro-music-toolkit/instruments.html) · [1.3 guide (Chinese)](references/v1.3-guide.zh-CN.md)
+[1.3 guide (Chinese)](references/v1.3-guide.zh-CN.md)
 
 ## 1.2: sampled instruments and stereo reverb
 
 A compact (~1.9 MB) CC0 starter collection adds recorder, piano, kalimba and glockenspiel, with 12 root samples. Import selected instruments with SHA-256 checks into portable offline scores. Opt-in seeded convolution reverb has independent track sends; existing scores retain their dry sound.
 
-[Hear the same phrase in three versions](https://narrastory.github.io/retro-music-toolkit/sound-lab.html) · [1.2 guide (Chinese)](references/v1.2-guide.zh-CN.md)
+[1.2 guide (Chinese)](references/v1.2-guide.zh-CN.md)
 
 ## Quick start
 
@@ -235,7 +235,7 @@ Full documentation (in Chinese): [quick start](references/quickstart.zh-CN.md) �
 - **Release tails are reported separately from held-note conflicts.** The former is routine and harmless; only the latter needs a fix.
 - **Reproducibility.** Drum noise, humanize jitter and randomised arpeggios are derived from the seed; runtime `Math.random` is banned. Cross-browser DSP differences can still shift individual samples, so bit-exact output is not claimed.
 
-**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 137 automated tests (107 unit, 28 real-audio, 2 web), plus showcase checks.
+**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 135 automated tests (105 unit, 28 real-audio, 2 web), plus showcase checks.
 
 </details>
 

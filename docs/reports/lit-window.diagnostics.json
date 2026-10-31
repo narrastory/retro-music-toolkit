@@ -1,0 +1,808 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "window-piano",
+      "path": "tracks.0"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "window-piano: 153 release tails truncated by the next note (first at beat 1, last at beat 142). The notes themselves finished; only the tails are clipped.",
+      "trackId": "window-piano",
+      "beat": 1,
+      "eventIds": [
+        "window-piano-p0-0",
+        "window-piano-p0-1",
+        "window-piano-p0-2",
+        "window-piano-p0-3",
+        "window-piano-p1-0",
+        "window-piano-p1-1",
+        "window-piano-p1-2",
+        "window-piano-p1-3",
+        "window-piano-p1-4",
+        "window-piano-p2-0",
+        "window-piano-p2-1",
+        "window-piano-p2-2",
+        "window-piano-p2-3",
+        "window-piano-p3-0",
+        "window-piano-p3-1",
+        "window-piano-p4-0",
+        "window-piano-p4-1",
+        "window-piano-p4-2",
+        "window-piano-p4-3",
+        "window-piano-p5-0",
+        "window-piano-p5-1",
+        "window-piano-p5-2",
+        "window-piano-p5-3",
+        "window-piano-p6-0",
+        "window-piano-p6-1",
+        "window-piano-p6-2",
+        "window-piano-p6-3",
+        "window-piano-p7-0",
+        "window-piano-p7-1",
+        "window-piano-p7-2",
+        "window-piano-p8-0",
+        "window-piano-p8-1"
+      ],
+      "suggestion": {
+        "count": 153,
+        "exampleSourceIds": [
+          "window-piano-p0-0",
+          "window-piano-p0-1",
+          "window-piano-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "window-answer: 11 release tails truncated by the next note (first at beat 11.625, last at beat 131.625). The notes themselves finished; only the tails are clipped.",
+      "trackId": "window-answer",
+      "beat": 11.625,
+      "eventIds": [
+        "window-answer-p0-0",
+        "window-answer-p1-0",
+        "window-answer-p2-0",
+        "window-answer-p3-0",
+        "window-answer-p4-0",
+        "window-answer-p5-0",
+        "window-answer-p6-0",
+        "window-answer-p7-0",
+        "window-answer-p8-0",
+        "window-answer-p9-0",
+        "window-answer-p10-0"
+      ],
+      "suggestion": {
+        "count": 11,
+        "exampleSourceIds": [
+          "window-answer-p0-0",
+          "window-answer-p1-0",
+          "window-answer-p2-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "window-piano",
+        "window-bass"
+      ],
+      "fromBeat": 32,
+      "toBeat": 33.880208333333336,
+      "bar": 11,
+      "sourceEventIds": [
+        "window-piano-p10-3",
+        "window-piano-p11-0",
+        "window-bass-p10-1",
+        "window-bass-p11-0"
+      ],
+      "evidence": {
+        "first": "B4/B2",
+        "second": "A4/A2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 68,
+      "toBeat": 70,
+      "bar": 23,
+      "sourceEventIds": [
+        "window-piano-p22-3",
+        "window-piano-p23-0",
+        "window-piano-p23-1"
+      ],
+      "evidence": {
+        "leapSemitones": -7,
+        "nextMove": -3,
+        "gapBeats": 1
+      },
+      "message": "Leap of -7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 140,
+      "toBeat": 142,
+      "bar": 47,
+      "sourceEventIds": [
+        "window-piano-p46-3",
+        "window-piano-p47-0",
+        "window-piano-p47-1"
+      ],
+      "evidence": {
+        "leapSemitones": -7,
+        "nextMove": -3,
+        "gapBeats": 1
+      },
+      "message": "Leap of -7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "window-bass",
+        "window-pad"
+      ],
+      "fromBeat": 12,
+      "toBeat": 122.375,
+      "bar": 5,
+      "sourceEventIds": [
+        "window-bass-p4-0",
+        "window-pad-p0-1",
+        "window-bass-p16-0",
+        "window-pad-p12-1",
+        "window-bass-p25-0",
+        "window-pad-p21-1",
+        "window-bass-p28-0",
+        "window-pad-p24-1",
+        "window-bass-p29-0",
+        "window-pad-p25-1",
+        "window-bass-p36-0",
+        "window-pad-p32-1"
+      ],
+      "evidence": {
+        "pairs": 6
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano",
+        "window-pad"
+      ],
+      "fromBeat": 12.125,
+      "toBeat": 122.375,
+      "bar": 5,
+      "sourceEventIds": [
+        "window-piano-p4-2",
+        "window-pad-p0-1",
+        "window-piano-p16-2",
+        "window-pad-p12-1",
+        "window-piano-p30-2",
+        "window-pad-p24-1",
+        "window-piano-p32-2",
+        "window-pad-p25-1",
+        "window-piano-p40-2",
+        "window-pad-p32-1"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 0,
+      "toBeat": 6,
+      "bar": 1,
+      "sourceEventIds": [
+        "window-piano-p0-0",
+        "window-piano-p0-1",
+        "window-piano-p0-2",
+        "window-piano-p0-3",
+        "window-piano-p1-0",
+        "window-piano-p1-1",
+        "window-piano-p1-2",
+        "window-piano-p1-3",
+        "window-piano-p1-4"
+      ],
+      "clipIds": [
+        "window-piano-clip-p0",
+        "window-piano-clip-p1"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.11979166666666696,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 12,
+      "toBeat": 18,
+      "bar": 5,
+      "sourceEventIds": [
+        "window-piano-p4-0",
+        "window-piano-p4-1",
+        "window-piano-p4-2",
+        "window-piano-p4-3",
+        "window-piano-p5-0",
+        "window-piano-p5-1",
+        "window-piano-p5-2",
+        "window-piano-p5-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p4",
+        "window-piano-clip-p5"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.11979166666666785,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 24,
+      "toBeat": 30,
+      "bar": 9,
+      "sourceEventIds": [
+        "window-piano-p8-0",
+        "window-piano-p8-1",
+        "window-piano-p8-2",
+        "window-piano-p8-3",
+        "window-piano-p9-0",
+        "window-piano-p9-1",
+        "window-piano-p9-2",
+        "window-piano-p9-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p8",
+        "window-piano-clip-p9"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.11979166666666785,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 36,
+      "toBeat": 42,
+      "bar": 13,
+      "sourceEventIds": [
+        "window-piano-p12-0",
+        "window-piano-p12-1",
+        "window-piano-p12-2",
+        "window-piano-p12-3",
+        "window-piano-p13-0",
+        "window-piano-p13-1",
+        "window-piano-p13-2",
+        "window-piano-p13-3",
+        "window-piano-p13-4"
+      ],
+      "clipIds": [
+        "window-piano-clip-p12",
+        "window-piano-clip-p13"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.1197916666666643,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 48,
+      "toBeat": 54,
+      "bar": 17,
+      "sourceEventIds": [
+        "window-piano-p16-0",
+        "window-piano-p16-1",
+        "window-piano-p16-2",
+        "window-piano-p16-3",
+        "window-piano-p17-0",
+        "window-piano-p17-1",
+        "window-piano-p17-2",
+        "window-piano-p17-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p16",
+        "window-piano-clip-p17"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.1197916666666643,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 60,
+      "toBeat": 66,
+      "bar": 21,
+      "sourceEventIds": [
+        "window-piano-p20-0",
+        "window-piano-p20-1",
+        "window-piano-p20-2",
+        "window-piano-p20-3",
+        "window-piano-p21-0",
+        "window-piano-p21-1",
+        "window-piano-p21-2",
+        "window-piano-p21-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p20",
+        "window-piano-clip-p21"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.1197916666666714,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 108,
+      "toBeat": 114,
+      "bar": 37,
+      "sourceEventIds": [
+        "window-piano-p36-0",
+        "window-piano-p36-1",
+        "window-piano-p36-2",
+        "window-piano-p36-3",
+        "window-piano-p37-0",
+        "window-piano-p37-1",
+        "window-piano-p37-2",
+        "window-piano-p37-3",
+        "window-piano-p37-4"
+      ],
+      "clipIds": [
+        "window-piano-clip-p36",
+        "window-piano-clip-p37"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.1197916666666714,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 120,
+      "toBeat": 126,
+      "bar": 41,
+      "sourceEventIds": [
+        "window-piano-p40-0",
+        "window-piano-p40-1",
+        "window-piano-p40-2",
+        "window-piano-p40-3",
+        "window-piano-p41-0",
+        "window-piano-p41-1",
+        "window-piano-p41-2",
+        "window-piano-p41-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p40",
+        "window-piano-clip-p41"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.1197916666666714,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "window-piano"
+      ],
+      "fromBeat": 132,
+      "toBeat": 138,
+      "bar": 45,
+      "sourceEventIds": [
+        "window-piano-p44-0",
+        "window-piano-p44-1",
+        "window-piano-p44-2",
+        "window-piano-p44-3",
+        "window-piano-p45-0",
+        "window-piano-p45-1",
+        "window-piano-p45-2",
+        "window-piano-p45-3"
+      ],
+      "clipIds": [
+        "window-piano-clip-p44",
+        "window-piano-clip-p45"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.11979166666665719,
+        "spanBeats": 6
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "window-answer",
+        "window-bass",
+        "window-pad",
+        "window-piano"
+      ],
+      "fromBeat": 36,
+      "toBeat": 72,
+      "bar": 13,
+      "sourceEventIds": [
+        "window-bass-p12-0",
+        "window-piano-p12-0",
+        "window-pad-p8-0",
+        "window-pad-p8-1",
+        "window-pad-p8-2",
+        "window-piano-p12-1",
+        "window-piano-p12-2",
+        "window-bass-p12-1",
+        "window-piano-p12-3",
+        "window-bass-p13-0",
+        "window-piano-p13-0",
+        "window-pad-p9-0",
+        "window-pad-p9-1",
+        "window-pad-p9-2",
+        "window-piano-p13-1",
+        "window-piano-p13-2",
+        "window-piano-p13-3",
+        "window-piano-p13-4",
+        "window-bass-p14-0",
+        "window-piano-p14-0",
+        "window-pad-p10-0",
+        "window-pad-p10-1",
+        "window-pad-p10-2",
+        "window-piano-p14-1",
+        "window-piano-p14-2",
+        "window-bass-p14-1",
+        "window-piano-p14-3",
+        "window-bass-p15-0",
+        "window-piano-p15-0",
+        "window-pad-p11-0",
+        "window-pad-p11-1",
+        "window-pad-p11-2",
+        "window-piano-p15-1",
+        "window-piano-p15-2",
+        "window-answer-p3-0",
+        "window-answer-p3-1",
+        "window-bass-p16-0",
+        "window-piano-p16-0",
+        "window-pad-p12-0",
+        "window-pad-p12-1",
+        "window-pad-p12-2",
+        "window-piano-p16-1",
+        "window-piano-p16-2",
+        "window-bass-p16-1",
+        "window-piano-p16-3",
+        "window-bass-p17-0",
+        "window-piano-p17-0",
+        "window-pad-p13-0",
+        "window-pad-p13-1",
+        "window-pad-p13-2",
+        "window-piano-p17-1",
+        "window-piano-p17-2",
+        "window-piano-p17-3",
+        "window-bass-p18-0",
+        "window-piano-p18-0",
+        "window-pad-p14-0",
+        "window-pad-p14-1",
+        "window-pad-p14-2",
+        "window-piano-p18-1",
+        "window-bass-p18-1",
+        "window-piano-p18-2",
+        "window-piano-p18-3",
+        "window-bass-p19-0",
+        "window-piano-p19-0",
+        "window-pad-p15-0",
+        "window-pad-p15-1",
+        "window-pad-p15-2",
+        "window-piano-p19-1",
+        "window-piano-p19-2",
+        "window-piano-p19-3",
+        "window-answer-p4-0",
+        "window-answer-p4-1",
+        "window-bass-p20-0",
+        "window-piano-p20-0",
+        "window-pad-p16-0",
+        "window-pad-p16-1",
+        "window-pad-p16-2",
+        "window-piano-p20-1",
+        "window-bass-p20-1",
+        "window-piano-p20-2",
+        "window-piano-p20-3",
+        "window-bass-p21-0",
+        "window-piano-p21-0",
+        "window-pad-p17-0",
+        "window-pad-p17-1",
+        "window-pad-p17-2",
+        "window-piano-p21-1",
+        "window-piano-p21-2",
+        "window-piano-p21-3",
+        "window-bass-p22-0",
+        "window-piano-p22-0",
+        "window-pad-p18-0",
+        "window-pad-p18-1",
+        "window-pad-p18-2",
+        "window-piano-p22-1",
+        "window-piano-p22-2",
+        "window-bass-p22-1",
+        "window-piano-p22-3",
+        "window-bass-p23-0",
+        "window-piano-p23-0",
+        "window-pad-p19-0",
+        "window-pad-p19-1",
+        "window-pad-p19-2",
+        "window-piano-p23-1",
+        "window-answer-p5-0",
+        "window-answer-p5-1"
+      ],
+      "clipIds": [
+        "window-bass-clip-p12",
+        "window-piano-clip-p12",
+        "window-pad-clip-p8",
+        "window-bass-clip-p13",
+        "window-piano-clip-p13",
+        "window-pad-clip-p9",
+        "window-bass-clip-p14",
+        "window-piano-clip-p14",
+        "window-pad-clip-p10",
+        "window-bass-clip-p15",
+        "window-piano-clip-p15",
+        "window-pad-clip-p11",
+        "window-answer-clip-p3",
+        "window-bass-clip-p16",
+        "window-piano-clip-p16",
+        "window-pad-clip-p12",
+        "window-bass-clip-p17",
+        "window-piano-clip-p17",
+        "window-pad-clip-p13",
+        "window-bass-clip-p18",
+        "window-piano-clip-p18",
+        "window-pad-clip-p14",
+        "window-bass-clip-p19",
+        "window-piano-clip-p19",
+        "window-pad-clip-p15",
+        "window-answer-clip-p4",
+        "window-bass-clip-p20",
+        "window-piano-clip-p20",
+        "window-pad-clip-p16",
+        "window-bass-clip-p21",
+        "window-piano-clip-p21",
+        "window-pad-clip-p17",
+        "window-bass-clip-p22",
+        "window-piano-clip-p22",
+        "window-pad-clip-p18",
+        "window-bass-clip-p23",
+        "window-piano-clip-p23",
+        "window-pad-clip-p19",
+        "window-answer-clip-p5"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-0",
+          "section-1"
+        ],
+        "densityRelativeDifference": 0.09433962264150955
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "window-piano",
+        "role": "melody",
+        "instrument": "keys-grand",
+        "eventCount": 176,
+        "notesPerBeat": 1.2222222222222223,
+        "medianMidi": 69
+      },
+      {
+        "trackId": "window-pad",
+        "role": "harmony",
+        "instrument": "window-soft-pad",
+        "eventCount": 120,
+        "notesPerBeat": 0.8333333333333334,
+        "medianMidi": 54
+      },
+      {
+        "trackId": "window-bass",
+        "role": "bass",
+        "instrument": "triangle-bass",
+        "eventCount": 66,
+        "notesPerBeat": 0.4583333333333333,
+        "medianMidi": 45
+      },
+      {
+        "trackId": "window-answer",
+        "role": "arp",
+        "instrument": "starter-kalimba",
+        "eventCount": 22,
+        "notesPerBeat": 0.1527777777777778,
+        "medianMidi": 68
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Windowlight",
+        "fromBeat": 0,
+        "toBeat": 36,
+        "eventsPerBeat": 2.6666666666666665,
+        "activeTrackIds": [
+          "window-answer",
+          "window-bass",
+          "window-pad",
+          "window-piano"
+        ],
+        "medianMidi": 64
+      },
+      {
+        "sectionId": "section-1",
+        "label": "A letter",
+        "fromBeat": 36,
+        "toBeat": 72,
+        "eventsPerBeat": 2.9444444444444446,
+        "activeTrackIds": [
+          "window-answer",
+          "window-bass",
+          "window-pad",
+          "window-piano"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Quiet night",
+        "fromBeat": 72,
+        "toBeat": 108,
+        "eventsPerBeat": 2.1666666666666665,
+        "activeTrackIds": [
+          "window-answer",
+          "window-bass",
+          "window-pad",
+          "window-piano"
+        ],
+        "medianMidi": 66
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Still awake",
+        "fromBeat": 108,
+        "toBeat": 144,
+        "eventsPerBeat": 2.888888888888889,
+        "activeTrackIds": [
+          "window-answer",
+          "window-bass",
+          "window-pad",
+          "window-piano"
+        ],
+        "medianMidi": 61.5
+      }
+    ],
+    "barBeats": 3,
+    "windowBeats": 3,
+    "key": "D major",
+    "chordCount": 48
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 3,
+    "resolvedSpanBeats": 6
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

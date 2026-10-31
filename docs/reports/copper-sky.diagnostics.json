@@ -1,0 +1,649 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "copper-lead: 153 release tails truncated by the next note (first at beat 0.5, last at beat 158). The notes themselves finished; only the tails are clipped.",
+      "trackId": "copper-lead",
+      "beat": 0.5,
+      "eventIds": [
+        "copper-lead-p0-0",
+        "copper-lead-p0-1",
+        "copper-lead-p0-2",
+        "copper-lead-p0-3",
+        "copper-lead-p0-4",
+        "copper-lead-p1-0",
+        "copper-lead-p1-1",
+        "copper-lead-p1-2",
+        "copper-lead-p1-3",
+        "copper-lead-p1-4",
+        "copper-lead-p2-0",
+        "copper-lead-p2-1",
+        "copper-lead-p2-2",
+        "copper-lead-p2-3",
+        "copper-lead-p2-4",
+        "copper-lead-p3-0",
+        "copper-lead-p3-1",
+        "copper-lead-p3-2",
+        "copper-lead-p3-3",
+        "copper-lead-p3-4",
+        "copper-lead-p4-0",
+        "copper-lead-p4-1",
+        "copper-lead-p4-2",
+        "copper-lead-p4-3",
+        "copper-lead-p4-4",
+        "copper-lead-p5-0",
+        "copper-lead-p5-1",
+        "copper-lead-p5-2",
+        "copper-lead-p5-3",
+        "copper-lead-p5-4",
+        "copper-lead-p6-0",
+        "copper-lead-p6-1"
+      ],
+      "suggestion": {
+        "count": 153,
+        "exampleSourceIds": [
+          "copper-lead-p0-0",
+          "copper-lead-p0-1",
+          "copper-lead-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "HARMONY_NON_CHORD_TONE",
+      "severity": "warning",
+      "trackIds": [
+        "copper-lead"
+      ],
+      "fromBeat": 148,
+      "toBeat": 148.88020833333334,
+      "bar": 38,
+      "sourceEventIds": [
+        "copper-lead-p33-0"
+      ],
+      "evidence": {
+        "chord": "Dm/F",
+        "pitch": "C5",
+        "chordTones": [
+          "D",
+          "F",
+          "A"
+        ],
+        "durationBeats": 0.8802083333333334
+      },
+      "message": "C5 is not in Dm/F and is held on a strong beat",
+      "suggestions": [
+        "Move to a chord tone, shorten it, or change the chord if the tension is intentional."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "copper-lead"
+      ],
+      "fromBeat": 86,
+      "toBeat": 89,
+      "bar": 22,
+      "sourceEventIds": [
+        "copper-lead-p17-3",
+        "copper-lead-p18-0",
+        "copper-lead-p18-1"
+      ],
+      "evidence": {
+        "leapSemitones": 9,
+        "nextMove": 3,
+        "gapBeats": 2
+      },
+      "message": "Leap of 9 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "copper-lead"
+      ],
+      "fromBeat": 28,
+      "toBeat": 157.88020833333334,
+      "bar": 8,
+      "sourceEventIds": [
+        "copper-lead-p7-0",
+        "copper-lead-p7-4",
+        "copper-lead-p7-5",
+        "copper-lead-p15-0",
+        "copper-lead-p15-4",
+        "copper-lead-p23-1",
+        "copper-lead-p23-2",
+        "copper-lead-p31-0",
+        "copper-lead-p31-4",
+        "copper-lead-p31-5",
+        "copper-lead-p35-1"
+      ],
+      "evidence": {
+        "count": 11,
+        "ratio": 0.0582010582010582,
+        "key": "D minor",
+        "pitches": [
+          "C#5",
+          "B4"
+        ]
+      },
+      "message": "11 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "copper-guitar"
+      ],
+      "fromBeat": 29.25,
+      "toBeat": 159.51354166666667,
+      "bar": 8,
+      "sourceEventIds": [
+        "copper-guitar-p7-1",
+        "copper-guitar-p7-3",
+        "copper-guitar-p15-1",
+        "copper-guitar-p15-3",
+        "copper-guitar-p23-1",
+        "copper-guitar-p23-3",
+        "copper-guitar-p31-1",
+        "copper-guitar-p31-3",
+        "copper-guitar-p35-1",
+        "copper-guitar-p35-3"
+      ],
+      "evidence": {
+        "count": 10,
+        "ratio": 0.06944444444444445,
+        "key": "D minor",
+        "pitches": [
+          "C#4"
+        ]
+      },
+      "message": "10 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "copper-piano"
+      ],
+      "fromBeat": 31,
+      "toBeat": 159.528125,
+      "bar": 8,
+      "sourceEventIds": [
+        "copper-piano-p3-1",
+        "copper-piano-p7-1",
+        "copper-piano-p11-1",
+        "copper-piano-p15-1",
+        "copper-piano-p19-1",
+        "copper-piano-p21-1"
+      ],
+      "evidence": {
+        "count": 6,
+        "ratio": 0.12,
+        "key": "D minor",
+        "pitches": [
+          "C#4",
+          "C#5"
+        ]
+      },
+      "message": "6 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "copper-bass",
+        "copper-guitar"
+      ],
+      "fromBeat": 4,
+      "toBeat": 119.071875,
+      "bar": 2,
+      "sourceEventIds": [
+        "copper-bass-p1-0",
+        "copper-guitar-p1-0",
+        "copper-bass-p1-2",
+        "copper-guitar-p1-2",
+        "copper-bass-p9-0",
+        "copper-guitar-p9-0",
+        "copper-bass-p9-2",
+        "copper-guitar-p9-2",
+        "copper-bass-p20-0",
+        "copper-guitar-p16-0",
+        "copper-bass-p20-2",
+        "copper-guitar-p16-2",
+        "copper-bass-p24-0",
+        "copper-guitar-p20-0",
+        "copper-bass-p24-2",
+        "copper-guitar-p20-2",
+        "copper-bass-p29-0",
+        "copper-guitar-p25-0",
+        "copper-bass-p29-2",
+        "copper-guitar-p25-2"
+      ],
+      "evidence": {
+        "pairs": 10
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "copper-bass",
+        "copper-piano"
+      ],
+      "fromBeat": 6.5,
+      "toBeat": 119.528125,
+      "bar": 2,
+      "sourceEventIds": [
+        "copper-bass-p1-2",
+        "copper-piano-p0-0",
+        "copper-bass-p9-2",
+        "copper-piano-p4-0",
+        "copper-bass-p29-2",
+        "copper-piano-p16-0"
+      ],
+      "evidence": {
+        "pairs": 3
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "copper-lead",
+        "copper-guitar"
+      ],
+      "fromBeat": 6.5,
+      "toBeat": 121.51354166666667,
+      "bar": 2,
+      "sourceEventIds": [
+        "copper-lead-p1-4",
+        "copper-guitar-p1-2",
+        "copper-lead-p2-1",
+        "copper-guitar-p2-1",
+        "copper-lead-p9-4",
+        "copper-guitar-p9-2",
+        "copper-lead-p10-1",
+        "copper-guitar-p10-1",
+        "copper-lead-p25-4",
+        "copper-guitar-p25-2",
+        "copper-lead-p26-1",
+        "copper-guitar-p26-1"
+      ],
+      "evidence": {
+        "pairs": 6
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "copper-bass",
+        "copper-drums",
+        "copper-guitar",
+        "copper-lead",
+        "copper-piano"
+      ],
+      "fromBeat": 112,
+      "toBeat": 160,
+      "bar": 29,
+      "sourceEventIds": [
+        "copper-bass-p28-0",
+        "copper-drums-p26-0",
+        "copper-lead-p24-0",
+        "copper-drums-p26-4",
+        "copper-guitar-p24-0",
+        "copper-lead-p24-1",
+        "copper-drums-p26-2",
+        "copper-guitar-p24-1",
+        "copper-bass-p28-1",
+        "copper-drums-p26-5",
+        "copper-lead-p24-2",
+        "copper-drums-p26-6",
+        "copper-lead-p24-3",
+        "copper-bass-p28-2",
+        "copper-drums-p26-1",
+        "copper-guitar-p24-2",
+        "copper-lead-p24-4",
+        "copper-drums-p26-3",
+        "copper-lead-p24-5",
+        "copper-guitar-p24-3",
+        "copper-drums-p26-7",
+        "copper-bass-p29-0",
+        "copper-drums-p27-0",
+        "copper-lead-p25-0",
+        "copper-drums-p27-4",
+        "copper-guitar-p25-0",
+        "copper-lead-p25-1",
+        "copper-drums-p27-2",
+        "copper-lead-p25-2",
+        "copper-guitar-p25-1",
+        "copper-bass-p29-1",
+        "copper-drums-p27-5",
+        "copper-drums-p27-6",
+        "copper-lead-p25-3",
+        "copper-bass-p29-2",
+        "copper-drums-p27-1",
+        "copper-guitar-p25-2",
+        "copper-lead-p25-4",
+        "copper-drums-p27-3",
+        "copper-lead-p25-5",
+        "copper-piano-p16-0",
+        "copper-piano-p16-1",
+        "copper-guitar-p25-3",
+        "copper-drums-p27-7",
+        "copper-bass-p30-0",
+        "copper-drums-p28-0",
+        "copper-lead-p26-0",
+        "copper-drums-p28-4",
+        "copper-guitar-p26-0",
+        "copper-lead-p26-1",
+        "copper-drums-p28-2",
+        "copper-guitar-p26-1",
+        "copper-bass-p30-1",
+        "copper-drums-p28-5",
+        "copper-lead-p26-2",
+        "copper-drums-p28-6",
+        "copper-lead-p26-3",
+        "copper-bass-p30-2",
+        "copper-drums-p28-1",
+        "copper-guitar-p26-2",
+        "copper-lead-p26-4",
+        "copper-drums-p28-3",
+        "copper-lead-p26-5",
+        "copper-guitar-p26-3",
+        "copper-drums-p28-7",
+        "copper-bass-p31-0",
+        "copper-drums-p29-0",
+        "copper-lead-p27-0",
+        "copper-drums-p29-4",
+        "copper-guitar-p27-0",
+        "copper-lead-p27-1",
+        "copper-drums-p29-2",
+        "copper-lead-p27-2",
+        "copper-guitar-p27-1",
+        "copper-bass-p31-1",
+        "copper-drums-p29-5",
+        "copper-drums-p29-6",
+        "copper-lead-p27-3",
+        "copper-bass-p31-2",
+        "copper-drums-p29-1",
+        "copper-guitar-p27-2",
+        "copper-lead-p27-4",
+        "copper-drums-p29-3",
+        "copper-lead-p27-5",
+        "copper-piano-p17-0",
+        "copper-piano-p17-1",
+        "copper-guitar-p27-3",
+        "copper-drums-p29-7",
+        "copper-bass-p32-0",
+        "copper-drums-p30-0",
+        "copper-lead-p28-0",
+        "copper-drums-p30-4",
+        "copper-guitar-p28-0",
+        "copper-lead-p28-1",
+        "copper-drums-p30-2",
+        "copper-lead-p28-2",
+        "copper-guitar-p28-1",
+        "copper-bass-p32-1",
+        "copper-drums-p30-5",
+        "copper-drums-p30-6",
+        "copper-lead-p28-3",
+        "copper-bass-p32-2",
+        "copper-drums-p30-1",
+        "copper-guitar-p28-2",
+        "copper-lead-p28-4",
+        "copper-drums-p30-3",
+        "copper-lead-p28-5",
+        "copper-guitar-p28-3",
+        "copper-drums-p30-7",
+        "copper-bass-p33-0",
+        "copper-drums-p31-0",
+        "copper-lead-p29-0",
+        "copper-drums-p31-4",
+        "copper-guitar-p29-0",
+        "copper-lead-p29-1",
+        "copper-drums-p31-2",
+        "copper-guitar-p29-1",
+        "copper-bass-p33-1",
+        "copper-drums-p31-5",
+        "copper-lead-p29-2",
+        "copper-drums-p31-6",
+        "copper-lead-p29-3",
+        "copper-bass-p33-2",
+        "copper-drums-p31-1",
+        "copper-guitar-p29-2",
+        "copper-lead-p29-4",
+        "copper-drums-p31-3",
+        "copper-lead-p29-5"
+      ],
+      "clipIds": [
+        "copper-bass-clip-p28",
+        "copper-drums-clip-p26",
+        "copper-lead-clip-p24",
+        "copper-guitar-clip-p24",
+        "copper-bass-clip-p29",
+        "copper-drums-clip-p27",
+        "copper-lead-clip-p25",
+        "copper-guitar-clip-p25",
+        "copper-piano-clip-p16",
+        "copper-bass-clip-p30",
+        "copper-drums-clip-p28",
+        "copper-lead-clip-p26",
+        "copper-guitar-clip-p26",
+        "copper-bass-clip-p31",
+        "copper-drums-clip-p29",
+        "copper-lead-clip-p27",
+        "copper-guitar-clip-p27",
+        "copper-piano-clip-p17",
+        "copper-bass-clip-p32",
+        "copper-drums-clip-p30",
+        "copper-lead-clip-p28",
+        "copper-guitar-clip-p28",
+        "copper-bass-clip-p33",
+        "copper-drums-clip-p31",
+        "copper-lead-clip-p29",
+        "copper-guitar-clip-p29",
+        "copper-piano-clip-p18",
+        "copper-bass-clip-p34",
+        "copper-drums-clip-p32",
+        "copper-lead-clip-p30",
+        "copper-guitar-clip-p30",
+        "copper-bass-clip-p35",
+        "copper-drums-clip-p33",
+        "copper-lead-clip-p31",
+        "copper-guitar-clip-p31",
+        "copper-piano-clip-p19",
+        "copper-bass-clip-p36",
+        "copper-drums-clip-p34",
+        "copper-lead-clip-p32",
+        "copper-guitar-clip-p32",
+        "copper-bass-clip-p37",
+        "copper-drums-clip-p35",
+        "copper-lead-clip-p33",
+        "copper-guitar-clip-p33",
+        "copper-piano-clip-p20",
+        "copper-bass-clip-p38",
+        "copper-drums-clip-p36",
+        "copper-lead-clip-p34",
+        "copper-guitar-clip-p34",
+        "copper-bass-clip-p39",
+        "copper-drums-clip-p37",
+        "copper-lead-clip-p35",
+        "copper-guitar-clip-p35",
+        "copper-piano-clip-p21"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-2",
+          "section-3"
+        ],
+        "densityRelativeDifference": 0.07283464566929139
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "copper-lead",
+        "role": "melody",
+        "instrument": "copper-rounded-lead",
+        "eventCount": 189,
+        "notesPerBeat": 1.18125,
+        "medianMidi": 72
+      },
+      {
+        "trackId": "copper-guitar",
+        "role": "arp",
+        "instrument": "band-guitar-short",
+        "eventCount": 144,
+        "notesPerBeat": 0.9,
+        "medianMidi": 60
+      },
+      {
+        "trackId": "copper-piano",
+        "role": "harmony",
+        "instrument": "keys-grand",
+        "eventCount": 50,
+        "notesPerBeat": 0.3125,
+        "medianMidi": 62
+      },
+      {
+        "trackId": "copper-bass",
+        "role": "bass",
+        "instrument": "band-bass-short",
+        "eventCount": 112,
+        "notesPerBeat": 0.7,
+        "medianMidi": 45
+      },
+      {
+        "trackId": "copper-drums",
+        "role": "drums",
+        "instrument": "drums-acoustic",
+        "eventCount": 289,
+        "notesPerBeat": 1.80625,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Departure",
+        "fromBeat": 0,
+        "toBeat": 32,
+        "eventsPerBeat": 5.53125,
+        "activeTrackIds": [
+          "copper-bass",
+          "copper-drums",
+          "copper-guitar",
+          "copper-lead",
+          "copper-piano"
+        ],
+        "medianMidi": 64
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Open road",
+        "fromBeat": 32,
+        "toBeat": 80,
+        "eventsPerBeat": 4.083333333333333,
+        "activeTrackIds": [
+          "copper-bass",
+          "copper-drums",
+          "copper-guitar",
+          "copper-lead",
+          "copper-piano"
+        ],
+        "medianMidi": 64.5
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Far horizon",
+        "fromBeat": 80,
+        "toBeat": 112,
+        "eventsPerBeat": 4.90625,
+        "activeTrackIds": [
+          "copper-bass",
+          "copper-drums",
+          "copper-guitar",
+          "copper-lead",
+          "copper-piano"
+        ],
+        "medianMidi": 60
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Another mile",
+        "fromBeat": 112,
+        "toBeat": 160,
+        "eventsPerBeat": 5.291666666666667,
+        "activeTrackIds": [
+          "copper-bass",
+          "copper-drums",
+          "copper-guitar",
+          "copper-lead",
+          "copper-piano"
+        ],
+        "medianMidi": 62
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "D minor",
+    "chordCount": 40
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}
