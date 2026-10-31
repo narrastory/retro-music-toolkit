@@ -19,10 +19,10 @@ async function initShowcase() {
     <audio preload="none" src="audio/${track.id}.mp3" aria-label="${track.title}"></audio>
     <div class="transport"><button class="play" aria-label="播放${track.title}">▶ 播放</button><input class="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="${track.title}播放进度"><span class="time">0:00 / ${clock(track.duration)}</span><button class="loop" aria-pressed="false" aria-label="循环播放${track.title}">↻ 循环</button></div>
     <p class="audio-error" role="status" hidden></p>
-    <div class="structure" aria-label="乐曲段落">${track.sections.map((label, i) => `<span><b>${clock((track.duration * i) / 4)}</b> ${label}</span>`).join("")}</div>
+    <div class="structure" aria-label="乐曲段落">${track.sections.map((label, i) => `<span><b>${clock((track.sectionBeats[i] * 60) / track.tempo)}</b> ${label}</span>`).join("")}</div>
     <div class="features">${track.features.map((feature) => `<span>${feature}</span>`).join("")}</div>
     <div class="prompt"><div class="prompt-head"><h4>创作 Prompt</h4><button class="copy" aria-label="复制${track.title}创作提示词">复制提示词</button></div><p>${track.prompt}</p><small>本次原创创作的主要提示词；逐音符编写乐谱，再经本工具离线渲染。</small></div>
-    <div class="downloads"><a href="audio/${track.id}.wav" download>下载 WAV ↓</a><a href="scores/${track.id}.json" download>下载乐谱 ↓</a><a href="reports/${track.id}.json">渲染报告 ↗</a></div></div>`;
+    <div class="downloads"><a href="audio/${track.id}.wav" download>下载 WAV ↓</a><a href="scores/${track.id}.json" download>下载乐谱 ↓</a><a href="reports/${track.id}.json">渲染报告 ↗</a></div><details class="music-credits"><summary>音源署名与使用说明</summary><p>${track.credits.join("<br>")}</p><p>采样经裁剪、重采样、增益和音准校准；保留适用署名与改动说明。许可：<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>、<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>。<a href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md">完整出处</a></p></details></div>`;
     collection.append(article);
     const audio = article.querySelector("audio");
     const play = article.querySelector(".play");

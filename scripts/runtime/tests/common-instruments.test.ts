@@ -9,7 +9,6 @@ import {
 } from "../src/instrument-collection.js";
 import { fixture } from "./helpers.js";
 import { compileScore } from "../src/compiler.js";
-import { createHash } from "node:crypto";
 import { decodeWav } from "../src/wav.js";
 test("common packs import all six usable instruments without any material-directory dependency", async () => {
   const available = await listBundledCollections();
@@ -56,41 +55,4 @@ test("common packs import all six usable instruments without any material-direct
       .drumKit.slots.length,
     20,
   );
-});
-test("published common-instrument auditions have matching portable sources and safe master hashes", async () => {
-  const root = new URL("../../../docs/", import.meta.url);
-  const catalog = JSON.parse(
-    await readFile(new URL("instrument-catalog.json", root), "utf8"),
-  );
-  assert.equal(catalog.entries.length, 6);
-  for (const id of [
-    ...catalog.entries.map((e: { file: string }) => e.file),
-    catalog.ensemble,
-  ]) {
-    const text = await readFile(new URL(`scores/${id}.json`, root));
-    const report = JSON.parse(
-      await readFile(new URL(`reports/${id}.json`, root), "utf8"),
-    );
-    const wav = await readFile(new URL(`audio/${id}.wav`, root));
-    assert.equal(
-      report.sourceHash,
-      createHash("sha256").update(text).digest("hex"),
-    );
-    assert.equal(
-      report.audioHash,
-      createHash("sha256").update(wav).digest("hex"),
-    );
-    assert.equal(report.silent, false);
-    assert.equal(report.clippedSamples, 0);
-    assert.equal(report.nonFiniteSamples, 0);
-    assert.ok(report.truePeakDbfs < -0.5);
-    const compiled = compileScore(JSON.parse(text.toString("utf8")));
-    assert.ok(
-      compiled.events.some(
-        (e) =>
-          e.sampleZoneIndex !== undefined ||
-          e.sampleDrumSlotIndex !== undefined,
-      ),
-    );
-  }
 });

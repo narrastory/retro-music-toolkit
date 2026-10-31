@@ -1,50 +1,109 @@
 [
   {
-    "id": "ember-resolve",
-    "title": "余烬决心",
-    "english": "Ember Resolve",
-    "style": "Chip battle",
-    "setting": "战斗 / 快速推进",
-    "duration": 48,
-    "tempo": 160,
-    "bars": 32,
+    "id": "after-the-rain",
+    "title": "雨后小径",
+    "english": "After the Rain",
+    "style": "Pastoral exploration",
+    "setting": "田园 / 自由探索",
+    "duration": 100,
+    "tempo": 96,
+    "bars": 40,
+    "meter": "4/4",
+    "key": "G major",
+    "sectionBeats": [
+      0,
+      32,
+      80,
+      112
+    ],
+    "sections": [
+      "晨露",
+      "脚步",
+      "远山",
+      "归途"
+    ],
+    "features": [
+      "有留白的笛声主题",
+      "吉他与钢琴交接",
+      "100 秒循环"
+    ],
+    "description": "雨停以后，小路还映着天光。竖笛唱出一段轻轻上扬的旋律，吉他与钢琴在句间回应，适合不赶时间的探索。",
+    "prompt": "为原创生活冒险游戏写一首雨后原野的长循环配乐。G 大调，96 BPM，4/4，40 小节。以两小节为单位写有呼吸的竖笛主题，保留清晰节奏身份；用干净吉他双音、克制的电贝斯与零星卡林巴支持旋律。钢琴只在空隙和过渡段接话。以大七、小七和弦与级进低音连接段落，中段转向关系小调色彩，回归时减少装饰。打击乐轻且不连续，尾句从属和声自然接回开头；避免持续高音、满拍琶音和强烈的大鼓。所有旋律原创。",
+    "credits": [
+      "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+      "Gogodze Phu Vol II — Karoryfer Lecolds (CC BY 4.0).",
+      "Growlybass / Black And Green Guitars (CC0); VCSL / Versilian Studios (CC0)."
+    ]
+  },
+  {
+    "id": "lit-window",
+    "title": "窗灯未眠",
+    "english": "The Lit Window",
+    "style": "Intimate piano",
+    "setting": "室内 / 对话与休息",
+    "duration": 80,
+    "tempo": 108,
+    "bars": 48,
+    "meter": "3/4",
+    "key": "D major",
+    "sectionBeats": [
+      0,
+      36,
+      72,
+      108
+    ],
+    "sections": [
+      "窗影",
+      "回信",
+      "夜色",
+      "灯暖"
+    ],
+    "features": [
+      "无鼓的三拍叙事",
+      "钢琴长短句交织",
+      "轻柔的和声留白"
+    ],
+    "description": "屋外渐渐安静，桌上的信还没有读完。钢琴沿着三拍的呼吸慢慢展开，偶尔有几颗拨弦音落在句尾。",
+    "prompt": "为原创 RPG 的安静室内与夜间对话写一首可久听的原创钢琴配乐。D 大调，四分音符 108 BPM，3/4，48 小节，以十二小节长句组织主题、变化、夜色与回归。使用柔和的双力度钢琴、很轻的低音和缓起音合成和声，不使用鼓组。让旋律有重复的节奏身份和真正的停顿，中段转向 B 小调色彩，再回到熟悉的句子。卡林巴仅在少数句尾回答；空间尾音柔和，避免八音盒式持续高音、机械分解和弦和每四小节重新开场。",
+    "credits": [
+      "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+      "VCSL / Versilian Studios — kalimba (CC0); remaining synthesis original."
+    ]
+  },
+  {
+    "id": "copper-sky",
+    "title": "铜色天际",
+    "english": "Copper Sky",
+    "style": "Gentle adventure",
+    "setting": "野外 / 轻快冒险",
+    "duration": 80,
+    "tempo": 120,
+    "bars": 40,
     "meter": "4/4",
     "key": "D minor",
-    "features": ["短动机变奏", "单声部和弦轮换", "中段抽空"],
-    "description": "最后一点火光，也能照亮下一次出手。急促的脉冲主题撞上切分低音，在骤然留白后重新燃起。",
-    "prompt": "为原创像素 RPG 写一首有决心感的战斗循环曲。借鉴《传说之下》《三角符文》以短动机建立身份、通过配器与段落制造戏剧变化的设计思路，旋律与和声素材全部原创，不引用游戏主题。D 小调，160 BPM，4/4，32 小节。用两路脉冲、三角低音和合成鼓；主旋律保留可辨识的节奏动机，第二脉冲以单声部快速和弦轮换支撑。安排主题、增强、抽空、回归四段，中段降低节奏密度，最后以属和弦引回开头。",
-    "sections": ["火星", "坚定", "悬停", "重燃"]
-  },
-  {
-    "id": "redleaf-post",
-    "title": "红叶邮便",
-    "english": "Redleaf Post",
-    "style": "Pastoral folk",
-    "setting": "小镇 / 田园日常",
-    "duration": 64,
-    "tempo": 90,
-    "bars": 32,
-    "meter": "6/8",
-    "key": "F major",
-    "features": ["复合拍律动", "长笛与拨弦问答", "八抽头回声"],
-    "description": "沿着铺满红叶的小路，把一封信送到午后的窗前。长笛与拨弦轻轻交换旋律，六拍子的摇曳里藏着一段小小的乡愁。",
-    "prompt": "为原创田园生活游戏写一首秋日小镇的循环配乐。参考《星露谷物语》让季节、生活节奏和温暖情绪融入配器的设计思路，不引用任何现成旋律。F 大调，四分音符 90 BPM，6/8，32 小节。用程序采样长笛唱出有呼吸的主题，以拨弦、低音和克制的弦乐铺底，加入少量打击乐与八抽头 FIR 回声。中段转向关系小调色彩，让拨弦接过旋律，再回到长笛主题；结尾轻落主和弦，形成温暖的循环。",
-    "sections": ["晨光", "来信", "秋意", "归途"]
-  },
-  {
-    "id": "zero-gravity",
-    "title": "越过失重线",
-    "english": "Zero Gravity Line",
-    "style": "Electronic ascent",
-    "setting": "攀登 / 电子探索",
-    "duration": 68.57142857142857,
-    "tempo": 112,
-    "bars": 32,
-    "meter": "4/4",
-    "key": "A minor",
-    "features": ["原创 FM 音色", "音色与声像自动化", "由静到动的织体"],
-    "description": "先听见呼吸，再听见前方。玻璃般的音符从稀疏走向密集，鼓与低音逐层进入，越过短暂的失重，重新向上。",
-    "prompt": "为原创平台探索游戏写一首从孤独到坚定的电子循环曲。参考《蔚蓝》以合成器织体、空间感和渐进层次服务攀登情绪的设计思路，所有音符与音色设计原创，不复刻原作主题。A 小调，112 BPM，4/4，32 小节。设计玻璃质感 FM 琶音、柔和 FM 主奏与缓起音和声，开头以八分音符铺陈，第二段加入十六分音符织体和切分鼓组；中段撤去主鼓、放慢音符密度，回归时恢复推进。用亮度、声像自动化、轻微弯音和共享延迟连接层次，最后经属和弦返回开头。",
-    "sections": ["漂浮", "攀升", "失重", "越线"]
+    "sectionBeats": [
+      0,
+      32,
+      80,
+      112
+    ],
+    "sections": [
+      "启程",
+      "长路",
+      "远望",
+      "再一程"
+    ],
+    "features": [
+      "圆润的 FM 主题",
+      "克制的真实节奏组",
+      "减法形成的段落对比"
+    ],
+    "description": "天色亮起来，旅程还很长。温暖的合成旋律与轻巧的吉他节奏交替前行，中段放慢呼吸，再带着熟悉的主题出发。",
+    "prompt": "为原创探索 RPG 写一首轻快而不催促的野外冒险循环曲。D 小调，120 BPM，4/4，40 小节。用圆润的 FM 主奏写可记忆的两小节动机，结合真实短奏贝斯、干净吉他和柔和鼓组。以小七、大七、半减七和属七和弦连接主题，钢琴只作空隙里的支撑；避免持续十六分音符、高频噪声铺满和强烈压缩。过渡段撤掉主要节奏层，中段扩大旋律呼吸，最后用较短的句子经属和弦接回开头。每个段落要有具体的配器变化，所有旋律原创。",
+    "credits": [
+      "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+      "Gogodze Phu Vol II — Karoryfer Lecolds (CC BY 4.0).",
+      "Growlybass / Black And Green Guitars — Karoryfer Lecolds; guitar recordings Brian Wood (CC0)."
+    ]
   }
 ]

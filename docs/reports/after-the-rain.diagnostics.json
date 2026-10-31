@@ -1,0 +1,813 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "rain-recorder: 108 release tails truncated by the next note (first at beat 1.5, last at beat 158). The notes themselves finished; only the tails are clipped.",
+      "trackId": "rain-recorder",
+      "beat": 1.5,
+      "eventIds": [
+        "rain-recorder-p0-0",
+        "rain-recorder-p0-1",
+        "rain-recorder-p0-2",
+        "rain-recorder-p0-3",
+        "rain-recorder-p1-0",
+        "rain-recorder-p2-0",
+        "rain-recorder-p2-1",
+        "rain-recorder-p2-2",
+        "rain-recorder-p2-3",
+        "rain-recorder-p3-0",
+        "rain-recorder-p3-1",
+        "rain-recorder-p3-2",
+        "rain-recorder-p4-0",
+        "rain-recorder-p4-1",
+        "rain-recorder-p4-2",
+        "rain-recorder-p4-3",
+        "rain-recorder-p4-4",
+        "rain-recorder-p5-0",
+        "rain-recorder-p5-1",
+        "rain-recorder-p5-2",
+        "rain-recorder-p6-0",
+        "rain-recorder-p6-1",
+        "rain-recorder-p6-2",
+        "rain-recorder-p6-3",
+        "rain-recorder-p7-0",
+        "rain-recorder-p7-1",
+        "rain-recorder-p8-0",
+        "rain-recorder-p8-1",
+        "rain-recorder-p8-2",
+        "rain-recorder-p8-3",
+        "rain-recorder-p9-0",
+        "rain-recorder-p10-0"
+      ],
+      "suggestion": {
+        "count": 108,
+        "exampleSourceIds": [
+          "rain-recorder-p0-0",
+          "rain-recorder-p0-1",
+          "rain-recorder-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "rain-piano: 19 release tails truncated by the next note (first at beat 7.3, last at beat 151.3). The notes themselves finished; only the tails are clipped.",
+      "trackId": "rain-piano",
+      "beat": 7.3,
+      "eventIds": [
+        "rain-piano-p0-0",
+        "rain-piano-p1-0",
+        "rain-piano-p2-0",
+        "rain-piano-p3-0",
+        "rain-piano-p4-0",
+        "rain-piano-p4-1",
+        "rain-piano-p4-2",
+        "rain-piano-p5-0",
+        "rain-piano-p5-1",
+        "rain-piano-p6-0",
+        "rain-piano-p6-1",
+        "rain-piano-p7-0",
+        "rain-piano-p7-1",
+        "rain-piano-p7-2",
+        "rain-piano-p8-0",
+        "rain-piano-p9-0",
+        "rain-piano-p10-0",
+        "rain-piano-p11-0",
+        "rain-piano-p12-0"
+      ],
+      "suggestion": {
+        "count": 19,
+        "exampleSourceIds": [
+          "rain-piano-p0-0",
+          "rain-piano-p1-0",
+          "rain-piano-p2-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "HARMONY_NON_CHORD_TONE",
+      "severity": "warning",
+      "trackIds": [
+        "rain-recorder"
+      ],
+      "fromBeat": 153,
+      "toBeat": 153.88020833333334,
+      "bar": 39,
+      "sourceEventIds": [
+        "rain-recorder-p34-1"
+      ],
+      "evidence": {
+        "chord": "D7",
+        "pitch": "B4",
+        "chordTones": [
+          "D",
+          "F#",
+          "A",
+          "C"
+        ],
+        "durationBeats": 0.8802083333333334
+      },
+      "message": "B4 is not in D7 and is held on a strong beat",
+      "suggestions": [
+        "Move to a chord tone, shorten it, or change the chord if the tension is intentional."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "BASS_NON_CHORD_TONE",
+      "severity": "warning",
+      "trackIds": [
+        "rain-bass"
+      ],
+      "fromBeat": 6,
+      "toBeat": 6.615625,
+      "bar": 2,
+      "sourceEventIds": [
+        "rain-bass-p1-1"
+      ],
+      "evidence": {
+        "chord": "D/F#",
+        "pitch": "C#3",
+        "chordTones": [
+          2,
+          6,
+          9
+        ]
+      },
+      "message": "Bass C#3 clashes with D/F#",
+      "suggestions": [
+        "Use the root, fifth or another chord tone; a suspended clash is possible but should be deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "BASS_NON_CHORD_TONE",
+      "severity": "warning",
+      "trackIds": [
+        "rain-bass"
+      ],
+      "fromBeat": 38,
+      "toBeat": 38.615625,
+      "bar": 10,
+      "sourceEventIds": [
+        "rain-bass-p9-1"
+      ],
+      "evidence": {
+        "chord": "D/F#",
+        "pitch": "C#3",
+        "chordTones": [
+          2,
+          6,
+          9
+        ]
+      },
+      "message": "Bass C#3 clashes with D/F#",
+      "suggestions": [
+        "Use the root, fifth or another chord tone; a suspended clash is possible but should be deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "BASS_NON_CHORD_TONE",
+      "severity": "warning",
+      "trackIds": [
+        "rain-bass"
+      ],
+      "fromBeat": 118,
+      "toBeat": 118.615625,
+      "bar": 30,
+      "sourceEventIds": [
+        "rain-bass-p29-1"
+      ],
+      "evidence": {
+        "chord": "D/F#",
+        "pitch": "C#3",
+        "chordTones": [
+          2,
+          6,
+          9
+        ]
+      },
+      "message": "Bass C#3 clashes with D/F#",
+      "suggestions": [
+        "Use the root, fifth or another chord tone; a suspended clash is possible but should be deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "rain-recorder",
+        "rain-bass"
+      ],
+      "fromBeat": 3,
+      "toBeat": 4.880208333333333,
+      "bar": 1,
+      "sourceEventIds": [
+        "rain-recorder-p0-3",
+        "rain-recorder-p1-0",
+        "rain-bass-p0-1",
+        "rain-bass-p1-0"
+      ],
+      "evidence": {
+        "first": "D5/D3",
+        "second": "F#4/F#2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "rain-recorder",
+        "rain-bass"
+      ],
+      "fromBeat": 35,
+      "toBeat": 36.880208333333336,
+      "bar": 9,
+      "sourceEventIds": [
+        "rain-recorder-p8-3",
+        "rain-recorder-p9-0",
+        "rain-bass-p8-1",
+        "rain-bass-p9-0"
+      ],
+      "evidence": {
+        "first": "D5/D3",
+        "second": "F#4/F#2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "rain-recorder",
+        "rain-bass"
+      ],
+      "fromBeat": 115,
+      "toBeat": 116.88020833333333,
+      "bar": 29,
+      "sourceEventIds": [
+        "rain-recorder-p24-3",
+        "rain-recorder-p25-0",
+        "rain-bass-p28-1",
+        "rain-bass-p29-0"
+      ],
+      "evidence": {
+        "first": "D5/D3",
+        "second": "F#4/F#2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "rain-bass"
+      ],
+      "fromBeat": 6,
+      "toBeat": 118.615625,
+      "bar": 2,
+      "sourceEventIds": [
+        "rain-bass-p1-1",
+        "rain-bass-p9-1",
+        "rain-bass-p29-1"
+      ],
+      "evidence": {
+        "count": 3,
+        "ratio": 0.04285714285714286,
+        "key": "G major",
+        "pitches": [
+          "C#3"
+        ]
+      },
+      "message": "3 notes outside the declared G major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "rain-bass",
+        "rain-guitar"
+      ],
+      "fromBeat": 12,
+      "toBeat": 145.13229166666665,
+      "bar": 4,
+      "sourceEventIds": [
+        "rain-bass-p3-0",
+        "rain-guitar-p3-0",
+        "rain-bass-p11-0",
+        "rain-guitar-p11-0",
+        "rain-bass-p16-0",
+        "rain-guitar-p16-0",
+        "rain-bass-p22-0",
+        "rain-guitar-p21-0",
+        "rain-bass-p26-0",
+        "rain-guitar-p23-0",
+        "rain-bass-p31-0",
+        "rain-guitar-p27-0",
+        "rain-bass-p36-0",
+        "rain-guitar-p32-0"
+      ],
+      "evidence": {
+        "pairs": 7
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "rain-recorder",
+        "rain-guitar"
+      ],
+      "fromBeat": 12.997916666666667,
+      "toBeat": 125.93958333333333,
+      "bar": 4,
+      "sourceEventIds": [
+        "rain-recorder-p3-2",
+        "rain-guitar-p3-0",
+        "rain-recorder-p11-2",
+        "rain-guitar-p11-0",
+        "rain-recorder-p27-2",
+        "rain-guitar-p27-0"
+      ],
+      "evidence": {
+        "pairs": 3
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "rain-recorder",
+        "rain-guitar"
+      ],
+      "fromBeat": 20,
+      "toBeat": 24,
+      "bar": 6,
+      "sourceEventIds": [
+        "rain-recorder-p5-0",
+        "rain-recorder-p5-1",
+        "rain-recorder-p5-2",
+        "rain-recorder-p5-3",
+        "rain-guitar-p5-0",
+        "rain-guitar-p5-1",
+        "rain-guitar-p5-2",
+        "rain-guitar-p5-3"
+      ],
+      "clipIds": [
+        "rain-recorder-clip-p5",
+        "rain-guitar-clip-p5"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "rain-recorder",
+        "rain-guitar"
+      ],
+      "fromBeat": 52,
+      "toBeat": 56,
+      "bar": 14,
+      "sourceEventIds": [
+        "rain-recorder-p13-0",
+        "rain-recorder-p13-1",
+        "rain-recorder-p13-2",
+        "rain-recorder-p13-3",
+        "rain-guitar-p13-0",
+        "rain-guitar-p13-1",
+        "rain-guitar-p13-3",
+        "rain-guitar-p13-2"
+      ],
+      "clipIds": [
+        "rain-recorder-clip-p13",
+        "rain-guitar-clip-p13"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "rain-recorder",
+        "rain-guitar"
+      ],
+      "fromBeat": 132,
+      "toBeat": 136,
+      "bar": 34,
+      "sourceEventIds": [
+        "rain-recorder-p29-0",
+        "rain-recorder-p29-1",
+        "rain-recorder-p29-2",
+        "rain-recorder-p29-3",
+        "rain-guitar-p29-0",
+        "rain-guitar-p29-1",
+        "rain-guitar-p29-2",
+        "rain-guitar-p29-3"
+      ],
+      "clipIds": [
+        "rain-recorder-clip-p29",
+        "rain-guitar-clip-p29"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "rain-bass",
+        "rain-drums",
+        "rain-guitar",
+        "rain-kalimba",
+        "rain-piano",
+        "rain-recorder"
+      ],
+      "fromBeat": 32,
+      "toBeat": 80,
+      "bar": 9,
+      "sourceEventIds": [
+        "rain-bass-p8-0",
+        "rain-drums-p2-0",
+        "rain-recorder-p8-0",
+        "rain-guitar-p8-0",
+        "rain-guitar-p8-1",
+        "rain-drums-p2-1",
+        "rain-recorder-p8-1",
+        "rain-recorder-p8-2",
+        "rain-guitar-p8-3",
+        "rain-bass-p8-1",
+        "rain-guitar-p8-2",
+        "rain-drums-p2-2",
+        "rain-recorder-p8-3",
+        "rain-bass-p9-0",
+        "rain-recorder-p9-0",
+        "rain-guitar-p9-0",
+        "rain-guitar-p9-1",
+        "rain-recorder-p9-1",
+        "rain-bass-p9-1",
+        "rain-guitar-p9-3",
+        "rain-guitar-p9-2",
+        "rain-piano-p2-0",
+        "rain-piano-p2-1",
+        "rain-bass-p10-0",
+        "rain-drums-p3-0",
+        "rain-recorder-p10-0",
+        "rain-guitar-p10-1",
+        "rain-guitar-p10-0",
+        "rain-recorder-p10-1",
+        "rain-drums-p3-1",
+        "rain-recorder-p10-2",
+        "rain-guitar-p10-2",
+        "rain-bass-p10-1",
+        "rain-guitar-p10-3",
+        "rain-drums-p3-2",
+        "rain-recorder-p10-3",
+        "rain-bass-p11-0",
+        "rain-recorder-p11-0",
+        "rain-guitar-p11-1",
+        "rain-recorder-p11-1",
+        "rain-guitar-p11-0",
+        "rain-recorder-p11-2",
+        "rain-recorder-p11-3",
+        "rain-kalimba-p2-0",
+        "rain-kalimba-p2-1",
+        "rain-bass-p12-0",
+        "rain-drums-p4-0",
+        "rain-recorder-p12-0",
+        "rain-guitar-p12-0",
+        "rain-guitar-p12-1",
+        "rain-recorder-p12-1",
+        "rain-drums-p4-1",
+        "rain-recorder-p12-2",
+        "rain-recorder-p12-3",
+        "rain-guitar-p12-2",
+        "rain-bass-p12-1",
+        "rain-guitar-p12-3",
+        "rain-drums-p4-2",
+        "rain-recorder-p12-4",
+        "rain-bass-p13-0",
+        "rain-recorder-p13-0",
+        "rain-guitar-p13-0",
+        "rain-guitar-p13-1",
+        "rain-recorder-p13-1",
+        "rain-recorder-p13-2",
+        "rain-bass-p13-1",
+        "rain-recorder-p13-3",
+        "rain-guitar-p13-3",
+        "rain-guitar-p13-2",
+        "rain-piano-p3-0",
+        "rain-piano-p3-1",
+        "rain-bass-p14-0",
+        "rain-drums-p5-0",
+        "rain-recorder-p14-0",
+        "rain-guitar-p14-1",
+        "rain-guitar-p14-0",
+        "rain-drums-p5-1",
+        "rain-recorder-p14-1",
+        "rain-recorder-p14-2",
+        "rain-guitar-p14-3",
+        "rain-bass-p14-1",
+        "rain-guitar-p14-2",
+        "rain-drums-p5-2",
+        "rain-recorder-p14-3",
+        "rain-bass-p15-0",
+        "rain-recorder-p15-0",
+        "rain-recorder-p15-1",
+        "rain-guitar-p15-1",
+        "rain-recorder-p15-2",
+        "rain-guitar-p15-0",
+        "rain-recorder-p15-3",
+        "rain-recorder-p15-4",
+        "rain-recorder-p15-5",
+        "rain-kalimba-p3-0",
+        "rain-kalimba-p3-1",
+        "rain-bass-p16-0",
+        "rain-drums-p6-0",
+        "rain-piano-p4-0",
+        "rain-guitar-p16-0",
+        "rain-guitar-p16-1",
+        "rain-piano-p4-1",
+        "rain-drums-p6-1",
+        "rain-piano-p4-2",
+        "rain-piano-p4-3",
+        "rain-bass-p16-1",
+        "rain-guitar-p16-3",
+        "rain-guitar-p16-2",
+        "rain-drums-p6-2",
+        "rain-bass-p17-0",
+        "rain-piano-p5-0",
+        "rain-guitar-p17-1",
+        "rain-guitar-p17-0",
+        "rain-piano-p5-1",
+        "rain-bass-p17-1",
+        "rain-piano-p5-2",
+        "rain-guitar-p17-2",
+        "rain-guitar-p17-3",
+        "rain-bass-p18-0",
+        "rain-drums-p7-0",
+        "rain-piano-p6-0",
+        "rain-guitar-p18-0",
+        "rain-guitar-p18-1",
+        "rain-piano-p6-1",
+        "rain-drums-p7-1",
+        "rain-piano-p6-2",
+        "rain-bass-p18-1",
+        "rain-guitar-p18-2",
+        "rain-guitar-p18-3"
+      ],
+      "clipIds": [
+        "rain-bass-clip-p8",
+        "rain-drums-clip-p2",
+        "rain-recorder-clip-p8",
+        "rain-guitar-clip-p8",
+        "rain-bass-clip-p9",
+        "rain-recorder-clip-p9",
+        "rain-guitar-clip-p9",
+        "rain-piano-clip-p2",
+        "rain-bass-clip-p10",
+        "rain-drums-clip-p3",
+        "rain-recorder-clip-p10",
+        "rain-guitar-clip-p10",
+        "rain-bass-clip-p11",
+        "rain-recorder-clip-p11",
+        "rain-guitar-clip-p11",
+        "rain-kalimba-clip-p2",
+        "rain-bass-clip-p12",
+        "rain-drums-clip-p4",
+        "rain-recorder-clip-p12",
+        "rain-guitar-clip-p12",
+        "rain-bass-clip-p13",
+        "rain-recorder-clip-p13",
+        "rain-guitar-clip-p13",
+        "rain-piano-clip-p3",
+        "rain-bass-clip-p14",
+        "rain-drums-clip-p5",
+        "rain-recorder-clip-p14",
+        "rain-guitar-clip-p14",
+        "rain-bass-clip-p15",
+        "rain-recorder-clip-p15",
+        "rain-guitar-clip-p15",
+        "rain-kalimba-clip-p3",
+        "rain-bass-clip-p16",
+        "rain-drums-clip-p6",
+        "rain-piano-clip-p4",
+        "rain-guitar-clip-p16",
+        "rain-bass-clip-p17",
+        "rain-piano-clip-p5",
+        "rain-guitar-clip-p17",
+        "rain-bass-clip-p18",
+        "rain-drums-clip-p7",
+        "rain-piano-clip-p6",
+        "rain-guitar-clip-p18",
+        "rain-bass-clip-p19",
+        "rain-piano-clip-p7",
+        "rain-guitar-clip-p19",
+        "rain-kalimba-clip-p4"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-0",
+          "section-1"
+        ],
+        "densityRelativeDifference": 0.06521739130434782
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "rain-recorder",
+        "role": "melody",
+        "instrument": "starter-recorder",
+        "eventCount": 132,
+        "notesPerBeat": 0.825,
+        "medianMidi": 71
+      },
+      {
+        "trackId": "rain-guitar",
+        "role": "harmony",
+        "instrument": "band-guitar",
+        "eventCount": 128,
+        "notesPerBeat": 0.8,
+        "medianMidi": 60
+      },
+      {
+        "trackId": "rain-bass",
+        "role": "bass",
+        "instrument": "band-bass",
+        "eventCount": 70,
+        "notesPerBeat": 0.4375,
+        "medianMidi": 47
+      },
+      {
+        "trackId": "rain-piano",
+        "role": "harmony",
+        "instrument": "keys-grand",
+        "eventCount": 32,
+        "notesPerBeat": 0.2,
+        "medianMidi": 72
+      },
+      {
+        "trackId": "rain-kalimba",
+        "role": "arp",
+        "instrument": "starter-kalimba",
+        "eventCount": 20,
+        "notesPerBeat": 0.125,
+        "medianMidi": 73
+      },
+      {
+        "trackId": "rain-drums",
+        "role": "drums",
+        "instrument": "drums-acoustic",
+        "eventCount": 42,
+        "notesPerBeat": 0.2625,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Dew",
+        "fromBeat": 0,
+        "toBeat": 32,
+        "eventsPerBeat": 2.6875,
+        "activeTrackIds": [
+          "rain-bass",
+          "rain-drums",
+          "rain-guitar",
+          "rain-kalimba",
+          "rain-piano",
+          "rain-recorder"
+        ],
+        "medianMidi": 66
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Footsteps",
+        "fromBeat": 32,
+        "toBeat": 80,
+        "eventsPerBeat": 2.875,
+        "activeTrackIds": [
+          "rain-bass",
+          "rain-drums",
+          "rain-guitar",
+          "rain-kalimba",
+          "rain-piano",
+          "rain-recorder"
+        ],
+        "medianMidi": 66
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Distant hills",
+        "fromBeat": 80,
+        "toBeat": 112,
+        "eventsPerBeat": 1.96875,
+        "activeTrackIds": [
+          "rain-bass",
+          "rain-guitar",
+          "rain-kalimba",
+          "rain-piano",
+          "rain-recorder"
+        ],
+        "medianMidi": 66
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Homeward",
+        "fromBeat": 112,
+        "toBeat": 160,
+        "eventsPerBeat": 2.8541666666666665,
+        "activeTrackIds": [
+          "rain-bass",
+          "rain-drums",
+          "rain-guitar",
+          "rain-kalimba",
+          "rain-piano",
+          "rain-recorder"
+        ],
+        "medianMidi": 66
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "G major",
+    "chordCount": 40
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}
