@@ -2,6 +2,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { compileScore } from "../dist/compiler.js";
 import { chromium } from "playwright";
 
 test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and responsive layout", async () => {
@@ -12,6 +14,8 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
     css: "text/css",
     svg: "image/svg+xml",
     mp3: "audio/mpeg",
+    json: "application/json",
+    wav: "audio/wav",
   };
   const server = createServer(async (request, response) => {
     try {
@@ -66,8 +70,10 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
         errors.push(response.url());
     });
     await page.goto(`http://127.0.0.1:${server.address().port}`);
-    assert.equal(await page.locator(".track").count(), 4);
-    assert.equal(await page.locator(".prompt p").count(), 4);
+    await page.locator(".track").last().waitFor();
+    assert.equal(await page.locator(".track").count(), 3);
+    assert.equal(await page.locator(".track img").count(), 0);
+    assert.equal(await page.locator(".prompt p").count(), 3);
     // Below-fold covers load lazily; bring each into view before checking it.
     for (const image of await page.locator("img").all()) {
       await image.scrollIntoViewIfNeeded();
@@ -77,11 +83,10 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
     for (const href of await page
       .locator(".downloads a")
       .evaluateAll((links) => links.map((link) => link.href))) {
-      const path = href.split("/main/")[1];
-      assert.ok(path);
-      await readFile(new URL(`../../../${path}`, import.meta.url));
+      const path = new URL(href).pathname;
+      await readFile(new URL(`.${path}`, root));
     }
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 3; index++) {
       await page.locator(".play").nth(index).click();
       await page.waitForFunction((i) => {
         const media = [...document.querySelectorAll("audio")];
@@ -127,10 +132,12 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
     );
     await page.locator("#crt-toggle").click();
     await page.reload();
+    await page.locator(".track").last().waitFor();
     assert.equal(
       await page.locator("#crt-toggle").getAttribute("aria-pressed"),
       "false",
     );
+    await page.locator(".track").last().waitFor();
     for (const width of [320, 390, 768, 1280]) {
       await page.setViewportSize({ width, height: 900 });
       assert.ok(
@@ -141,22 +148,69 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
       );
     }
     if (process.env.SHOWCASE_SCREENSHOT) {
-      await page.locator('#crt-toggle').click();
-      for (const image of await page.locator('img').all()) {
+      await page.locator("#crt-toggle").click();
+      for (const image of await page.locator("img").all()) {
         await image.scrollIntoViewIfNeeded();
-        await image.evaluate(image => image.decode());
+        await image.evaluate((image) => image.decode());
       }
-      await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-      await page.screenshot({ path: process.env.SHOWCASE_SCREENSHOT, fullPage: true });
+      await page.evaluate(() =>
+        window.scrollTo({ top: 0, behavior: "instant" }),
+      );
+      await page.screenshot({
+        path: process.env.SHOWCASE_SCREENSHOT,
+        fullPage: true,
+      });
       await page.setViewportSize({ width: 390, height: 844 });
-      await page.screenshot({ path: process.env.SHOWCASE_SCREENSHOT.replace('.png', '-mobile.png'), fullPage: true });
+      await page.screenshot({
+        path: process.env.SHOWCASE_SCREENSHOT.replace(".png", "-mobile.png"),
+        fullPage: true,
+      });
     }
     assert.deepEqual(errors, []);
     console.log(
-      "All four MP3s played; downloads resolved; desktop/mobile layouts checked.",
+      "All three new MP3s played; downloads resolved; desktop/mobile layouts checked.",
     );
   } finally {
     await browser?.close();
     await new Promise((resolve) => server.close(resolve));
   }
+});
+
+test("showcase: original scores and masters agree with render reports", async () => {
+  const root = new URL("../../../docs/", import.meta.url);
+  const tracks = JSON.parse(
+    await readFile(new URL("music.json", root), "utf8"),
+  );
+  assert.equal(tracks.length, 3);
+  const hashes = new Set();
+  for (const track of tracks) {
+    const source = await readFile(new URL(`scores/${track.id}.json`, root));
+    const score = JSON.parse(source);
+    const report = JSON.parse(
+      await readFile(new URL(`reports/${track.id}.json`, root), "utf8"),
+    );
+    const wav = await readFile(new URL(`audio/${track.id}.wav`, root));
+    const compiled = compileScore(score);
+    assert.ok(compiled.events.length > 400);
+    assert.equal(score.schemaVersion, "1.3");
+    assert.equal(score.sections.length, 4);
+    assert.equal(
+      report.sourceHash,
+      createHash("sha256").update(source).digest("hex"),
+    );
+    assert.equal(
+      report.audioHash,
+      createHash("sha256").update(wav).digest("hex"),
+    );
+    assert.equal(wav.byteLength, 44 + report.frames * 4);
+    assert.equal(report.silent, false);
+    assert.equal(report.nonFiniteSamples, 0);
+    assert.equal(report.clippedSamples, 0);
+    assert.ok(report.truePeakDbfs < -1);
+    assert.equal(report.boundarySuspicious, false);
+    assert.ok(Math.abs(report.durationSeconds - track.duration) < 0.001);
+    assert.equal(report.frames, Math.round(track.duration * report.sampleRate));
+    hashes.add(report.audioHash);
+  }
+  assert.equal(hashes.size, 3);
 });

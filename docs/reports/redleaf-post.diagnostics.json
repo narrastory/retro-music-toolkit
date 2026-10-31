@@ -1,0 +1,231 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "redleaf-flute: 85 release tails truncated by the next note (first at beat 0.5, last at beat 94). The notes themselves finished; only the tails are clipped.",
+      "trackId": "redleaf-flute",
+      "beat": 0.5,
+      "eventIds": [
+        "redleaf-flute-0-0",
+        "redleaf-flute-0-1",
+        "redleaf-flute-0-2",
+        "redleaf-flute-1-0",
+        "redleaf-flute-1-1",
+        "redleaf-flute-1-2",
+        "redleaf-flute-2-0",
+        "redleaf-flute-2-1",
+        "redleaf-flute-2-2",
+        "redleaf-flute-2-3",
+        "redleaf-flute-3-0",
+        "redleaf-flute-3-1",
+        "redleaf-flute-4-0",
+        "redleaf-flute-4-1",
+        "redleaf-flute-4-2",
+        "redleaf-flute-4-3",
+        "redleaf-flute-5-0",
+        "redleaf-flute-5-1",
+        "redleaf-flute-5-2",
+        "redleaf-flute-6-0",
+        "redleaf-flute-6-1",
+        "redleaf-flute-6-2",
+        "redleaf-flute-6-3",
+        "redleaf-flute-7-0",
+        "redleaf-flute-7-1",
+        "redleaf-flute-8-0",
+        "redleaf-flute-8-1",
+        "redleaf-flute-8-2",
+        "redleaf-flute-9-0",
+        "redleaf-flute-9-1",
+        "redleaf-flute-9-2",
+        "redleaf-flute-10-0"
+      ],
+      "suggestion": {
+        "count": 85,
+        "exampleSourceIds": [
+          "redleaf-flute-0-0",
+          "redleaf-flute-0-1",
+          "redleaf-flute-0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "redleaf-pluck: 8 release tails truncated by the next note (first at beat 49.502, last at beat 58). The notes themselves finished; only the tails are clipped.",
+      "trackId": "redleaf-pluck",
+      "beat": 49.50208333333333,
+      "eventIds": [
+        "redleaf-pluck-16-1",
+        "redleaf-pluck-16-2",
+        "redleaf-pluck-17-0",
+        "redleaf-pluck-17-1",
+        "redleaf-pluck-18-0",
+        "redleaf-pluck-18-1",
+        "redleaf-pluck-19-0",
+        "redleaf-pluck-19-1"
+      ],
+      "suggestion": {
+        "count": 8,
+        "exampleSourceIds": [
+          "redleaf-pluck-16-1",
+          "redleaf-pluck-16-2",
+          "redleaf-pluck-17-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "redleaf-flute",
+        "redleaf-bass"
+      ],
+      "fromBeat": 46,
+      "toBeat": 60.43020833333333,
+      "bar": 16,
+      "sourceEventIds": [
+        "redleaf-flute-15-2",
+        "redleaf-flute-20-0",
+        "redleaf-bass-15-0",
+        "redleaf-bass-20-0"
+      ],
+      "evidence": {
+        "first": "F5/F2",
+        "second": "G5/G2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "redleaf-flute",
+        "role": "melody",
+        "instrument": "sample-flute",
+        "eventCount": 113,
+        "notesPerBeat": 1.1770833333333333,
+        "medianMidi": 74
+      },
+      {
+        "trackId": "redleaf-pluck",
+        "role": "arp",
+        "instrument": "sample-pluck",
+        "eventCount": 182,
+        "notesPerBeat": 1.8958333333333333,
+        "medianMidi": 60
+      },
+      {
+        "trackId": "redleaf-bass",
+        "role": "bass",
+        "instrument": "sample-bass",
+        "eventCount": 64,
+        "notesPerBeat": 0.6666666666666666,
+        "medianMidi": 44
+      },
+      {
+        "trackId": "redleaf-strings",
+        "role": "harmony",
+        "instrument": "sample-strings",
+        "eventCount": 40,
+        "notesPerBeat": 0.4166666666666667,
+        "medianMidi": 53
+      },
+      {
+        "trackId": "redleaf-percussion",
+        "role": "drums",
+        "instrument": "chip-drums",
+        "eventCount": 96,
+        "notesPerBeat": 1,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "redleaf-post-section-0",
+        "label": "Morning",
+        "fromBeat": 0,
+        "toBeat": 24,
+        "eventsPerBeat": 4.708333333333333,
+        "activeTrackIds": [
+          "redleaf-bass",
+          "redleaf-flute",
+          "redleaf-percussion",
+          "redleaf-pluck"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "redleaf-post-section-1",
+        "label": "Letters",
+        "fromBeat": 24,
+        "toBeat": 48,
+        "eventsPerBeat": 6,
+        "activeTrackIds": [
+          "redleaf-bass",
+          "redleaf-flute",
+          "redleaf-percussion",
+          "redleaf-pluck",
+          "redleaf-strings"
+        ],
+        "medianMidi": 60
+      },
+      {
+        "sectionId": "redleaf-post-section-2",
+        "label": "Autumn",
+        "fromBeat": 48,
+        "toBeat": 72,
+        "eventsPerBeat": 3.9166666666666665,
+        "activeTrackIds": [
+          "redleaf-bass",
+          "redleaf-flute",
+          "redleaf-percussion",
+          "redleaf-pluck",
+          "redleaf-strings"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "redleaf-post-section-3",
+        "label": "Homeward",
+        "fromBeat": 72,
+        "toBeat": 96,
+        "eventsPerBeat": 6,
+        "activeTrackIds": [
+          "redleaf-bass",
+          "redleaf-flute",
+          "redleaf-percussion",
+          "redleaf-pluck",
+          "redleaf-strings"
+        ],
+        "medianMidi": 60
+      }
+    ],
+    "barBeats": 3,
+    "windowBeats": 3,
+    "key": "F major",
+    "chordCount": 32
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 3,
+    "resolvedSpanBeats": 6
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

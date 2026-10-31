@@ -43,7 +43,7 @@ node dist/cli.js example --out song.json && node dist/cli.js render song.json --
 强拍上的非和弦音、低音与和弦冲突、平行五度、没解决的大跳、循环接缝没回到主和弦——诊断会给出小节号和音符 ID，有的还直接附上修复值。
 
 > [!TIP]
-> 想先听听效果？👉 **[在线试听页](https://narrastory.github.io/retro-music-toolkit/)**（4 首，可直接播放）
+> 想先听听效果？👉 **[在线试听页](https://narrastory.github.io/retro-music-toolkit/)**（3 首全新原创：芯片战斗、田园与电子探索）
 > 所有示例都由仓库里的 JSON 乐谱离线渲染，没有经过任何模型生成。
 
 ---

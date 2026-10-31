@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="给下一场冒险的复古游戏音乐。试听原创配乐，下载音频与可编辑乐谱。"
+      content="三首全新原创游戏配乐：芯片战斗、田园小镇与电子攀登。用 Retro Music Toolkit 离线创作，试听并下载 WAV 与乐谱。"
     />
-    <meta name="theme-color" content="#15152b" />
-    <title>Retro Music Toolkit · 给下一场冒险的声音</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="showcase.js" defer></script>
+    <meta name="theme-color" content="#210d13" />
+    <title>Retro Music Toolkit · 点燃下一场冒险</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css?v=red-originals-1" />
+    <script src="showcase.js?v=red-originals-1" defer></script>
   </head>
   <body class="crt">
     <a class="skip" href="#collection">跳到音乐选集</a>
+    <div class="pixel-sky" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
     <div class="page">
       <header class="masthead">
         <a class="brand" href="./"
-          ><img src="logo.svg" width="34" height="34" alt="" /><span
-            >Retro Music <b>Toolkit</b></span
-          ></a
+          ><span class="brand-icon" aria-hidden="true">♫</span
+          ><span>Retro Music <b>Toolkit</b></span></a
         >
         <nav aria-label="主导航">
-          <a href="#collection">音乐选集</a
+          <a href="#collection">试听选集</a
           ><a href="https://github.com/narrastory/retro-music-toolkit"
             >GitHub ↗</a
           ><button id="crt-toggle" aria-pressed="true">CRT 效果：开</button>
@@ -30,57 +33,53 @@
       </header>
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <div>
-            <p class="eyebrow">一份复古游戏原声选集</p>
-            <h1 id="hero-title">给下一场冒险，<br />一个难忘的旋律。</h1>
+          <p class="eyebrow">
+            <span></span> 原创游戏配乐 / Original game soundtracks
+          </p>
+          <h1 id="hero-title">
+            为下一场冒险，<br />点燃声音<span class="cursor" aria-hidden="true"
+              >_</span
+            >
+          </h1>
+          <div class="hero-bottom">
             <p class="intro">
-              穿过像素原野，走向星光栈道，<br />在亮着灯的港口停一停。<br />为你的游戏，听见一个新的世界。
+              一点不肯熄灭的决心，一封秋天的来信，<br />一次越过失重线的攀登。<br />三种世界，三首从零写起的旋律。
             </p>
-            <a class="button primary" href="#collection">▶ 开始试听</a
-            ><span class="hero-note">原创配乐 · 免费使用 · 附创作提示词</span>
+            <div class="hero-actions">
+              <a class="button primary" href="#collection">▶ 听见新的世界</a
+              ><span>3 首原创 / 可循环 / 免费用于游戏</span>
+            </div>
           </div>
-          <figure class="hero-art">
-            <img
-              src="scenes/starfall.svg"
-              width="640"
-              height="360"
-              alt="像素夜空下，通向远方城堡的星光栈道"
-            />
-            <figcaption>
-              <span class="signal"></span> 此刻的风景
-              <span>Starfall Causeway</span>
-            </figcaption>
-            <div class="art-label">下一站，星辰之间。</div>
-          </figure>
+          <div class="horizon" aria-hidden="true"></div>
         </section>
         <section id="collection" aria-labelledby="collection-title">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">选择你的游戏世界</p>
-              <h2 id="collection-title">按下播放，冒险开始。</h2>
+              <p class="eyebrow">战斗 · 田园 · 攀登</p>
+              <h2 id="collection-title">你的故事，从哪一首开始？</h2>
             </div>
-            <p>3 个主题 / 4 段声音<br />戴上耳机，慢慢挑选。</p>
+            <p>每首附创作 Prompt<br />WAV 音频与完整乐谱</p>
           </div>
-          <div id="tracks"></div>
+          <div id="tracks"><p class="loading">正在载入音乐选集…</p></div>
           <noscript
             ><p>
-              启用 JavaScript 可查看完整选集与提示词。直接试听：<a
-                href="audio/starfall-fm.mp3"
-                >星光栈道 FM</a
-              >、<a href="audio/starfall-sample.mp3">采样版</a>、<a
-                href="audio/pixel-trail.mp3"
-                >像素小径</a
-              >、<a href="audio/lantern-harbor.mp3">灯火港湾</a>。
+              完整选集需要 JavaScript。直接试听：<a
+                href="audio/ember-resolve.mp3"
+                >余烬决心</a
+              >、<a href="audio/redleaf-post.mp3">红叶邮便</a>、<a
+                href="audio/zero-gravity.mp3"
+                >越过失重线</a
+              >。
             </p></noscript
           >
         </section>
         <section class="take-home" aria-labelledby="take-title">
           <span class="pixel-note" aria-hidden="true">♫</span>
           <div>
-            <h2 id="take-title">让音乐，成为游戏的一部分。</h2>
+            <h2 id="take-title">把喜欢的声音，带进你的游戏。</h2>
             <p>
-              这些展示音频可自由用于你的项目，包含商业游戏。每首都附有 WAV 和
-              JSON 乐谱，方便继续调整旋律、音色与编配。
+              三首展示曲均可自由用于个人与商业项目。下载原始 WAV
+              即可使用，循环时长可在渲染报告中查看；乐谱也一并留给你。
             </p>
             <a
               href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md#generated-audio"
@@ -88,14 +87,12 @@
             >
           </div>
           <div class="tool-note">
-            <h3>喜欢它，也可以继续创作。</h3>
+            <h3>由 Retro Music Toolkit 创作与渲染</h3>
             <p>
-              Retro Music Toolkit
-              将结构化乐谱变成复古配乐。本地渲染、定点修改，保留你已经喜欢的部分。
+              脉冲、FM、程序采样，三种声音语言。离线渲染，也能继续调整旋律、音色与编配。
             </p>
-            <a
-              href="https://github.com/narrastory/retro-music-toolkit#quick-start"
-              >探索工具与快速开始 ↗</a
+            <a href="https://github.com/narrastory/retro-music-toolkit"
+              >了解工具 ↗</a
             >
           </div>
         </section>
@@ -106,10 +103,9 @@
           href="https://github.com/narrastory/retro-music-toolkit"
           >Retro Music Toolkit</a
         >
-        <p>用有限的声音，讲无限的故事。</p>
+        <p>有限的声音，无限的故事。</p>
         <small
-          >预览为 MP3；原始 WAV 与渲染报告保留在仓库。<br />NES / Genesis / SNES
-          为风格描述，非原机芯片精确仿真。</small
+          >MP3 用于预览，WAV 用于游戏交付。<br />风格参考仅涉及创作思路，不使用原作旋律或采样。</small
         >
       </footer>
     </div>

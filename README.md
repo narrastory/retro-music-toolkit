@@ -43,7 +43,7 @@ Bass wrong in bar 9? `patch` edits that one note, leaves everything else untouch
 Non-chord tones on strong beats, bass clashing with the chord, parallel fifths, unresolved leaps, a loop seam that never returns to the opening chord — diagnostics report the bar and the note ID, and often the exact repair value.
 
 > [!TIP]
-> Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (four tracks, playable in the browser)
+> Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (three original tracks: chip battle, pastoral and electronic)
 > Every example is rendered offline from a JSON score in this repository. No model was involved.
 
 ---

@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "ember-lead: 42 release tails truncated by the next note (first at beat 0.75, last at beat 119). The notes themselves finished; only the tails are clipped.",
+      "trackId": "ember-lead",
+      "beat": 0.75,
+      "eventIds": [
+        "ember-lead-0-1",
+        "ember-lead-0-2",
+        "ember-lead-0-4",
+        "ember-lead-1-1",
+        "ember-lead-1-2",
+        "ember-lead-1-6",
+        "ember-lead-2-1",
+        "ember-lead-2-5",
+        "ember-lead-3-2",
+        "ember-lead-3-3",
+        "ember-lead-4-1",
+        "ember-lead-4-2",
+        "ember-lead-4-4",
+        "ember-lead-5-1",
+        "ember-lead-6-5",
+        "ember-lead-8-1",
+        "ember-lead-8-2",
+        "ember-lead-8-4",
+        "ember-lead-9-1",
+        "ember-lead-9-2",
+        "ember-lead-9-6",
+        "ember-lead-10-1",
+        "ember-lead-10-5",
+        "ember-lead-11-2",
+        "ember-lead-11-3",
+        "ember-lead-12-1",
+        "ember-lead-12-2",
+        "ember-lead-12-4",
+        "ember-lead-13-1",
+        "ember-lead-14-5",
+        "ember-lead-24-1",
+        "ember-lead-24-2"
+      ],
+      "suggestion": {
+        "count": 42,
+        "exampleSourceIds": [
+          "ember-lead-0-1",
+          "ember-lead-0-2",
+          "ember-lead-0-4"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "ember-pulse: 240 release tails truncated by the next note (first at beat 16.083, last at beat 126.5). The notes themselves finished; only the tails are clipped.",
+      "trackId": "ember-pulse",
+      "beat": 16.083333333333332,
+      "eventIds": [
+        "ember-pulse-4-0",
+        "ember-pulse-4-0",
+        "ember-pulse-4-0",
+        "ember-pulse-4-0",
+        "ember-pulse-4-0",
+        "ember-pulse-4-0",
+        "ember-pulse-4-3",
+        "ember-pulse-4-3",
+        "ember-pulse-4-3",
+        "ember-pulse-4-3",
+        "ember-pulse-4-3",
+        "ember-pulse-4-3",
+        "ember-pulse-5-0",
+        "ember-pulse-5-0",
+        "ember-pulse-5-0",
+        "ember-pulse-5-0",
+        "ember-pulse-5-0",
+        "ember-pulse-5-0",
+        "ember-pulse-5-3",
+        "ember-pulse-5-3",
+        "ember-pulse-5-3",
+        "ember-pulse-5-3",
+        "ember-pulse-5-3",
+        "ember-pulse-5-3",
+        "ember-pulse-6-0",
+        "ember-pulse-6-0",
+        "ember-pulse-6-0",
+        "ember-pulse-6-0",
+        "ember-pulse-6-0",
+        "ember-pulse-6-0",
+        "ember-pulse-6-3",
+        "ember-pulse-6-3"
+      ],
+      "suggestion": {
+        "count": 240,
+        "exampleSourceIds": [
+          "ember-pulse-4-0",
+          "ember-pulse-4-0",
+          "ember-pulse-4-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 27,
+      "toBeat": 28.430208333333333,
+      "bar": 7,
+      "sourceEventIds": [
+        "ember-lead-6-6",
+        "ember-lead-7-0",
+        "ember-bass-6-4",
+        "ember-bass-7-0"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 29,
+      "toBeat": 29.930208333333333,
+      "bar": 8,
+      "sourceEventIds": [
+        "ember-lead-7-2",
+        "ember-lead-7-3",
+        "ember-bass-7-1",
+        "ember-bass-7-2"
+      ],
+      "evidence": {
+        "first": "A4/A2",
+        "second": "E5/E3"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 59,
+      "toBeat": 60.43020833333333,
+      "bar": 15,
+      "sourceEventIds": [
+        "ember-lead-14-6",
+        "ember-lead-15-0",
+        "ember-bass-14-4",
+        "ember-bass-15-0"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 70,
+      "toBeat": 72.86041666666667,
+      "bar": 18,
+      "sourceEventIds": [
+        "ember-lead-17-3",
+        "ember-lead-18-0",
+        "ember-bass-17-1",
+        "ember-bass-18-0"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "A4/D2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 119,
+      "toBeat": 120.43020833333334,
+      "bar": 30,
+      "sourceEventIds": [
+        "ember-lead-29-6",
+        "ember-lead-30-0",
+        "ember-bass-29-4",
+        "ember-bass-30-0"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 121,
+      "toBeat": 121.93020833333334,
+      "bar": 31,
+      "sourceEventIds": [
+        "ember-lead-30-2",
+        "ember-lead-30-3",
+        "ember-bass-30-1",
+        "ember-bass-30-2"
+      ],
+      "evidence": {
+        "first": "A4/A2",
+        "second": "E5/E3"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "ember-lead",
+        "ember-bass"
+      ],
+      "fromBeat": 125,
+      "toBeat": 125.93020833333334,
+      "bar": 32,
+      "sourceEventIds": [
+        "ember-lead-31-2",
+        "ember-lead-31-3",
+        "ember-bass-31-1",
+        "ember-bass-31-2"
+      ],
+      "evidence": {
+        "first": "A4/A2",
+        "second": "E5/E3"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "ember-pulse"
+      ],
+      "fromBeat": 28,
+      "toBeat": 126.57083333333334,
+      "bar": 8,
+      "sourceEventIds": [
+        "ember-pulse-7-0",
+        "ember-pulse-7-3",
+        "ember-pulse-15-0",
+        "ember-pulse-15-3",
+        "ember-pulse-30-0",
+        "ember-pulse-30-3",
+        "ember-pulse-31-0",
+        "ember-pulse-31-3"
+      ],
+      "evidence": {
+        "count": 24,
+        "ratio": 0.08571428571428572,
+        "key": "D minor",
+        "pitches": [
+          "C#4"
+        ]
+      },
+      "message": "24 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "ember-lead"
+      ],
+      "fromBeat": 28.5,
+      "toBeat": 126.86041666666667,
+      "bar": 8,
+      "sourceEventIds": [
+        "ember-lead-7-1",
+        "ember-lead-7-4",
+        "ember-lead-15-1",
+        "ember-lead-15-6",
+        "ember-lead-22-4",
+        "ember-lead-23-0",
+        "ember-lead-23-5",
+        "ember-lead-30-1",
+        "ember-lead-30-4",
+        "ember-lead-31-1",
+        "ember-lead-31-4"
+      ],
+      "evidence": {
+        "count": 11,
+        "ratio": 0.05555555555555555,
+        "key": "D minor",
+        "pitches": [
+          "C#5"
+        ]
+      },
+      "message": "11 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "ember-lead",
+        "ember-pulse"
+      ],
+      "fromBeat": 54,
+      "toBeat": 54.43020833333333,
+      "bar": 14,
+      "sourceEventIds": [
+        "ember-lead-13-4",
+        "ember-pulse-13-3"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-pulse"
+      ],
+      "fromBeat": 24,
+      "toBeat": 28,
+      "bar": 7,
+      "sourceEventIds": [
+        "ember-lead-6-0",
+        "ember-lead-6-1",
+        "ember-lead-6-2",
+        "ember-lead-6-3",
+        "ember-lead-6-4",
+        "ember-lead-6-5",
+        "ember-lead-6-6",
+        "ember-pulse-6-0",
+        "ember-pulse-6-3"
+      ],
+      "clipIds": [
+        "ember-lead-clip-6",
+        "ember-pulse-clip-6"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.75,
+        "otherNotesPerBeat": 3.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-pulse"
+      ],
+      "fromBeat": 56,
+      "toBeat": 60,
+      "bar": 15,
+      "sourceEventIds": [
+        "ember-lead-14-0",
+        "ember-lead-14-1",
+        "ember-lead-14-2",
+        "ember-lead-14-3",
+        "ember-lead-14-4",
+        "ember-lead-14-5",
+        "ember-lead-14-6",
+        "ember-pulse-14-0",
+        "ember-pulse-14-3"
+      ],
+      "clipIds": [
+        "ember-lead-clip-14",
+        "ember-pulse-clip-14"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.75,
+        "otherNotesPerBeat": 3.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "ember-lead",
+        "ember-pulse"
+      ],
+      "fromBeat": 116,
+      "toBeat": 120,
+      "bar": 30,
+      "sourceEventIds": [
+        "ember-lead-29-0",
+        "ember-lead-29-1",
+        "ember-lead-29-2",
+        "ember-lead-29-3",
+        "ember-lead-29-4",
+        "ember-lead-29-5",
+        "ember-lead-29-6",
+        "ember-pulse-29-0",
+        "ember-pulse-29-3"
+      ],
+      "clipIds": [
+        "ember-lead-clip-29",
+        "ember-pulse-clip-29"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.75,
+        "otherNotesPerBeat": 3.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "ember-lead",
+        "role": "melody",
+        "instrument": "pulse-lead-soft",
+        "eventCount": 198,
+        "notesPerBeat": 1.546875,
+        "medianMidi": 76
+      },
+      {
+        "trackId": "ember-pulse",
+        "role": "arp",
+        "instrument": "pulse-pluck",
+        "eventCount": 280,
+        "notesPerBeat": 2.1875,
+        "medianMidi": 64
+      },
+      {
+        "trackId": "ember-bass",
+        "role": "bass",
+        "instrument": "triangle-bass",
+        "eventCount": 176,
+        "notesPerBeat": 1.375,
+        "medianMidi": 43
+      },
+      {
+        "trackId": "ember-drums",
+        "role": "drums",
+        "instrument": "chip-drums",
+        "eventCount": 334,
+        "notesPerBeat": 2.609375,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "ember-resolve-section-0",
+        "label": "Spark",
+        "fromBeat": 0,
+        "toBeat": 32,
+        "eventsPerBeat": 8.125,
+        "activeTrackIds": [
+          "ember-bass",
+          "ember-drums",
+          "ember-lead",
+          "ember-pulse"
+        ],
+        "medianMidi": 65
+      },
+      {
+        "sectionId": "ember-resolve-section-1",
+        "label": "Resolve",
+        "fromBeat": 32,
+        "toBeat": 64,
+        "eventsPerBeat": 9.9375,
+        "activeTrackIds": [
+          "ember-bass",
+          "ember-drums",
+          "ember-lead",
+          "ember-pulse"
+        ],
+        "medianMidi": 65
+      },
+      {
+        "sectionId": "ember-resolve-section-2",
+        "label": "Suspension",
+        "fromBeat": 64,
+        "toBeat": 96,
+        "eventsPerBeat": 3.125,
+        "activeTrackIds": [
+          "ember-bass",
+          "ember-drums",
+          "ember-lead"
+        ],
+        "medianMidi": 67
+      },
+      {
+        "sectionId": "ember-resolve-section-3",
+        "label": "Return",
+        "fromBeat": 96,
+        "toBeat": 128,
+        "eventsPerBeat": 9.6875,
+        "activeTrackIds": [
+          "ember-bass",
+          "ember-drums",
+          "ember-lead",
+          "ember-pulse"
+        ],
+        "medianMidi": 64
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "D minor",
+    "chordCount": 32
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}
