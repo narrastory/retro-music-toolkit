@@ -1,126 +1,118 @@
 <!doctype html>
 <html lang="zh-CN">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Retro Music Toolkit · 试听</title>
-<style>
-  :root {
-    --bg: #0b0f16;
-    --panel: #141c28;
-    --line: #24303f;
-    --ink: #e8eef7;
-    --muted: #8b9bb0;
-    --accent: #ef3b4c;
-    --mint: #8ef0cb;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    padding: 48px 20px 80px;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  header { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
-  header img { width: 64px; height: 64px; image-rendering: pixelated; }
-  h1 { font-size: 24px; margin: 0; letter-spacing: -0.01em; }
-  .lede { color: var(--muted); margin: 0 0 40px; font-size: 15px; }
-  a { color: var(--mint); }
-  article {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 20px 22px;
-    margin-bottom: 16px;
-  }
-  .title {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 12px;
-    align-items: baseline;
-    margin-bottom: 4px;
-  }
-  .title strong { font-size: 17px; }
-  .tag {
-    font: 12px/1 ui-monospace, Menlo, monospace;
-    color: var(--mint);
-    border: 1px solid #2b5a4a;
-    background: #12201c;
-    border-radius: 99px;
-    padding: 3px 9px;
-  }
-  .meta {
-    color: var(--muted);
-    font: 13px/1.6 ui-monospace, Menlo, monospace;
-    margin: 0 0 12px;
-  }
-  audio { width: 100%; margin-top: 4px; }
-  .note { color: var(--muted); font-size: 13px; margin-top: 10px; }
-  footer {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 40px;
-    border-top: 1px solid var(--line);
-    padding-top: 20px;
-  }
-</style>
-
-<div class="wrap">
-  <header>
-    <img src="logo.svg" alt="">
-    <h1>Retro Music Toolkit · 试听</h1>
-  </header>
-  <p class="lede">
-    以下全部由仓库内的 JSON 乐谱离线渲染，没有使用任何模型生成。
-    每个片段都可从对应工程重新导出，结果一致。
-  </p>
-
-  <article>
-    <div class="title">
-      <strong>Starfall Causeway</strong>
-      <span class="tag">Genesis · FM</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="给下一场冒险的复古游戏音乐。试听原创配乐，下载音频与可编辑乐谱。"
+    />
+    <meta name="theme-color" content="#15152b" />
+    <title>Retro Music Toolkit · 给下一场冒险的声音</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="showcase.js" defer></script>
+  </head>
+  <body class="crt">
+    <a class="skip" href="#collection">跳到音乐选集</a>
+    <div class="page">
+      <header class="masthead">
+        <a class="brand" href="./"
+          ><img src="logo.svg" width="34" height="34" alt="" /><span
+            >Retro Music <b>Toolkit</b></span
+          ></a
+        >
+        <nav aria-label="主导航">
+          <a href="#collection">音乐选集</a
+          ><a href="https://github.com/narrastory/retro-music-toolkit"
+            >GitHub ↗</a
+          ><button id="crt-toggle" aria-pressed="true">CRT 效果：开</button>
+        </nav>
+      </header>
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div>
+            <p class="eyebrow">一份复古游戏原声选集</p>
+            <h1 id="hero-title">给下一场冒险，<br />一个难忘的旋律。</h1>
+            <p class="intro">
+              穿过像素原野，走向星光栈道，<br />在亮着灯的港口停一停。<br />为你的游戏，听见一个新的世界。
+            </p>
+            <a class="button primary" href="#collection">▶ 开始试听</a
+            ><span class="hero-note">原创配乐 · 免费使用 · 附创作提示词</span>
+          </div>
+          <figure class="hero-art">
+            <img
+              src="scenes/starfall.svg"
+              width="640"
+              height="360"
+              alt="像素夜空下，通向远方城堡的星光栈道"
+            />
+            <figcaption>
+              <span class="signal"></span> 此刻的风景
+              <span>Starfall Causeway</span>
+            </figcaption>
+            <div class="art-label">下一站，星辰之间。</div>
+          </figure>
+        </section>
+        <section id="collection" aria-labelledby="collection-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">选择你的游戏世界</p>
+              <h2 id="collection-title">按下播放，冒险开始。</h2>
+            </div>
+            <p>3 个主题 / 4 段声音<br />戴上耳机，慢慢挑选。</p>
+          </div>
+          <div id="tracks"></div>
+          <noscript
+            ><p>
+              启用 JavaScript 可查看完整选集与提示词。直接试听：<a
+                href="audio/starfall-fm.mp3"
+                >星光栈道 FM</a
+              >、<a href="audio/starfall-sample.mp3">采样版</a>、<a
+                href="audio/pixel-trail.mp3"
+                >像素小径</a
+              >、<a href="audio/lantern-harbor.mp3">灯火港湾</a>。
+            </p></noscript
+          >
+        </section>
+        <section class="take-home" aria-labelledby="take-title">
+          <span class="pixel-note" aria-hidden="true">♫</span>
+          <div>
+            <h2 id="take-title">让音乐，成为游戏的一部分。</h2>
+            <p>
+              这些展示音频可自由用于你的项目，包含商业游戏。每首都附有 WAV 和
+              JSON 乐谱，方便继续调整旋律、音色与编配。
+            </p>
+            <a
+              href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md#generated-audio"
+              >查看音频使用说明 ↗</a
+            >
+          </div>
+          <div class="tool-note">
+            <h3>喜欢它，也可以继续创作。</h3>
+            <p>
+              Retro Music Toolkit
+              将结构化乐谱变成复古配乐。本地渲染、定点修改，保留你已经喜欢的部分。
+            </p>
+            <a
+              href="https://github.com/narrastory/retro-music-toolkit#quick-start"
+              >探索工具与快速开始 ↗</a
+            >
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a
+          class="brand"
+          href="https://github.com/narrastory/retro-music-toolkit"
+          >Retro Music Toolkit</a
+        >
+        <p>用有限的声音，讲无限的故事。</p>
+        <small
+          >预览为 MP3；原始 WAV 与渲染报告保留在仓库。<br />NES / Genesis / SNES
+          为风格描述，非原机芯片精确仿真。</small
+        >
+      </footer>
     </div>
-    <p class="meta">32.0 s · 120 BPM · 16 小节 · loop · −21.59 LUFS · 真峰值 −6.18 dBFS</p>
-    <audio controls preload="none" src="audio/starfall-fm.mp3"></audio>
-    <p class="note">从零编写：独立 FM 音色、A2 句尾变奏、回答声部、连奏滑音与弯音。</p>
-  </article>
-
-  <article>
-    <div class="title">
-      <strong>Starfall Causeway（采样改编）</strong>
-      <span class="tag">SNES · sampled</span>
-    </div>
-    <p class="meta">35.6 s · 同主题 · 内嵌双音区 WAV · −21.60 LUFS</p>
-    <audio controls preload="none" src="audio/starfall-sample.mp3"></audio>
-    <p class="note">同一份乐谱换成采样音色，演示音色与乐谱解耦。</p>
-  </article>
-
-  <article>
-    <div class="title">
-      <strong>Pixel Trail</strong>
-      <span class="tag">NES · pulse</span>
-    </div>
-    <p class="meta">29.1 s · 132 BPM · 16 小节 · loop</p>
-    <audio controls preload="none" src="audio/pixel-trail.mp3"></audio>
-    <p class="note">两路脉冲 + 三角低音 + 合成鼓，AABA 结构。</p>
-  </article>
-
-  <article>
-    <div class="title">
-      <strong>Lantern Harbor</strong>
-      <span class="tag">SNES · sampled</span>
-    </div>
-    <p class="meta">38.4 s · 100 BPM · 16 小节 · loop</p>
-    <audio controls preload="none" src="audio/lantern-harbor.mp3"></audio>
-    <p class="note">五轨编配，含弦乐和声与回答声部。</p>
-  </article>
-
-  <footer>
-    音频为 MP3 160 kbps 预览副本；仓库内保留原始 PCM16 WAV 与渲染报告。
-    这些示例只做过信号层面验证，没有主观听审记录 —— 好不好听请你自己判断。
-    <br><br>
-    <a href="https://github.com/narrastory/retro-music-toolkit">← 返回 GitHub 仓库</a>
-  </footer>
-</div>
+    <p id="announcement" class="sr-only" role="status"></p>
+  </body>
 </html>
