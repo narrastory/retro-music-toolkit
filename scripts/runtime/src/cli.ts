@@ -17,7 +17,8 @@ import { importInstrument } from "./instrument-pack.js";
 import {
   importInstrumentCollection,
   InstrumentCollectionSchema,
-  bundledStarterManifest,
+  bundledCollectionManifest,
+  listBundledCollections,
 } from "./instrument-collection.js";
 import { INSTRUMENTS } from "./instruments.js";
 import { diagnoseScore } from "./diagnostics.js";
@@ -43,7 +44,7 @@ Usage: retro-music COMMAND [FILE] [options]
 
 Commands
   instruments                       list presets with guidance
-  instrument-packs                  list bundled sampled instruments
+  instrument-packs [--all|--pack ID] list bundled sampled instruments
   import-pack SCORE.json --out NEW.json [--instrument ID,...]
                                     --definition MANIFEST.json for a local pack
   validate SCORE.json               full compile check
@@ -105,6 +106,8 @@ const { positionals, values } = (() => {
         config: { type: "string" },
         score: { type: "string" },
         definition: { type: "string" },
+        pack: { type: "string" },
+        all: { type: "boolean" },
         from: { type: "string" },
         to: { type: "string" },
         bars: { type: "string" },
@@ -335,6 +338,16 @@ function minimalExample() {
 }
 
 async function main() {
+  if (values.pack && values.definition)
+    throw new ToolkitError(
+      "CONFLICTING_PACK_OPTIONS",
+      "Use --pack or --definition, not both",
+    );
+  if (values.all && (values.pack || values.definition))
+    throw new ToolkitError(
+      "CONFLICTING_PACK_OPTIONS",
+      "--all cannot select a single pack",
+    );
   if (values.version || command === "version") {
     print({ version: TOOLKIT_VERSION });
     return;
@@ -372,7 +385,12 @@ async function main() {
     return;
   }
   if (command === "instrument-packs") {
-    const path = values.definition ?? bundledStarterManifest;
+    const available = await listBundledCollections();
+    if (values.all) {
+      print(available);
+      return;
+    }
+    const path = values.definition ?? bundledCollectionManifest(values.pack);
     const pack = InstrumentCollectionSchema.parse((await load(path)).data);
     print({
       id: pack.id,
@@ -381,6 +399,12 @@ async function main() {
       license: pack.license,
       source: pack.source,
       manifest: resolve(path),
+      availablePacks: available.map((p) => ({
+        id: p.id,
+        name: p.name,
+        license: p.license,
+        instruments: p.instruments.map((i) => i.id),
+      })),
       instruments: pack.instruments.map((p) => ({
         ...p.instrument,
         sampleCount: p.assets.length,
@@ -389,7 +413,9 @@ async function main() {
     return;
   }
   if (command === "schema") {
-    const text = JSON.stringify(z.toJSONSchema(ScoreSchema), null, 2) + "\n";
+    const text =
+      JSON.stringify(z.toJSONSchema(ScoreSchema, { io: "input" }), null, 2) +
+      "\n";
     if (values.out) await output(values.out, text);
     else console.log(text);
     return;
@@ -516,7 +542,7 @@ async function main() {
   }
   if (command === "import-pack") {
     if (!values.out) throw new ToolkitError("MISSING_OUT", "--out is required");
-    const path = values.definition ?? bundledStarterManifest;
+    const path = values.definition ?? bundledCollectionManifest(values.pack);
     const definition = await load(path);
     const score = await importInstrumentCollection(
       data,

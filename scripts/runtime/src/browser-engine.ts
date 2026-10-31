@@ -249,29 +249,34 @@ export async function renderInBrowser(
           if (drums) {
             // Sampled kit slots take priority; anything else falls back to the
             // synthetic piece so a partial kit still renders audibly.
-            const buffers = new Map<DrumSound, Tone.ToneAudioBuffer>();
+            const buffers = new Map<string, Tone.ToneAudioBuffer>();
+            for (const slot of p.drumKit?.slots ?? []) {
+              if (buffers.has(slot.assetId)) continue;
+              const asset = decodeSampleAsset(s.sampleAssets![slot.assetId]!);
+              buffers.set(
+                slot.assetId,
+                own(toneBufferFromChannels(asset.channels, asset.sampleRate)),
+              );
+            }
             for (const sound of new Set(trackEvents.map((e) => e.sound!))) {
-              const slot = findDrumSlot(p, sound);
-              if (slot && s.sampleAssets?.[slot.assetId]) {
-                const asset = decodeSampleAsset(s.sampleAssets[slot.assetId]!);
+              if (!findDrumSlot(p, sound))
                 buffers.set(
-                  sound,
-                  own(toneBufferFromChannels(asset.channels, asset.sampleRate)),
-                );
-              } else {
-                buffers.set(
-                  sound,
+                  "fallback:" + sound,
                   own(drumBuffer(sound, sr, s.seed ^ hash(t.id + sound))),
                 );
-              }
             }
             for (let cycle = 0; cycle < cycles; cycle++)
               for (const e of trackEvents) {
                 if (mode === "one-shot" && e.tick / compiled.ppq >= to)
                   continue;
                 const at = cycle * cycleSeconds + (e.tick / compiled.ppq) * spb,
-                  buffer = buffers.get(e.sound!)!,
-                  slot = findDrumSlot(p, e.sound!);
+                  slot =
+                    e.sampleDrumSlotIndex !== undefined
+                      ? p.drumKit?.slots[e.sampleDrumSlotIndex]
+                      : findDrumSlot(p, e.sound!, e.velocity),
+                  buffer = buffers.get(
+                    slot?.assetId ?? "fallback:" + e.sound!,
+                  )!;
                 const source = own(
                   new Tone.ToneBufferSource({
                     url: buffer,
@@ -442,7 +447,11 @@ export async function renderInBrowser(
                 voice.guard.gain.setValueAtTime(1, Math.max(at, end - fade));
                 voice.guard.gain.linearRampToValueAtTime(0, end);
               }
-              const zone = findZone(p, first.midi!);
+              const zone =
+                first.sampleZoneIndex !== undefined &&
+                p.sample?.kind === "zones"
+                  ? p.sample.zones[first.sampleZoneIndex]
+                  : findZone(p, first.midi!, first.velocity);
               const buffer = zone
                 ? external.get(zone.assetId)
                 : procedural?.buffer;

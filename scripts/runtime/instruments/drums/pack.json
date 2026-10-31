@@ -1,0 +1,290 @@
+{
+  "id": "drums",
+  "name": "Common Drums — compact acoustic kit",
+  "version": "1.0.0",
+  "license": "CC-BY-4.0",
+  "source": "https://www.karoryfer.com/",
+  "instruments": [
+    {
+      "instrument": {
+        "id": "drums-acoustic",
+        "engine": "drums",
+        "role": "drums",
+        "range": [
+          0,
+          127
+        ],
+        "attack": 0,
+        "release": 0,
+        "description": "Acoustic drum kit; compact non-looped WAV edits with native velocity/RR selection.",
+        "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. CC-BY-4.0",
+        "drumKit": {
+          "slots": [
+            {
+              "assetId": "drums-acoustic-kick-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "sound": "kick"
+            },
+            {
+              "assetId": "drums-acoustic-kick-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "sound": "kick"
+            },
+            {
+              "assetId": "drums-acoustic-kick-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "sound": "kick"
+            },
+            {
+              "assetId": "drums-acoustic-kick-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "sound": "kick"
+            },
+            {
+              "assetId": "drums-acoustic-snare-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "sound": "snare"
+            },
+            {
+              "assetId": "drums-acoustic-snare-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "sound": "snare"
+            },
+            {
+              "assetId": "drums-acoustic-snare-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "sound": "snare"
+            },
+            {
+              "assetId": "drums-acoustic-snare-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "sound": "snare"
+            },
+            {
+              "assetId": "drums-acoustic-hat-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "sound": "hat"
+            },
+            {
+              "assetId": "drums-acoustic-hat-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "sound": "hat"
+            },
+            {
+              "assetId": "drums-acoustic-hat-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "sound": "hat"
+            },
+            {
+              "assetId": "drums-acoustic-hat-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "sound": "hat"
+            },
+            {
+              "assetId": "drums-acoustic-openhat-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "sound": "openhat"
+            },
+            {
+              "assetId": "drums-acoustic-openhat-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "sound": "openhat"
+            },
+            {
+              "assetId": "drums-acoustic-openhat-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "sound": "openhat"
+            },
+            {
+              "assetId": "drums-acoustic-openhat-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "sound": "openhat"
+            },
+            {
+              "assetId": "drums-acoustic-tom-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "sound": "tom"
+            },
+            {
+              "assetId": "drums-acoustic-tom-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "sound": "tom"
+            },
+            {
+              "assetId": "drums-acoustic-tom-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "sound": "tom"
+            },
+            {
+              "assetId": "drums-acoustic-tom-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "sound": "tom"
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "id": "drums-acoustic-kick-soft-1",
+          "file": "samples/drums-acoustic-kick-soft-1.wav",
+          "sha256": "c5fff24144734203c4054f4c769c8e7fae61b64db7cab859b0a62e8fa0411a83",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/kick_mic/ks_vl2_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-kick-soft-2",
+          "file": "samples/drums-acoustic-kick-soft-2.wav",
+          "sha256": "0d0635573ea5e8558969657b7d9b819f7776085a345aad0866491e1ffc0dbb2a",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/kick_mic/ks_vl2_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-kick-hard-1",
+          "file": "samples/drums-acoustic-kick-hard-1.wav",
+          "sha256": "7c8a3c0a24679890ff2a08db345d61077b03394619fe13fb06354a7b8d804a19",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/kick_mic/ks_vl4_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-kick-hard-2",
+          "file": "samples/drums-acoustic-kick-hard-2.wav",
+          "sha256": "bae89b89005bcef7da839de24dece617d472d638132bc8a1cfe157d16110877b",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/kick_mic/ks_vl4_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-snare-soft-1",
+          "file": "samples/drums-acoustic-snare-soft-1.wav",
+          "sha256": "4528a306f060423d4b1234c8c203520331ad2a3b8f106baddebae44d30f76ba3",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/snare_mic/sc_vl2_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-snare-soft-2",
+          "file": "samples/drums-acoustic-snare-soft-2.wav",
+          "sha256": "79ddeb342e1b61b2f5e640a17ca3e1f7e697feb8ebc097b98385b05d137a2190",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/snare_mic/sc_vl2_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-snare-hard-1",
+          "file": "samples/drums-acoustic-snare-hard-1.wav",
+          "sha256": "54d9677b84f657ed377294ad08082c30162889bdaed748ea78b791be2ec87bf8",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/snare_mic/sc_vl4_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-snare-hard-2",
+          "file": "samples/drums-acoustic-snare-hard-2.wav",
+          "sha256": "00974a3e2baccb6f9acfc9a38321ac1a9cea0c61c4ddd380edaeef4572bb0167",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/snare_mic/sc_vl4_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-hat-soft-1",
+          "file": "samples/drums-acoustic-hat-soft-1.wav",
+          "sha256": "24c764116296d44e360ed85590896d8003e550c37cb53b38941c28f3519266cd",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/hc_vl2_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-hat-soft-2",
+          "file": "samples/drums-acoustic-hat-soft-2.wav",
+          "sha256": "8f4f113ef06f2cbf7d64613cf8c0b80e864abba7edc6337ac830a984147a54d4",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/hc_vl2_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-hat-hard-1",
+          "file": "samples/drums-acoustic-hat-hard-1.wav",
+          "sha256": "02e2de6a15b0e7fd515edcaafd4f6d57cc35f6adc6ed4440e463f391a193f5b5",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/hc_vl4_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-hat-hard-2",
+          "file": "samples/drums-acoustic-hat-hard-2.wav",
+          "sha256": "a2a40af5cb4c8bac2b991001175fc24eb32370131a4c0ac6674bffa02f3a9d2a",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/hc_vl4_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-openhat-soft-1",
+          "file": "samples/drums-acoustic-openhat-soft-1.wav",
+          "sha256": "63c69caee2980c9ebdf11619ffa500498980082b1b8b6fc32807734580d7d28b",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/ho_vl2_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-openhat-soft-2",
+          "file": "samples/drums-acoustic-openhat-soft-2.wav",
+          "sha256": "44125645779602b6d6ac7ee7cbee6f58d7b382c75a532e57794485c64dd995ad",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/ho_vl2_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-openhat-hard-1",
+          "file": "samples/drums-acoustic-openhat-hard-1.wav",
+          "sha256": "b8dd3a2265c38a77e2143e957b9bcfa1ffea516bccab531dc4094f2548274bc1",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/ho_vl3_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-openhat-hard-2",
+          "file": "samples/drums-acoustic-openhat-hard-2.wav",
+          "sha256": "a51a4ce6177f1e6425eb721fa8e2ca49f9cdaf4b2ef604127d584a5eb7b8967a",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/ho_vl3_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-tom-soft-1",
+          "file": "samples/drums-acoustic-tom-soft-1.wav",
+          "sha256": "07ed26d8f16289457229046c8d31c64f83ded5ade730e79b051ef568841a6a5c",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/tm_vl2_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-tom-soft-2",
+          "file": "samples/drums-acoustic-tom-soft-2.wav",
+          "sha256": "f630fa4dac860cf2d2010ae4810490dd25834a968a1943b2c2b1d6cd48df0d62",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/tm_vl2_rr2.wav"
+        },
+        {
+          "id": "drums-acoustic-tom-hard-1",
+          "file": "samples/drums-acoustic-tom-hard-1.wav",
+          "sha256": "1616dc97feef8fba0a424136bc40d346bea17ca97c86affb76d7a397222ba242",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/tm_vl4_rr1.wav"
+        },
+        {
+          "id": "drums-acoustic-tom-hard-2",
+          "file": "samples/drums-acoustic-tom-hard-2.wav",
+          "sha256": "77031e011b9d0905d666eac5af75425edd29cd420446aea469595fb4739f91e5",
+          "provenance": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. License: CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Gogodze_Phu_vol_II/Samples/oh_mic/tm_vl4_rr2.wav"
+        }
+      ]
+    }
+  ]
+}

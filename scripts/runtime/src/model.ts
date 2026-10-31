@@ -282,6 +282,9 @@ export type CompiledEvent = {
   cutTick?: number;
   swingShiftTicks?: number;
   humanizeVelocity?: number;
+  /** Compiled once so crop, solo and repeated loop renders use identical samples. */
+  sampleZoneIndex?: number;
+  sampleDrumSlotIndex?: number;
 };
 export type CompiledScore = {
   score: Score;

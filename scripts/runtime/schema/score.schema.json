@@ -113,12 +113,6 @@
                 "maximum": 0
               }
             },
-            "required": [
-              "pulseWidth",
-              "harmonicity",
-              "sustain",
-              "volumeDb"
-            ],
             "additionalProperties": false
           },
           "sample": {
@@ -160,6 +154,24 @@
                     "items": {
                       "type": "object",
                       "properties": {
+                        "lowVelocity": {
+                          "default": 1,
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 127
+                        },
+                        "highVelocity": {
+                          "default": 127,
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 127
+                        },
+                        "roundRobin": {
+                          "default": 1,
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 16
+                        },
                         "lowMidi": {
                           "type": "integer",
                           "minimum": 0,
@@ -213,10 +225,7 @@
                         "lowMidi",
                         "highMidi",
                         "rootMidi",
-                        "assetId",
-                        "tuningCents",
-                        "gainDb",
-                        "loopCrossfadeFrames"
+                        "assetId"
                       ],
                       "additionalProperties": false
                     }
@@ -235,11 +244,29 @@
             "properties": {
               "slots": {
                 "minItems": 1,
-                "maxItems": 16,
+                "maxItems": 64,
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
+                    "lowVelocity": {
+                      "default": 1,
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 127
+                    },
+                    "highVelocity": {
+                      "default": 127,
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 127
+                    },
+                    "roundRobin": {
+                      "default": 1,
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 16
+                    },
                     "sound": {
                       "type": "string",
                       "enum": [
@@ -279,10 +306,7 @@
                   },
                   "required": [
                     "sound",
-                    "assetId",
-                    "gainDb",
-                    "tuningCents",
-                    "startFrame"
+                    "assetId"
                   ],
                   "additionalProperties": false
                 }
@@ -309,10 +333,6 @@
                 "maximum": 2
               }
             },
-            "required": [
-              "filterOctaves",
-              "fmIndexScale"
-            ],
             "additionalProperties": false
           },
           "provenance": {
@@ -608,10 +628,6 @@
                 "maximum": 0.5
               }
             },
-            "required": [
-              "timingBeats",
-              "velocity"
-            ],
             "additionalProperties": false
           },
           "arpeggio": {
@@ -644,12 +660,6 @@
                 ]
               }
             },
-            "required": [
-              "enabled",
-              "rate",
-              "gate",
-              "order"
-            ],
             "additionalProperties": false
           },
           "controls": {
@@ -672,10 +682,6 @@
                 "maximum": 1
               }
             },
-            "required": [
-              "brightness",
-              "pluckiness"
-            ],
             "additionalProperties": false
           },
           "automation": {
@@ -859,10 +865,7 @@
                           "kind",
                           "at",
                           "pitch",
-                          "duration",
-                          "gate",
-                          "velocity",
-                          "hold"
+                          "duration"
                         ],
                         "additionalProperties": false
                       },
@@ -913,9 +916,7 @@
                           "id",
                           "kind",
                           "at",
-                          "sound",
-                          "velocity",
-                          "detuneCents"
+                          "sound"
                         ],
                         "additionalProperties": false
                       }
@@ -981,11 +982,7 @@
               "required": [
                 "id",
                 "pattern",
-                "at",
-                "repeats",
-                "transpose",
-                "velocityScale",
-                "mute"
+                "at"
               ],
               "additionalProperties": false
             }
@@ -995,15 +992,6 @@
           "id",
           "role",
           "instrument",
-          "gainDb",
-          "pan",
-          "send",
-          "reverbSend",
-          "maxVoices",
-          "voicePolicy",
-          "swing",
-          "swingUnit",
-          "controls",
           "patterns",
           "clips"
         ],
@@ -1085,13 +1073,6 @@
               "maximum": 0
             }
           },
-          "required": [
-            "enabled",
-            "delayBeats",
-            "feedback",
-            "taps",
-            "returnDb"
-          ],
           "additionalProperties": false
         },
         "reverb": {
@@ -1126,22 +1107,9 @@
               "maximum": 0
             }
           },
-          "required": [
-            "enabled",
-            "decaySeconds",
-            "preDelaySeconds",
-            "damping",
-            "returnDb"
-          ],
           "additionalProperties": false
         }
       },
-      "required": [
-        "masterDb",
-        "delayBeats",
-        "feedback",
-        "returnDb"
-      ],
       "additionalProperties": false
     },
     "export": {
@@ -1227,23 +1195,9 @@
               "maximum": 0.02
             }
           },
-          "required": [
-            "enabled",
-            "ceilingDbfs",
-            "lookaheadSeconds"
-          ],
           "additionalProperties": false
         }
       },
-      "required": [
-        "sampleRate",
-        "format",
-        "mode",
-        "tailSeconds",
-        "warmupCycles",
-        "dither",
-        "limiter"
-      ],
       "additionalProperties": false
     }
   },
@@ -1251,16 +1205,10 @@
     "schemaVersion",
     "title",
     "profile",
-    "authenticity",
     "tempo",
     "meter",
     "lengthBeats",
-    "seed",
-    "harmony",
-    "sections",
-    "tracks",
-    "mixer",
-    "export"
+    "tracks"
   ],
   "additionalProperties": false
 }

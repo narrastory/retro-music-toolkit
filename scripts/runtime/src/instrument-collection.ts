@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { open, realpath, stat } from "node:fs/promises";
+import { open, realpath, stat, readdir, readFile } from "node:fs/promises";
 import { resolve, relative, isAbsolute } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
@@ -30,6 +30,39 @@ export const InstrumentCollectionSchema = z.strictObject({
 export const bundledStarterManifest = fileURLToPath(
   new URL("../instruments/starter/pack.json", import.meta.url),
 );
+export function bundledCollectionManifest(id = "starter") {
+  if (!/^[a-z0-9][a-z0-9-]{0,63}$/.test(id))
+    throw new ToolkitError("UNKNOWN_PACK", id);
+  return fileURLToPath(
+    new URL(`../instruments/${id}/pack.json`, import.meta.url),
+  );
+}
+export async function listBundledCollections() {
+  const root = new URL("../instruments/", import.meta.url);
+  const directories = await readdir(root, { withFileTypes: true });
+  const packs = [];
+  for (const dir of directories
+    .filter((d) => d.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))) {
+    const manifest = bundledCollectionManifest(dir.name);
+    const pack = InstrumentCollectionSchema.parse(
+      JSON.parse(await readFile(manifest, "utf8")),
+    );
+    packs.push({
+      id: pack.id,
+      name: pack.name,
+      version: pack.version,
+      license: pack.license,
+      source: pack.source,
+      manifest,
+      instruments: pack.instruments.map((p) => ({
+        ...p.instrument,
+        sampleCount: p.assets.length,
+      })),
+    });
+  }
+  return packs;
+}
 const MAX_ASSET_BYTES = 6_000_000; // Matches the 8 MB base64 asset schema cap.
 const MAX_IMPORT_BYTES = 24_000_000; // Container/PCM overhead; frame caps still apply.
 

@@ -167,6 +167,46 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
       });
     }
     assert.deepEqual(errors, []);
+    await page.goto(
+      `http://127.0.0.1:${server.address().port}/instruments.html`,
+    );
+    await page.locator("#catalog .track").last().waitFor();
+    assert.equal(await page.locator("audio").count(), 7);
+    for (let index = 0; index < 7; index++) {
+      await page
+        .locator("audio")
+        .nth(index)
+        .evaluate((audio) => audio.play());
+      await page.waitForFunction((i) => {
+        const media = [...document.querySelectorAll("audio")];
+        return (
+          media[i].currentTime > 0 &&
+          media.filter((a) => !a.paused).length === 1
+        );
+      }, index);
+    }
+    for (const width of [320, 390, 1280]) {
+      await page.setViewportSize({ width, height: 900 });
+      assert.ok(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+        `instrument gallery overflow at ${width}px`,
+      );
+    }
+    for (const href of await page
+      .locator(".downloads a")
+      .evaluateAll((links) => links.map((a) => a.href)))
+      await readFile(new URL(`.${new URL(href).pathname}`, root));
+    if (process.env.SHOWCASE_SCREENSHOT)
+      await page.screenshot({
+        path: process.env.SHOWCASE_SCREENSHOT.replace(
+          ".png",
+          "-instruments.png",
+        ),
+        fullPage: true,
+      });
+    assert.deepEqual(errors, []);
     await page.goto(`http://127.0.0.1:${server.address().port}/sound-lab.html`);
     assert.equal(await page.locator("audio").count(), 3);
     for (let index = 0; index < 3; index++) {

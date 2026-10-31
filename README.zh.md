@@ -10,7 +10,7 @@
 
 **完全本地，零 API。同一份乐谱，永远导出同一段音频。**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![126 tests](https://img.shields.io/badge/tests-126%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![137 tests](https://img.shields.io/badge/tests-137%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 在线试听](https://narrastory.github.io/retro-music-toolkit/) · [快速开始](#快速开始) · [和音乐大模型的区别](#和音乐生成大模型有什么不同) · [技术细节](#技术细节)
 
@@ -90,7 +90,7 @@ Sections:
 | **复现** | 同一提示词，每次结果不同 | 同一乐谱，每次结果相同 |
 | **修改** | 重新生成整段 | 定点改一个音 |
 | **可解释** | 只拿到音频 | 拿到乐谱和诊断 |
-| **素材来源** | 训练数据不可追溯 | 程序合成 + 来源明确的 CC0 采样 |
+| **素材来源** | 训练数据不可追溯 | 程序合成 + 来源明确的 CC0 / CC BY 采样 |
 
 **大模型擅长从零给你一个灵感；这个工具擅长把灵感变成能进游戏、能改、能复现的成品。** 如果你已经有旋律构思，或者你在构建一个需要稳定输出的 AI Agent，后者才是你会每天用到的那个。
 
@@ -137,7 +137,7 @@ Sections:
 <td valign="top">
 
 **🔊 发声**
-- NES / Genesis / SNES 三种风格，11 个程序音色 + 4 件入门采样乐器
+- NES / Genesis / SNES 三种风格，11 个程序音色 + 10 件采样乐器
 - `hardware` 模式：无滤波脉冲、三档占空比、16 级音量
 - 单声部和弦轮换：三音和弦只占一个声部
 - SNES 八抽头 FIR 回声，8 种鼓件 + 采样鼓组
@@ -167,6 +167,12 @@ cat song.json | node dist/cli.js validate - --compact
 ```
 
 ---
+
+## 1.3：常用音色扩充
+
+新增电贝斯、短奏贝斯、干净吉他、短奏吉他、钢琴和基础鼓组，三个包合计约 4.4 MB。支持 MIDI 力度分层、由 seed 控制的轮换采样，以及按包选择导入。素材分 CC0 / CC BY 3.0 / CC BY 4.0 保存，使用时保留适用的署名与许可。
+
+[试听常用音色与合奏](https://narrastory.github.io/retro-music-toolkit/instruments.html) · [1.3 使用指南](references/v1.3-guide.zh-CN.md)
 
 ## 1.2：采样乐器与混响
 
@@ -229,7 +235,7 @@ node dist/cli.js compare v1.wav v2.wav --out ab.wav   # 两版等响对比
 - **release 尾音与按音冲突分开报告**。前者常见且无害，后者才需要改。
 - **可复现性**：鼓噪声、humanize、random 琶音全部由 seed 派生，禁止运行期 `Math.random`。浏览器 DSP 差异仍可能导致逐样本不一致，不宣称 bit-exact。
 
-**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；126 项自动化测试（98 单元 + 26 真实音频 + 2 网页），另有试听页专项检查。
+**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；137 项自动化测试（107 单元 + 28 真实音频 + 2 网页），另有试听页专项检查。
 
 </details>
 

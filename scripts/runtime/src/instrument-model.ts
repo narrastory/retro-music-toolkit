@@ -18,7 +18,13 @@ export const DrumSoundSchema = z.enum([
 export type DrumSound = z.infer<typeof DrumSoundSchema>;
 
 const midi = z.number().int().min(0).max(127);
+const variantFields = {
+  lowVelocity: z.number().int().min(1).max(127).default(1),
+  highVelocity: z.number().int().min(1).max(127).default(127),
+  roundRobin: z.number().int().min(1).max(16).default(1),
+};
 export const SampleZoneSchema = z.strictObject({
+  ...variantFields,
   lowMidi: midi,
   highMidi: midi,
   rootMidi: midi,
@@ -32,6 +38,7 @@ export const SampleZoneSchema = z.strictObject({
 });
 /** One sampled drum piece. `sound` selects which hit event triggers it. */
 export const DrumKitSlotSchema = z.strictObject({
+  ...variantFields,
   sound: DrumSoundSchema,
   assetId: z.string().min(1).max(80),
   gainDb: z.number().min(-36).max(6).default(0),
@@ -40,7 +47,7 @@ export const DrumKitSlotSchema = z.strictObject({
   startFrame: z.number().int().min(0).default(0),
 });
 export const DrumKitSchema = z.strictObject({
-  slots: z.array(DrumKitSlotSchema).min(1).max(16),
+  slots: z.array(DrumKitSlotSchema).min(1).max(64),
 });
 export const InstrumentDefinitionSchema = z.strictObject({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),
@@ -113,12 +120,54 @@ export function decodeSampleAsset(asset: SampleAsset) {
     );
   return data;
 }
-export function findZone(p: InstrumentDefinition, note: number) {
-  if (p.sample?.kind !== "zones") return undefined;
-  return p.sample.zones.find((z) => note >= z.lowMidi && note <= z.highMidi);
+function matchesVelocity(
+  item: { lowVelocity?: number; highVelocity?: number },
+  velocity?: number,
+) {
+  if (velocity === undefined) return true;
+  const value = Math.max(1, Math.min(127, Math.round(velocity * 127)));
+  return (
+    value >= (item.lowVelocity ?? 1) && value <= (item.highVelocity ?? 127)
+  );
 }
-export function findDrumSlot(p: InstrumentDefinition, sound: DrumSound) {
-  return p.drumKit?.slots.find((s) => s.sound === sound);
+export function matchingZones(
+  p: InstrumentDefinition,
+  note: number,
+  velocity?: number,
+) {
+  return p.sample?.kind === "zones"
+    ? p.sample.zones
+        .filter(
+          (z) =>
+            note >= z.lowMidi &&
+            note <= z.highMidi &&
+            matchesVelocity(z, velocity),
+        )
+        .sort((a, b) => a.roundRobin - b.roundRobin)
+    : [];
+}
+export function findZone(
+  p: InstrumentDefinition,
+  note: number,
+  velocity?: number,
+) {
+  return matchingZones(p, note, velocity)[0];
+}
+export function matchingDrumSlots(
+  p: InstrumentDefinition,
+  sound: DrumSound,
+  velocity?: number,
+) {
+  return (p.drumKit?.slots ?? [])
+    .filter((s) => s.sound === sound && matchesVelocity(s, velocity))
+    .sort((a, b) => a.roundRobin - b.roundRobin);
+}
+export function findDrumSlot(
+  p: InstrumentDefinition,
+  sound: DrumSound,
+  velocity?: number,
+) {
+  return matchingDrumSlots(p, sound, velocity)[0];
 }
 /** Asset IDs referenced by an instrument, for budget and reference checks. */
 export function referencedAssets(p: InstrumentDefinition): string[] {
