@@ -11,3 +11,7 @@ scripts/runtime/dist/
 # Brainstorm session artifacts
 .superpowers/
 .cache/
+
+# Local source archives, not part of the toolkit or its distributable packs.
+/material/
+/material-library/

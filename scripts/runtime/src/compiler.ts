@@ -18,7 +18,12 @@ import {
   isDrumEngine,
 } from "./instruments.js";
 import { validateExtensions } from "./score-validation.js";
-import { findZone, findDrumSlot } from "./instrument-model.js";
+import {
+  findZone,
+  findDrumSlot,
+  matchingZones,
+  matchingDrumSlots,
+} from "./instrument-model.js";
 
 /** Deterministic 32-bit hash used for per-event, per-track jitter. */
 export function hashString(s: string): number {
@@ -234,7 +239,7 @@ export function validateScore(input: unknown): {
           d.push({
             severity: "warning",
             code: "DRUM_SLOT_MISSING",
-            message: `${p.id} has no sampled ${e.sound}; the hit will be silent`,
+            message: `${p.id} has no sampled ${e.sound}; using the synthesized fallback`,
             trackId: t.id,
             eventIds: [e.id],
             beat: e.at,
@@ -557,6 +562,16 @@ export function compileScore(input: unknown): CompiledScore {
   for (const t of s.tracks) {
     const instrument = getPreset(t.instrument);
     const trackEvents = events.filter((e) => e.trackId === t.id);
+    const counters = new Map<string, number>();
+    const pickVariant = (indices: number[]) => {
+      const key = indices.join(","),
+        ordinal = counters.get(key) ?? 0;
+      counters.set(key, ordinal + 1);
+      return indices[
+        (((hashString(t.id + "/" + key) ^ s.seed) >>> 0) + ordinal) %
+          indices.length
+      ]!;
+    };
 
     // Drum hits are independent one-shots: no polyphony accounting at all.
     if (isDrumEngine(instrument)) {
@@ -564,6 +579,23 @@ export function compileScore(input: unknown): CompiledScore {
         if (e.velocity === 0) {
           e.endTick = e.tick;
           e.keyEndTick = e.tick;
+        } else if (instrument.drumKit) {
+          const indices = matchingDrumSlots(
+            instrument,
+            e.sound!,
+            e.velocity,
+          ).map((slot) => instrument.drumKit!.slots.indexOf(slot));
+          if (indices.length) e.sampleDrumSlotIndex = pickVariant(indices);
+          else if (
+            instrument.drumKit.slots.some((slot) => slot.sound === e.sound)
+          )
+            diagnostics.push({
+              severity: "error",
+              code: "DRUM_VELOCITY_RANGE",
+              message: `No ${e.sound} sample covers velocity ${e.velocity}`,
+              trackId: t.id,
+              eventIds: [e.id],
+            });
         }
       }
       continue;
@@ -580,6 +612,28 @@ export function compileScore(input: unknown): CompiledScore {
         e.endTick = e.tick;
         e.keyEndTick = e.tick;
         continue;
+      }
+      if (instrument.sample?.kind === "zones") {
+        const zones = instrument.sample.zones;
+        const indices = matchingZones(instrument, e.midi!, e.velocity).map(
+          (zone) => zones.indexOf(zone),
+        );
+        const priorIndex = active[0]?.sampleZoneIndex;
+        if (!indices.length)
+          diagnostics.push({
+            severity: "error",
+            code: "SAMPLE_ZONE_RANGE",
+            message: `No sample covers note ${e.midi} at velocity ${e.velocity}`,
+            trackId: t.id,
+            eventIds: [e.id],
+          });
+        else
+          e.sampleZoneIndex =
+            e.articulation === "legato" &&
+            priorIndex !== undefined &&
+            indices.includes(priorIndex)
+              ? priorIndex
+              : pickVariant(indices);
       }
       if (e.articulation === "legato") {
         const prior = active[0];
@@ -604,7 +658,7 @@ export function compileScore(input: unknown): CompiledScore {
           });
         } else if (
           instrument.sample?.kind === "zones" &&
-          findZone(instrument, prior.midi!) !== findZone(instrument, e.midi!)
+          prior.sampleZoneIndex !== e.sampleZoneIndex
         ) {
           diagnostics.push({
             severity: "error",

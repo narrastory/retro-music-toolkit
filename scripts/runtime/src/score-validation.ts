@@ -80,11 +80,27 @@ export function validateExtensions(
             "SAMPLE_REFERENCE",
             `${p.id}: missing/invalid asset ${z.assetId}`,
           );
-        if (
-          z.lowMidi > z.highMidi ||
-          (i > 0 && zones[i - 1]!.highMidi >= z.lowMidi)
-        )
+        if (z.lowMidi > z.highMidi || z.lowVelocity > z.highVelocity)
           error("SAMPLE_ZONES", `${p.id}: invalid/overlapping zones`);
+        for (const other of zones.slice(0, i)) {
+          const overlaps =
+            other.lowMidi <= z.highMidi &&
+            z.lowMidi <= other.highMidi &&
+            other.lowVelocity <= z.highVelocity &&
+            z.lowVelocity <= other.highVelocity;
+          const alternatives =
+            other.lowMidi === z.lowMidi &&
+            other.highMidi === z.highMidi &&
+            other.rootMidi === z.rootMidi &&
+            other.lowVelocity === z.lowVelocity &&
+            other.highVelocity === z.highVelocity &&
+            other.roundRobin !== z.roundRobin;
+          if (overlaps && !alternatives)
+            error(
+              "SAMPLE_ZONES",
+              `${p.id}: ambiguous overlapping sample layers`,
+            );
+        }
         if ((z.loopStartFrame === undefined) !== (z.loopEndFrame === undefined))
           error("SAMPLE_LOOP", "Both loop frame boundaries are required");
         if (
@@ -101,11 +117,24 @@ export function validateExtensions(
       }
     }
     if (p.drumKit) {
-      const seen = new Set<string>();
-      for (const slot of p.drumKit.slots) {
-        if (seen.has(slot.sound))
-          error("DRUM_SLOTS", `${p.id}: duplicate drum slot ${slot.sound}`);
-        seen.add(slot.sound);
+      for (const [i, slot] of p.drumKit.slots.entries()) {
+        if (slot.lowVelocity > slot.highVelocity)
+          error("DRUM_SLOTS", `${p.id}: invalid velocity range`);
+        for (const other of p.drumKit.slots.slice(0, i)) {
+          const overlaps =
+            other.sound === slot.sound &&
+            other.lowVelocity <= slot.highVelocity &&
+            slot.lowVelocity <= other.highVelocity;
+          const alternatives =
+            other.lowVelocity === slot.lowVelocity &&
+            other.highVelocity === slot.highVelocity &&
+            other.roundRobin !== slot.roundRobin;
+          if (overlaps && !alternatives)
+            error(
+              "DRUM_SLOTS",
+              `${p.id}: ambiguous drum layers for ${slot.sound}`,
+            );
+        }
         const a = decoded.get(slot.assetId);
         if (!a)
           error(

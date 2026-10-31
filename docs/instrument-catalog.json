@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "id": "band-bass",
+      "file": "instrument-band-bass",
+      "title": "电贝斯",
+      "description": "两档力度、两次轮换，适合流动低音与稳定根音。",
+      "pack": "band",
+      "license": "CC0-1.0",
+      "credit": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+      "source": "https://www.karoryfer.com/"
+    },
+    {
+      "id": "band-bass-short",
+      "file": "instrument-band-bass-short",
+      "title": "短奏贝斯",
+      "description": "较短的起音与尾音，适合切分、跳跃和快节奏伴奏。",
+      "pack": "band",
+      "license": "CC0-1.0",
+      "credit": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+      "source": "https://www.karoryfer.com/"
+    },
+    {
+      "id": "band-guitar",
+      "file": "instrument-band-guitar",
+      "title": "干净电吉他",
+      "description": "轻重拨弦两档力度，适合分解和弦与城镇主题。",
+      "pack": "band",
+      "license": "CC0-1.0",
+      "credit": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+      "source": "https://www.karoryfer.com/"
+    },
+    {
+      "id": "band-guitar-short",
+      "file": "instrument-band-guitar-short",
+      "title": "短奏电吉他",
+      "description": "利落的短奏与轮换录音，适合节奏型和弦。",
+      "pack": "band",
+      "license": "CC0-1.0",
+      "credit": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+      "source": "https://www.karoryfer.com/"
+    },
+    {
+      "id": "keys-grand",
+      "file": "instrument-keys-grand",
+      "title": "钢琴",
+      "description": "精选两个力度层与四个根音，适合叙事旋律和和声。",
+      "pack": "piano",
+      "license": "CC-BY-3.0",
+      "credit": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. CC-BY-3.0",
+      "source": "https://archive.org/details/SalamanderGrandPianoV3"
+    },
+    {
+      "id": "drums-acoustic",
+      "file": "instrument-drums-acoustic",
+      "title": "基础原声鼓组",
+      "description": "底鼓、军鼓、闭镲、开镲和通鼓，各有两档力度与轮换。",
+      "pack": "drums",
+      "license": "CC-BY-4.0",
+      "credit": "Gogodze Phu Vol II — Karoryfer Lecolds, copyright 2018. CC-BY-4.0",
+      "source": "https://www.karoryfer.com/"
+    }
+  ],
+  "ensemble": "instrument-ensemble",
+  "normalization": "RMS -24 dBFS target with peak cap; not perceptual loudness matching.",
+  "credits": [
+    "Growlybass / Black And Green Guitars — Karoryfer Lecolds; guitar recordings Brian Wood (CC0).",
+    "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+    "Gogodze Phu Vol II — Karoryfer Lecolds (CC BY 4.0)."
+  ],
+  "changes": "Compact mono 32 kHz edits, trimmed/faded, common instrument gain, selected velocity/RR maps. These are curated derivatives, not full original-library playback."
+}

@@ -1,6 +1,6 @@
 {
   "name": "@retro-music/toolkit",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "private": true,
   "type": "module",
   "description": "AI-oriented symbolic retro music compiler and offline Tone.js renderer",
@@ -39,7 +39,7 @@
     "prepare": "npm run build",
     "check": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
-    "test:audio": "node --import tsx --test --test-concurrency=1 tests/audio.integration.ts tests/v3-audio.integration.ts tests/reverb.audio.integration.ts",
+    "test:audio": "node --import tsx --test --test-concurrency=1 tests/audio.integration.ts tests/v3-audio.integration.ts tests/reverb.audio.integration.ts tests/sample-variants.audio.integration.ts",
     "test:web": "npm run build && node --import tsx --test tests/web.integration.ts",
     "test:all": "npm test && npm run test:audio && npm run test:web",
     "music": "node --import tsx src/cli.ts",

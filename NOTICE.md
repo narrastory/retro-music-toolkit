@@ -22,8 +22,9 @@ relicensed by this repository.
 Everything in `assets/` and `docs/audio/` was produced by this toolkit from
 scores authored for this repository. The original eleven presets use procedural
 instruments and drums. Sound-lab recordings also use the CC0 samples below.
-No commercial game samples or ripped assets are included. You may reuse these
-renders freely.
+No commercial game samples or ripped assets are included. Reuse renders under
+their applicable source licenses. The common-instrument gallery also includes
+the attribution-licensed piano and drum recordings described below.
 
 ## Starter sampled instruments (CC0)
 
@@ -38,6 +39,36 @@ license. The full upstream license is preserved in that directory as
 SHA-256 values, calibrated root notes and tuning offsets. The preparation script
 trims/resamples the recordings into short mono PCM16 WAVs and calibrates peaks;
 the pack is about 1.9 MB. Imported portable scores retain sample provenance.
+
+## Common sampled instruments
+
+The new `band`, `piano`, and `drums` directories under
+`scripts/runtime/instruments/` contain curated derivatives of user-supplied
+sample libraries. The original `material/` and `material-library/` folders are
+ignored local archives and are not project files or runtime dependencies.
+
+- **band (CC0-1.0):** Growlybass and Black And Green Guitars, Karoryfer Lecolds.
+  Guitar recordings by Brian Wood. Source: https://www.karoryfer.com/
+- **piano (CC BY 3.0):** Salamander Grand Piano V3 by Alexander Holm; retuned
+  mapping by Markus Fiedler. Source distribution:
+  https://archive.org/details/SalamanderGrandPianoV3
+  License: https://creativecommons.org/licenses/by/3.0/
+- **drums (CC BY 4.0):** Gogodze Phu Vol II by Karoryfer Lecolds, copyright 2018.
+  Source: https://www.karoryfer.com/
+  License: https://creativecommons.org/licenses/by/4.0/
+
+Changes: selected representative root notes, velocity layers and RR takes;
+leading-silence trim, mono 32 kHz PCM16 conversion, short edits with end fades,
+and one shared gain per root note/drum sound. Original SFZ behavior is not fully
+reproduced. Exact source paths, original/processed hashes and mappings are in
+each pack's `SOURCES.json`; full supplied licenses and attribution notices are
+included alongside the manifest.
+
+Retain applicable attribution, license links and change notices when sharing
+these samples, embedded score copies or derivative material. In particular,
+`instrument-keys-grand`, `instrument-drums-acoustic` and `instrument-ensemble`
+in `docs/audio/` use the credited piano/drum materials. These recordings are
+not relicensed under the code's MIT license; no endorsement is implied.
 
 ## npm dependencies
 

@@ -78,12 +78,34 @@ test("committed JSON Schema matches the runtime Zod schema", () => {
       "utf8",
     ),
   );
-  const generated = JSON.parse(JSON.stringify(z.toJSONSchema(ScoreSchema)));
+  const generated = JSON.parse(
+    JSON.stringify(z.toJSONSchema(ScoreSchema, { io: "input" })),
+  );
   assert.deepEqual(
     committed,
     generated,
     "schema/score.schema.json is stale; run `npm run schema -- --force`",
   );
+});
+test("published input schema keeps velocity, RR and legacy defaults optional", () => {
+  const schema = JSON.parse(
+    readFileSync(
+      new URL("../schema/score.schema.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const definition = schema.properties.instrumentDefinitions.items.properties;
+  const zones = definition.sample.oneOf.find(
+    (p: any) => p.properties.kind.const === "zones",
+  ).properties.zones.items;
+  const slots = definition.drumKit.properties.slots.items;
+  for (const item of [zones, slots])
+    for (const field of ["lowVelocity", "highVelocity", "roundRobin", "gainDb"])
+      assert.ok(
+        !item.required.includes(field),
+        `${field} must be optional in input JSON Schema`,
+      );
+  assert.ok(!schema.properties.tracks.items.required.includes("reverbSend"));
 });
 
 test("drum hits never steal voices from each other", () => {

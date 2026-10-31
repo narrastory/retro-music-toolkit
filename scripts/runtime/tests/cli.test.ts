@@ -65,3 +65,29 @@ test("CLI discovers and imports bundled instruments from another working directo
     await rm(dir, { recursive: true, force: true });
   }
 });
+test("CLI lists all common packs and rejects conflicting pack sources", () => {
+  const result = spawnSync(
+    process.execPath,
+    ["--import", "tsx", "src/cli.ts", "instrument-packs", "--all", "--compact"],
+    { encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stdout || result.stderr);
+  const packs = JSON.parse(result.stdout);
+  assert.ok(packs.some((p: { id: string }) => p.id === "band"));
+  const conflict = spawnSync(
+    process.execPath,
+    [
+      "--import",
+      "tsx",
+      "src/cli.ts",
+      "instrument-packs",
+      "--pack",
+      "band",
+      "--definition",
+      "custom.json",
+    ],
+    { encoding: "utf8" },
+  );
+  assert.equal(conflict.status, 1);
+  assert.match(conflict.stdout, /CONFLICTING_PACK_OPTIONS/);
+});

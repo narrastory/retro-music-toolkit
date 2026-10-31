@@ -1,0 +1,673 @@
+{
+  "id": "band",
+  "name": "Common Band — bass and clean guitar",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "source": "https://www.karoryfer.com/",
+  "instruments": [
+    {
+      "instrument": {
+        "id": "band-bass",
+        "engine": "sample",
+        "role": "bass",
+        "range": [
+          36,
+          67
+        ],
+        "attack": 0.004,
+        "release": 0.08,
+        "description": "Fingered electric bass; compact non-looped WAV edits with native velocity/RR selection.",
+        "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "band-bass-40-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-40-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-40-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-40-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-48-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-48-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-48-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-48-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-60-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-60-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-60-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-60-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "id": "band-bass-40-soft-1",
+          "file": "samples/band-bass-40-soft-1.wav",
+          "sha256": "f564d6026ba0698a4f100b41ceeb725813277f1f9c618721c39fefc564ad14bf",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/e2_p_rr1.wav"
+        },
+        {
+          "id": "band-bass-40-soft-2",
+          "file": "samples/band-bass-40-soft-2.wav",
+          "sha256": "4765a3ee5543cb526b0af4842c423f73c4bd60ea2d359b3ba03aed835973b4b6",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/e2_p_rr2.wav"
+        },
+        {
+          "id": "band-bass-40-hard-1",
+          "file": "samples/band-bass-40-hard-1.wav",
+          "sha256": "81847897c6350458476a21ffeeae954e6357281fbee46069553838893db79d75",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/e2_f_rr1.wav"
+        },
+        {
+          "id": "band-bass-40-hard-2",
+          "file": "samples/band-bass-40-hard-2.wav",
+          "sha256": "d76c9f809740b262a6648ae94d85c961d92c8a939d33e3af5773c183a16dd94a",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/e2_f_rr2.wav"
+        },
+        {
+          "id": "band-bass-48-soft-1",
+          "file": "samples/band-bass-48-soft-1.wav",
+          "sha256": "13dfa6730230de321c3a626d15f37428b5720c3c121d6cad6ff839ee74ac5def",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c3_p_rr1.wav"
+        },
+        {
+          "id": "band-bass-48-soft-2",
+          "file": "samples/band-bass-48-soft-2.wav",
+          "sha256": "dcc830c2f69595afe11c3dc7209a25d12d3bb33be6bb88bf673acf7526a4edf6",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c3_p_rr2.wav"
+        },
+        {
+          "id": "band-bass-48-hard-1",
+          "file": "samples/band-bass-48-hard-1.wav",
+          "sha256": "fa74ab6f859e9b152815e9d83d763909b0bed2cbc07679b85d2d22f3c69c8892",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c3_f_rr1.wav"
+        },
+        {
+          "id": "band-bass-48-hard-2",
+          "file": "samples/band-bass-48-hard-2.wav",
+          "sha256": "429e417ff13fca7d62a13eb2cc66e74c6710da01b7637e83a2a27aa51258fb92",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c3_f_rr2.wav"
+        },
+        {
+          "id": "band-bass-60-soft-1",
+          "file": "samples/band-bass-60-soft-1.wav",
+          "sha256": "e19112cbb94e0781735e4fbd2ee02e146548e9ba75025afa518c3945a62fbd17",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c4_p_rr1.wav"
+        },
+        {
+          "id": "band-bass-60-soft-2",
+          "file": "samples/band-bass-60-soft-2.wav",
+          "sha256": "45a4e19a60d601b277c229f40f38d3ea880298b796be61650e51ab214b814a57",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c4_p_rr2.wav"
+        },
+        {
+          "id": "band-bass-60-hard-1",
+          "file": "samples/band-bass-60-hard-1.wav",
+          "sha256": "59fab41a669f9087b2f84ca99f8c43b27a752a1972e13728ea0f4de9169787c6",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c4_f_rr1.wav"
+        },
+        {
+          "id": "band-bass-60-hard-2",
+          "file": "samples/band-bass-60-hard-2.wav",
+          "sha256": "f5f72235cd64db46168869676fd704a2a43d03881ea509bf28bc7f4fc0c6d05f",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/sustain/c4_f_rr2.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "band-bass-short",
+        "engine": "sample",
+        "role": "bass",
+        "range": [
+          36,
+          67
+        ],
+        "attack": 0.003,
+        "release": 0.045,
+        "description": "Short electric bass; compact non-looped WAV edits with native velocity/RR selection.",
+        "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "band-bass-short-40-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-short-40-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 36,
+              "highMidi": 44,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-short-48-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-short-48-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 45,
+              "highMidi": 54,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-short-60-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-bass-short-60-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 55,
+              "highMidi": 67,
+              "rootMidi": 60,
+              "tuningCents": 0
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "id": "band-bass-short-40-all-1",
+          "file": "samples/band-bass-short-40-all-1.wav",
+          "sha256": "d61a8c2ff0e48e9d6f09e3bbe77e5b15d3a206b5ea219557cb869fd3554d0998",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/e2_staccato_rr1.wav"
+        },
+        {
+          "id": "band-bass-short-40-all-2",
+          "file": "samples/band-bass-short-40-all-2.wav",
+          "sha256": "dbd0bc8280d07d4212dedeac3e064976e6c072ddeba4d26b107821a3ff41d9b0",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/e2_staccato_rr2.wav"
+        },
+        {
+          "id": "band-bass-short-48-all-1",
+          "file": "samples/band-bass-short-48-all-1.wav",
+          "sha256": "6d1e0f6b569725b226db0b2f7c4502bf21246cf7709aa066dc41fbc1924b97ee",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/c3_staccato_rr1.wav"
+        },
+        {
+          "id": "band-bass-short-48-all-2",
+          "file": "samples/band-bass-short-48-all-2.wav",
+          "sha256": "74043d621a980882dde8078806b95be1049293aaaa6a9bdcfe32bde36eb70e35",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/c3_staccato_rr2.wav"
+        },
+        {
+          "id": "band-bass-short-60-all-1",
+          "file": "samples/band-bass-short-60-all-1.wav",
+          "sha256": "715081fc362bb0d42fd49f5398d192abc4154dd0d712a8561b1e6504d6e2a961",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/c4_staccato_rr1.wav"
+        },
+        {
+          "id": "band-bass-short-60-all-2",
+          "file": "samples/band-bass-short-60-all-2.wav",
+          "sha256": "d1477684404d191760582321d6db12dfe45192d724b75862ab0735a457b8485b",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Growlybass/staccato/c4_staccato_rr2.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "band-guitar",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          40,
+          76
+        ],
+        "attack": 0.003,
+        "release": 0.12,
+        "description": "Clean electric guitar; compact non-looped WAV edits with native velocity/RR selection.",
+        "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "band-guitar-40-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-40-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-40-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-40-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-52-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-52-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-52-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-52-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-64-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-64-soft-2",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 2,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-64-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-64-hard-2",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "id": "band-guitar-40-soft-1",
+          "file": "samples/band-guitar-40-soft-1.wav",
+          "sha256": "430c6ab270aa3b7e892033835f7c28f3ff0bd7d50a25fe55135e626c85458ad2",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e3_p_rr1.wav"
+        },
+        {
+          "id": "band-guitar-40-soft-2",
+          "file": "samples/band-guitar-40-soft-2.wav",
+          "sha256": "2971eea2625e0c837e841b6dff894a9ac1493c0d80504ed29094ce850e206b64",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e3_p_rr2.wav"
+        },
+        {
+          "id": "band-guitar-40-hard-1",
+          "file": "samples/band-guitar-40-hard-1.wav",
+          "sha256": "17de8c968d6fd5f09a541d1863189a75d0cee735db65da3b18fd5ca39cc021a6",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e3_mf_rr1.wav"
+        },
+        {
+          "id": "band-guitar-40-hard-2",
+          "file": "samples/band-guitar-40-hard-2.wav",
+          "sha256": "c6d844f384c19226ffdd9392b6b9bff57caa4efa32528a972c20b9cd42113ac0",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e3_mf_rr2.wav"
+        },
+        {
+          "id": "band-guitar-52-soft-1",
+          "file": "samples/band-guitar-52-soft-1.wav",
+          "sha256": "586467fa97cc01fed4d9b658ccc90f76efa4fdea1c61c06323f62fd2d0dab726",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e4_p_rr1.wav"
+        },
+        {
+          "id": "band-guitar-52-soft-2",
+          "file": "samples/band-guitar-52-soft-2.wav",
+          "sha256": "d32a8747d9f3488a38e9719ff52beb337ee7967b5fabfb129dec2fbef74b6446",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e4_p_rr2.wav"
+        },
+        {
+          "id": "band-guitar-52-hard-1",
+          "file": "samples/band-guitar-52-hard-1.wav",
+          "sha256": "82bcfdf4ef2bcb27d7c9b5424da9323e03b3fa78140aee32ed01f857f36d547e",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e4_mf_rr1.wav"
+        },
+        {
+          "id": "band-guitar-52-hard-2",
+          "file": "samples/band-guitar-52-hard-2.wav",
+          "sha256": "4f707094f2b83c6254a60d9557237133efb9673bbd6aaa253c1d2b83d330596c",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e4_mf_rr2.wav"
+        },
+        {
+          "id": "band-guitar-64-soft-1",
+          "file": "samples/band-guitar-64-soft-1.wav",
+          "sha256": "08962d3765a02e7a23167d7278c91f94291cd77fb130a8d4cc6abd1a8afed425",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e5_p_rr1.wav"
+        },
+        {
+          "id": "band-guitar-64-soft-2",
+          "file": "samples/band-guitar-64-soft-2.wav",
+          "sha256": "da6360bede3ab17932cbe5c71976952c4ef90f2adcdc7c4f0e6163cd0f528d5e",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e5_p_rr2.wav"
+        },
+        {
+          "id": "band-guitar-64-hard-1",
+          "file": "samples/band-guitar-64-hard-1.wav",
+          "sha256": "21fea4010e2c21054cd54d81160a37ff2821cc190de1dfd0f8270d668b71d571",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e5_mf_rr1.wav"
+        },
+        {
+          "id": "band-guitar-64-hard-2",
+          "file": "samples/band-guitar-64-hard-2.wav",
+          "sha256": "ff02c52d9d848f77e9d184da63ec2d334534b8b07b9308921ff63367470b85c2",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/ord/twang_e5_mf_rr2.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "band-guitar-short",
+        "engine": "sample",
+        "role": "arp",
+        "range": [
+          40,
+          76
+        ],
+        "attack": 0.002,
+        "release": 0.045,
+        "description": "Short clean electric guitar; compact non-looped WAV edits with native velocity/RR selection.",
+        "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. CC0-1.0",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "band-guitar-short-40-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-short-40-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 40,
+              "highMidi": 46,
+              "rootMidi": 40,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-short-52-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-short-52-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 47,
+              "highMidi": 58,
+              "rootMidi": 52,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-short-64-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "band-guitar-short-64-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 59,
+              "highMidi": 76,
+              "rootMidi": 64,
+              "tuningCents": 0
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "id": "band-guitar-short-40-all-1",
+          "file": "samples/band-guitar-short-40-all-1.wav",
+          "sha256": "f43ae905c9ffd6202a621512c231bf5ed41ec834059c9de1b444fa99fea84225",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e3_rr1.wav"
+        },
+        {
+          "id": "band-guitar-short-40-all-2",
+          "file": "samples/band-guitar-short-40-all-2.wav",
+          "sha256": "b6d9ac9744a31e49c662ece87a2fa81127fcf2c4dd2a691d7da11c8ab3332254",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e3_rr2.wav"
+        },
+        {
+          "id": "band-guitar-short-52-all-1",
+          "file": "samples/band-guitar-short-52-all-1.wav",
+          "sha256": "a43722ed31a2108a17ea4340152e72386982d439499a760c14c7652062c6c030",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e4_rr1.wav"
+        },
+        {
+          "id": "band-guitar-short-52-all-2",
+          "file": "samples/band-guitar-short-52-all-2.wav",
+          "sha256": "1302fc61b890c083f7ecb8af4bc24a1b201fb1eb66c645450e0c33b05fca7477",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e4_rr2.wav"
+        },
+        {
+          "id": "band-guitar-short-64-all-1",
+          "file": "samples/band-guitar-short-64-all-1.wav",
+          "sha256": "6ba805ff5970aeef43e0c10cfb96af285ab3a05d5d7886c1a3fbb78101c012bf",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e5_rr1.wav"
+        },
+        {
+          "id": "band-guitar-short-64-all-2",
+          "file": "samples/band-guitar-short-64-all-2.wav",
+          "sha256": "d88fe9493de322b6ca4b9b4b1b7f76a5972560c343d945ee0a3444158fe41222",
+          "provenance": "Growlybass and Black And Green Guitars — Karoryfer Lecolds. Guitar recordings: Brian Wood. License: CC0-1.0 https://creativecommons.org/publicdomain/zero/1.0/; Source: https://www.karoryfer.com/; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original Karoryfer_Black_And_Green_Guitars_1000/Samples/green/stac/staccato_e5_rr2.wav"
+        }
+      ]
+    }
+  ]
+}
