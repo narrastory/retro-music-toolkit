@@ -190,6 +190,6 @@ patch 原子地作用在内存副本，完整编译成功后才返回；失败�
 - 采样区域字段：lowMidi/highMidi/rootMidi、assetId、tuningCents、gainDb、loopStartFrame/loopEndFrame、`loopCrossfadeFrames`（1.2 新增，用于隐藏循环点咔哒）。
 - **采样鼓组**（1.2 新增）：`engine: "drums"` 的音色可以用 `drumKit.slots` 为每个 `sound` 指定独立采样、增益、调音与起始帧；未提供的鼓件回退到内置合成鼓，并在诊断中提示 `DRUM_SLOT_MISSING`。
 - `import-instrument` 现在接受 PCM16 / PCM24 / PCM32 / float32 WAV，并会读取文件里的 `smpl` 块，自动填入根音与循环点（仍应人工确认）。
-- 单个资产上限 768000 帧；工程总计 400 万声道帧。
+- 单个资产上限 768000 帧；工程总计 800 万声道帧。
 
 详见 `v0.3-guide.zh-CN.md`。

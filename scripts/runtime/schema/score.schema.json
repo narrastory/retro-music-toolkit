@@ -339,6 +339,11 @@
             "type": "string",
             "maxLength": 1000
           },
+          "velocityCrossfade": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 64
+          },
           "pack": {
             "type": "object",
             "properties": {

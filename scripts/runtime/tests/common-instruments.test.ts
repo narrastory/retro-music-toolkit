@@ -42,8 +42,24 @@ test("common packs import all six usable instruments without any material-direct
       "curated samples must not be silent",
     );
   }
-  // 1.1.0 bass: six roots (max shift 3 semitones) at 2 layers x 2 RR.
-  assert.ok(bytes < 6_500_000, `${bytes} bytes`);
+  // band 1.2.0 / piano 1.1.0: a root every six semitones for bass, guitar
+  // and piano (max shift ±3), 2 layers x 2 RR where available.
+  assert.ok(bytes < 9_500_000, `${bytes} bytes`);
+  for (const p of score.instrumentDefinitions.filter((p: any) => p.sample)) {
+    const roots = [...new Set(p.sample.zones.map((z: any) => z.rootMidi))];
+    for (const z of p.sample.zones)
+      assert.ok(
+        Math.max(z.rootMidi - z.lowMidi, z.highMidi - z.rootMidi) <= 3,
+        `${p.id}: zone ${z.lowMidi}-${z.highMidi} shifts more than 3 semitones from ${z.rootMidi}`,
+      );
+    assert.ok(roots.length >= 6, p.id);
+  }
+  for (const id of ["band-bass", "band-guitar", "keys-grand", "drums-acoustic"])
+    assert.equal(
+      score.instrumentDefinitions.find((p: any) => p.id === id)
+        .velocityCrossfade,
+      24,
+    );
   const bass = score.instrumentDefinitions.find(
     (p: any) => p.id === "band-bass",
   );

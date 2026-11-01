@@ -273,35 +273,53 @@ export async function renderInBrowser(
                   slot =
                     e.sampleDrumSlotIndex !== undefined
                       ? p.drumKit?.slots[e.sampleDrumSlotIndex]
-                      : findDrumSlot(p, e.sound!, e.velocity),
-                  buffer = buffers.get(
-                    slot?.assetId ?? "fallback:" + e.sound!,
+                      : findDrumSlot(p, e.sound!, e.velocity);
+                const blendSlot =
+                  slot && e.sampleBlend
+                    ? p.drumKit?.slots[e.sampleBlend.index]
+                    : undefined;
+                // Equal-power pair near a velocity-layer boundary.
+                const layers: [typeof slot, number][] = blendSlot
+                  ? [
+                      [slot, Math.sqrt(1 - e.sampleBlend!.weight ** 2)],
+                      [blendSlot, e.sampleBlend!.weight],
+                    ]
+                  : [[slot, 1]];
+                for (const [layer, weight] of layers) {
+                  const buffer = buffers.get(
+                    layer?.assetId ?? "fallback:" + e.sound!,
                   )!;
-                const source = own(
-                  new Tone.ToneBufferSource({
-                    url: buffer,
-                    fadeIn: 0,
-                    fadeOut: 0.002,
-                  }),
-                ).connect(gain);
-                const natural = slot ? buffer.duration : hitDuration(e.sound!);
-                const length =
-                  e.cutTick === undefined
-                    ? natural
-                    : Math.min(
-                        natural,
-                        ((e.cutTick - e.tick) / compiled.ppq) * spb,
-                      );
-                if (length <= 0) continue;
-                const rate = slot
-                  ? 2 ** ((slot.tuningCents + (e.detuneCents ?? 0)) / 1200)
-                  : 2 ** ((e.detuneCents ?? 0) / 1200);
-                const offset = slot ? slot.startFrame / buffer.sampleRate : 0;
-                if (rate !== 1) source.playbackRate.value = rate;
-                const level = slot
-                  ? Tone.dbToGain(slot.gainDb) * e.velocity
-                  : e.velocity;
-                source.start(at, offset, length, level);
+                  const natural = layer
+                    ? buffer.duration
+                    : hitDuration(e.sound!);
+                  const length =
+                    e.cutTick === undefined
+                      ? natural
+                      : Math.min(
+                          natural,
+                          ((e.cutTick - e.tick) / compiled.ppq) * spb,
+                        );
+                  if (length <= 0) continue;
+                  const source = own(
+                    new Tone.ToneBufferSource({
+                      url: buffer,
+                      fadeIn: 0,
+                      fadeOut: 0.002,
+                    }),
+                  ).connect(gain);
+                  const rate = layer
+                    ? 2 ** ((layer.tuningCents + (e.detuneCents ?? 0)) / 1200)
+                    : 2 ** ((e.detuneCents ?? 0) / 1200);
+                  const offset = layer
+                    ? layer.startFrame / buffer.sampleRate
+                    : 0;
+                  if (rate !== 1) source.playbackRate.value = rate;
+                  const level =
+                    (layer ? Tone.dbToGain(layer.gainDb) : 1) *
+                    e.velocity *
+                    weight;
+                  source.start(at, offset, length, level);
+                }
               }
             continue;
           }
@@ -452,43 +470,64 @@ export async function renderInBrowser(
                 p.sample?.kind === "zones"
                   ? p.sample.zones[first.sampleZoneIndex]
                   : findZone(p, first.midi!, first.velocity);
-              const buffer = zone
-                ? external.get(zone.assetId)
-                : procedural?.buffer;
-              const rootFreq = zone
-                ? midiHz(zone.rootMidi) * 2 ** (zone.tuningCents / 1200)
-                : procedural?.freq;
-              let source: Tone.ToneBufferSource | undefined;
-              if (buffer) {
+              const blendZone =
+                zone && first.sampleBlend && p.sample?.kind === "zones"
+                  ? p.sample.zones[first.sampleBlend.index]
+                  : undefined;
+              // One source per layer; two near a velocity-layer boundary,
+              // mixed at equal power. Each keeps its own root for pitch.
+              const layers: [typeof zone, number][] = blendZone
+                ? [
+                    [zone, Math.sqrt(1 - first.sampleBlend!.weight ** 2)],
+                    [blendZone, first.sampleBlend!.weight],
+                  ]
+                : [[zone, 1]];
+              const sources: {
+                source: Tone.ToneBufferSource;
+                factor: number;
+              }[] = [];
+              for (const [layer, weight] of layers) {
+                const buffer = layer
+                  ? external.get(layer.assetId)
+                  : procedural?.buffer;
+                if (!buffer) continue;
+                const rootFreq = layer
+                  ? midiHz(layer.rootMidi) * 2 ** (layer.tuningCents / 1200)
+                  : procedural!.freq;
                 const assetRate = buffer.sampleRate;
                 const zoneGain = own(
-                  new Tone.Gain(zone ? Tone.dbToGain(zone.gainDb) : 1),
+                  new Tone.Gain(
+                    (layer ? Tone.dbToGain(layer.gainDb) : 1) * weight,
+                  ),
                 ).connect(voice.envelope!);
-                source = own(
+                const source = own(
                   new Tone.ToneBufferSource({
                     url: buffer,
-                    loop: zone
-                      ? zone.loopStartFrame !== undefined
+                    loop: layer
+                      ? layer.loopStartFrame !== undefined
                       : procedural!.sustained,
-                    loopStart: zone
-                      ? (zone.loopStartFrame ?? 0) / assetRate
+                    loopStart: layer
+                      ? (layer.loopStartFrame ?? 0) / assetRate
                       : 0,
-                    loopEnd: zone
-                      ? (zone.loopEndFrame ??
+                    loopEnd: layer
+                      ? (layer.loopEndFrame ??
                           Math.round(buffer.duration * assetRate)) / assetRate
                       : buffer.duration,
-                    playbackRate: frequencyAt(first, 0, spb) / rootFreq!,
+                    playbackRate: frequencyAt(first, 0, spb) / rootFreq,
                     fadeOut: 0.002,
                   }),
                 ).connect(zoneGain);
                 source.start(at);
+                source.stop(end);
+                sources.push({ source, factor: 1 / rootFreq });
+              }
+              if (sources.length)
                 voice.envelope!.triggerAttackRelease(
                   noteLen,
                   at,
                   first.velocity,
                 );
-                source.stop(end);
-              } else
+              else
                 voice.synth!.triggerAttackRelease(
                   frequencyAt(first, 0, spb),
                   noteLen,
@@ -530,30 +569,41 @@ export async function renderInBrowser(
                           (p.velocityResponse?.fmIndexScale ?? 0)),
                     start,
                   );
-                const param = source?.playbackRate ?? voice.synth!.frequency;
-                const factor = source ? 1 / rootFreq! : 1;
                 voice.synth?.detune.setValueAtTime(0, start);
                 const previous = group[index - 1]?.midi;
-                param.setValueAtTime(
-                  frequencyAt(event, 0, spb, previous) * factor,
-                  start,
-                );
-                if (event.vibrato || event.expression) {
-                  for (let time = start + 0.01; time < segmentEnd; time += 0.01)
-                    param.linearRampToValueAtTime(
-                      frequencyAt(event, time - start, spb, previous) * factor,
-                      time,
-                    );
-                  if (segmentEnd - start > 0.0001)
-                    param.linearRampToValueAtTime(
-                      frequencyAt(
-                        event,
-                        segmentEnd - start - 0.00001,
-                        spb,
-                        previous,
-                      ) * factor,
-                      segmentEnd - 0.00001,
-                    );
+                const targets = sources.length
+                  ? sources.map((s) => ({
+                      param: s.source.playbackRate,
+                      factor: s.factor,
+                    }))
+                  : [{ param: voice.synth!.frequency, factor: 1 }];
+                for (const { param, factor } of targets) {
+                  param.setValueAtTime(
+                    frequencyAt(event, 0, spb, previous) * factor,
+                    start,
+                  );
+                  if (event.vibrato || event.expression) {
+                    for (
+                      let time = start + 0.01;
+                      time < segmentEnd;
+                      time += 0.01
+                    )
+                      param.linearRampToValueAtTime(
+                        frequencyAt(event, time - start, spb, previous) *
+                          factor,
+                        time,
+                      );
+                    if (segmentEnd - start > 0.0001)
+                      param.linearRampToValueAtTime(
+                        frequencyAt(
+                          event,
+                          segmentEnd - start - 0.00001,
+                          spb,
+                          previous,
+                        ) * factor,
+                        segmentEnd - 0.00001,
+                      );
+                  }
                 }
               }
             }

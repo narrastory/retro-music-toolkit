@@ -23,6 +23,7 @@ import {
   findDrumSlot,
   matchingZones,
   matchingDrumSlots,
+  velocityBlend,
 } from "./instrument-model.js";
 
 /** Deterministic 32-bit hash used for per-event, per-track jitter. */
@@ -585,8 +586,21 @@ export function compileScore(input: unknown): CompiledScore {
             e.sound!,
             e.velocity,
           ).map((slot) => instrument.drumKit!.slots.indexOf(slot));
-          if (indices.length) e.sampleDrumSlotIndex = pickVariant(indices);
-          else if (
+          if (indices.length) {
+            e.sampleDrumSlotIndex = pickVariant(indices);
+            const slots = instrument.drumKit.slots;
+            const blend = velocityBlend(
+              slots.filter((slot) => slot.sound === e.sound),
+              slots[e.sampleDrumSlotIndex]!,
+              instrument.velocityCrossfade,
+              e.velocity,
+            );
+            if (blend)
+              e.sampleBlend = {
+                index: slots.indexOf(blend.item),
+                weight: blend.weight,
+              };
+          } else if (
             instrument.drumKit.slots.some((slot) => slot.sound === e.sound)
           )
             diagnostics.push({
@@ -627,13 +641,28 @@ export function compileScore(input: unknown): CompiledScore {
             trackId: t.id,
             eventIds: [e.id],
           });
-        else
-          e.sampleZoneIndex =
-            e.articulation === "legato" &&
-            priorIndex !== undefined &&
-            indices.includes(priorIndex)
-              ? priorIndex
-              : pickVariant(indices);
+        else if (
+          e.articulation === "legato" &&
+          priorIndex !== undefined &&
+          indices.includes(priorIndex)
+        ) {
+          // A legato note continues the held sample, including its blend.
+          e.sampleZoneIndex = priorIndex;
+          if (active[0]?.sampleBlend) e.sampleBlend = active[0].sampleBlend;
+        } else {
+          e.sampleZoneIndex = pickVariant(indices);
+          const blend = velocityBlend(
+            zones.filter((z) => e.midi! >= z.lowMidi && e.midi! <= z.highMidi),
+            zones[e.sampleZoneIndex]!,
+            instrument.velocityCrossfade,
+            e.velocity,
+          );
+          if (blend)
+            e.sampleBlend = {
+              index: zones.indexOf(blend.item),
+              weight: blend.weight,
+            };
+        }
       }
       if (e.articulation === "legato") {
         const prior = active[0];

@@ -92,3 +92,78 @@ test("sample legato retains the current RR sample and rejects a velocity-layer s
   s.tracks[0].patterns.a.events[1].velocity = 0.8;
   assert.throws(() => compileScore(s), /Score validation failed/);
 });
+test("velocity crossfade blends adjacent layers at equal power with aligned round robin", () => {
+  const s = layeredFixture();
+  s.instrumentDefinitions[0].velocityCrossfade = 16;
+  const zones = s.instrumentDefinitions[0].sample.zones;
+  // Effective weight of the upper (65–127) layer across the boundary at 64.5.
+  const upperWeight: number[] = [];
+  for (let v = 52; v <= 77; v++) {
+    s.tracks[0].patterns.a.events = [
+      {
+        id: "n",
+        kind: "note",
+        at: 0,
+        pitch: "C4",
+        duration: 1,
+        velocity: v / 127,
+      },
+    ];
+    const [e] = compileScore(s).events;
+    const primary = zones[e!.sampleZoneIndex!];
+    const blend = e!.sampleBlend;
+    if (blend) {
+      assert.equal(zones[blend.index].roundRobin, primary.roundRobin);
+      assert.notEqual(zones[blend.index].lowVelocity, primary.lowVelocity);
+    }
+    const primaryWeight = Math.sqrt(1 - (blend?.weight ?? 0) ** 2);
+    upperWeight.push(
+      primary.lowVelocity === 65 ? primaryWeight : (blend?.weight ?? 0),
+    );
+  }
+  assert.equal(upperWeight[0], 0, "outside the fade: lower layer only");
+  assert.equal(upperWeight.at(-1), 1, "outside the fade: upper layer only");
+  for (let i = 1; i < upperWeight.length; i++)
+    assert.ok(upperWeight[i]! >= upperWeight[i - 1]! - 1e-9, `step ${i}`);
+  const middle = upperWeight[64 - 52]!;
+  assert.ok(middle > 0.5 && middle < 0.8, `${middle}`);
+});
+test("velocity crossfade is opt-in and also applies to drum slots", () => {
+  assert.ok(compileScore(layeredFixture()).events.every((e) => !e.sampleBlend));
+  const s = layeredFixture(true);
+  s.instrumentDefinitions[0].velocityCrossfade = 16;
+  s.tracks[0].patterns.a.events = [
+    { id: "h", kind: "hit", at: 0, sound: "snare", velocity: 64 / 127 },
+  ];
+  const [e] = compileScore(s).events;
+  const slots = s.instrumentDefinitions[0].drumKit.slots;
+  assert.equal(slots[e!.sampleDrumSlotIndex!].highVelocity, 64);
+  assert.equal(slots[e!.sampleBlend!.index].lowVelocity, 65);
+});
+test("legato keeps the held note's velocity blend", () => {
+  const s = layeredFixture();
+  s.instrumentDefinitions[0].velocityCrossfade = 16;
+  s.tracks[0].patterns.a.events = [
+    {
+      id: "a",
+      kind: "note",
+      at: 0,
+      pitch: "C4",
+      duration: 1,
+      hold: true,
+      velocity: 62 / 127,
+    },
+    {
+      id: "b",
+      kind: "note",
+      at: 1,
+      pitch: "D4",
+      duration: 1,
+      articulation: "legato",
+      velocity: 60 / 127,
+    },
+  ];
+  const [a, b] = compileScore(s).events;
+  assert.ok(a!.sampleBlend);
+  assert.deepEqual(b!.sampleBlend, a!.sampleBlend);
+});

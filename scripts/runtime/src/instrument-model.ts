@@ -89,6 +89,13 @@ export const InstrumentDefinitionSchema = z.strictObject({
     .optional(),
   provenance: z.string().max(1000).optional(),
   /**
+   * Width, in MIDI velocity steps, of an equal-power crossfade centred on each
+   * boundary between adjacent velocity layers (zones covering the same note,
+   * or drum slots for the same sound). Within it both layers sound, so a small
+   * velocity change no longer flips the timbre. Omitted or 0: hard switch.
+   */
+  velocityCrossfade: z.number().min(0).max(64).optional(),
+  /**
    * Pack this definition was copied from by import-pack. Scores embed a full
    * copy, so this is what lets tooling notice when the pack has since changed.
    */
@@ -188,4 +195,54 @@ export function referencedAssets(p: InstrumentDefinition): string[] {
     ids.push(...p.sample.zones.map((z) => z.assetId));
   if (p.drumKit) ids.push(...p.drumKit.slots.map((s) => s.assetId));
   return ids;
+}
+
+type Layered = {
+  lowVelocity: number;
+  highVelocity: number;
+  roundRobin: number;
+};
+/**
+ * Partner layer for an event near a velocity boundary. `candidates` are the
+ * zones or slots that could play this note or drum sound at any velocity;
+ * `primary` is the one selected for the event's velocity. Returns the
+ * neighbouring layer (same round robin where it exists) and its equal-power
+ * weight; the primary plays at sqrt(1 - weight²).
+ */
+export function velocityBlend<T extends Layered>(
+  candidates: T[],
+  primary: T,
+  width: number | undefined,
+  velocity: number,
+): { item: T; weight: number } | undefined {
+  if (!width) return undefined;
+  const x = Math.max(1, Math.min(127, velocity * 127));
+  const upperEdge = primary.highVelocity + 0.5,
+    lowerEdge = primary.lowVelocity - 0.5;
+  const upper = candidates.filter(
+      (c) => c.lowVelocity === primary.highVelocity + 1,
+    ),
+    lower = candidates.filter(
+      (c) => c.highVelocity === primary.lowVelocity - 1,
+    );
+  const useUpper =
+    upper.length > 0 &&
+    upperEdge - x < width / 2 &&
+    (!lower.length || upperEdge - x <= x - lowerEdge);
+  const useLower = !useUpper && lower.length > 0 && x - lowerEdge < width / 2;
+  if (!useUpper && !useLower) return undefined;
+  const edge = useUpper ? upperEdge : lowerEdge;
+  // t runs 0 → 1 across the fade from the lower layer to the upper layer.
+  const t = Math.max(0, Math.min(1, (x - (edge - width / 2)) / width));
+  const weight = useUpper
+    ? Math.sin((t * Math.PI) / 2)
+    : Math.cos((t * Math.PI) / 2);
+  if (weight < 0.01) return undefined;
+  const layer = [...(useUpper ? upper : lower)].sort(
+    (a, b) => a.roundRobin - b.roundRobin,
+  );
+  const item =
+    layer.find((c) => c.roundRobin === primary.roundRobin) ??
+    layer[(primary.roundRobin - 1) % layer.length]!;
+  return { item, weight };
 }

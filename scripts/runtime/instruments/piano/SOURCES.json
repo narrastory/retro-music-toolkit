@@ -33,6 +33,34 @@
       "tuningCents": 9
     },
     {
+      "file": "samples/keys-grand-42-soft-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#2v6.wav",
+      "originalSha256": "aaec041587b099af59c4bf058ff4cfaf8d9c79b1e7a57dbac855d5013ed1498e",
+      "sha256": "f8a4929d051b32e3c3903fa6d7c1f1d9f8c20cdfcf8a1d8aff3f566b77b2ee8d",
+      "bytes": 128044,
+      "sharedGainDb": 4.658369022949797,
+      "assetId": "keys-grand-42-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 42,
+      "tuningCents": 7
+    },
+    {
+      "file": "samples/keys-grand-42-hard-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#2v12.wav",
+      "originalSha256": "57bf79c98ba1b3401d74f58d44e10709b9397cdb2529f235bd65200a6ac0ecb0",
+      "sha256": "6002c372fa08e5fa85d64c858ae53731e2361e1f9a42792363d3ab065f2d9584",
+      "bytes": 128044,
+      "sharedGainDb": 4.658369022949797,
+      "assetId": "keys-grand-42-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 42,
+      "tuningCents": 7
+    },
+    {
       "file": "samples/keys-grand-48-soft-1.wav",
       "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C3v6.wav",
       "originalSha256": "1b234c209c8fc7909aca08f110ef4a534f032a63953b66d3f0f047a615b0f3ae",
@@ -59,6 +87,34 @@
       "roundRobin": 1,
       "rootMidi": 48,
       "tuningCents": 0
+    },
+    {
+      "file": "samples/keys-grand-54-soft-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#3v6.wav",
+      "originalSha256": "9462b72c760fea7bf539eae3c91683e68326c4c3f1d276c9f2f1c9735508ec95",
+      "sha256": "d12e1b81c9e3e0c294bbeac388a5e0f11775cd72d0ad4afd82e546ab4ffaa39c",
+      "bytes": 128044,
+      "sharedGainDb": 5.5260134020285,
+      "assetId": "keys-grand-54-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 54,
+      "tuningCents": 3
+    },
+    {
+      "file": "samples/keys-grand-54-hard-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#3v12.wav",
+      "originalSha256": "d05a592c38b248b8b0c304e49b12547e93979cde2fc5a8b5082d999ed5e051cb",
+      "sha256": "0a1971bc09335f1dd46a0bfc6c4a17bbae89b4032b9c4f961539016a066d5e22",
+      "bytes": 128044,
+      "sharedGainDb": 5.5260134020285,
+      "assetId": "keys-grand-54-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 54,
+      "tuningCents": 3
     },
     {
       "file": "samples/keys-grand-60-soft-1.wav",
@@ -89,6 +145,34 @@
       "tuningCents": 6
     },
     {
+      "file": "samples/keys-grand-66-soft-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#4v6.wav",
+      "originalSha256": "9bc512fe8a9351fd9ae5555e82279eac5ebbad052e5d1651c93d0dbe7cb7765d",
+      "sha256": "7a810a0403356df3a6eee5959c7aac960d48f287dea966d62de9b473e43458ac",
+      "bytes": 128044,
+      "sharedGainDb": 3.9316126263091586,
+      "assetId": "keys-grand-66-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 66,
+      "tuningCents": 0
+    },
+    {
+      "file": "samples/keys-grand-66-hard-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#4v12.wav",
+      "originalSha256": "cc2d6437fe56405ca6cc74ec6c4c274f88b546f8e7b9b3a2c81a7d2b2ea174af",
+      "sha256": "ccae5ed31d0462f52c04677d4c262cffe7cab9b8fe46858b8ed0444cc7c39904",
+      "bytes": 128044,
+      "sharedGainDb": 3.9316126263091586,
+      "assetId": "keys-grand-66-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 66,
+      "tuningCents": 0
+    },
+    {
       "file": "samples/keys-grand-72-soft-1.wav",
       "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C5v6.wav",
       "originalSha256": "099cc2ca1d1955de4901a430ff1ff92c0ff82056d75816447936dc4f80d60865",
@@ -114,6 +198,62 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 72,
+      "tuningCents": 8
+    },
+    {
+      "file": "samples/keys-grand-78-soft-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#5v6.wav",
+      "originalSha256": "15b0ecddd568fe354361e26c3aa4b87e2017f8494182f2a01442d46e225b0dbe",
+      "sha256": "1f1e4dad02dfbf31743f67e29646756ae7a81481207ab6dbe78f0f584b65ba50",
+      "bytes": 128044,
+      "sharedGainDb": 5.149405440759796,
+      "assetId": "keys-grand-78-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 78,
+      "tuningCents": 5
+    },
+    {
+      "file": "samples/keys-grand-78-hard-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#5v12.wav",
+      "originalSha256": "b3fe40bc8e02a8228e6f14aa317b996aeab03e7cfc6b0f03206a2496a585a222",
+      "sha256": "68c9215f4193c67a17f7c32c93bd0eda85bf07f35f198e186fec33418f4bcd79",
+      "bytes": 128044,
+      "sharedGainDb": 5.149405440759796,
+      "assetId": "keys-grand-78-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 78,
+      "tuningCents": 5
+    },
+    {
+      "file": "samples/keys-grand-84-soft-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C6v6.wav",
+      "originalSha256": "e0855c5b1ad158163617811abba24183d3f62ddd937e2c912c39dd0516ae732a",
+      "sha256": "3744fbd407eddb7491de2b2ebafe1218e98332742b9accf2cca1970a469f992f",
+      "bytes": 128044,
+      "sharedGainDb": 2.361754371093575,
+      "assetId": "keys-grand-84-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 84,
+      "tuningCents": 8
+    },
+    {
+      "file": "samples/keys-grand-84-hard-1.wav",
+      "originalPath": "SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C6v12.wav",
+      "originalSha256": "4f9a3b436eec903880ef7be386d9436954da415fc440ee4b9094232a39714666",
+      "sha256": "e6b36833504db88c2e4536d862ce95607a89c6e4a57e5847b1a67986729f600a",
+      "bytes": 128044,
+      "sharedGainDb": 2.361754371093575,
+      "assetId": "keys-grand-84-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 84,
       "tuningCents": 8
     }
   ]

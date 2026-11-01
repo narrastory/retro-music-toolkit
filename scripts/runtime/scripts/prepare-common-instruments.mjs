@@ -54,7 +54,8 @@ const packs = [
   {
     id: "band",
     // 1.1.0: bass roots corrected to sounding pitch (were one octave high).
-    version: "1.1.0",
+    // 1.2.0: guitar root every six semitones; velocity-layer crossfade.
+    version: "1.2.0",
     name: "Common Band — bass and clean guitar",
     license: "CC0-1.0",
     url: "https://www.karoryfer.com/",
@@ -69,7 +70,8 @@ const packs = [
   },
   {
     id: "piano",
-    version: "1.0.0",
+    // 1.1.0: root every six semitones (C and F#); velocity-layer crossfade.
+    version: "1.1.0",
     name: "Common Keys — compact Salamander piano",
     license: "CC-BY-3.0",
     url: "https://archive.org/details/SalamanderGrandPianoV3",
@@ -80,7 +82,8 @@ const packs = [
   },
   {
     id: "drums",
-    version: "1.0.0",
+    // 1.1.0: velocity-layer crossfade.
+    version: "1.1.0",
     name: "Common Drums — compact acoustic kit",
     license: "CC-BY-4.0",
     url: "https://www.karoryfer.com/",
@@ -129,6 +132,32 @@ function tonal(id, name, role, roots, range, seconds, attack, release, paths) {
 // Growlybass is sampled every minor third; take every other sample from the
 // open low E so no note is shifted more than three semitones (was up to +7).
 const BASS_ROOTS = [28, 33, 39, 45, 51, 57];
+// Black And Green Guitars has every semitone; a root every six semitones
+// keeps shifts within ±3 (was up to +12 at the top of the range).
+const GUITAR_ROOTS = [40, 46, 52, 58, 64, 70, 76];
+// Salamander samples C, D#, F# and A; C and F# give a root every six semitones.
+const PIANO_ROOTS = [36, 42, 48, 54, 60, 66, 72, 78, 84];
+const pianoFile = (midi, layer) =>
+  `44.1khz16bit/${["C", "", "", "", "", "", "F#"][midi % 12]}${Math.floor(midi / 12) - 1}v${layer.name === "soft" ? 6 : 12}.wav`;
+const retuned = new Map(
+  [
+    ...(
+      await readFile(
+        resolve(source, piano, "SalamanderGrandPianoV3Retuned.sfz"),
+        "utf8",
+      )
+    ).matchAll(/sample=(\S+)[^\n]*?tune=(-?\d+)/g),
+  ].map((m) => [m[1].replaceAll("\\", "/"), Number(m[2])]),
+);
+/** SFZ tune lowers playback by N cents, i.e. the sample is N cents sharp. */
+function salamanderTuning(...files) {
+  const values = new Set(files.map((f) => -(retuned.get(f) ?? 0)));
+  if (values.size !== 1)
+    throw new Error(`Inconsistent Salamander tuning for ${files.join(", ")}`);
+  return [...values][0];
+}
+/** Equal-power layer crossfade width, in MIDI velocity steps (see schema). */
+const LAYER_CROSSFADE = 24;
 const two = [
     { name: "soft", low: 1, high: 79 },
     { name: "hard", low: 80, high: 127 },
@@ -172,7 +201,7 @@ packs[0].instruments.push(
     "band-guitar",
     "Clean electric guitar",
     "harmony",
-    [40, 52, 64],
+    GUITAR_ROOTS,
     [40, 76],
     1.6,
     0.003,
@@ -181,14 +210,14 @@ packs[0].instruments.push(
       layers: two,
       rr: 2,
       file: (n, l, r) =>
-        `${guitar}/Samples/green/ord/twang_${noteFile([40, 52, 64][n], 12)}_${l.name === "soft" ? "p" : "mf"}_rr${r}.wav`,
+        `${guitar}/Samples/green/ord/twang_${noteFile(GUITAR_ROOTS[n], 12)}_${l.name === "soft" ? "p" : "mf"}_rr${r}.wav`,
     },
   ),
   tonal(
     "band-guitar-short",
     "Short clean electric guitar",
     "arp",
-    [40, 52, 64],
+    GUITAR_ROOTS,
     [40, 76],
     0.5,
     0.002,
@@ -197,7 +226,7 @@ packs[0].instruments.push(
       layers: one,
       rr: 2,
       file: (n, l, r) =>
-        `${guitar}/Samples/green/stac/staccato_${noteFile([40, 52, 64][n], 12)}_rr${r}.wav`,
+        `${guitar}/Samples/green/stac/staccato_${noteFile(GUITAR_ROOTS[n], 12)}_rr${r}.wav`,
     },
   ),
 );
@@ -206,7 +235,7 @@ packs[1].instruments.push(
     "keys-grand",
     "Grand piano",
     "harmony",
-    [36, 48, 60, 72],
+    PIANO_ROOTS,
     [36, 84],
     2,
     0.003,
@@ -214,11 +243,12 @@ packs[1].instruments.push(
     {
       layers: two,
       rr: 1,
-      // Explicit stretch tuning from SalamanderGrandPianoV3Retuned.sfz (tune
-      // -9/0/-6/-8 cents); auto-measurement only verifies it.
-      tuning: [9, 0, 6, 8],
-      file: (n, l) =>
-        `${piano}/44.1khz16bit/C${n + 2}v${l.name === "soft" ? 6 : 12}.wav`,
+      // Stretch tuning read from SalamanderGrandPianoV3Retuned.sfz;
+      // auto-measurement only verifies it.
+      tuning: PIANO_ROOTS.map((m) =>
+        salamanderTuning(pianoFile(m, two[0]), pianoFile(m, two[1])),
+      ),
+      file: (n, l) => `${piano}/${pianoFile(PIANO_ROOTS[n], l)}`,
     },
   ),
 );
@@ -453,6 +483,9 @@ for (const pack of packs) {
         engine: spec.role === "drums" ? "drums" : "sample",
         role: spec.role,
         range: spec.range,
+        ...(new Set(spec.items.map((i) => i.lowVelocity)).size > 1
+          ? { velocityCrossfade: LAYER_CROSSFADE }
+          : {}),
         attack: spec.attack,
         release: spec.release,
         description: `${spec.name}; compact non-looped WAV edits with native velocity/RR selection.`,

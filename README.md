@@ -10,7 +10,7 @@
 
 **Fully local, no API. The same score always renders the same audio.**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![139 tests](https://img.shields.io/badge/tests-139%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#what-it-does-for-you) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#what-it-does-for-you) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#what-it-does-for-you) [![143 tests](https://img.shields.io/badge/tests-143%20passing-339933?style=flat-square)](#technical-details) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#quick-start) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 Listen online](https://narrastory.github.io/retro-music-toolkit/) · [Quick start](#quick-start) · [vs. music models](#how-is-this-different-from-a-music-generation-model) · [Technical details](#technical-details)
 
@@ -235,7 +235,7 @@ Full documentation (in Chinese): [quick start](references/quickstart.zh-CN.md) �
 - **Release tails are reported separately from held-note conflicts.** The former is routine and harmless; only the latter needs a fix.
 - **Reproducibility.** Drum noise, humanize jitter and randomised arpeggios are derived from the seed; runtime `Math.random` is banned. Cross-browser DSP differences can still shift individual samples, so bit-exact output is not claimed.
 
-**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 139 automated tests (109 unit, 28 real-audio, 2 web), plus showcase checks.
+**Size**: roughly 7,500 lines of TypeScript, four runtime dependencies (`tone`, `zod`, `playwright`, `esbuild`), 143 automated tests (112 unit, 29 real-audio, 2 web), plus showcase checks.
 
 </details>
 

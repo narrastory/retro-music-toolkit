@@ -1,7 +1,7 @@
 {
   "id": "piano",
   "name": "Common Keys — compact Salamander piano",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "CC-BY-3.0",
   "source": "https://archive.org/details/SalamanderGrandPianoV3",
   "instruments": [
@@ -14,6 +14,7 @@
           36,
           84
         ],
+        "velocityCrossfade": 24,
         "attack": 0.003,
         "release": 0.18,
         "description": "Grand piano; compact non-looped WAV edits with native velocity/RR selection.",
@@ -27,7 +28,7 @@
               "highVelocity": 79,
               "roundRobin": 1,
               "lowMidi": 36,
-              "highMidi": 42,
+              "highMidi": 39,
               "rootMidi": 36,
               "tuningCents": 9
             },
@@ -37,17 +38,37 @@
               "highVelocity": 127,
               "roundRobin": 1,
               "lowMidi": 36,
-              "highMidi": 42,
+              "highMidi": 39,
               "rootMidi": 36,
               "tuningCents": 9
+            },
+            {
+              "assetId": "keys-grand-42-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 45,
+              "rootMidi": 42,
+              "tuningCents": 7
+            },
+            {
+              "assetId": "keys-grand-42-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 45,
+              "rootMidi": 42,
+              "tuningCents": 7
             },
             {
               "assetId": "keys-grand-48-soft-1",
               "lowVelocity": 1,
               "highVelocity": 79,
               "roundRobin": 1,
-              "lowMidi": 43,
-              "highMidi": 54,
+              "lowMidi": 46,
+              "highMidi": 51,
               "rootMidi": 48,
               "tuningCents": 0
             },
@@ -56,18 +77,38 @@
               "lowVelocity": 80,
               "highVelocity": 127,
               "roundRobin": 1,
-              "lowMidi": 43,
-              "highMidi": 54,
+              "lowMidi": 46,
+              "highMidi": 51,
               "rootMidi": 48,
               "tuningCents": 0
+            },
+            {
+              "assetId": "keys-grand-54-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 57,
+              "rootMidi": 54,
+              "tuningCents": 3
+            },
+            {
+              "assetId": "keys-grand-54-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 57,
+              "rootMidi": 54,
+              "tuningCents": 3
             },
             {
               "assetId": "keys-grand-60-soft-1",
               "lowVelocity": 1,
               "highVelocity": 79,
               "roundRobin": 1,
-              "lowMidi": 55,
-              "highMidi": 66,
+              "lowMidi": 58,
+              "highMidi": 63,
               "rootMidi": 60,
               "tuningCents": 6
             },
@@ -76,18 +117,38 @@
               "lowVelocity": 80,
               "highVelocity": 127,
               "roundRobin": 1,
-              "lowMidi": 55,
-              "highMidi": 66,
+              "lowMidi": 58,
+              "highMidi": 63,
               "rootMidi": 60,
               "tuningCents": 6
+            },
+            {
+              "assetId": "keys-grand-66-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 64,
+              "highMidi": 69,
+              "rootMidi": 66,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "keys-grand-66-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 64,
+              "highMidi": 69,
+              "rootMidi": 66,
+              "tuningCents": 0
             },
             {
               "assetId": "keys-grand-72-soft-1",
               "lowVelocity": 1,
               "highVelocity": 79,
               "roundRobin": 1,
-              "lowMidi": 67,
-              "highMidi": 84,
+              "lowMidi": 70,
+              "highMidi": 75,
               "rootMidi": 72,
               "tuningCents": 8
             },
@@ -96,9 +157,49 @@
               "lowVelocity": 80,
               "highVelocity": 127,
               "roundRobin": 1,
-              "lowMidi": 67,
-              "highMidi": 84,
+              "lowMidi": 70,
+              "highMidi": 75,
               "rootMidi": 72,
+              "tuningCents": 8
+            },
+            {
+              "assetId": "keys-grand-78-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 81,
+              "rootMidi": 78,
+              "tuningCents": 5
+            },
+            {
+              "assetId": "keys-grand-78-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 81,
+              "rootMidi": 78,
+              "tuningCents": 5
+            },
+            {
+              "assetId": "keys-grand-84-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 84,
+              "tuningCents": 8
+            },
+            {
+              "assetId": "keys-grand-84-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 84,
               "tuningCents": 8
             }
           ]
@@ -118,6 +219,18 @@
           "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C2v12.wav"
         },
         {
+          "id": "keys-grand-42-soft-1",
+          "file": "samples/keys-grand-42-soft-1.wav",
+          "sha256": "f8a4929d051b32e3c3903fa6d7c1f1d9f8c20cdfcf8a1d8aff3f566b77b2ee8d",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#2v6.wav"
+        },
+        {
+          "id": "keys-grand-42-hard-1",
+          "file": "samples/keys-grand-42-hard-1.wav",
+          "sha256": "6002c372fa08e5fa85d64c858ae53731e2361e1f9a42792363d3ab065f2d9584",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#2v12.wav"
+        },
+        {
           "id": "keys-grand-48-soft-1",
           "file": "samples/keys-grand-48-soft-1.wav",
           "sha256": "c37218c60023e695bd1f482ea8fd81bc50cd13032d5afdf49f008657723684a1",
@@ -128,6 +241,18 @@
           "file": "samples/keys-grand-48-hard-1.wav",
           "sha256": "c430acff4c1d5c88a947b54b8261f8516e5abee61ed639ad66402f1cb568b57d",
           "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C3v12.wav"
+        },
+        {
+          "id": "keys-grand-54-soft-1",
+          "file": "samples/keys-grand-54-soft-1.wav",
+          "sha256": "d12e1b81c9e3e0c294bbeac388a5e0f11775cd72d0ad4afd82e546ab4ffaa39c",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#3v6.wav"
+        },
+        {
+          "id": "keys-grand-54-hard-1",
+          "file": "samples/keys-grand-54-hard-1.wav",
+          "sha256": "0a1971bc09335f1dd46a0bfc6c4a17bbae89b4032b9c4f961539016a066d5e22",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#3v12.wav"
         },
         {
           "id": "keys-grand-60-soft-1",
@@ -142,6 +267,18 @@
           "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C4v12.wav"
         },
         {
+          "id": "keys-grand-66-soft-1",
+          "file": "samples/keys-grand-66-soft-1.wav",
+          "sha256": "7a810a0403356df3a6eee5959c7aac960d48f287dea966d62de9b473e43458ac",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#4v6.wav"
+        },
+        {
+          "id": "keys-grand-66-hard-1",
+          "file": "samples/keys-grand-66-hard-1.wav",
+          "sha256": "ccae5ed31d0462f52c04677d4c262cffe7cab9b8fe46858b8ed0444cc7c39904",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#4v12.wav"
+        },
+        {
           "id": "keys-grand-72-soft-1",
           "file": "samples/keys-grand-72-soft-1.wav",
           "sha256": "3fa6799eb3defa645b4dc50e7210cef97316b0bab47e4c25ccae4242126e3713",
@@ -152,6 +289,30 @@
           "file": "samples/keys-grand-72-hard-1.wav",
           "sha256": "358d1598285caab68be298bfce3c0b01239b9e1bc0e7c7e10990b0f2346181f3",
           "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C5v12.wav"
+        },
+        {
+          "id": "keys-grand-78-soft-1",
+          "file": "samples/keys-grand-78-soft-1.wav",
+          "sha256": "1f1e4dad02dfbf31743f67e29646756ae7a81481207ab6dbe78f0f584b65ba50",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#5v6.wav"
+        },
+        {
+          "id": "keys-grand-78-hard-1",
+          "file": "samples/keys-grand-78-hard-1.wav",
+          "sha256": "68c9215f4193c67a17f7c32c93bd0eda85bf07f35f198e186fec33418f4bcd79",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/F#5v12.wav"
+        },
+        {
+          "id": "keys-grand-84-soft-1",
+          "file": "samples/keys-grand-84-soft-1.wav",
+          "sha256": "3744fbd407eddb7491de2b2ebafe1218e98332742b9accf2cca1970a469f992f",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C6v6.wav"
+        },
+        {
+          "id": "keys-grand-84-hard-1",
+          "file": "samples/keys-grand-84-hard-1.wav",
+          "sha256": "e6b36833504db88c2e4536d862ce95607a89c6e4a57e5847b1a67986729f600a",
+          "provenance": "Salamander Grand Piano V3 — Alexander Holm. Retuned mapping: Markus Fiedler. Derived from the user-supplied V3+20161209 44.1 kHz/16-bit distribution. License: CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/; Source: https://archive.org/details/SalamanderGrandPianoV3; Changes: mono 32 kHz PCM16, trimmed, faded, shared instrument gain; original SalamanderGrandPianoV3_44.1khz16bit/44.1khz16bit/C6v12.wav"
         }
       ]
     }

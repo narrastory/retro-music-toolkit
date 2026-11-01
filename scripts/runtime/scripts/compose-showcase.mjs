@@ -253,19 +253,22 @@ const gTheme = [
     ["piano", ["keys-grand"]],
     ["drums", ["drums-acoustic"]],
   ]);
+  // Guitar, bass and piano gains are trimmed by the measured solo-loudness
+  // change from band 1.2.0 / piano 1.1.0 (denser roots and layer crossfade:
+  // +3.4, +1.9, +2.8 LU) so the cue keeps its original balance.
   const lead = track(s, "rain-recorder", "starter-recorder", "melody", -7, {
     reverbSend: 0.26,
   });
-  const guitar = track(s, "rain-guitar", "band-guitar", "harmony", 0, {
+  const guitar = track(s, "rain-guitar", "band-guitar", "harmony", -3.4, {
     maxVoices: 2,
     pan: -0.2,
     reverbSend: 0.16,
     humanize: { timingBeats: 0.003125, velocity: 0.025 },
   });
-  const bass = track(s, "rain-bass", "band-bass", "bass", -2, {
+  const bass = track(s, "rain-bass", "band-bass", "bass", -3.9, {
     reverbSend: 0,
   });
-  const piano = track(s, "rain-piano", "keys-grand", "harmony", 1, {
+  const piano = track(s, "rain-piano", "keys-grand", "harmony", -1.8, {
     pan: 0.17,
     reverbSend: 0.22,
   });

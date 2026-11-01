@@ -40,10 +40,12 @@ export function validateExtensions(
       );
     }
   }
-  if (totalFrames > 4_000_000)
+  // About 250 s of mono 32 kHz audio (~32 MB decoded): room for six dense
+  // multi-root pack instruments in one score.
+  if (totalFrames > 8_000_000)
     error(
       "SAMPLE_BUDGET",
-      "Embedded sample assets exceed 4 million channel frames",
+      "Embedded sample assets exceed 8 million channel frames",
       undefined,
       { suggestion: { frames: totalFrames } },
     );

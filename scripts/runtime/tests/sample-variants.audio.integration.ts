@@ -55,3 +55,38 @@ for (const drums of [false, true])
       "crop must retain full-score sample choices",
     );
   });
+test("real audio mixes both velocity layers inside the crossfade", async () => {
+  const s = layeredFixture();
+  s.instrumentDefinitions[0].velocityCrossfade = 32;
+  s.tracks[0].patterns.a.events = [
+    {
+      id: "n",
+      kind: "note",
+      at: 0,
+      pitch: "C4",
+      duration: 1,
+      velocity: 64 / 127,
+    },
+  ];
+  const [e] = compileScore(s).events;
+  const audio = decodeWav((await renderScore(s, { mode: "one-shot" })).wav)
+    .channels[0]!;
+  // Test tone for zone i is 220 + 110·i Hz; measure both layers' tones.
+  const level = (f: number) => {
+    let re = 0,
+      im = 0;
+    for (let i = 4410; i < 13230; i++) {
+      re += audio[i]! * Math.cos((2 * Math.PI * f * i) / 44100);
+      im += audio[i]! * Math.sin((2 * Math.PI * f * i) / 44100);
+    }
+    return Math.hypot(re, im);
+  };
+  const primary = level(220 + e!.sampleZoneIndex! * 110),
+    blended = level(220 + e!.sampleBlend!.index * 110);
+  const expected =
+    e!.sampleBlend!.weight / Math.sqrt(1 - e!.sampleBlend!.weight ** 2);
+  assert.ok(
+    Math.abs(blended / primary - expected) < 0.1,
+    `ratio ${blended / primary} vs ${expected}`,
+  );
+});

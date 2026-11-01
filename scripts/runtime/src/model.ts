@@ -285,6 +285,11 @@ export type CompiledEvent = {
   /** Compiled once so crop, solo and repeated loop renders use identical samples. */
   sampleZoneIndex?: number;
   sampleDrumSlotIndex?: number;
+  /**
+   * Second velocity layer mixed in near a layer boundary (velocityCrossfade):
+   * index into sample.zones or drumKit.slots, with its equal-power weight.
+   */
+  sampleBlend?: { index: number; weight: number };
 };
 export type CompiledScore = {
   score: Score;
