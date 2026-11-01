@@ -86,7 +86,10 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
     assert.equal(await page.locator(".prompt p").count(), trackCount);
     assert.equal(await page.locator(".track img").count(), 0);
     assert.equal(await page.locator(".music-credits").count(), trackCount);
-    // Verify every published score, WAV and report link targets a real repository file.
+    // Verify every published score and report link targets a real repository file.
+    // WAV masters are local render output and are deliberately not linked.
+    assert.equal(await page.locator(".dl-wav").count(), 0);
+    assert.equal(await page.locator(".dl-score").count(), trackCount);
     for (const href of await page
       .locator(".downloads a")
       .evaluateAll((links) => links.map((link) => link.href))) {
@@ -236,20 +239,20 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
   }
 });
 
-test("showcase: original scores and masters agree with render reports", async () => {
+test("showcase: original scores and render reports agree; MP3 previews are present", async () => {
   const root = new URL("../../../docs/", import.meta.url);
   const tracks = JSON.parse(
     await readFile(new URL("music.json", root), "utf8"),
   );
   assert.equal(tracks.length, 5);
-  const hashes = new Set();
   for (const track of tracks) {
     const source = await readFile(new URL(`scores/${track.id}.json`, root));
     const score = JSON.parse(source);
     const report = JSON.parse(
       await readFile(new URL(`reports/${track.id}.json`, root), "utf8"),
     );
-    const wav = await readFile(new URL(`audio/${track.id}.wav`, root));
+    const mp3 = await readFile(new URL(`audio/${track.id}.mp3`, root));
+    assert.ok(mp3.byteLength > 100_000, `${track.id}: missing MP3 preview`);
     const compiled = compileScore(score);
     assert.ok(compiled.events.some((event) => event.velocity > 0));
     assert.equal(score.schemaVersion, "1.3");
@@ -270,11 +273,6 @@ test("showcase: original scores and masters agree with render reports", async ()
       report.sourceHash,
       createHash("sha256").update(source).digest("hex"),
     );
-    assert.equal(
-      report.audioHash,
-      createHash("sha256").update(wav).digest("hex"),
-    );
-    assert.equal(wav.byteLength, 44 + report.frames * 4);
     assert.equal(report.silent, false);
     assert.equal(report.nonFiniteSamples, 0);
     assert.equal(report.clippedSamples, 0);
@@ -282,7 +280,5 @@ test("showcase: original scores and masters agree with render reports", async ()
     assert.equal(report.boundarySuspicious, false);
     assert.ok(Math.abs(report.durationSeconds - track.duration) < 0.001);
     assert.equal(report.frames, Math.round(track.duration * report.sampleRate));
-    hashes.add(report.audioHash);
   }
-  assert.equal(hashes.size, 5);
 });

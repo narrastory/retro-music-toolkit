@@ -7,7 +7,7 @@
 - `SKILL.md`：AI 的创作流程与工具使用说明。
 - `scripts/runtime/`：TypeScript 工程、CLI、Schema、测试、示例和网页试听器。
 - `references/`：工程文档、作曲操作手册和用户提供的三份背景教程。
-- `docs/audio/`、`docs/scores/`、`docs/reports/`：全新原创展示曲、可编辑乐谱与渲染报告。
+- `docs/audio/`（五首 MP3 试听）、`docs/scores/`（可编辑乐谱）、`docs/reports/`（渲染报告）。
 
 当前版本支持固定速度、4 或 8 为拍号分母的节拍、跨小节延音（`hold`）、clip 裁剪、swing、humanize、调性与和弦标记、和声诊断、伴奏/琶音生成、动机算子、采样鼓组、局部修改、片段/独奏/循环渲染与 PCM16 WAV。暂不支持 tempo map、MIDI 导入导出、原生主机格式、完整芯片仿真和自动听觉审美评估。
 
@@ -40,7 +40,7 @@ RETRO_CHROMIUM_EXECUTABLE=/absolute/path/to/chromium npm run demo
 
 已有文件默认受到保护。再次执行可换输出路径，或使用 `npm run music -- render examples/pixel-trail.json --out output/pixel-trail.wav --force`。
 
-下载包里的预渲染 WAV 可以直接试听，不需要安装任何依赖。音乐优秀与否仍要由真实试听和使用场景判断。
+仓库附带的五首 MP3 试听可以直接播放，不需要安装任何依赖；需要 WAV 母带时按上面的步骤在本地渲染。音乐优秀与否仍要由真实试听和使用场景判断。
 
 ## 3. 命令行
 

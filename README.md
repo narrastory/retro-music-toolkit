@@ -45,6 +45,7 @@ Non-chord tones on strong beats, bass clashing with the chord, parallel fifths, 
 > [!TIP]
 > Want to hear it first? 👉 **[Listen online](https://narrastory.github.io/retro-music-toolkit/)** (five original game cues: an orchestral cave market, a swing-jazz tavern, a subtractive-synth crystal descent, an NES-style boss battle and an orchestral waltz finale; English and Chinese)
 > Every example is rendered offline from a JSON score in this repository. Audio synthesis uses no music generation service.
+> The repository ships the five MP3 previews and editable score JSONs only; WAV masters are rendered locally from the scores.
 
 ---
 

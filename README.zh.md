@@ -45,6 +45,7 @@ node dist/cli.js example --out song.json && node dist/cli.js render song.json --
 > [!TIP]
 > 想先听听效果？👉 **[在线试听页](https://narrastory.github.io/retro-music-toolkit/)**（5 首原创：管弦采样的洞穴集市、摇摆爵士酒馆、减法合成的晶脉探索、NES 四通道首领战、管弦圆舞曲尾声；中英双语）
 > 所有示例都由仓库里的 JSON 乐谱离线渲染，声音合成不调用音乐生成服务。
+> 仓库只附带五首 MP3 试听与可编辑乐谱 JSON；WAV 母带由本地渲染生成。
 
 ---
 

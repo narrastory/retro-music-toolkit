@@ -52,7 +52,7 @@
 
 ## 兼容性
 
-- Schema 1.0–1.3 全部可编译。仓库内 9 份历史示例（含 `assets/demos/` 中的 `*.score.json`）逐一验证通过，零 error。
+- Schema 1.0–1.3 全部可编译。验证时使用的 9 份历史示例（含当时 `assets/demos/` 中的 `*.score.json`）逐一通过，零 error；这些生成的示例输出后来已随仓库瘦身移除。
 - 破坏性变更见 `v1.1-guide.zh-CN.md` 第 9 节（默认 `voicePolicy`、鼓轨声部语义、`patchScore` 返回签名）。
 
 ## 1.1 的音色验证

@@ -1,8 +1,15 @@
-# Dependencies and build output
+# Build output
 node_modules/
 dist/
 output/
 scripts/runtime/dist/
+
+# Rendered showcase audio is local output. The page ships MP3 previews and
+# editable score JSONs only; WAV masters are regenerated with render-showcase.
+docs/audio/*.wav
+assets/demos/
+assets/auditions/
+assets/custom-audition/
 
 # Local scratch
 *.log

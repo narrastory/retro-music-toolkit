@@ -19,14 +19,18 @@ relicensed by this repository.
 
 ## Generated audio
 
-Everything in `assets/` and `docs/audio/` was produced by this toolkit from
-scores authored for this repository. The original eleven presets use procedural
-instruments and drums. The three current showcase cues use sampled instruments
-as well as original synthesis. No commercial game samples or ripped assets are
-included. Reuse renders under their applicable source licenses. All three cues
-use the credited CC BY 3.0 piano; After the Rain and Copper Sky also use the
-CC BY 4.0 drums. Preserve the credits and modification notices below when
-redistributing their WAV/MP3 renders or embedded scores.
+Everything in `docs/audio/` and the embedded sample data in `docs/scores/` was
+produced by this toolkit from scores authored for this repository. The five
+showcase cues use sampled instruments as well as original synthesis. No
+commercial game samples or ripped assets are included. Reuse renders under
+their applicable source licenses. The sampled cues use the credited CC BY 3.0
+piano or CC BY 4.0 drums as noted below; `molten-core-warden` is pure
+synthesis. Preserve the credits and modification notices when redistributing
+their MP3 renders or embedded scores.
+
+The repository ships MP3 previews and editable score JSONs only. WAV masters
+are local render output and are not committed; render them from the scores
+with `scripts/runtime/scripts/render-showcase.mjs` when needed.
 
 ## Starter sampled instruments (CC0)
 

@@ -21,13 +21,13 @@ const UI = {
   en: {
     pageTitle: "Retro Music Toolkit: five songs from below",
     metaDescription:
-      "Five original game soundtracks rendered offline from JSON scores with Retro Music Toolkit. Listen, then download the WAV and the full score.",
+      "Five original game soundtracks rendered offline from JSON scores with Retro Music Toolkit. Listen, then download the full score.",
     skip: "Skip to the tracks",
     navLabel: "Main",
     navTracks: "Tracks",
     heroTitle: "Deep underground,<br />five songs are glowing.",
     heroIntro:
-      "A market, a tavern, a crystal vein, a guardian and the way back to the surface. Five original game cues, every note written in a JSON score and rendered offline by Retro Music Toolkit into seamlessly looping audio.",
+      "A market, a tavern, a crystal vein, a guardian and the way back to the surface. Five original game cues, every note written in a JSON score and rendered offline by Retro Music Toolkit.",
     heroButton: "Start with Mossglow Market",
     heroHint:
       "While a track plays, the cave behind the page takes on its landscape and the Core pulses on the beat.",
@@ -37,12 +37,12 @@ const UI = {
     loading: "Digging up the tracks…",
     takeTitle: "Take them into your game",
     takeUse:
-      "All five may be used in personal and commercial projects. Each WAV loops seamlessly end to start; the score is plain JSON you can edit, re-orchestrate and render again with the same tool.",
+      "All five may be used in personal and commercial projects. The score is plain JSON you can edit, re-orchestrate and render again with the same tool; render a WAV locally whenever you need delivery audio.",
     takeCredit:
       "Some tracks use attribution-licensed samples (piano CC BY 3.0, drums CC BY 4.0); keep the credits listed under each track when you publish. Molten Core Warden is pure synthesis and needs no credit.",
     takeLink: "Full sources and licenses",
     footerNote:
-      "Melodies and arrangements are original; no melodies or samples from commercial games are used. MP3 for listening, WAV for delivery.",
+      "Melodies and arrangements are original; no melodies or samples from commercial games are used. The page ships MP3 previews; render WAV from the score when you need it.",
     footerLink: "Retro Music Toolkit on GitHub",
     langButton: "中文",
     langLabel: "切换到中文",
@@ -65,25 +65,23 @@ const UI = {
     copied: "Copied",
     copiedAnnounce: (t) => `Copied the writing prompt for ${t}`,
     selectToCopy: "Selected; copy manually",
-    wav: "Download WAV",
     score: "Download score",
     report: "Render report",
     credits: "Sample credits",
-    playError: "Can't play right now. Try again, or download the WAV.",
-    loadError:
-      "The audio didn't load. Check your connection, or download the WAV.",
+    playError: "Can't play right now. Try again.",
+    loadError: "The audio didn't load. Check your connection and try again.",
     listError: "The track list didn't load. Refresh the page to try again.",
   },
   zh: {
     pageTitle: "Retro Music Toolkit：地底五首歌",
     metaDescription:
-      "五首原创游戏配乐，全部由 Retro Music Toolkit 从 JSON 乐谱离线渲染。可试听，并下载 WAV 与完整乐谱。",
+      "五首原创游戏配乐，全部由 Retro Music Toolkit 从 JSON 乐谱离线渲染。可试听，并下载完整乐谱。",
     skip: "跳到曲目",
     navLabel: "主导航",
     navTracks: "曲目",
     heroTitle: "地底深处，<br />有五首歌在发光。",
     heroIntro:
-      "一座集市、一家酒馆、一条晶脉、一位守卫，还有回到地表的路。五首原创游戏配乐，每一个音符都写在 JSON 乐谱里，由 Retro Music Toolkit 在本机离线渲染成可无缝循环的音频。",
+      "一座集市、一家酒馆、一条晶脉、一位守卫，还有回到地表的路。五首原创游戏配乐，每一个音符都写在 JSON 乐谱里，由 Retro Music Toolkit 在本机离线渲染。",
     heroButton: "从苔光集市听起",
     heroHint: "播放时，背景的洞穴会换成那首曲子的地貌，核心随节拍跳动。",
     collectionTitle: "五条矿脉，五种声音",
@@ -92,12 +90,12 @@ const UI = {
     loading: "正在挖掘曲目…",
     takeTitle: "把它们带进你的游戏",
     takeUse:
-      "五首曲子都可用于个人和商业项目。WAV 首尾相接即可无缝循环；乐谱是普通 JSON，可以改旋律、换配器，再用同一个工具重新渲染。",
+      "五首曲子都可用于个人和商业项目。乐谱是普通 JSON，可以改旋律、换配器，再用同一个工具在本地重新渲染 WAV。",
     takeCredit:
       "部分曲目用到了署名许可的采样（钢琴 CC BY 3.0、鼓组 CC BY 4.0），发布时请保留每首曲目下方列出的署名。熔芯守卫全部是合成音色，无需署名。",
     takeLink: "查看完整出处与许可",
     footerNote:
-      "旋律与编曲均为原创，不使用任何商业游戏的旋律或采样。MP3 用于试听，WAV 用于交付。",
+      "旋律与编曲均为原创，不使用任何商业游戏的旋律或采样。页面提供 MP3 试听；需要交付时，用乐谱在本地渲染 WAV。",
     footerLink: "在 GitHub 上查看 Retro Music Toolkit",
     langButton: "EN",
     langLabel: "Switch to English",
@@ -119,12 +117,11 @@ const UI = {
     copied: "已复制",
     copiedAnnounce: (t) => `已复制${t}的创作提示词`,
     selectToCopy: "已选中，请手动复制",
-    wav: "下载 WAV",
     score: "下载乐谱",
     report: "渲染报告",
     credits: "音源署名",
-    playError: "暂时无法播放。请重试，或下载 WAV 试听。",
-    loadError: "音频加载失败。请检查网络，或下载 WAV 试听。",
+    playError: "暂时无法播放，请重试。",
+    loadError: "音频加载失败，请检查网络后重试。",
     listError: "曲目清单暂时无法加载，请刷新页面重试。",
   },
 };
@@ -314,7 +311,6 @@ async function initShowcase() {
         </div>
       </details>
       <div class="downloads">
-        <a class="dl-wav" href="audio/${track.id}.wav" download></a>
         <a class="dl-score" href="scores/${track.id}.json" download></a>
         <a class="dl-report" href="reports/${track.id}.json"></a>
       </div>
@@ -387,7 +383,6 @@ async function initShowcase() {
       $(".prompt small").textContent = ui.promptNote;
       copy.textContent = ui.copy;
       copy.setAttribute("aria-label", ui.copyLabel(t.title));
-      $(".dl-wav").textContent = ui.wav;
       $(".dl-score").textContent = ui.score;
       $(".dl-report").textContent = ui.report;
       $(".music-credits summary").textContent = ui.credits;
