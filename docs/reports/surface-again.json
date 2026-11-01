@@ -1,0 +1,231 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 3780000,
+  "durationSeconds": 85.71428571428571,
+  "peak": 0.806254506111145,
+  "peakDbfs": -1.8705569020485824,
+  "truePeakDbfs": -1.84872261407634,
+  "rms": 0.10638884644834967,
+  "rmsDbfs": -19.462078000939577,
+  "loudnessLufs": -16.19,
+  "dcMean": -0.000032834294699359524,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.00030089356005191803,
+  "maxAdjacentStep": 0.1972203105688095,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.00003516521572309591,
+  "cycleComparison": {
+    "differenceRms": 0.00003516521572309591,
+    "signalRms": 0.10638884644834967,
+    "relativeDifference": 0.00033053479661675005
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": {
+    "enabled": true,
+    "ceilingDbfs": -1.5,
+    "lookaheadSeconds": 0.005,
+    "triggeredSamples": 0,
+    "maxGainReductionDb": 0
+  },
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 120,
+    "warmupCycles": 2,
+    "loopFrames": 3780000,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": {
+      "enabled": true,
+      "ceilingDbfs": -1.5,
+      "lookaheadSeconds": 0.005,
+      "triggeredSamples": 0,
+      "maxGainReductionDb": 0
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "piano-melody",
+      "path": "tracks.0"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-strings",
+      "trackId": "strings-melody",
+      "path": "tracks.2"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings-melody: 28 release tails truncated by the next note (first at beat 61, last at beat 93). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings-melody",
+      "beat": 61,
+      "eventIds": [
+        "strings-melody-p0-0",
+        "strings-melody-p0-1",
+        "strings-melody-p0-2",
+        "strings-melody-p0-3",
+        "strings-melody-p0-4",
+        "strings-melody-p0-5",
+        "strings-melody-p0-6",
+        "strings-melody-p0-7",
+        "strings-melody-p0-8",
+        "strings-melody-p0-9",
+        "strings-melody-p0-10",
+        "strings-melody-p0-11",
+        "strings-melody-p0-12",
+        "strings-melody-p0-13",
+        "strings-melody-p0-14",
+        "strings-melody-p0-15",
+        "strings-melody-p0-16",
+        "strings-melody-p0-17",
+        "strings-melody-p0-18",
+        "strings-melody-p0-19",
+        "strings-melody-p0-20",
+        "strings-melody-p0-21",
+        "strings-melody-p0-22",
+        "strings-melody-p0-23",
+        "strings-melody-p0-24",
+        "strings-melody-p0-25",
+        "strings-melody-p0-26",
+        "strings-melody-p0-27"
+      ],
+      "suggestion": {
+        "count": 28,
+        "exampleSourceIds": [
+          "strings-melody-p0-0",
+          "strings-melody-p0-1",
+          "strings-melody-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings-pad: 93 release tails truncated by the next note (first at beat 27, last at beat 117). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings-pad",
+      "beat": 27,
+      "eventIds": [
+        "strings-pad-p0-0",
+        "strings-pad-p0-1",
+        "strings-pad-p0-2",
+        "strings-pad-p0-3",
+        "strings-pad-p0-4",
+        "strings-pad-p0-5",
+        "strings-pad-p0-6",
+        "strings-pad-p0-7",
+        "strings-pad-p0-8",
+        "strings-pad-p0-10",
+        "strings-pad-p0-11",
+        "strings-pad-p0-9",
+        "strings-pad-p0-12",
+        "strings-pad-p0-13",
+        "strings-pad-p0-14",
+        "strings-pad-p0-15",
+        "strings-pad-p0-16",
+        "strings-pad-p0-17",
+        "strings-pad-p0-18",
+        "strings-pad-p0-19",
+        "strings-pad-p0-20",
+        "strings-pad-p0-21",
+        "strings-pad-p0-22",
+        "strings-pad-p0-23",
+        "strings-pad-p0-24",
+        "strings-pad-p0-25",
+        "strings-pad-p0-26",
+        "strings-pad-p0-27",
+        "strings-pad-p0-28",
+        "strings-pad-p0-29",
+        "strings-pad-p0-30",
+        "strings-pad-p0-31"
+      ],
+      "suggestion": {
+        "count": 93,
+        "exampleSourceIds": [
+          "strings-pad-p0-0",
+          "strings-pad-p0-1",
+          "strings-pad-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "horn: 11 release tails truncated by the next note (first at beat 63, last at beat 93). The notes themselves finished; only the tails are clipped.",
+      "trackId": "horn",
+      "beat": 63,
+      "eventIds": [
+        "horn-p0-0",
+        "horn-p0-1",
+        "horn-p0-2",
+        "horn-p0-3",
+        "horn-p0-4",
+        "horn-p0-5",
+        "horn-p0-6",
+        "horn-p0-7",
+        "horn-p0-8",
+        "horn-p0-9",
+        "horn-p0-10"
+      ],
+      "suggestion": {
+        "count": 11,
+        "exampleSourceIds": [
+          "horn-p0-0",
+          "horn-p0-1",
+          "horn-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "flute: 3 release tails truncated by the next note (first at beat 71, last at beat 95). The notes themselves finished; only the tails are clipped.",
+      "trackId": "flute",
+      "beat": 71,
+      "eventIds": [
+        "flute-p0-0",
+        "flute-p0-2",
+        "flute-p0-4"
+      ],
+      "suggestion": {
+        "count": 3,
+        "exampleSourceIds": [
+          "flute-p0-0",
+          "flute-p0-2",
+          "flute-p0-4"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "title": "Surface Again",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261186,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "3c8c239126758b58ef714932ba651bab19fb2728f7a2b47f7343a20b3475c192",
+  "audioHash": "75b974697c11e8bd5e7bbcb6869faad29a06d3b085b6673339ea3656eb2215d5",
+  "sourceFile": "docs/scores/surface-again.json"
+}

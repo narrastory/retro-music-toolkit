@@ -254,11 +254,10 @@ function louder(s, db) {
   const master = Math.min(0, s.mixer.masterDb + db);
   const rest = db - (master - s.mixer.masterDb);
   s.mixer.masterDb = master;
-  for (const t of s.tracks) {
-    if (t.gainDb + rest > 6)
-      throw new Error(`${t.id}: no headroom for +${rest} dB`);
-    t.gainDb = Math.round((t.gainDb + rest) * 10) / 10;
-  }
+  // Tracks stop at the +6 dB fader limit; a quiet cue may leave its
+  // loudest track slightly lower in the balance.
+  for (const t of s.tracks)
+    t.gainDb = Math.min(6, Math.round((t.gainDb + rest) * 10) / 10);
 }
 async function save(id, s, meta) {
   const compiled = compileScore(s);
@@ -601,6 +600,21 @@ async function save(id, s, meta) {
   s.mixer.masterDb = -3;
   louder(s, 7.5); // measured -23.5 LUFS before; release target -16 LUFS
   await save("mossglow-market", s, {
+    en: {
+      title: "Mossglow Market",
+      style: "Cozy settlement",
+      setting: "Settlement, market by day",
+      sections: ["Lanterns", "Stalls", "Old well", "Closing bell"],
+      features: [
+        "Flute theme with a clarinet counterline",
+        "String interlude in D minor",
+        "Pizzicato, harp and marimba rhythm layer",
+      ],
+      description:
+        "Market day in a cavern lit by glowing moss. The flute sings the theme, the clarinet answers below it, and pizzicato and marimba set a light step. In the middle the strings turn to D minor, as if someone had stopped by the old well.",
+      prompt:
+        "Write a warm looping cue for the daytime settlement of an original underground survival game. F major, 100 BPM, 4/4, 40 bars. Use the orchestra pack: the flute sings a theme in two-bar phrases with a recognisable rhythm; on the second pass add a clarinet guide-tone counterline, and on the return let the clarinet follow the theme a sixth below. Pizzicato bass walks root, fifth and passing note; harp plays flowing eighths in the intro and middle section; marimba plays off-beat dyads. The middle section turns to D minor with a long string line while the drums thin out to kick and sparse cymbals. The last four bars return to the intro harmony and lead back to the top through C7. All melodies original.",
+    },
     title: "苔光集市",
     style: "Cozy settlement",
     setting: "聚落 / 白天的集市",
@@ -932,6 +946,21 @@ async function save(id, s, meta) {
   s.mixer.masterDb = -4;
   louder(s, 11.2); // measured -27.2 LUFS before
   await save("crystal-undercurrent", s, {
+    en: {
+      title: "Crystal Undercurrent",
+      style: "Synth exploration",
+      setting: "Deep layer, crystal veins",
+      sections: ["Descent", "Veins", "Still water", "Surge"],
+      features: [
+        "Subtractive pad, bass, pluck and lead",
+        "Filter automation shapes every section",
+        "Piano interlude, then a build and release",
+      ],
+      description:
+        "Going down, the crystals in the rock light up layer by layer. The filter opens slowly through the intro while a plucked arpeggio and syncopated bass push the journey on. The middle leaves only piano over a pad like still water, then gathers itself and returns to a brighter theme.",
+      prompt:
+        "Write a modern-retro synth loop for the crystal-vein area of an original underground exploration game. E minor, 120 BPM, 4/4, 48 bars. Apart from piano and drums, use the subtractive engine only: analog-pad holds the whole piece and its brightness automation tells the story (dark to bright in the intro, darker in the middle, brightest in the build, dark again at the end so the loop joins); analog-pluck plays sixteenth arpeggios, analog-bass plays syncopated eighths with octave jumps, and analog-lead sings a two-bar motif with scoops and delayed vibrato on long notes. Bars 25–32 are a piano interlude, followed by an eight-bar build of ever-denser snare, and the last section adds a pulse-wave counterline an octave down. All melodies original.",
+    },
     title: "晶脉潜流",
     style: "Synth exploration",
     setting: "深层 / 晶体矿脉",
@@ -1195,6 +1224,21 @@ async function save(id, s, meta) {
   s.mixer.masterDb = -4;
   louder(s, 4.1); // measured -20.1 LUFS before
   await save("molten-core-warden", s, {
+    en: {
+      title: "Molten Core Warden",
+      style: "Chiptune boss battle",
+      setting: "The core, boss fight",
+      sections: ["Awakening", "Clash", "Second phase", "Final blow"],
+      features: [
+        "Hardware mode: 12.5 % and 25 % duty pulses",
+        "Single-voice chord arpeggios and pitch falls",
+        "Triangle octave bass and noise drums",
+      ],
+      description:
+        "The warden wakes beside the molten core. Two pulse waves, one triangle and a noise channel, written to the NES four-channel limit: the lead on a 12.5 % duty cycle, harmony faking chords with fast arpeggios, and a second phase where the drums ease off and wide vibrato on long notes raises the tension.",
+      prompt:
+        "Write chiptune boss-battle music for an original underground survival game. D minor, 160 BPM, 4/4, 44 bars, profile nes-inspired, authenticity hardware. Use exactly four channels: a 12.5 % duty pulse lead, a 25 % duty pulse harmony with arpeggio enabled (triads that start together become a fast arpeggio), triangle octave bass and a noise drum kit. Give the theme bite with repeated notes and leaps, and end phrases with downward pitch bends; the B section moves to B♭ and C major colour and returns to A7 via E7; in the second phase slow the drums, switch the lead to long notes with wide vibrato, and let the harmony hold whole-bar arpeggios. End on A7 to loop back. All melodies original.",
+    },
     title: "熔芯守卫",
     style: "Chiptune boss battle",
     setting: "核心 / 首领战",
@@ -1210,6 +1254,444 @@ async function save(id, s, meta) {
       "为原创地下生存游戏写一首首领战芯片音乐。D 小调，160 BPM，4/4，44 小节，profile 用 nes-inspired，authenticity 设为 hardware。严格只用四个通道：12.5% 占空比的脉冲主旋律，25% 占空比的脉冲和声（开启 arpeggio，把同时开始的三和弦变成快速琶音），三角波八度低音，噪声鼓组。主题用重复音和跳进写出攻击性，句尾用向下的弯音；B 段转到降 B 与 C 的大调色彩，经 E7 回到 A7；第二阶段放慢鼓点，主旋律改成长音和宽颤音，和声铺整小节琶音。结尾经 A7 接回开头。所有旋律原创。",
     credits: [
       "All sounds: original pulse, triangle and noise synthesis in hardware mode.",
+    ],
+  });
+}
+
+// ============================================================ 4. Lamplit Tavern
+// The miners' tavern after a shift. Swing jazz in AABA form: walking bass,
+// four-to-the-bar guitar comping, a swung ride, clarinet head and a
+// vibraphone chorus over the bridge. G major, 116 BPM, 32 bars.
+{
+  const A1 = ["Gmaj7", "Em7", "Am7", "D7", "Bm7", "E7", "Am7", "D7"];
+  const A2 = ["Gmaj7", "Em7", "Am7", "D7", "Gmaj7", "G7", "Cmaj7", "Cm6"];
+  const B = ["Bm7", "E7", "Am7", "D7", "Gmaj7", "E7", "A7", "D7"];
+  const chords = [...A1, ...A2, ...B, ...A1];
+  let s = base({
+    title: "Lamplit Tavern",
+    tempo: 116,
+    key: { tonic: "G", mode: "major" },
+    chords,
+    profile: "snes-inspired",
+    sections: [
+      ["Doors open", 8, 0.5],
+      ["Regulars", 8, 0.6],
+      ["Vibes chorus", 8, 0.7],
+      ["Last round", 8, 0.6],
+    ],
+  });
+  s = await importPacks(s, [
+    ["band", ["band-bass", "band-guitar-short"]],
+    ["orchestra", ["orch-clarinet", "orch-vibraphone"]],
+    ["drums", ["drums-acoustic"]],
+  ]);
+  s.mixer.reverb = {
+    enabled: true,
+    decaySeconds: 1.1,
+    preDelaySeconds: 0.02,
+    damping: 0.6,
+    returnDb: -11,
+  };
+  const swing = { swing: 0.6, swingUnit: 0.5 };
+  const clarinet = track(s, "clarinet", "orch-clarinet", "melody", -2, {
+    ...swing,
+    reverbSend: 0.25,
+    pan: 0.1,
+    humanize: { timingBeats: 0.008, velocity: 0.05 },
+  });
+  const vibes = track(s, "vibes", "orch-vibraphone", "melody", -4, {
+    ...swing,
+    maxVoices: 3,
+    reverbSend: 0.3,
+    pan: -0.25,
+    humanize: { timingBeats: 0.006, velocity: 0.06 },
+  });
+  const guitar = track(s, "guitar", "band-guitar-short", "harmony", -10, {
+    maxVoices: 3,
+    reverbSend: 0.12,
+    pan: 0.3,
+    humanize: { timingBeats: 0.005, velocity: 0.06 },
+  });
+  const bass = track(s, "bass", "band-bass", "bass", -1, {
+    reverbSend: 0.04,
+    humanize: { timingBeats: 0.004, velocity: 0.05 },
+  });
+  const kit = track(s, "drums", "drums-acoustic", "drums", -8, {
+    ...swing,
+    reverbSend: 0.1,
+    humanize: { timingBeats: 0.004, velocity: 0.08 },
+  });
+  const swingVibrato = { minBeats: 1.5, depth: 10, rate: 5, delay: 0.5 };
+  const head = [
+    "B4:0.5 D5:0.5 F#5:1 E5:0.5 D5:0.5 B4:1",
+    "G4:1.5 B4:0.5 D5:1 -:1",
+    "C5:0.5 E5:0.5 G5:1 F#5:0.5 E5:0.5 C5:1",
+    "F#5:1.5 E5:0.5 D5:1 -:1",
+    "D5:0.5 F#5:0.5 A5:1 G5:0.5 F#5:0.5 D5:1",
+    "G#5:1.5 F#5:0.5 E5:1 D5:1",
+    "C5:1 E5:0.5 D5:0.5 C5:1 A4:1",
+    "F#4:1 A4:1 C5:1.5 -:0.5",
+  ];
+  const head2 = [
+    ...head.slice(0, 4),
+    "D5:0.5 B4:0.5 G4:1 B4:0.5 D5:0.5 F#5:1",
+    "F5:1.5 D5:0.5 B4:1 G4:1",
+    "E5:1 G5:0.5 E5:0.5 B4:1 C5:1",
+    "Eb5:2 C5:1 A4:1",
+  ];
+  line(clarinet, 0, 4, head, { vibrato: swingVibrato });
+  line(clarinet, 8, 4, head2, { vibrato: swingVibrato, velocity: 0.76 });
+  // Bridge: clarinet holds guide tones while the vibraphone takes a chorus.
+  line(clarinet, 20, 4, ["B4:4", "G#4:4", "G4:4", "F#4:4"], {
+    velocity: 0.5,
+    vibrato: { minBeats: 2, depth: 8, rate: 4.5, delay: 1 },
+  });
+  line(clarinet, 24, 4, head, { vibrato: swingVibrato, velocity: 0.8 });
+  line(
+    vibes,
+    16,
+    4,
+    [
+      "F#5:0.5 A5:0.5 D6:0.5 A5:0.5 F#5:1 D5:1",
+      "G#5:0.5 B5:0.5 D6:0.5 B5:0.5 G#5:1 E5:1",
+      "C6:0.5 A5:0.5 E5:0.5 C5:0.5 E5:1 G5:1",
+      "F#5:1.5 A5:0.5 C6:1 -:1",
+      "B5:0.5 G5:0.5 D5:0.5 B4:0.5 D5:1 F#5:1",
+      "G#5:1.5 B5:0.5 D6:1 B5:1",
+      "C#6:1 A5:0.5 G5:0.5 E5:1 C#5:1",
+      "D5:1 F#5:1 A5:1.5 -:0.5",
+    ],
+    { velocity: 0.72 },
+  );
+  // Vibraphone comping in the A sections: shell voicings (third and
+  // seventh) on the "and" of two and on four, every other bar.
+  const shell = (symbol) => {
+    const { root, pcs } = chord(symbol);
+    const pick = (interval) =>
+      pcs.find((pc) => (pc - root + 12) % 12 === interval);
+    const third = pick(4) ?? pick(3);
+    const seventh = pick(10) ?? pick(11) ?? pick(9);
+    // Above the guitar's comping register.
+    return [above(third, 67), above(seventh, 67)].sort((a, b) => a - b);
+  };
+  const comp = [];
+  chords.forEach((c, b) => {
+    if ((b >= 16 && b < 24) || b % 2 === 1) return;
+    for (const at of [1.5, 3])
+      for (const m of shell(c))
+        comp.push(note(b * 4 + at, m, 0.5, 0.42, { gate: 0.7 }));
+  });
+  put(vibes, 0, chords.length * 4, comp);
+  // Guitar: short chords on every beat, accents on two and four.
+  const guitarEvents = [];
+  voiceLead(chords, 52, 67, 3).forEach((v, b) => {
+    for (let beat = 0; beat < 4; beat++)
+      for (const m of v)
+        guitarEvents.push(
+          note(b * 4 + beat, m, 0.5, beat % 2 ? 0.62 : 0.48, { gate: 0.55 }),
+        );
+  });
+  put(guitar, 0, chords.length * 4, guitarEvents);
+  // Walking bass: root, two chord tones, then a step into the next root.
+  const bassEvents = [];
+  chords.forEach((c, b) => {
+    const root = bassOf(c, 31);
+    const tones = tonesIn(c, root, root + 12);
+    const next = bassOf(chords[(b + 1) % chords.length], 31);
+    // The last bar leads across the loop seam, which diagnostics cannot
+    // see, so it approaches from a D7 chord tone (F#) instead.
+    const approach =
+      b === chords.length - 1
+        ? next - 1
+        : next + (b % 3 === 0 ? -1 : next - 2 > root ? 2 : 1);
+    [root, tones[1] ?? root + 4, tones[2] ?? root + 7, approach].forEach(
+      (m, beat) =>
+        bassEvents.push(
+          note(b * 4 + beat, m, 1, beat ? 0.62 : 0.74, { gate: 0.8 }),
+        ),
+    );
+  });
+  put(bass, 0, chords.length * 4, bassEvents);
+  // Swung ride on the hats, feathered kick, ghosted snare and a fill
+  // into each new chorus.
+  drums(kit, 0, 32, 4, (b, bar) => ({
+    hat: "x...x.o.x...x.o.",
+    kick: "o.......o.......",
+    snare: bar % 4 === 3 ? "..........o...o." : "..............o.",
+    ...(bar % 8 === 7
+      ? { snare: "........x.o.x.xx", tom: "x..............." }
+      : {}),
+    ...(bar === 16 ? { openhat: "x..............." } : {}),
+  }));
+  louder(s, 9.7); // measured -25.7 LUFS before; release target -16 LUFS
+  await save("lamplit-tavern", s, {
+    title: "矿灯酒馆",
+    style: "Swing jazz",
+    setting: "聚落 / 下工后的酒馆",
+    sections: ["开门", "熟客", "颤音琴独奏", "最后一轮"],
+    features: [
+      "摇摆节奏：swing 把八分音符变成三连音律动",
+      "AABA 曲式与 ii–V 爵士和声",
+      "行走低音、四拍吉他与颤音琴独奏",
+    ],
+    description:
+      "收工后的矿工挤进酒馆，炉火和矿灯一起亮着。单簧管吹起主题，贝斯一步一步地走，吉他在每一拍上轻轻扫弦；到了桥段，颤音琴站起来来了一段独奏。",
+    prompt:
+      "为原创地下生存游戏的矿工酒馆写一首摇摆爵士循环曲。G 大调，116 BPM，4/4，32 小节 AABA 曲式，和声以 ii–V–I 为骨架（含 Cm6 与 E7 等借用和弦）。单簧管吹主题，第二个 A 段的后四小节改写为终止句；B 段由颤音琴独奏，单簧管只吹引导音长音。电贝斯写四分音符的行走低音：根音、两个和弦音，再用半音或全音接近下一个根音。短奏吉他每拍扫一次三音和弦，二、四拍略重；颤音琴在 A 段隔小节打三音与七音的壳和弦。鼓用踩镲模拟摇摆的叮叮镲，底鼓极轻，军鼓偶尔加鬼音，每八小节加过门。旋律、颤音琴与鼓设置 swing 0.6。所有旋律原创。",
+    en: {
+      title: "Lamplit Tavern",
+      style: "Swing jazz",
+      setting: "Settlement, tavern after the shift",
+      sections: ["Doors open", "Regulars", "Vibes chorus", "Last round"],
+      features: [
+        "Swing: straight eighths become a triplet lilt",
+        "AABA form over ii–V jazz harmony",
+        "Walking bass, four-to-the-bar guitar, vibraphone solo",
+      ],
+      description:
+        "After the shift the miners crowd into the tavern, fire and lamps both burning. The clarinet plays the head, the bass walks step by step, the guitar brushes every beat, and over the bridge the vibraphone stands up for a chorus of its own.",
+      prompt:
+        "Write a swing-jazz loop for the miners' tavern in an original underground survival game. G major, 116 BPM, 4/4, a 32-bar AABA form built on ii–V–I (with borrowed chords such as Cm6 and E7). The clarinet plays the head, with the last four bars of the second A rewritten as a cadence; the vibraphone solos over the B section while the clarinet holds guide tones. The electric bass walks in quarter notes: root, two chord tones, then a half- or whole-step approach to the next root. Short guitar plays a triad on every beat, slightly heavier on two and four; in the A sections the vibraphone comps third-and-seventh shells every other bar. Drums play a swung ride on the hi-hat, a feathered kick, occasional ghost notes on snare and a fill every eight bars. Melody, vibraphone and drums use swing 0.6. All melodies original.",
+    },
+    credits: [
+      "Growlybass / Black And Green Guitars — Karoryfer Lecolds; guitar recordings Brian Wood (CC0).",
+      "VSCO 2 Community Edition and VCSL — Versilian Studios (CC0).",
+      "Gogodze Phu Vol II — Karoryfer Lecolds (CC BY 4.0).",
+    ],
+  });
+}
+
+// ============================================================ 5. Surface Again
+// The ending: climbing out into daylight. A 3/4 waltz that grows from solo
+// piano into strings, harp, horn and flute, then returns to the piano.
+// D major, 84 BPM, 40 bars.
+{
+  const P = ["D", "A/C#", "Bm", "D/A", "G", "D/F#", "Em7", "A7"];
+  const bridge = ["G", "Em7", "Asus4", "A7"];
+  const climax = [
+    "G",
+    "A",
+    "F#m",
+    "Bm",
+    "G",
+    "A",
+    "D",
+    "A/C#",
+    "Bm",
+    "Em7",
+    "Asus4",
+    "A7",
+  ];
+  const chords = [...P, ...P, ...bridge, ...climax, ...P];
+  let s = base({
+    title: "Surface Again",
+    tempo: 84,
+    meter: [3, 4],
+    key: { tonic: "D", mode: "major" },
+    chords,
+    profile: "snes-inspired",
+    sections: [
+      ["First light", 8, 0.3],
+      ["The climb", 12, 0.5],
+      ["Open sky", 12, 0.85],
+      ["Home", 8, 0.35],
+    ],
+  });
+  s = await importPacks(s, [
+    ["piano", ["keys-grand"]],
+    ["orchestra", ["orch-strings", "orch-harp", "orch-horn", "orch-flute"]],
+  ]);
+  s.mixer.reverb = {
+    enabled: true,
+    decaySeconds: 2.2,
+    preDelaySeconds: 0.035,
+    damping: 0.5,
+    returnDb: -7,
+  };
+  const bpb = 3;
+  const total = chords.length * bpb;
+  const pianoRH = track(s, "piano-melody", "keys-grand", "melody", -1, {
+    maxVoices: 2,
+    reverbSend: 0.35,
+    pan: 0.06,
+    humanize: { timingBeats: 0.008, velocity: 0.05 },
+  });
+  const pianoLH = track(s, "piano-waltz", "keys-grand", "harmony", -7, {
+    maxVoices: 4,
+    reverbSend: 0.35,
+    pan: -0.06,
+    humanize: { timingBeats: 0.006, velocity: 0.06 },
+  });
+  const cantabile = track(s, "strings-melody", "orch-strings", "melody", -3, {
+    reverbSend: 0.4,
+    pan: 0.1,
+  });
+  const pad = track(s, "strings-pad", "orch-strings", "harmony", -10, {
+    maxVoices: 3,
+    reverbSend: 0.45,
+    pan: -0.12,
+  });
+  const harp = track(s, "harp", "orch-harp", "arp", -8, {
+    maxVoices: 4,
+    reverbSend: 0.38,
+    pan: 0.3,
+    humanize: { timingBeats: 0.004, velocity: 0.06 },
+  });
+  const horn = track(s, "horn", "orch-horn", "harmony", -6, {
+    reverbSend: 0.4,
+    pan: -0.25,
+  });
+  const flute = track(s, "flute", "orch-flute", "melody", -7, {
+    reverbSend: 0.42,
+    pan: 0.28,
+  });
+  const vib = { minBeats: 1.5, depth: 10, rate: 4.8, delay: 0.6 };
+  const theme = [
+    "F#5:1.5 E5:0.5 D5:1",
+    "E5:2 A4:1",
+    "D5:1.5 C#5:0.5 B4:1",
+    "A4:2 F#4:1",
+    "G4:1 B4:1 D5:1",
+    "F#5:1.5 E5:0.5 D5:1",
+    "E5:1 G5:1 F#5:0.5 E5:0.5",
+    "E5:2 -:1",
+  ];
+  const themeHigh = [
+    "A5:1.5 G5:0.5 F#5:1",
+    "E5:2 C#5:1",
+    "D5:1.5 E5:0.5 F#5:1",
+    "A5:2 F#5:1",
+    "G5:1 F#5:1 E5:1",
+    "D5:1.5 E5:0.5 F#5:1",
+    "G5:1 B5:1 A5:0.5 G5:0.5",
+    "A5:3",
+    "B5:1.5 A5:0.5 G5:1",
+    "G5:2 E5:1",
+    "D5:1 E5:1 A5:1",
+    "C#5:2 -:1",
+  ];
+  line(pianoRH, 0, bpb, theme, { velocity: 0.6 });
+  line(pianoRH, 8, bpb, themeHigh, { velocity: 0.66 });
+  line(pianoRH, 32, bpb, theme, { velocity: 0.5 });
+  line(
+    cantabile,
+    20,
+    bpb,
+    [
+      "D5:1 G5:1 B5:1",
+      "A5:2 E5:1",
+      "F#5:1.5 E5:0.5 C#5:1",
+      "D5:3",
+      "D5:1 G5:1 B5:1",
+      "C#6:2 B5:0.5 A5:0.5",
+      "A5:1.5 F#5:0.5 D5:1",
+      "E5:3",
+      "F#5:1 D5:1 B4:1",
+      "G5:1.5 F#5:0.5 E5:1",
+      "E5:1 D5:1 E5:1",
+      "C#5:2 -:1",
+    ],
+    { velocity: 0.78, vibrato: vib },
+  );
+  // Flute answers in the last two beats of the climax phrases.
+  const answers = [];
+  for (const [bar, pair] of [
+    [23, ["F#5", "B5"]],
+    [27, ["A5", "C#6"]],
+    [31, ["E5", "A5"]],
+  ])
+    pair.forEach((n, k) => answers.push(note(bar * bpb + 1 + k, n, 1, 0.6)));
+  put(flute, 0, total, answers);
+  // Horn: one sustained inner voice per climax bar.
+  put(
+    horn,
+    20 * bpb,
+    climax.length * bpb,
+    voiceLead(climax, 50, 62, 1).map((v, b) =>
+      note(b * bpb, v[0], 3, 0.58, { gate: 0.97 }),
+    ),
+  );
+  // Piano left hand: waltz bass on one, chord on two and three; in the
+  // climax it plays broken chords so the strings carry the weight.
+  const lh = [];
+  const lhChords = voiceLead(chords, 52, 64, 2);
+  chords.forEach((c, b) => {
+    if (b >= 20 && b < 32) {
+      tonesIn(c, 50, 74)
+        .slice(0, 5)
+        .forEach((m, k) => lh.push(note(b * bpb + k * 0.5, m, 1, 0.38)));
+      return;
+    }
+    const soft = b < 8 || b >= 32 ? 0.85 : 1;
+    lh.push(note(b * bpb, bassOf(c, 38), 1, 0.55 * soft));
+    for (const at of [1, 2])
+      for (const m of lhChords[b])
+        lh.push(note(b * bpb + at, m, 1, 0.38 * soft, { gate: 0.75 }));
+  });
+  put(pianoLH, 0, total, lh);
+  // String pad and harp from the second section on.
+  put(
+    pad,
+    0,
+    total,
+    voiceLead(chords, 50, 69, 3).flatMap((v, b) =>
+      b < 8
+        ? []
+        : v.map((m) =>
+            note(b * bpb, m, 3, b >= 32 ? 0.32 : b >= 20 ? 0.5 : 0.4, {
+              gate: 0.98,
+            }),
+          ),
+    ),
+  );
+  const harpEvents = [];
+  chords.forEach((c, b) => {
+    if (b < 8 || b >= 32) return;
+    const tones = tonesIn(c, 50, 81);
+    for (let k = 0; k < 6; k++)
+      harpEvents.push(
+        note(
+          b * bpb + k * 0.5,
+          tones[Math.min(k + (b % 2), tones.length - 1)],
+          1,
+          k ? 0.42 : 0.55,
+        ),
+      );
+  });
+  put(harp, 0, total, harpEvents);
+  louder(s, 14); // measured -30.0 LUFS before
+  await save("surface-again", s, {
+    title: "重返地表",
+    style: "Orchestral finale",
+    setting: "尾声 / 回到阳光下",
+    sections: ["微光", "攀登", "开阔的天空", "归家"],
+    features: [
+      "3/4 拍圆舞曲，钢琴独奏开场",
+      "弦乐、竖琴、圆号与长笛逐层加入",
+      "高潮后回到钢琴，循环接回开头",
+    ],
+    description:
+      "在地下待了太久，终于看见出口的光。钢琴先轻轻唱出主题；往上爬的时候，弦乐和竖琴一点点跟上来；走出洞口的那一刻，弦乐接过旋律，圆号和长笛在两旁应和，最后又只剩下钢琴。",
+    prompt:
+      "为原创地下生存游戏的结局写一首温暖、略带感伤的圆舞曲。D 大调，84 BPM，3/4，40 小节，分为独奏、攀登、高潮、尾声四段。开头八小节只有钢琴：右手唱主题，左手第一拍低音、二三拍和弦，和声为 D–A/C#–Bm–D/A–G–D/F#–Em7–A7 的下行低音。第二段主题移高，加入弦乐长音铺底和竖琴分解八分音，四小节桥段停在 A7。高潮由弦乐唱旋律（带延迟揉音），圆号写一条持续的内声部，长笛在乐句最后两拍应答，钢琴改弹分解和弦。最后八小节回到钢琴独奏的主题，音量更轻，经 A7 接回开头。所有旋律原创。",
+    en: {
+      title: "Surface Again",
+      style: "Orchestral finale",
+      setting: "Ending, back into daylight",
+      sections: ["First light", "The climb", "Open sky", "Home"],
+      features: [
+        "A 3/4 waltz that opens on solo piano",
+        "Strings, harp, horn and flute join layer by layer",
+        "Back to the piano after the climax, looping to the start",
+      ],
+      description:
+        "After so long underground, there is light at the exit. The piano sings the theme quietly; as you climb, strings and harp join a little at a time; stepping out of the cave, the strings take the melody with horn and flute answering on either side, and at the end only the piano remains.",
+      prompt:
+        "Write a warm, slightly bittersweet waltz for the ending of an original underground survival game. D major, 84 BPM, 3/4, 40 bars in four parts: solo, climb, climax and coda. The first eight bars are piano alone: the right hand sings the theme, the left hand plays bass on one and chords on two and three, over the descending bass D–A/C#–Bm–D/A–G–D/F#–Em7–A7. In the second part the theme moves higher, with a sustained string pad and harp eighths, and a four-bar bridge that stops on A7. In the climax the strings carry the melody with delayed vibrato, the horn holds a sustained inner voice, the flute answers in the last two beats of each phrase, and the piano switches to broken chords. The last eight bars return to the solo-piano theme, softer, and lead back to the top through A7. All melodies original.",
+    },
+    credits: [
+      "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+      "VSCO 2 Community Edition — Versilian Studios (CC0).",
     ],
   });
 }

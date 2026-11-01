@@ -76,8 +76,14 @@ export async function renderInBrowser(
   const loopFrames = Math.round(s.lengthBeats * spb * sr),
     cycleSeconds = loopFrames / sr;
   const cycles = mode === "loop" ? s.export.warmupCycles + 1 : 1;
+  // OfflineAudioContext truncates duration × rate to whole frames, and
+  // (frames / rate) × cycles × rate can land just below an integer (84 BPM,
+  // 120 beats: 11339999.999…), leaving the last cycle one frame short. Half a
+  // frame of slack makes the truncation land on the intended length.
   const duration =
-    mode === "loop" ? cycleSeconds * cycles : to * spb + s.export.tailSeconds;
+    mode === "loop"
+      ? (loopFrames * cycles + 0.5) / sr
+      : to * spb + s.export.tailSeconds;
   if (duration * sr > 16_000_000)
     throw new Error(
       "Render exceeds 16 million frames; reduce song length, warmup cycles or render a range",

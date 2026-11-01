@@ -338,7 +338,8 @@ export function harmonyFindings(c: CompiledScore): HarmonyFinding[] {
 
   // Bass vs chord root.
   for (const track of bassTracks) {
-    for (const e of byTrack.get(track.id) ?? []) {
+    const line = byTrack.get(track.id) ?? [];
+    for (const [index, e] of line.entries()) {
       const beat = beatOf(e);
       const w = chordAt(windows, beat);
       if (!w) continue;
@@ -346,6 +347,18 @@ export function harmonyFindings(c: CompiledScore): HarmonyFinding[] {
       const tones = chordTones(w);
       if (!tones.includes(pc)) {
         if (e.durationTicks / c.ppq < 0.5) continue;
+        // Walking-bass approach tone: off the downbeat, stepping (one or two
+        // semitones) into a chord tone of the next note's chord.
+        const next = line[index + 1];
+        const nextChord = next && chordAt(windows, beatOf(next));
+        if (
+          next &&
+          nextChord &&
+          Math.abs(beat - Math.round(beat / barBeats) * barBeats) > 1e-6 &&
+          Math.abs(next.midi! - e.midi!) <= 2 &&
+          chordTones(nextChord).includes(((next.midi! % 12) + 12) % 12)
+        )
+          continue;
         emit(
           "BASS_NON_CHORD_TONE",
           [track.id],

@@ -1,0 +1,703 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "piano-melody",
+      "path": "tracks.0"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-strings",
+      "trackId": "strings-melody",
+      "path": "tracks.2"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings-melody: 28 release tails truncated by the next note (first at beat 61, last at beat 93). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings-melody",
+      "beat": 61,
+      "eventIds": [
+        "strings-melody-p0-0",
+        "strings-melody-p0-1",
+        "strings-melody-p0-2",
+        "strings-melody-p0-3",
+        "strings-melody-p0-4",
+        "strings-melody-p0-5",
+        "strings-melody-p0-6",
+        "strings-melody-p0-7",
+        "strings-melody-p0-8",
+        "strings-melody-p0-9",
+        "strings-melody-p0-10",
+        "strings-melody-p0-11",
+        "strings-melody-p0-12",
+        "strings-melody-p0-13",
+        "strings-melody-p0-14",
+        "strings-melody-p0-15",
+        "strings-melody-p0-16",
+        "strings-melody-p0-17",
+        "strings-melody-p0-18",
+        "strings-melody-p0-19",
+        "strings-melody-p0-20",
+        "strings-melody-p0-21",
+        "strings-melody-p0-22",
+        "strings-melody-p0-23",
+        "strings-melody-p0-24",
+        "strings-melody-p0-25",
+        "strings-melody-p0-26",
+        "strings-melody-p0-27"
+      ],
+      "suggestion": {
+        "count": 28,
+        "exampleSourceIds": [
+          "strings-melody-p0-0",
+          "strings-melody-p0-1",
+          "strings-melody-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings-pad: 93 release tails truncated by the next note (first at beat 27, last at beat 117). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings-pad",
+      "beat": 27,
+      "eventIds": [
+        "strings-pad-p0-0",
+        "strings-pad-p0-1",
+        "strings-pad-p0-2",
+        "strings-pad-p0-3",
+        "strings-pad-p0-4",
+        "strings-pad-p0-5",
+        "strings-pad-p0-6",
+        "strings-pad-p0-7",
+        "strings-pad-p0-8",
+        "strings-pad-p0-10",
+        "strings-pad-p0-11",
+        "strings-pad-p0-9",
+        "strings-pad-p0-12",
+        "strings-pad-p0-13",
+        "strings-pad-p0-14",
+        "strings-pad-p0-15",
+        "strings-pad-p0-16",
+        "strings-pad-p0-17",
+        "strings-pad-p0-18",
+        "strings-pad-p0-19",
+        "strings-pad-p0-20",
+        "strings-pad-p0-21",
+        "strings-pad-p0-22",
+        "strings-pad-p0-23",
+        "strings-pad-p0-24",
+        "strings-pad-p0-25",
+        "strings-pad-p0-26",
+        "strings-pad-p0-27",
+        "strings-pad-p0-28",
+        "strings-pad-p0-29",
+        "strings-pad-p0-30",
+        "strings-pad-p0-31"
+      ],
+      "suggestion": {
+        "count": 93,
+        "exampleSourceIds": [
+          "strings-pad-p0-0",
+          "strings-pad-p0-1",
+          "strings-pad-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "horn: 11 release tails truncated by the next note (first at beat 63, last at beat 93). The notes themselves finished; only the tails are clipped.",
+      "trackId": "horn",
+      "beat": 63,
+      "eventIds": [
+        "horn-p0-0",
+        "horn-p0-1",
+        "horn-p0-2",
+        "horn-p0-3",
+        "horn-p0-4",
+        "horn-p0-5",
+        "horn-p0-6",
+        "horn-p0-7",
+        "horn-p0-8",
+        "horn-p0-9",
+        "horn-p0-10"
+      ],
+      "suggestion": {
+        "count": 11,
+        "exampleSourceIds": [
+          "horn-p0-0",
+          "horn-p0-1",
+          "horn-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "flute: 3 release tails truncated by the next note (first at beat 71, last at beat 95). The notes themselves finished; only the tails are clipped.",
+      "trackId": "flute",
+      "beat": 71,
+      "eventIds": [
+        "flute-p0-0",
+        "flute-p0-2",
+        "flute-p0-4"
+      ],
+      "suggestion": {
+        "count": 3,
+        "exampleSourceIds": [
+          "flute-p0-0",
+          "flute-p0-2",
+          "flute-p0-4"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "findings": [
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "piano-melody",
+        "piano-waltz"
+      ],
+      "fromBeat": 5,
+      "toBeat": 103.35,
+      "bar": 2,
+      "sourceEventIds": [
+        "piano-melody-p0-5",
+        "piano-waltz-p0-9",
+        "piano-melody-p2-5",
+        "piano-waltz-p0-169"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "piano-melody",
+        "harp"
+      ],
+      "fromBeat": 25.5,
+      "toBeat": 42.9,
+      "bar": 9,
+      "sourceEventIds": [
+        "piano-melody-p1-1",
+        "harp-p0-4",
+        "piano-melody-p1-5",
+        "harp-p0-10",
+        "piano-melody-p1-10",
+        "harp-p0-21",
+        "piano-melody-p1-16",
+        "harp-p0-33"
+      ],
+      "evidence": {
+        "pairs": 4
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "piano-melody",
+        "strings-pad"
+      ],
+      "fromBeat": 33,
+      "toBeat": 108.9,
+      "bar": 12,
+      "sourceEventIds": [
+        "piano-melody-p1-10",
+        "strings-pad-p0-11",
+        "piano-melody-p2-2",
+        "strings-pad-p0-76",
+        "piano-melody-p2-10",
+        "strings-pad-p0-83"
+      ],
+      "evidence": {
+        "pairs": 3
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "piano-waltz",
+        "strings-pad"
+      ],
+      "fromBeat": 56,
+      "toBeat": 113.93958333333333,
+      "bar": 19,
+      "sourceEventIds": [
+        "piano-waltz-p0-94",
+        "strings-pad-p0-35",
+        "piano-waltz-p0-115",
+        "strings-pad-p0-44",
+        "piano-waltz-p0-140",
+        "strings-pad-p0-58",
+        "piano-waltz-p0-164",
+        "strings-pad-p0-76",
+        "piano-waltz-p0-183",
+        "strings-pad-p0-87"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "strings-pad"
+      ],
+      "fromBeat": 25.5,
+      "toBeat": 98.93958333333333,
+      "bar": 9,
+      "sourceEventIds": [
+        "harp-p0-3",
+        "strings-pad-p0-5",
+        "harp-p0-28",
+        "strings-pad-p0-16",
+        "harp-p0-63",
+        "strings-pad-p0-35",
+        "harp-p0-75",
+        "strings-pad-p0-41",
+        "harp-p0-99",
+        "strings-pad-p0-52",
+        "harp-p0-108",
+        "harp-p0-111",
+        "strings-pad-p0-58",
+        "harp-p0-120",
+        "harp-p0-135",
+        "strings-pad-p0-70",
+        "harp-p0-142",
+        "strings-pad-p0-74"
+      ],
+      "evidence": {
+        "pairs": 10
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "piano-melody"
+      ],
+      "fromBeat": 117,
+      "toBeat": 120,
+      "bar": 40,
+      "sourceEventIds": [
+        "piano-melody-p2-20"
+      ],
+      "evidence": {
+        "heldIntoLoop": 2.0520833333333335,
+        "lastPitch": "E5"
+      },
+      "message": "A E5 is held across the loop point",
+      "suggestions": [
+        "A long note over the seam blurs the downbeat; shorten it or let it resolve on the opening chord."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "strings-melody"
+      ],
+      "fromBeat": 93,
+      "toBeat": 120,
+      "bar": 32,
+      "sourceEventIds": [
+        "strings-melody-p0-28"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 27,
+        "lastPitch": "C#5"
+      },
+      "message": "Melody goes quiet for the last 27.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 93,
+      "toBeat": 120,
+      "bar": 32,
+      "sourceEventIds": [
+        "flute-p0-5"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 25,
+        "lastPitch": "A5"
+      },
+      "message": "Melody goes quiet for the last 25.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "piano-melody"
+      ],
+      "fromBeat": 0,
+      "toBeat": 120,
+      "bar": 1,
+      "sourceEventIds": [
+        "piano-melody-p0-0",
+        "piano-melody-p0-1",
+        "piano-melody-p0-2",
+        "piano-melody-p0-3",
+        "piano-melody-p0-4",
+        "piano-melody-p0-5",
+        "piano-melody-p0-6",
+        "piano-melody-p0-7",
+        "piano-melody-p0-8",
+        "piano-melody-p0-9",
+        "piano-melody-p0-10",
+        "piano-melody-p0-11",
+        "piano-melody-p0-12",
+        "piano-melody-p0-13",
+        "piano-melody-p0-14",
+        "piano-melody-p0-15",
+        "piano-melody-p0-16",
+        "piano-melody-p0-17",
+        "piano-melody-p0-18",
+        "piano-melody-p0-19",
+        "piano-melody-p0-20",
+        "piano-melody-p1-0",
+        "piano-melody-p1-1",
+        "piano-melody-p1-2",
+        "piano-melody-p1-3",
+        "piano-melody-p1-4",
+        "piano-melody-p1-5",
+        "piano-melody-p1-6",
+        "piano-melody-p1-7",
+        "piano-melody-p1-8",
+        "piano-melody-p1-9",
+        "piano-melody-p1-10",
+        "piano-melody-p1-11",
+        "piano-melody-p1-12",
+        "piano-melody-p1-13",
+        "piano-melody-p1-14",
+        "piano-melody-p1-15",
+        "piano-melody-p1-16",
+        "piano-melody-p1-17",
+        "piano-melody-p1-18",
+        "piano-melody-p1-19",
+        "piano-melody-p1-20",
+        "piano-melody-p1-21",
+        "piano-melody-p1-22",
+        "piano-melody-p1-23",
+        "piano-melody-p1-24",
+        "piano-melody-p1-25",
+        "piano-melody-p1-26",
+        "piano-melody-p1-27",
+        "piano-melody-p1-28",
+        "piano-melody-p1-29",
+        "piano-melody-p2-0",
+        "piano-melody-p2-1",
+        "piano-melody-p2-2",
+        "piano-melody-p2-3",
+        "piano-melody-p2-4",
+        "piano-melody-p2-5",
+        "piano-melody-p2-6",
+        "piano-melody-p2-7",
+        "piano-melody-p2-8",
+        "piano-melody-p2-9",
+        "piano-melody-p2-10",
+        "piano-melody-p2-11",
+        "piano-melody-p2-12",
+        "piano-melody-p2-13",
+        "piano-melody-p2-14",
+        "piano-melody-p2-15",
+        "piano-melody-p2-16",
+        "piano-melody-p2-17",
+        "piano-melody-p2-18",
+        "piano-melody-p2-19",
+        "piano-melody-p2-20"
+      ],
+      "clipIds": [
+        "piano-melody-cp0",
+        "piano-melody-cp1",
+        "piano-melody-cp2"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 20
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "strings-melody"
+      ],
+      "fromBeat": 0,
+      "toBeat": 120,
+      "bar": 1,
+      "sourceEventIds": [
+        "strings-melody-p0-0",
+        "strings-melody-p0-1",
+        "strings-melody-p0-2",
+        "strings-melody-p0-3",
+        "strings-melody-p0-4",
+        "strings-melody-p0-5",
+        "strings-melody-p0-6",
+        "strings-melody-p0-7",
+        "strings-melody-p0-8",
+        "strings-melody-p0-9",
+        "strings-melody-p0-10",
+        "strings-melody-p0-11",
+        "strings-melody-p0-12",
+        "strings-melody-p0-13",
+        "strings-melody-p0-14",
+        "strings-melody-p0-15",
+        "strings-melody-p0-16",
+        "strings-melody-p0-17",
+        "strings-melody-p0-18",
+        "strings-melody-p0-19",
+        "strings-melody-p0-20",
+        "strings-melody-p0-21",
+        "strings-melody-p0-22",
+        "strings-melody-p0-23",
+        "strings-melody-p0-24",
+        "strings-melody-p0-25",
+        "strings-melody-p0-26",
+        "strings-melody-p0-27",
+        "strings-melody-p0-28"
+      ],
+      "clipIds": [
+        "strings-melody-cp0"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 9
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "piano-melody",
+        "strings-pad"
+      ],
+      "fromBeat": 105,
+      "toBeat": 108,
+      "bar": 36,
+      "sourceEventIds": [
+        "piano-melody-p2-8",
+        "piano-melody-p2-9",
+        "piano-melody-p2-10",
+        "strings-pad-p0-81",
+        "strings-pad-p0-82",
+        "strings-pad-p0-83"
+      ],
+      "clipIds": [
+        "piano-melody-cp2",
+        "strings-pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "piano-melody",
+        "role": "melody",
+        "instrument": "keys-grand",
+        "eventCount": 72,
+        "notesPerBeat": 0.6,
+        "medianMidi": 76
+      },
+      {
+        "trackId": "piano-waltz",
+        "role": "harmony",
+        "instrument": "keys-grand",
+        "eventCount": 200,
+        "notesPerBeat": 1.6666666666666667,
+        "medianMidi": 57
+      },
+      {
+        "trackId": "strings-melody",
+        "role": "melody",
+        "instrument": "orch-strings",
+        "eventCount": 29,
+        "notesPerBeat": 0.24166666666666667,
+        "medianMidi": 76
+      },
+      {
+        "trackId": "strings-pad",
+        "role": "harmony",
+        "instrument": "orch-strings",
+        "eventCount": 96,
+        "notesPerBeat": 0.8,
+        "medianMidi": 58
+      },
+      {
+        "trackId": "harp",
+        "role": "arp",
+        "instrument": "orch-harp",
+        "eventCount": 144,
+        "notesPerBeat": 1.2,
+        "medianMidi": 62
+      },
+      {
+        "trackId": "horn",
+        "role": "harmony",
+        "instrument": "orch-horn",
+        "eventCount": 12,
+        "notesPerBeat": 0.1,
+        "medianMidi": 57
+      },
+      {
+        "trackId": "flute",
+        "role": "melody",
+        "instrument": "orch-flute",
+        "eventCount": 6,
+        "notesPerBeat": 0.05,
+        "medianMidi": 81
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "First light",
+        "fromBeat": 0,
+        "toBeat": 24,
+        "eventsPerBeat": 2.5833333333333335,
+        "activeTrackIds": [
+          "harp",
+          "piano-melody",
+          "piano-waltz"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "section-1",
+        "label": "The climb",
+        "fromBeat": 24,
+        "toBeat": 60,
+        "eventsPerBeat": 5.472222222222222,
+        "activeTrackIds": [
+          "harp",
+          "piano-melody",
+          "piano-waltz",
+          "strings-pad"
+        ],
+        "medianMidi": 61
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Open sky",
+        "fromBeat": 60,
+        "toBeat": 96,
+        "eventsPerBeat": 5.972222222222222,
+        "activeTrackIds": [
+          "flute",
+          "harp",
+          "horn",
+          "piano-waltz",
+          "strings-melody",
+          "strings-pad"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Home",
+        "fromBeat": 96,
+        "toBeat": 120,
+        "eventsPerBeat": 3.5416666666666665,
+        "activeTrackIds": [
+          "piano-melody",
+          "piano-waltz",
+          "strings-pad"
+        ],
+        "medianMidi": 62
+      }
+    ],
+    "barBeats": 3,
+    "windowBeats": 3,
+    "key": "D major",
+    "chordCount": 40
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 3,
+    "resolvedSpanBeats": 6
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

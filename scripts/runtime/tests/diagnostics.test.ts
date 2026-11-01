@@ -145,3 +145,38 @@ test("harmony checks judge humanized notes at their written beat", () => {
     assert.deepEqual(findings, [], `seed ${seed}`);
   }
 });
+
+test("walking-bass approach tones are not reported as clashes", () => {
+  const s: any = fixture();
+  s.schemaVersion = "1.3";
+  s.lengthBeats = 8;
+  s.harmony = [
+    { at: 0, chord: "G" },
+    { at: 4, chord: "C" },
+  ];
+  s.tracks[0].role = "bass";
+  s.tracks[0].instrument = "triangle-bass";
+  const walk = (approach: string, downbeat = "C3") => ({
+    lengthBeats: 8,
+    events: ["G2", "B2", "D3", approach, downbeat].map((pitch, i) => ({
+      id: "n" + i,
+      kind: "note",
+      at: i,
+      pitch,
+      duration: 1,
+    })),
+  });
+  const clashes = () =>
+    diagnoseScore(s).findings.filter(
+      (f: any) => f.rule === "BASS_NON_CHORD_TONE",
+    ).length;
+  // C#3 steps down a semitone into C3 (a C-chord tone): an approach tone.
+  s.tracks[0].patterns.a = walk("C#3");
+  assert.equal(clashes(), 0);
+  // F#2 leaps to C3: still a clash.
+  s.tracks[0].patterns.a = walk("F#2");
+  assert.equal(clashes(), 1);
+  // A non-chord tone on the downbeat is still reported.
+  s.tracks[0].patterns.a = walk("D3", "C#3");
+  assert.equal(clashes(), 1);
+});

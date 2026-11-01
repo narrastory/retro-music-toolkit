@@ -44,12 +44,39 @@
       floor: "#241413",
       spore: "#ffd06a",
     },
+    tavern: {
+      core: "#ffc861",
+      glow: "#ff9f43",
+      warm: "#ffcf7a",
+      moss: "#5c4026",
+      floor: "#221914",
+      spore: "#ffe2a6",
+      dark: 0.62,
+    },
+    // Daylight reaches the cave: paler light and less darkness.
+    dawn: {
+      core: "#fff1b8",
+      glow: "#ffd2a1",
+      warm: "#ffe3b5",
+      moss: "#6f8f4e",
+      floor: "#232533",
+      spore: "#fff6dc",
+      dark: 0.42,
+    },
   };
+  for (const biome of Object.values(BIOMES)) biome.dark ??= 0.74;
   const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
   const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
   const rgb = (c, a = 1) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+  // Colours become [r, g, b]; the darkness level becomes [alpha × 1000] so
+  // it blends between biomes with the colours.
   const toRgb = (b) =>
-    Object.fromEntries(Object.entries(b).map(([k, v]) => [k, hex(v)]));
+    Object.fromEntries(
+      Object.entries(b).map(([k, v]) => [
+        k,
+        typeof v === "number" ? [Math.round(v * 1000)] : hex(v),
+      ]),
+    );
   let from = toRgb(BIOMES.idle),
     to = from,
     blendStart = 0;
@@ -357,7 +384,7 @@
     // Darkness with light cut out, then coloured light added on top.
     dctx.globalCompositeOperation = "source-over";
     dctx.clearRect(0, 0, W, H);
-    dctx.fillStyle = "rgba(6,4,12,0.74)";
+    dctx.fillStyle = `rgba(6,4,12,${p.dark[0] / 1000})`;
     dctx.fillRect(0, 0, W, H);
     dctx.globalCompositeOperation = "destination-out";
     light(dctx, cx, cy, 76 + beat * 16, [0, 0, 0], 1);

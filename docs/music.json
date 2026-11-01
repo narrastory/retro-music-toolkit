@@ -1,6 +1,24 @@
 [
   {
     "id": "mossglow-market",
+    "en": {
+      "title": "Mossglow Market",
+      "style": "Cozy settlement",
+      "setting": "Settlement, market by day",
+      "sections": [
+        "Lanterns",
+        "Stalls",
+        "Old well",
+        "Closing bell"
+      ],
+      "features": [
+        "Flute theme with a clarinet counterline",
+        "String interlude in D minor",
+        "Pizzicato, harp and marimba rhythm layer"
+      ],
+      "description": "Market day in a cavern lit by glowing moss. The flute sings the theme, the clarinet answers below it, and pizzicato and marimba set a light step. In the middle the strings turn to D minor, as if someone had stopped by the old well.",
+      "prompt": "Write a warm looping cue for the daytime settlement of an original underground survival game. F major, 100 BPM, 4/4, 40 bars. Use the orchestra pack: the flute sings a theme in two-bar phrases with a recognisable rhythm; on the second pass add a clarinet guide-tone counterline, and on the return let the clarinet follow the theme a sixth below. Pizzicato bass walks root, fifth and passing note; harp plays flowing eighths in the intro and middle section; marimba plays off-beat dyads. The middle section turns to D minor with a long string line while the drums thin out to kick and sparse cymbals. The last four bars return to the intro harmony and lead back to the top through C7. All melodies original."
+    },
     "title": "苔光集市",
     "style": "Cozy settlement",
     "setting": "聚落 / 白天的集市",
@@ -36,6 +54,24 @@
   },
   {
     "id": "crystal-undercurrent",
+    "en": {
+      "title": "Crystal Undercurrent",
+      "style": "Synth exploration",
+      "setting": "Deep layer, crystal veins",
+      "sections": [
+        "Descent",
+        "Veins",
+        "Still water",
+        "Surge"
+      ],
+      "features": [
+        "Subtractive pad, bass, pluck and lead",
+        "Filter automation shapes every section",
+        "Piano interlude, then a build and release"
+      ],
+      "description": "Going down, the crystals in the rock light up layer by layer. The filter opens slowly through the intro while a plucked arpeggio and syncopated bass push the journey on. The middle leaves only piano over a pad like still water, then gathers itself and returns to a brighter theme.",
+      "prompt": "Write a modern-retro synth loop for the crystal-vein area of an original underground exploration game. E minor, 120 BPM, 4/4, 48 bars. Apart from piano and drums, use the subtractive engine only: analog-pad holds the whole piece and its brightness automation tells the story (dark to bright in the intro, darker in the middle, brightest in the build, dark again at the end so the loop joins); analog-pluck plays sixteenth arpeggios, analog-bass plays syncopated eighths with octave jumps, and analog-lead sings a two-bar motif with scoops and delayed vibrato on long notes. Bars 25–32 are a piano interlude, followed by an eight-bar build of ever-denser snare, and the last section adds a pulse-wave counterline an octave down. All melodies original."
+    },
     "title": "晶脉潜流",
     "style": "Synth exploration",
     "setting": "深层 / 晶体矿脉",
@@ -72,6 +108,24 @@
   },
   {
     "id": "molten-core-warden",
+    "en": {
+      "title": "Molten Core Warden",
+      "style": "Chiptune boss battle",
+      "setting": "The core, boss fight",
+      "sections": [
+        "Awakening",
+        "Clash",
+        "Second phase",
+        "Final blow"
+      ],
+      "features": [
+        "Hardware mode: 12.5 % and 25 % duty pulses",
+        "Single-voice chord arpeggios and pitch falls",
+        "Triangle octave bass and noise drums"
+      ],
+      "description": "The warden wakes beside the molten core. Two pulse waves, one triangle and a noise channel, written to the NES four-channel limit: the lead on a 12.5 % duty cycle, harmony faking chords with fast arpeggios, and a second phase where the drums ease off and wide vibrato on long notes raises the tension.",
+      "prompt": "Write chiptune boss-battle music for an original underground survival game. D minor, 160 BPM, 4/4, 44 bars, profile nes-inspired, authenticity hardware. Use exactly four channels: a 12.5 % duty pulse lead, a 25 % duty pulse harmony with arpeggio enabled (triads that start together become a fast arpeggio), triangle octave bass and a noise drum kit. Give the theme bite with repeated notes and leaps, and end phrases with downward pitch bends; the B section moves to B♭ and C major colour and returns to A7 via E7; in the second phase slow the drums, switch the lead to long notes with wide vibrato, and let the harmony hold whole-bar arpeggios. End on A7 to loop back. All melodies original."
+    },
     "title": "熔芯守卫",
     "style": "Chiptune boss battle",
     "setting": "核心 / 首领战",
@@ -102,6 +156,113 @@
       48,
       80,
       144
+    ]
+  },
+  {
+    "id": "lamplit-tavern",
+    "title": "矿灯酒馆",
+    "style": "Swing jazz",
+    "setting": "聚落 / 下工后的酒馆",
+    "sections": [
+      "开门",
+      "熟客",
+      "颤音琴独奏",
+      "最后一轮"
+    ],
+    "features": [
+      "摇摆节奏：swing 把八分音符变成三连音律动",
+      "AABA 曲式与 ii–V 爵士和声",
+      "行走低音、四拍吉他与颤音琴独奏"
+    ],
+    "description": "收工后的矿工挤进酒馆，炉火和矿灯一起亮着。单簧管吹起主题，贝斯一步一步地走，吉他在每一拍上轻轻扫弦；到了桥段，颤音琴站起来来了一段独奏。",
+    "prompt": "为原创地下生存游戏的矿工酒馆写一首摇摆爵士循环曲。G 大调，116 BPM，4/4，32 小节 AABA 曲式，和声以 ii–V–I 为骨架（含 Cm6 与 E7 等借用和弦）。单簧管吹主题，第二个 A 段的后四小节改写为终止句；B 段由颤音琴独奏，单簧管只吹引导音长音。电贝斯写四分音符的行走低音：根音、两个和弦音，再用半音或全音接近下一个根音。短奏吉他每拍扫一次三音和弦，二、四拍略重；颤音琴在 A 段隔小节打三音与七音的壳和弦。鼓用踩镲模拟摇摆的叮叮镲，底鼓极轻，军鼓偶尔加鬼音，每八小节加过门。旋律、颤音琴与鼓设置 swing 0.6。所有旋律原创。",
+    "en": {
+      "title": "Lamplit Tavern",
+      "style": "Swing jazz",
+      "setting": "Settlement, tavern after the shift",
+      "sections": [
+        "Doors open",
+        "Regulars",
+        "Vibes chorus",
+        "Last round"
+      ],
+      "features": [
+        "Swing: straight eighths become a triplet lilt",
+        "AABA form over ii–V jazz harmony",
+        "Walking bass, four-to-the-bar guitar, vibraphone solo"
+      ],
+      "description": "After the shift the miners crowd into the tavern, fire and lamps both burning. The clarinet plays the head, the bass walks step by step, the guitar brushes every beat, and over the bridge the vibraphone stands up for a chorus of its own.",
+      "prompt": "Write a swing-jazz loop for the miners' tavern in an original underground survival game. G major, 116 BPM, 4/4, a 32-bar AABA form built on ii–V–I (with borrowed chords such as Cm6 and E7). The clarinet plays the head, with the last four bars of the second A rewritten as a cadence; the vibraphone solos over the B section while the clarinet holds guide tones. The electric bass walks in quarter notes: root, two chord tones, then a half- or whole-step approach to the next root. Short guitar plays a triad on every beat, slightly heavier on two and four; in the A sections the vibraphone comps third-and-seventh shells every other bar. Drums play a swung ride on the hi-hat, a feathered kick, occasional ghost notes on snare and a fill every eight bars. Melody, vibraphone and drums use swing 0.6. All melodies original."
+    },
+    "credits": [
+      "Growlybass / Black And Green Guitars — Karoryfer Lecolds; guitar recordings Brian Wood (CC0).",
+      "VSCO 2 Community Edition and VCSL — Versilian Studios (CC0).",
+      "Gogodze Phu Vol II — Karoryfer Lecolds (CC BY 4.0)."
+    ],
+    "english": "Lamplit Tavern",
+    "duration": 66.20689655172414,
+    "tempo": 116,
+    "bars": 32,
+    "meter": "4/4",
+    "key": "G major",
+    "sectionBeats": [
+      0,
+      32,
+      64,
+      96
+    ]
+  },
+  {
+    "id": "surface-again",
+    "title": "重返地表",
+    "style": "Orchestral finale",
+    "setting": "尾声 / 回到阳光下",
+    "sections": [
+      "微光",
+      "攀登",
+      "开阔的天空",
+      "归家"
+    ],
+    "features": [
+      "3/4 拍圆舞曲，钢琴独奏开场",
+      "弦乐、竖琴、圆号与长笛逐层加入",
+      "高潮后回到钢琴，循环接回开头"
+    ],
+    "description": "在地下待了太久，终于看见出口的光。钢琴先轻轻唱出主题；往上爬的时候，弦乐和竖琴一点点跟上来；走出洞口的那一刻，弦乐接过旋律，圆号和长笛在两旁应和，最后又只剩下钢琴。",
+    "prompt": "为原创地下生存游戏的结局写一首温暖、略带感伤的圆舞曲。D 大调，84 BPM，3/4，40 小节，分为独奏、攀登、高潮、尾声四段。开头八小节只有钢琴：右手唱主题，左手第一拍低音、二三拍和弦，和声为 D–A/C#–Bm–D/A–G–D/F#–Em7–A7 的下行低音。第二段主题移高，加入弦乐长音铺底和竖琴分解八分音，四小节桥段停在 A7。高潮由弦乐唱旋律（带延迟揉音），圆号写一条持续的内声部，长笛在乐句最后两拍应答，钢琴改弹分解和弦。最后八小节回到钢琴独奏的主题，音量更轻，经 A7 接回开头。所有旋律原创。",
+    "en": {
+      "title": "Surface Again",
+      "style": "Orchestral finale",
+      "setting": "Ending, back into daylight",
+      "sections": [
+        "First light",
+        "The climb",
+        "Open sky",
+        "Home"
+      ],
+      "features": [
+        "A 3/4 waltz that opens on solo piano",
+        "Strings, harp, horn and flute join layer by layer",
+        "Back to the piano after the climax, looping to the start"
+      ],
+      "description": "After so long underground, there is light at the exit. The piano sings the theme quietly; as you climb, strings and harp join a little at a time; stepping out of the cave, the strings take the melody with horn and flute answering on either side, and at the end only the piano remains.",
+      "prompt": "Write a warm, slightly bittersweet waltz for the ending of an original underground survival game. D major, 84 BPM, 3/4, 40 bars in four parts: solo, climb, climax and coda. The first eight bars are piano alone: the right hand sings the theme, the left hand plays bass on one and chords on two and three, over the descending bass D–A/C#–Bm–D/A–G–D/F#–Em7–A7. In the second part the theme moves higher, with a sustained string pad and harp eighths, and a four-bar bridge that stops on A7. In the climax the strings carry the melody with delayed vibrato, the horn holds a sustained inner voice, the flute answers in the last two beats of each phrase, and the piano switches to broken chords. The last eight bars return to the solo-piano theme, softer, and lead back to the top through A7. All melodies original."
+    },
+    "credits": [
+      "Salamander Grand Piano V3 — Alexander Holm; retuned mapping Markus Fiedler (CC BY 3.0).",
+      "VSCO 2 Community Edition — Versilian Studios (CC0)."
+    ],
+    "english": "Surface Again",
+    "duration": 85.71428571428571,
+    "tempo": 84,
+    "bars": 40,
+    "meter": "3/4",
+    "key": "D major",
+    "sectionBeats": [
+      0,
+      24,
+      60,
+      96
     ]
   }
 ]

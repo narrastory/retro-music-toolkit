@@ -199,3 +199,17 @@ test("hardware pulse renders the requested NES duty cycle", async () => {
     assert.ok(Math.abs(folded - duty) < 0.03, `${duty}: measured ${folded}`);
   }
 });
+
+test("loop render keeps whole cycles when the length rounds just below a frame", async () => {
+  // 11 beats at 84 BPM: (frames / rate) × 3 cycles × rate = …999.999…, which
+  // once truncated the last cycle by one frame and failed the cycle check.
+  const s: any = fixture();
+  s.schemaVersion = "1.3";
+  s.tempo = 84;
+  s.meter = [4, 4];
+  s.lengthBeats = 11;
+  s.export = { mode: "loop", warmupCycles: 2 };
+  s.tracks[0].patterns.a.lengthBeats = 11;
+  const result = await renderScore(s, { mode: "loop" });
+  assert.equal(result.report.frames, Math.round(((11 * 60) / 84) * 44100));
+});

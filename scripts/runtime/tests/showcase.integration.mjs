@@ -71,11 +71,21 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
     });
     await page.goto(`http://127.0.0.1:${server.address().port}`);
     await page.locator(".track").last().waitFor();
-    assert.equal(await page.locator(".track").count(), 3);
+    const trackCount = JSON.parse(
+      await readFile(new URL("music.json", root), "utf8"),
+    ).length;
+    assert.equal(trackCount, 5);
+    assert.equal(await page.locator(".track").count(), trackCount);
+    // English is the default language.
+    assert.equal(
+      await page.evaluate(() => document.documentElement.lang),
+      "en",
+    );
+    assert.match(await page.locator("h1").textContent(), /Deep underground/);
     assert.equal(await page.locator(".track img").count(), 0);
-    assert.equal(await page.locator(".prompt p").count(), 3);
+    assert.equal(await page.locator(".prompt p").count(), trackCount);
     assert.equal(await page.locator(".track img").count(), 0);
-    assert.equal(await page.locator(".music-credits").count(), 3);
+    assert.equal(await page.locator(".music-credits").count(), trackCount);
     // Verify every published score, WAV and report link targets a real repository file.
     for (const href of await page
       .locator(".downloads a")
@@ -83,7 +93,7 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
       const path = new URL(href).pathname;
       await readFile(new URL(`.${path}`, root));
     }
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < trackCount; index++) {
       await page.locator(".play").nth(index).click();
       await page.waitForFunction((i) => {
         const media = [...document.querySelectorAll("audio")];
@@ -145,6 +155,24 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
         );
       }),
     );
+    // Switching language rewrites text in place without stopping playback.
+    await page.locator("#lang-toggle").click();
+    assert.equal(
+      await page.evaluate(() => document.documentElement.lang),
+      "zh-CN",
+    );
+    assert.match(await page.locator("h1").textContent(), /地底深处/);
+    assert.equal(
+      await page.locator(".track h3").first().textContent(),
+      "苔光集市",
+    );
+    assert.equal(
+      await page
+        .locator("audio")
+        .first()
+        .evaluate((audio) => audio.paused),
+      false,
+    );
     await page.locator(".prompt summary").first().click();
     await page.locator(".copy").first().click();
     assert.equal(
@@ -154,6 +182,11 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
     await page.locator("#crt-toggle").click();
     await page.reload();
     await page.locator(".track").last().waitFor();
+    // The language choice is remembered between visits.
+    assert.equal(
+      await page.evaluate(() => document.documentElement.lang),
+      "zh-CN",
+    );
     assert.equal(
       await page.locator("#crt-toggle").getAttribute("aria-pressed"),
       "false",
@@ -195,7 +228,7 @@ test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts,
       0,
     );
     console.log(
-      "All three MP3s played; section jumps, cave scene, downloads and layouts checked.",
+      "All five MP3s played; language toggle, section jumps, cave scene, downloads and layouts checked.",
     );
   } finally {
     await browser?.close();
@@ -208,7 +241,7 @@ test("showcase: original scores and masters agree with render reports", async ()
   const tracks = JSON.parse(
     await readFile(new URL("music.json", root), "utf8"),
   );
-  assert.equal(tracks.length, 3);
+  assert.equal(tracks.length, 5);
   const hashes = new Set();
   for (const track of tracks) {
     const source = await readFile(new URL(`scores/${track.id}.json`, root));
@@ -227,6 +260,11 @@ test("showcase: original scores and masters agree with render reports", async ()
     );
     assert.equal(track.sections.length, track.sectionBeats.length);
     assert.ok(track.credits.length > 0);
+    // Every entry is bilingual: Chinese at the top level, English in `en`.
+    for (const field of ["title", "setting", "description", "prompt"])
+      assert.ok(track.en[field], `${track.id}: missing en.${field}`);
+    assert.equal(track.en.sections.length, track.sections.length);
+    assert.equal(track.en.features.length, track.features.length);
 
     assert.equal(
       report.sourceHash,
@@ -246,5 +284,5 @@ test("showcase: original scores and masters agree with render reports", async ()
     assert.equal(report.frames, Math.round(track.duration * report.sampleRate));
     hashes.add(report.audioHash);
   }
-  assert.equal(hashes.size, 3);
+  assert.equal(hashes.size, 5);
 });

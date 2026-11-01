@@ -69,7 +69,8 @@ included alongside the manifest.
 Retain applicable attribution, license links and change notices when sharing
 these samples, embedded score copies or derivative material. In particular,
 in `docs/audio/`, `crystal-undercurrent` uses the credited piano and drums,
-and `mossglow-market` uses the credited drums (plus CC0 orchestral samples);
+`surface-again` uses the credited piano, `mossglow-market` and
+`lamplit-tavern` use the credited drums (plus CC0 samples), and
 `molten-core-warden` is entirely original synthesis. These recordings are
 not relicensed under the code's MIT license; no endorsement is implied.
 

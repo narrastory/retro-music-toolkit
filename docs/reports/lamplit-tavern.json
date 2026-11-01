@@ -1,0 +1,536 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 2919724,
+  "durationSeconds": 66.20689342403628,
+  "peak": 0.6505577564239502,
+  "peakDbfs": -3.7342828157838746,
+  "truePeakDbfs": -3.73328414645431,
+  "rms": 0.11247387772091703,
+  "rmsDbfs": -18.978966631759945,
+  "loudnessLufs": -16.01,
+  "dcMean": -0.0001439063350774733,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.0006658212514594197,
+  "maxAdjacentStep": 0.1306248977780342,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.00002284392292385311,
+  "cycleComparison": {
+    "differenceRms": 0.00002284392292385311,
+    "signalRms": 0.11247387772091703,
+    "relativeDifference": 0.00020310425306519658
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": {
+    "enabled": true,
+    "ceilingDbfs": -1.5,
+    "lookaheadSeconds": 0.005,
+    "triggeredSamples": 0,
+    "maxGainReductionDb": 0
+  },
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 128,
+    "warmupCycles": 2,
+    "loopFrames": 2919724,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": {
+      "enabled": true,
+      "ceilingDbfs": -1.5,
+      "lookaheadSeconds": 0.005,
+      "triggeredSamples": 0,
+      "maxGainReductionDb": 0
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-vibraphone",
+      "trackId": "vibes",
+      "path": "tracks.1"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"harmony\" differs from preset role \"arp\" for band-guitar-short",
+      "trackId": "guitar",
+      "path": "tracks.2"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 0.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-1",
+        "clarinet-cp0/0/clarinet-p0-2"
+      ],
+      "beat": 0.9947916666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 3",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-4",
+        "clarinet-cp0/0/clarinet-p0-5"
+      ],
+      "beat": 3,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 6.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-7",
+        "clarinet-cp0/0/clarinet-p0-8"
+      ],
+      "beat": 6.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 8.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-10",
+        "clarinet-cp0/0/clarinet-p0-11"
+      ],
+      "beat": 8.994791666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 11.007",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-13",
+        "clarinet-cp0/0/clarinet-p0-14"
+      ],
+      "beat": 11.007291666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 13.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-16",
+        "clarinet-cp0/0/clarinet-p0-17"
+      ],
+      "beat": 13.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 16.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-19",
+        "clarinet-cp0/0/clarinet-p0-20"
+      ],
+      "beat": 16.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 19.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-22",
+        "clarinet-cp0/0/clarinet-p0-23"
+      ],
+      "beat": 19.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 21.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-25",
+        "clarinet-cp0/0/clarinet-p0-26"
+      ],
+      "beat": 21.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 26.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-30",
+        "clarinet-cp0/0/clarinet-p0-31"
+      ],
+      "beat": 26.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 33.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-1",
+        "clarinet-cp1/0/clarinet-p1-2"
+      ],
+      "beat": 33.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 34.994",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-4",
+        "clarinet-cp1/0/clarinet-p1-5"
+      ],
+      "beat": 34.99375,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 38.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-7",
+        "clarinet-cp1/0/clarinet-p1-8"
+      ],
+      "beat": 38.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 41.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-10",
+        "clarinet-cp1/0/clarinet-p1-11"
+      ],
+      "beat": 41.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 42.994",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-13",
+        "clarinet-cp1/0/clarinet-p1-14"
+      ],
+      "beat": 42.99375,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 46.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-16",
+        "clarinet-cp1/0/clarinet-p1-17"
+      ],
+      "beat": 46.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 49.002",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-19",
+        "clarinet-cp1/0/clarinet-p1-20"
+      ],
+      "beat": 49.00208333333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 50.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-22",
+        "clarinet-cp1/0/clarinet-p1-23"
+      ],
+      "beat": 50.994791666666664,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 54",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-25",
+        "clarinet-cp1/0/clarinet-p1-26"
+      ],
+      "beat": 54,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 58.002",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-30",
+        "clarinet-cp1/0/clarinet-p1-31"
+      ],
+      "beat": 58.00208333333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 96.992",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-1",
+        "clarinet-cp3/0/clarinet-p3-2"
+      ],
+      "beat": 96.99166666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 98.998",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-4",
+        "clarinet-cp3/0/clarinet-p3-5"
+      ],
+      "beat": 98.99791666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 102.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-7",
+        "clarinet-cp3/0/clarinet-p3-8"
+      ],
+      "beat": 102.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 105.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-10",
+        "clarinet-cp3/0/clarinet-p3-11"
+      ],
+      "beat": 105.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 106.999",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-13",
+        "clarinet-cp3/0/clarinet-p3-14"
+      ],
+      "beat": 106.99895833333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 110.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-16",
+        "clarinet-cp3/0/clarinet-p3-17"
+      ],
+      "beat": 110.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 112.993",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-19",
+        "clarinet-cp3/0/clarinet-p3-20"
+      ],
+      "beat": 112.99270833333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 115.007",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-22",
+        "clarinet-cp3/0/clarinet-p3-23"
+      ],
+      "beat": 115.00729166666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 117.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-25",
+        "clarinet-cp3/0/clarinet-p3-26"
+      ],
+      "beat": 117.99479166666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 121.998",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-30",
+        "clarinet-cp3/0/clarinet-p3-31"
+      ],
+      "beat": 121.99791666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "clarinet: 69 release tails truncated by the next note (first at beat 0.604, last at beat 126.004). The notes themselves finished; only the tails are clipped.",
+      "trackId": "clarinet",
+      "beat": 0.6041666666666666,
+      "eventIds": [
+        "clarinet-p0-0",
+        "clarinet-p0-2",
+        "clarinet-p0-3",
+        "clarinet-p0-5",
+        "clarinet-p0-6",
+        "clarinet-p0-9",
+        "clarinet-p0-11",
+        "clarinet-p0-12",
+        "clarinet-p0-14",
+        "clarinet-p0-15",
+        "clarinet-p0-18",
+        "clarinet-p0-20",
+        "clarinet-p0-21",
+        "clarinet-p0-23",
+        "clarinet-p0-24",
+        "clarinet-p0-26",
+        "clarinet-p0-27",
+        "clarinet-p0-28",
+        "clarinet-p0-29",
+        "clarinet-p0-31",
+        "clarinet-p0-32",
+        "clarinet-p0-33",
+        "clarinet-p0-34",
+        "clarinet-p1-0",
+        "clarinet-p1-2",
+        "clarinet-p1-3",
+        "clarinet-p1-5",
+        "clarinet-p1-6",
+        "clarinet-p1-9",
+        "clarinet-p1-11",
+        "clarinet-p1-12",
+        "clarinet-p1-14"
+      ],
+      "suggestion": {
+        "count": 69,
+        "exampleSourceIds": [
+          "clarinet-p0-0",
+          "clarinet-p0-2",
+          "clarinet-p0-3"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "vibes: 23 release tails truncated by the next note (first at beat 3.005, last at beat 123.005). The notes themselves finished; only the tails are clipped.",
+      "trackId": "vibes",
+      "beat": 3.0052083333333335,
+      "eventIds": [
+        "vibes-p1-0",
+        "vibes-p1-5",
+        "vibes-p1-9",
+        "vibes-p1-12",
+        "vibes-p1-17",
+        "vibes-p1-20",
+        "vibes-p1-25",
+        "vibes-p1-29",
+        "vibes-p0-0",
+        "vibes-p0-1",
+        "vibes-p0-5",
+        "vibes-p0-6",
+        "vibes-p0-7",
+        "vibes-p0-11",
+        "vibes-p0-12",
+        "vibes-p0-13",
+        "vibes-p0-21",
+        "vibes-p0-22",
+        "vibes-p0-31",
+        "vibes-p1-32",
+        "vibes-p1-36",
+        "vibes-p1-40",
+        "vibes-p1-45"
+      ],
+      "suggestion": {
+        "count": 23,
+        "exampleSourceIds": [
+          "vibes-p1-0",
+          "vibes-p1-5",
+          "vibes-p1-9"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "title": "Lamplit Tavern",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261218,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "af8c3ceddd8403ea13e7e8b2dcfd699c9d583d41383850ff72d12a6863a9a51f",
+  "audioHash": "691eea6ed34ce56033ec0b90fa805041017bfd63731090612c2bb351338b9a73",
+  "sourceFile": "docs/scores/lamplit-tavern.json"
+}

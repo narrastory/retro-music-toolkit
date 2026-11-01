@@ -1,14 +1,17 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="三首原创游戏配乐：苔光集市、晶脉潜流、熔芯守卫。全部由 Retro Music Toolkit 从 JSON 乐谱离线渲染，可试听、下载 WAV 与完整乐谱。"
+      data-i18n-content="metaDescription"
+      content="Five original game soundtracks rendered offline from JSON scores with Retro Music Toolkit. Listen, then download the WAV and the full score."
     />
     <meta name="theme-color" content="#0e0c16" />
-    <title>Retro Music Toolkit：地底三首歌</title>
+    <title data-i18n="pageTitle">
+      Retro Music Toolkit: five songs from below
+    </title>
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,12 +19,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap"
     />
-    <link rel="stylesheet" href="style.css?v=cave-1" />
-    <script src="scene.js?v=cave-1" defer></script>
-    <script src="showcase.js?v=cave-1" defer></script>
+    <link rel="stylesheet" href="style.css?v=cave-2" />
+    <script src="scene.js?v=cave-2" defer></script>
+    <script src="showcase.js?v=cave-2" defer></script>
   </head>
   <body class="crt">
-    <a class="skip" href="#collection">跳到曲目</a>
+    <a class="skip" href="#collection" data-i18n="skip">Skip to the tracks</a>
     <canvas id="cave" aria-hidden="true"></canvas>
     <div class="page">
       <header class="masthead">
@@ -32,75 +35,107 @@
           </svg>
           <span>Retro Music Toolkit</span>
         </a>
-        <nav aria-label="主导航">
-          <a href="#collection">曲目</a>
+        <nav aria-label="Main" data-i18n-aria="navLabel">
+          <a href="#collection" data-i18n="navTracks">Tracks</a>
           <a href="https://github.com/narrastory/retro-music-toolkit">GitHub</a>
           <button id="crt-toggle" type="button" aria-pressed="true">
-            扫描线：开
+            Scanlines: on
+          </button>
+          <button
+            id="lang-toggle"
+            type="button"
+            lang="zh-CN"
+            aria-label="切换到中文"
+          >
+            中文
           </button>
         </nav>
       </header>
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title">地底深处，<br />有三首歌在发光。</h1>
-          <p class="intro">
-            一座集市、一条晶脉、一位守卫。三首原创游戏配乐，每一个音符都写在
-            JSON 乐谱里，由 Retro Music Toolkit
-            在本机离线渲染成可无缝循环的音频。
+          <h1 id="hero-title" data-i18n-html="heroTitle">
+            Deep underground,<br />five songs are glowing.
+          </h1>
+          <p class="intro" data-i18n="heroIntro">
+            A market, a tavern, a crystal vein, a guardian and the way back to
+            the surface. Five original game cues, every note written in a JSON
+            score and rendered offline by Retro Music Toolkit into seamlessly
+            looping audio.
           </p>
           <div class="hero-actions">
             <button class="button" id="start-listening" type="button">
-              <span aria-hidden="true">▶</span> 从苔光集市听起
+              <span aria-hidden="true">▶</span>
+              <span data-i18n="heroButton">Start with Mossglow Market</span>
             </button>
-            <p>播放时，背景的洞穴会换成那首曲子的地貌，核心随节拍跳动。</p>
+            <p data-i18n="heroHint">
+              While a track plays, the cave behind the page takes on its
+              landscape and the Core pulses on the beat.
+            </p>
           </div>
         </section>
 
         <section id="collection" aria-labelledby="collection-title">
           <div class="section-heading">
-            <h2 id="collection-title">三层矿脉，三种写法</h2>
-            <p>
-              同一个工具，三套完全不同的声音：采样管弦、减法合成、NES
-              四通道。每首都附创作提示词、完整乐谱和渲染报告。
+            <h2 id="collection-title" data-i18n="collectionTitle">
+              Five veins, five sound worlds
+            </h2>
+            <p data-i18n="collectionIntro">
+              One tool, five different sounds: sampled orchestra, swing band,
+              subtractive synths, NES four-channel chip and a piano-led
+              orchestral waltz. Each comes with its writing prompt, full score
+              and render report.
             </p>
           </div>
-          <div id="tracks"><p class="loading">正在挖掘曲目…</p></div>
+          <div id="tracks">
+            <p class="loading" data-i18n="loading">Digging up the tracks…</p>
+          </div>
           <noscript>
             <p class="noscript">
-              启用 JavaScript 查看完整曲目。直接试听：
-              <a href="audio/mossglow-market.mp3">苔光集市</a>、
-              <a href="audio/crystal-undercurrent.mp3">晶脉潜流</a>、
-              <a href="audio/molten-core-warden.mp3">熔芯守卫</a>。
+              Enable JavaScript to see every track. Listen directly:
+              <a href="audio/mossglow-market.mp3">Mossglow Market</a>,
+              <a href="audio/lamplit-tavern.mp3">Lamplit Tavern</a>,
+              <a href="audio/crystal-undercurrent.mp3">Crystal Undercurrent</a>,
+              <a href="audio/molten-core-warden.mp3">Molten Core Warden</a>,
+              <a href="audio/surface-again.mp3">Surface Again</a>.
             </p>
           </noscript>
         </section>
 
         <section class="take-home" aria-labelledby="take-title">
-          <h2 id="take-title">把它们带进你的游戏</h2>
+          <h2 id="take-title" data-i18n="takeTitle">
+            Take them into your game
+          </h2>
           <div class="take-columns">
-            <p>
-              三首曲子都可用于个人和商业项目。WAV
-              首尾相接即可无缝循环；乐谱是普通
-              JSON，可以改旋律、换音色，再用同一个工具重新渲染。
+            <p data-i18n="takeUse">
+              All five may be used in personal and commercial projects. Each WAV
+              loops seamlessly end to start; the score is plain JSON you can
+              edit, re-orchestrate and render again with the same tool.
             </p>
             <p>
-              苔光集市和晶脉潜流用到了署名许可的采样（钢琴 CC BY 3.0、鼓组 CC BY
-              4.0），发布时请保留每首曲目下方列出的署名。熔芯守卫全部是合成音色，无需署名。
+              <span data-i18n="takeCredit"
+                >Some tracks use attribution-licensed samples (piano CC BY 3.0,
+                drums CC BY 4.0); keep the credits listed under each track when
+                you publish. Molten Core Warden is pure synthesis and needs no
+                credit.</span
+              >
               <a
                 href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md"
-                >查看完整出处与许可</a
+                data-i18n="takeLink"
+                >Full sources and licenses</a
               >
             </p>
           </div>
         </section>
       </main>
       <footer>
-        <p>
-          旋律与编曲均为原创，不使用任何商业游戏的旋律或采样。MP3 用于试听，WAV
-          用于交付。
+        <p data-i18n="footerNote">
+          Melodies and arrangements are original; no melodies or samples from
+          commercial games are used. MP3 for listening, WAV for delivery.
         </p>
-        <a href="https://github.com/narrastory/retro-music-toolkit"
-          >在 GitHub 上查看 Retro Music Toolkit</a
+        <a
+          href="https://github.com/narrastory/retro-music-toolkit"
+          data-i18n="footerLink"
+          >Retro Music Toolkit on GitHub</a
         >
       </footer>
     </div>

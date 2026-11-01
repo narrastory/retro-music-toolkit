@@ -1,0 +1,1644 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-vibraphone",
+      "trackId": "vibes",
+      "path": "tracks.1"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"harmony\" differs from preset role \"arp\" for band-guitar-short",
+      "trackId": "guitar",
+      "path": "tracks.2"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 0.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-1",
+        "clarinet-cp0/0/clarinet-p0-2"
+      ],
+      "beat": 0.9947916666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 3",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-4",
+        "clarinet-cp0/0/clarinet-p0-5"
+      ],
+      "beat": 3,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 6.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-7",
+        "clarinet-cp0/0/clarinet-p0-8"
+      ],
+      "beat": 6.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 8.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-10",
+        "clarinet-cp0/0/clarinet-p0-11"
+      ],
+      "beat": 8.994791666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 11.007",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-13",
+        "clarinet-cp0/0/clarinet-p0-14"
+      ],
+      "beat": 11.007291666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 13.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-16",
+        "clarinet-cp0/0/clarinet-p0-17"
+      ],
+      "beat": 13.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 16.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-19",
+        "clarinet-cp0/0/clarinet-p0-20"
+      ],
+      "beat": 16.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 19.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-22",
+        "clarinet-cp0/0/clarinet-p0-23"
+      ],
+      "beat": 19.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 21.996",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-25",
+        "clarinet-cp0/0/clarinet-p0-26"
+      ],
+      "beat": 21.995833333333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 26.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp0/0/clarinet-p0-30",
+        "clarinet-cp0/0/clarinet-p0-31"
+      ],
+      "beat": 26.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 33.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-1",
+        "clarinet-cp1/0/clarinet-p1-2"
+      ],
+      "beat": 33.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 34.994",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-4",
+        "clarinet-cp1/0/clarinet-p1-5"
+      ],
+      "beat": 34.99375,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 38.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-7",
+        "clarinet-cp1/0/clarinet-p1-8"
+      ],
+      "beat": 38.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 41.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-10",
+        "clarinet-cp1/0/clarinet-p1-11"
+      ],
+      "beat": 41.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 42.994",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-13",
+        "clarinet-cp1/0/clarinet-p1-14"
+      ],
+      "beat": 42.99375,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 46.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-16",
+        "clarinet-cp1/0/clarinet-p1-17"
+      ],
+      "beat": 46.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 49.002",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-19",
+        "clarinet-cp1/0/clarinet-p1-20"
+      ],
+      "beat": 49.00208333333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 50.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-22",
+        "clarinet-cp1/0/clarinet-p1-23"
+      ],
+      "beat": 50.994791666666664,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 54",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-25",
+        "clarinet-cp1/0/clarinet-p1-26"
+      ],
+      "beat": 54,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 58.002",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp1/0/clarinet-p1-30",
+        "clarinet-cp1/0/clarinet-p1-31"
+      ],
+      "beat": 58.00208333333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 96.992",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-1",
+        "clarinet-cp3/0/clarinet-p3-2"
+      ],
+      "beat": 96.99166666666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 98.998",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-4",
+        "clarinet-cp3/0/clarinet-p3-5"
+      ],
+      "beat": 98.99791666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 102.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-7",
+        "clarinet-cp3/0/clarinet-p3-8"
+      ],
+      "beat": 102.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 105.006",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-10",
+        "clarinet-cp3/0/clarinet-p3-11"
+      ],
+      "beat": 105.00625,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 106.999",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-13",
+        "clarinet-cp3/0/clarinet-p3-14"
+      ],
+      "beat": 106.99895833333333,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 110.003",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-16",
+        "clarinet-cp3/0/clarinet-p3-17"
+      ],
+      "beat": 110.003125,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 112.993",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-19",
+        "clarinet-cp3/0/clarinet-p3-20"
+      ],
+      "beat": 112.99270833333334,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 115.007",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-22",
+        "clarinet-cp3/0/clarinet-p3-23"
+      ],
+      "beat": 115.00729166666666,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 117.995",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-25",
+        "clarinet-cp3/0/clarinet-p3-26"
+      ],
+      "beat": 117.99479166666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "clarinet: voice 0 still held at beat 121.998",
+      "trackId": "clarinet",
+      "eventIds": [
+        "clarinet-cp3/0/clarinet-p3-30",
+        "clarinet-cp3/0/clarinet-p3-31"
+      ],
+      "beat": 121.99791666666667,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "clarinet: 69 release tails truncated by the next note (first at beat 0.604, last at beat 126.004). The notes themselves finished; only the tails are clipped.",
+      "trackId": "clarinet",
+      "beat": 0.6041666666666666,
+      "eventIds": [
+        "clarinet-p0-0",
+        "clarinet-p0-2",
+        "clarinet-p0-3",
+        "clarinet-p0-5",
+        "clarinet-p0-6",
+        "clarinet-p0-9",
+        "clarinet-p0-11",
+        "clarinet-p0-12",
+        "clarinet-p0-14",
+        "clarinet-p0-15",
+        "clarinet-p0-18",
+        "clarinet-p0-20",
+        "clarinet-p0-21",
+        "clarinet-p0-23",
+        "clarinet-p0-24",
+        "clarinet-p0-26",
+        "clarinet-p0-27",
+        "clarinet-p0-28",
+        "clarinet-p0-29",
+        "clarinet-p0-31",
+        "clarinet-p0-32",
+        "clarinet-p0-33",
+        "clarinet-p0-34",
+        "clarinet-p1-0",
+        "clarinet-p1-2",
+        "clarinet-p1-3",
+        "clarinet-p1-5",
+        "clarinet-p1-6",
+        "clarinet-p1-9",
+        "clarinet-p1-11",
+        "clarinet-p1-12",
+        "clarinet-p1-14"
+      ],
+      "suggestion": {
+        "count": 69,
+        "exampleSourceIds": [
+          "clarinet-p0-0",
+          "clarinet-p0-2",
+          "clarinet-p0-3"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "vibes: 23 release tails truncated by the next note (first at beat 3.005, last at beat 123.005). The notes themselves finished; only the tails are clipped.",
+      "trackId": "vibes",
+      "beat": 3.0052083333333335,
+      "eventIds": [
+        "vibes-p1-0",
+        "vibes-p1-5",
+        "vibes-p1-9",
+        "vibes-p1-12",
+        "vibes-p1-17",
+        "vibes-p1-20",
+        "vibes-p1-25",
+        "vibes-p1-29",
+        "vibes-p0-0",
+        "vibes-p0-1",
+        "vibes-p0-5",
+        "vibes-p0-6",
+        "vibes-p0-7",
+        "vibes-p0-11",
+        "vibes-p0-12",
+        "vibes-p0-13",
+        "vibes-p0-21",
+        "vibes-p0-22",
+        "vibes-p0-31",
+        "vibes-p1-32",
+        "vibes-p1-36",
+        "vibes-p1-40",
+        "vibes-p1-45"
+      ],
+      "suggestion": {
+        "count": 23,
+        "exampleSourceIds": [
+          "vibes-p1-0",
+          "vibes-p1-5",
+          "vibes-p1-9"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "bass"
+      ],
+      "fromBeat": 32.6,
+      "toBeat": 33.9,
+      "bar": 9,
+      "sourceEventIds": [
+        "clarinet-p1-1",
+        "clarinet-p1-2",
+        "bass-p0-32",
+        "bass-p0-33"
+      ],
+      "evidence": {
+        "first": "D5/G1",
+        "second": "F#5/B1"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "bass"
+      ],
+      "fromBeat": 40.6,
+      "toBeat": 41.9,
+      "bar": 11,
+      "sourceEventIds": [
+        "clarinet-p1-10",
+        "clarinet-p1-11",
+        "bass-p0-40",
+        "bass-p0-41"
+      ],
+      "evidence": {
+        "first": "E5/A1",
+        "second": "G5/C2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "bass"
+      ],
+      "fromBeat": 104.6,
+      "toBeat": 105.9,
+      "bar": 27,
+      "sourceEventIds": [
+        "clarinet-p3-10",
+        "clarinet-p3-11",
+        "bass-p0-104",
+        "bass-p0-105"
+      ],
+      "evidence": {
+        "first": "E5/A1",
+        "second": "G5/C2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "vibes",
+        "bass"
+      ],
+      "fromBeat": 73.6,
+      "toBeat": 74.9,
+      "bar": 19,
+      "sourceEventIds": [
+        "vibes-p0-15",
+        "vibes-p0-16",
+        "bass-p0-73",
+        "bass-p0-74"
+      ],
+      "evidence": {
+        "first": "C5/C2",
+        "second": "E5/E2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "vibes",
+        "bass"
+      ],
+      "fromBeat": 81.6,
+      "toBeat": 82.9,
+      "bar": 21,
+      "sourceEventIds": [
+        "vibes-p0-24",
+        "vibes-p0-25",
+        "bass-p0-81",
+        "bass-p0-82"
+      ],
+      "evidence": {
+        "first": "B4/B1",
+        "second": "D5/D2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "vibes",
+        "bass"
+      ],
+      "fromBeat": 93,
+      "toBeat": 95.35,
+      "bar": 24,
+      "sourceEventIds": [
+        "vibes-p0-37",
+        "vibes-p0-38",
+        "bass-p0-93",
+        "bass-p0-94"
+      ],
+      "evidence": {
+        "first": "F#5/F#2",
+        "second": "A5/A2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "vibes",
+        "bass"
+      ],
+      "fromBeat": 94,
+      "toBeat": 97.94999999999999,
+      "bar": 24,
+      "sourceEventIds": [
+        "vibes-p0-38",
+        "vibes-p1-32",
+        "bass-p0-94",
+        "bass-p0-97"
+      ],
+      "evidence": {
+        "first": "A5/A2",
+        "second": "B4/B1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 55,
+      "toBeat": 57,
+      "bar": 14,
+      "sourceEventIds": [
+        "clarinet-p1-27",
+        "clarinet-p1-28",
+        "clarinet-p1-29"
+      ],
+      "evidence": {
+        "leapSemitones": 9,
+        "nextMove": 3,
+        "gapBeats": 1
+      },
+      "message": "Leap of 9 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "vibes"
+      ],
+      "fromBeat": 35,
+      "toBeat": 41.6,
+      "bar": 9,
+      "sourceEventIds": [
+        "vibes-p1-19",
+        "vibes-p1-18",
+        "vibes-p1-20"
+      ],
+      "evidence": {
+        "leapSemitones": -7,
+        "nextMove": -4,
+        "gapBeats": 0
+      },
+      "message": "Leap of -7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "vibes"
+      ],
+      "fromBeat": 99,
+      "toBeat": 105.6,
+      "bar": 25,
+      "sourceEventIds": [
+        "vibes-p1-35",
+        "vibes-p1-34",
+        "vibes-p1-36"
+      ],
+      "evidence": {
+        "leapSemitones": -7,
+        "nextMove": -4,
+        "gapBeats": 0
+      },
+      "message": "Leap of -7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "bass"
+      ],
+      "fromBeat": 3,
+      "toBeat": 123.8,
+      "bar": 1,
+      "sourceEventIds": [
+        "bass-p0-3",
+        "bass-p0-7",
+        "bass-p0-15",
+        "bass-p0-21",
+        "bass-p0-23",
+        "bass-p0-27",
+        "bass-p0-31",
+        "bass-p0-39",
+        "bass-p0-47",
+        "bass-p0-59",
+        "bass-p0-61",
+        "bass-p0-63",
+        "bass-p0-69",
+        "bass-p0-71",
+        "bass-p0-75",
+        "bass-p0-79",
+        "bass-p0-85",
+        "bass-p0-87",
+        "bass-p0-89",
+        "bass-p0-95",
+        "bass-p0-99",
+        "bass-p0-103",
+        "bass-p0-111",
+        "bass-p0-117",
+        "bass-p0-119",
+        "bass-p0-123"
+      ],
+      "evidence": {
+        "count": 26,
+        "ratio": 0.203125,
+        "key": "G major",
+        "pitches": [
+          "D#2",
+          "A#1",
+          "G#2",
+          "C#2",
+          "G#1"
+        ]
+      },
+      "message": "26 notes outside the declared G major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 20,
+      "toBeat": 117.35,
+      "bar": 6,
+      "sourceEventIds": [
+        "clarinet-p0-24",
+        "clarinet-p1-24",
+        "clarinet-p1-33",
+        "clarinet-p2-1",
+        "clarinet-p3-24"
+      ],
+      "evidence": {
+        "count": 5,
+        "ratio": 0.044642857142857144,
+        "key": "G major",
+        "pitches": [
+          "G#5",
+          "F5",
+          "D#5",
+          "G#4"
+        ]
+      },
+      "message": "5 notes outside the declared G major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "guitar"
+      ],
+      "fromBeat": 52,
+      "toBeat": 119.275,
+      "bar": 14,
+      "sourceEventIds": [
+        "guitar-p0-156",
+        "guitar-p0-159",
+        "guitar-p0-162",
+        "guitar-p0-165",
+        "guitar-p0-205",
+        "guitar-p0-208",
+        "guitar-p0-211",
+        "guitar-p0-214",
+        "guitar-p0-253",
+        "guitar-p0-256",
+        "guitar-p0-259",
+        "guitar-p0-262",
+        "guitar-p0-349",
+        "guitar-p0-352",
+        "guitar-p0-355",
+        "guitar-p0-358"
+      ],
+      "evidence": {
+        "count": 16,
+        "ratio": 0.041666666666666664,
+        "key": "G major",
+        "pitches": [
+          "F3",
+          "G#3"
+        ]
+      },
+      "message": "16 notes outside the declared G major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "vibes"
+      ],
+      "fromBeat": 68,
+      "toBeat": 91.9,
+      "bar": 18,
+      "sourceEventIds": [
+        "vibes-p0-6",
+        "vibes-p0-10",
+        "vibes-p0-27",
+        "vibes-p0-31",
+        "vibes-p0-35"
+      ],
+      "evidence": {
+        "count": 5,
+        "ratio": 0.05747126436781609,
+        "key": "G major",
+        "pitches": [
+          "G#5",
+          "C#6",
+          "C#5"
+        ]
+      },
+      "message": "5 notes outside the declared G major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "clarinet",
+        "vibes"
+      ],
+      "fromBeat": 3,
+      "toBeat": 101.35,
+      "bar": 1,
+      "sourceEventIds": [
+        "clarinet-p0-6",
+        "vibes-p1-3",
+        "clarinet-p1-6",
+        "vibes-p1-19",
+        "clarinet-p1-20",
+        "vibes-p1-25",
+        "clarinet-p1-32",
+        "vibes-p1-28",
+        "vibes-p1-30",
+        "clarinet-p3-6",
+        "vibes-p1-35"
+      ],
+      "evidence": {
+        "pairs": 6
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "vibes"
+      ],
+      "fromBeat": 120,
+      "toBeat": 128,
+      "bar": 31,
+      "sourceEventIds": [
+        "vibes-p1-47"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 5,
+        "lastPitch": "C5"
+      },
+      "message": "Melody goes quiet for the last 5.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 0,
+      "toBeat": 128,
+      "bar": 1,
+      "sourceEventIds": [
+        "clarinet-p0-0",
+        "clarinet-p0-1",
+        "clarinet-p0-2",
+        "clarinet-p0-3",
+        "clarinet-p0-4",
+        "clarinet-p0-5",
+        "clarinet-p0-6",
+        "clarinet-p0-7",
+        "clarinet-p0-8",
+        "clarinet-p0-9",
+        "clarinet-p0-10",
+        "clarinet-p0-11",
+        "clarinet-p0-12",
+        "clarinet-p0-13",
+        "clarinet-p0-14",
+        "clarinet-p0-15",
+        "clarinet-p0-16",
+        "clarinet-p0-17",
+        "clarinet-p0-18",
+        "clarinet-p0-19",
+        "clarinet-p0-20",
+        "clarinet-p0-21",
+        "clarinet-p0-22",
+        "clarinet-p0-23",
+        "clarinet-p0-24",
+        "clarinet-p0-25",
+        "clarinet-p0-26",
+        "clarinet-p0-27",
+        "clarinet-p0-28",
+        "clarinet-p0-29",
+        "clarinet-p0-30",
+        "clarinet-p0-31",
+        "clarinet-p0-32",
+        "clarinet-p0-33",
+        "clarinet-p0-34",
+        "clarinet-p0-35",
+        "clarinet-p1-0",
+        "clarinet-p1-1",
+        "clarinet-p1-2",
+        "clarinet-p1-3",
+        "clarinet-p1-4",
+        "clarinet-p1-5",
+        "clarinet-p1-6",
+        "clarinet-p1-7",
+        "clarinet-p1-8",
+        "clarinet-p1-9",
+        "clarinet-p1-10",
+        "clarinet-p1-11",
+        "clarinet-p1-12",
+        "clarinet-p1-13",
+        "clarinet-p1-14",
+        "clarinet-p1-15",
+        "clarinet-p1-16",
+        "clarinet-p1-17",
+        "clarinet-p1-18",
+        "clarinet-p1-19",
+        "clarinet-p1-20",
+        "clarinet-p1-21",
+        "clarinet-p1-22",
+        "clarinet-p1-23",
+        "clarinet-p1-24",
+        "clarinet-p1-25",
+        "clarinet-p1-26",
+        "clarinet-p1-27",
+        "clarinet-p1-28",
+        "clarinet-p1-29",
+        "clarinet-p1-30",
+        "clarinet-p1-31",
+        "clarinet-p1-32",
+        "clarinet-p1-33",
+        "clarinet-p1-34",
+        "clarinet-p1-35",
+        "clarinet-p2-0",
+        "clarinet-p2-1",
+        "clarinet-p2-2",
+        "clarinet-p2-3",
+        "clarinet-p3-0",
+        "clarinet-p3-1",
+        "clarinet-p3-2",
+        "clarinet-p3-3",
+        "clarinet-p3-4",
+        "clarinet-p3-5",
+        "clarinet-p3-6",
+        "clarinet-p3-7",
+        "clarinet-p3-8",
+        "clarinet-p3-9",
+        "clarinet-p3-10",
+        "clarinet-p3-11",
+        "clarinet-p3-12",
+        "clarinet-p3-13",
+        "clarinet-p3-14",
+        "clarinet-p3-15",
+        "clarinet-p3-16",
+        "clarinet-p3-17",
+        "clarinet-p3-18",
+        "clarinet-p3-19",
+        "clarinet-p3-20",
+        "clarinet-p3-21",
+        "clarinet-p3-22",
+        "clarinet-p3-23",
+        "clarinet-p3-24",
+        "clarinet-p3-25",
+        "clarinet-p3-26",
+        "clarinet-p3-27",
+        "clarinet-p3-28",
+        "clarinet-p3-29",
+        "clarinet-p3-30",
+        "clarinet-p3-31",
+        "clarinet-p3-32",
+        "clarinet-p3-33",
+        "clarinet-p3-34",
+        "clarinet-p3-35"
+      ],
+      "clipIds": [
+        "clarinet-cp0",
+        "clarinet-cp1",
+        "clarinet-cp2",
+        "clarinet-cp3"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 25
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "vibes"
+      ],
+      "fromBeat": 0,
+      "toBeat": 128,
+      "bar": 1,
+      "sourceEventIds": [
+        "vibes-p1-0",
+        "vibes-p1-1",
+        "vibes-p1-3",
+        "vibes-p1-2",
+        "vibes-p1-5",
+        "vibes-p1-4",
+        "vibes-p1-7",
+        "vibes-p1-6",
+        "vibes-p1-9",
+        "vibes-p1-8",
+        "vibes-p1-11",
+        "vibes-p1-10",
+        "vibes-p1-12",
+        "vibes-p1-13",
+        "vibes-p1-14",
+        "vibes-p1-15",
+        "vibes-p1-17",
+        "vibes-p1-16",
+        "vibes-p1-19",
+        "vibes-p1-18",
+        "vibes-p1-20",
+        "vibes-p1-21",
+        "vibes-p1-22",
+        "vibes-p1-23",
+        "vibes-p1-25",
+        "vibes-p1-24",
+        "vibes-p1-26",
+        "vibes-p1-27",
+        "vibes-p1-29",
+        "vibes-p1-28",
+        "vibes-p1-30",
+        "vibes-p1-31",
+        "vibes-p0-0",
+        "vibes-p0-1",
+        "vibes-p0-2",
+        "vibes-p0-3",
+        "vibes-p0-4",
+        "vibes-p0-5",
+        "vibes-p0-6",
+        "vibes-p0-7",
+        "vibes-p0-8",
+        "vibes-p0-9",
+        "vibes-p0-10",
+        "vibes-p0-11",
+        "vibes-p0-12",
+        "vibes-p0-13",
+        "vibes-p0-14",
+        "vibes-p0-15",
+        "vibes-p0-16",
+        "vibes-p0-17",
+        "vibes-p0-18",
+        "vibes-p0-19",
+        "vibes-p0-20",
+        "vibes-p0-21",
+        "vibes-p0-22",
+        "vibes-p0-23",
+        "vibes-p0-24",
+        "vibes-p0-25",
+        "vibes-p0-26",
+        "vibes-p0-27",
+        "vibes-p0-28",
+        "vibes-p0-29",
+        "vibes-p0-30",
+        "vibes-p0-31",
+        "vibes-p0-32",
+        "vibes-p0-33",
+        "vibes-p0-34",
+        "vibes-p0-35",
+        "vibes-p0-36",
+        "vibes-p0-37",
+        "vibes-p0-38",
+        "vibes-p1-32",
+        "vibes-p1-33",
+        "vibes-p1-35",
+        "vibes-p1-34",
+        "vibes-p1-36",
+        "vibes-p1-37",
+        "vibes-p1-38",
+        "vibes-p1-39",
+        "vibes-p1-40",
+        "vibes-p1-41",
+        "vibes-p1-42",
+        "vibes-p1-43",
+        "vibes-p1-45",
+        "vibes-p1-44",
+        "vibes-p1-46",
+        "vibes-p1-47"
+      ],
+      "clipIds": [
+        "vibes-cp1",
+        "vibes-cp0"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 20
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "bass",
+        "clarinet",
+        "drums",
+        "guitar",
+        "vibes"
+      ],
+      "fromBeat": 64,
+      "toBeat": 96,
+      "bar": 17,
+      "sourceEventIds": [
+        "drums-p0-156",
+        "drums-p0-165",
+        "vibes-p0-0",
+        "bass-p0-64",
+        "guitar-p0-194",
+        "vibes-p0-1",
+        "bass-p0-65",
+        "guitar-p0-196",
+        "guitar-p0-197",
+        "drums-p0-157",
+        "vibes-p0-2",
+        "guitar-p0-195",
+        "vibes-p0-3",
+        "drums-p0-158",
+        "guitar-p0-198",
+        "guitar-p0-200",
+        "bass-p0-66",
+        "drums-p0-163",
+        "guitar-p0-199",
+        "drums-p0-159",
+        "vibes-p0-4",
+        "guitar-p0-201",
+        "guitar-p0-202",
+        "vibes-p0-5",
+        "drums-p0-160",
+        "bass-p0-67",
+        "guitar-p0-203",
+        "drums-p0-164",
+        "drums-p0-161",
+        "drums-p0-166",
+        "bass-p0-68",
+        "drums-p0-172",
+        "guitar-p0-204",
+        "guitar-p0-205",
+        "guitar-p0-206",
+        "vibes-p0-6",
+        "vibes-p0-7",
+        "guitar-p0-209",
+        "guitar-p0-207",
+        "drums-p0-167",
+        "guitar-p0-208",
+        "bass-p0-69",
+        "vibes-p0-8",
+        "drums-p0-168",
+        "vibes-p0-9",
+        "guitar-p0-210",
+        "guitar-p0-211",
+        "guitar-p0-212",
+        "bass-p0-70",
+        "drums-p0-169",
+        "drums-p0-173",
+        "vibes-p0-10",
+        "bass-p0-71",
+        "drums-p0-170",
+        "guitar-p0-215",
+        "vibes-p0-11",
+        "guitar-p0-213",
+        "guitar-p0-214",
+        "drums-p0-171",
+        "drums-p0-174",
+        "vibes-p0-12",
+        "bass-p0-72",
+        "drums-p0-181",
+        "guitar-p0-218",
+        "guitar-p0-216",
+        "drums-p0-175",
+        "guitar-p0-217",
+        "vibes-p0-13",
+        "guitar-p0-220",
+        "drums-p0-176",
+        "bass-p0-73",
+        "guitar-p0-219",
+        "guitar-p0-221",
+        "vibes-p0-14",
+        "vibes-p0-15",
+        "drums-p0-177",
+        "guitar-p0-222",
+        "bass-p0-74",
+        "drums-p0-182",
+        "guitar-p0-223",
+        "drums-p0-178",
+        "guitar-p0-224",
+        "vibes-p0-16",
+        "bass-p0-75",
+        "guitar-p0-227",
+        "guitar-p0-226",
+        "vibes-p0-17",
+        "drums-p0-179",
+        "guitar-p0-225",
+        "drums-p0-180",
+        "drums-p0-183",
+        "guitar-p0-228",
+        "drums-p0-190",
+        "vibes-p0-18",
+        "bass-p0-76",
+        "drums-p0-184",
+        "guitar-p0-229",
+        "guitar-p0-230",
+        "bass-p0-77",
+        "drums-p0-185",
+        "guitar-p0-232",
+        "guitar-p0-231",
+        "guitar-p0-233",
+        "vibes-p0-19",
+        "drums-p0-186",
+        "guitar-p0-235",
+        "drums-p0-187",
+        "bass-p0-78",
+        "drums-p0-191",
+        "guitar-p0-234",
+        "guitar-p0-236",
+        "vibes-p0-20",
+        "drums-p0-192",
+        "guitar-p0-237",
+        "guitar-p0-239",
+        "bass-p0-79",
+        "drums-p0-188",
+        "guitar-p0-238",
+        "drums-p0-193",
+        "drums-p0-189",
+        "clarinet-p2-0",
+        "bass-p0-80",
+        "guitar-p0-241",
+        "guitar-p0-242",
+        "guitar-p0-240",
+        "drums-p0-194",
+        "vibes-p0-21",
+        "drums-p0-200"
+      ],
+      "clipIds": [
+        "drums-cp0",
+        "vibes-cp0",
+        "bass-cp0",
+        "guitar-cp0",
+        "clarinet-cp2"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-1",
+          "section-2"
+        ],
+        "densityRelativeDifference": 0.0311284046692607
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "bass",
+        "clarinet",
+        "drums",
+        "guitar",
+        "vibes"
+      ],
+      "fromBeat": 96,
+      "toBeat": 128,
+      "bar": 25,
+      "sourceEventIds": [
+        "drums-p0-235",
+        "clarinet-p3-0",
+        "guitar-p0-288",
+        "drums-p0-241",
+        "guitar-p0-290",
+        "clarinet-p3-1",
+        "clarinet-p3-2",
+        "bass-p0-97",
+        "guitar-p0-291",
+        "guitar-p0-293",
+        "drums-p0-236",
+        "guitar-p0-292",
+        "vibes-p1-32",
+        "vibes-p1-33",
+        "drums-p0-237",
+        "drums-p0-238",
+        "guitar-p0-296",
+        "drums-p0-242",
+        "bass-p0-98",
+        "clarinet-p3-3",
+        "guitar-p0-294",
+        "guitar-p0-295",
+        "clarinet-p3-4",
+        "vibes-p1-35",
+        "drums-p0-239",
+        "bass-p0-99",
+        "clarinet-p3-5",
+        "guitar-p0-298",
+        "guitar-p0-297",
+        "guitar-p0-299",
+        "vibes-p1-34",
+        "drums-p0-240",
+        "drums-p0-243",
+        "guitar-p0-301",
+        "drums-p0-244",
+        "drums-p0-250",
+        "guitar-p0-300",
+        "bass-p0-100",
+        "guitar-p0-302",
+        "clarinet-p3-6",
+        "guitar-p0-303",
+        "drums-p0-245",
+        "bass-p0-101",
+        "guitar-p0-304",
+        "guitar-p0-305",
+        "clarinet-p3-7",
+        "drums-p0-246",
+        "guitar-p0-306",
+        "drums-p0-247",
+        "guitar-p0-307",
+        "drums-p0-251",
+        "guitar-p0-308",
+        "bass-p0-102",
+        "clarinet-p3-8",
+        "bass-p0-103",
+        "guitar-p0-309",
+        "drums-p0-248",
+        "guitar-p0-310",
+        "guitar-p0-311",
+        "drums-p0-252",
+        "drums-p0-249",
+        "clarinet-p3-9",
+        "bass-p0-104",
+        "guitar-p0-312",
+        "guitar-p0-313",
+        "drums-p0-259",
+        "drums-p0-253",
+        "guitar-p0-314",
+        "clarinet-p3-10",
+        "guitar-p0-315",
+        "guitar-p0-317",
+        "bass-p0-105",
+        "drums-p0-254",
+        "guitar-p0-316",
+        "clarinet-p3-11",
+        "vibes-p1-36",
+        "drums-p0-255",
+        "vibes-p1-37",
+        "drums-p0-260",
+        "guitar-p0-318",
+        "guitar-p0-319",
+        "guitar-p0-320",
+        "bass-p0-106",
+        "drums-p0-256",
+        "clarinet-p3-12",
+        "clarinet-p3-13",
+        "guitar-p0-323",
+        "guitar-p0-321",
+        "bass-p0-107",
+        "vibes-p1-38",
+        "clarinet-p3-14",
+        "vibes-p1-39",
+        "guitar-p0-322",
+        "drums-p0-257",
+        "drums-p0-261",
+        "drums-p0-258",
+        "clarinet-p3-15",
+        "guitar-p0-324",
+        "bass-p0-108",
+        "drums-p0-262",
+        "drums-p0-268",
+        "guitar-p0-326",
+        "guitar-p0-325",
+        "bass-p0-109",
+        "guitar-p0-327",
+        "guitar-p0-329",
+        "drums-p0-263",
+        "guitar-p0-328",
+        "drums-p0-264",
+        "clarinet-p3-16",
+        "drums-p0-265",
+        "guitar-p0-331",
+        "guitar-p0-332",
+        "bass-p0-110",
+        "guitar-p0-330",
+        "clarinet-p3-17",
+        "drums-p0-269",
+        "drums-p0-270",
+        "guitar-p0-333",
+        "drums-p0-266",
+        "guitar-p0-335",
+        "bass-p0-111",
+        "guitar-p0-334",
+        "drums-p0-267",
+        "drums-p0-271",
+        "clarinet-p3-18",
+        "guitar-p0-336",
+        "drums-p0-278"
+      ],
+      "clipIds": [
+        "drums-cp0",
+        "clarinet-cp3",
+        "guitar-cp0",
+        "bass-cp0",
+        "vibes-cp1"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-2",
+          "section-3"
+        ],
+        "densityRelativeDifference": 0.02734375
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "clarinet",
+        "role": "melody",
+        "instrument": "orch-clarinet",
+        "eventCount": 112,
+        "notesPerBeat": 0.875,
+        "medianMidi": 74
+      },
+      {
+        "trackId": "vibes",
+        "role": "melody",
+        "instrument": "orch-vibraphone",
+        "eventCount": 87,
+        "notesPerBeat": 0.6796875,
+        "medianMidi": 74
+      },
+      {
+        "trackId": "guitar",
+        "role": "harmony",
+        "instrument": "band-guitar-short",
+        "eventCount": 384,
+        "notesPerBeat": 3,
+        "medianMidi": 56.5
+      },
+      {
+        "trackId": "bass",
+        "role": "bass",
+        "instrument": "band-bass",
+        "eventCount": 128,
+        "notesPerBeat": 1,
+        "medianMidi": 38
+      },
+      {
+        "trackId": "drums",
+        "role": "drums",
+        "instrument": "drums-acoustic",
+        "eventCount": 313,
+        "notesPerBeat": 2.4453125,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Doors open",
+        "fromBeat": 0,
+        "toBeat": 32,
+        "eventsPerBeat": 8.1875,
+        "activeTrackIds": [
+          "bass",
+          "clarinet",
+          "drums",
+          "guitar",
+          "vibes"
+        ],
+        "medianMidi": 60
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Regulars",
+        "fromBeat": 32,
+        "toBeat": 64,
+        "eventsPerBeat": 8.03125,
+        "activeTrackIds": [
+          "bass",
+          "clarinet",
+          "drums",
+          "guitar",
+          "vibes"
+        ],
+        "medianMidi": 57
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Vibes chorus",
+        "fromBeat": 64,
+        "toBeat": 96,
+        "eventsPerBeat": 7.78125,
+        "activeTrackIds": [
+          "bass",
+          "clarinet",
+          "drums",
+          "guitar",
+          "vibes"
+        ],
+        "medianMidi": 57
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Last round",
+        "fromBeat": 96,
+        "toBeat": 128,
+        "eventsPerBeat": 8,
+        "activeTrackIds": [
+          "bass",
+          "clarinet",
+          "drums",
+          "guitar",
+          "vibes"
+        ],
+        "medianMidi": 57
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "G major",
+    "chordCount": 32
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}
