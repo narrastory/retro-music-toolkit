@@ -6,6 +6,8 @@ import { patchScore } from "../src/patch.js";
 import { encodeWav, decodeWav } from "../src/wav.js";
 import { analyzeChannels } from "../src/analysis.js";
 import { fixture } from "./helpers.js";
+import { bakeLoopCrossfade } from "../src/dsp.js";
+import { findSustainLoop } from "../src/loop.js";
 test("pitch, flats and tick accuracy", () => {
   assert.equal(midi("A4"), 69);
   assert.equal(midi("Bb3"), 58);
@@ -183,4 +185,74 @@ test("audio analysis detects silence, invalid values and overrange", () => {
   const b = analyzeChannels([new Float32Array([1.2, NaN, -0.2])], 48000);
   assert.equal(b.clippedSamples, 1);
   assert.equal(b.nonFiniteSamples, 1);
+});
+
+test("subtractive settings are limited to the subtractive engine and default sensibly", () => {
+  const s: any = fixture();
+  s.schemaVersion = "1.3";
+  s.instrumentDefinitions = [
+    {
+      id: "wrong-engine",
+      engine: "pulse",
+      role: "melody",
+      range: [48, 84],
+      attack: 0.01,
+      release: 0.1,
+      description: "Pulse with stray filter settings",
+      subtractive: { oscillator: "sawtooth" },
+    },
+  ];
+  s.tracks[0].instrument = "wrong-engine";
+  assert.throws(
+    () => compileScore(s),
+    (e: any) =>
+      e.diagnostics.some((d: any) => d.code === "SUBTRACTIVE_DEFINITION"),
+  );
+  s.instrumentDefinitions[0].engine = "subtractive";
+  const p = compileScore(s).score.instrumentDefinitions![0]!;
+  assert.equal(p.subtractive!.unison.voices, 1);
+  assert.equal(p.subtractive!.filter.type, "lowpass");
+  assert.equal(p.subtractive!.lfo, undefined);
+});
+
+test("baked loop crossfade makes the end-to-start jump continuous", () => {
+  // A ramp has a large jump from loop end back to loop start.
+  const ramp = Float32Array.from({ length: 1000 }, (_, i) => i / 1000);
+  const [out] = bakeLoopCrossfade([ramp], 400, 900, 100);
+  const jump = (x: Float32Array) => Math.abs(x[400]! - x[899]!);
+  assert.ok(jump(ramp) > 0.4);
+  assert.ok(jump(out!) < 0.002, `${jump(out!)}`);
+  // Outside the fade region the data is untouched; the input is not mutated.
+  assert.equal(out![700], ramp[700]);
+  assert.ok(Math.abs(ramp[899]! - 0.899) < 1e-6);
+  // Clamped to the material available before the loop start.
+  const [short] = bakeLoopCrossfade([ramp], 10, 900, 100);
+  assert.equal(short![880], ramp[880]);
+});
+
+test("sustain loop finder lands on whole periods with in-phase fade regions", () => {
+  const sr = 32000,
+    f = 440 * 2 ** ((57 - 69) / 12);
+  // Harmonic tone with slow amplitude drift, like a held instrument note.
+  const x = Float32Array.from({ length: sr * 2.5 }, (_, i) => {
+    const t = i / sr;
+    return (
+      (Math.sin(2 * Math.PI * f * t) + 0.4 * Math.sin(4 * Math.PI * f * t)) *
+      (0.8 + 0.05 * Math.sin(2 * Math.PI * 0.7 * t))
+    );
+  });
+  const loop = findSustainLoop(x, sr, 57, {
+    endMarginSeconds: 0.1,
+    loopSeconds: 1.2,
+    crossfadeSeconds: 0.25,
+  });
+  assert.ok(loop.correlation > 0.99, `${loop.correlation}`);
+  const cycles = (loop.end - loop.start) / (sr / f);
+  assert.ok(Math.abs(cycles - Math.round(cycles)) < 0.05, `${cycles}`);
+  assert.equal(loop.crossfade, 8000);
+  // After baking, the jump from loop end back to loop start is seamless.
+  const [baked] = bakeLoopCrossfade([x], loop.start, loop.end, loop.crossfade);
+  const step = Math.abs(baked![loop.start]! - baked![loop.end - 1]!);
+  const typical = Math.abs(x[loop.start]! - x[loop.start - 1]!);
+  assert.ok(step < typical * 1.5 + 1e-3, `${step} vs ${typical}`);
 });

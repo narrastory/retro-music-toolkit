@@ -1,0 +1,42 @@
+{
+  "id": "analog-pad",
+  "engine": "subtractive",
+  "role": "harmony",
+  "range": [
+    36,
+    84
+  ],
+  "attack": 0.35,
+  "release": 1.2,
+  "description": "Warm detuned saw pad: five-voice unison, slow filter swell and gentle filter drift. For held chords under modern-retro cues.",
+  "synthesis": {
+    "sustain": 0.85,
+    "decaySeconds": 0.8,
+    "volumeDb": -14
+  },
+  "subtractive": {
+    "oscillator": "sawtooth",
+    "unison": {
+      "voices": 5,
+      "detuneCents": 18
+    },
+    "filter": {
+      "type": "lowpass",
+      "cutoffHz": 700,
+      "resonance": 0.8,
+      "rolloff": -24,
+      "envelopeOctaves": 1.6,
+      "attack": 0.6,
+      "decay": 1.4,
+      "sustain": 0.45,
+      "release": 1.2
+    },
+    "lfo": {
+      "rateHz": 0.25,
+      "pitchCents": 0,
+      "filterOctaves": 0.35,
+      "amplitude": 0
+    }
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

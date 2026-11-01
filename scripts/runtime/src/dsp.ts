@@ -138,3 +138,36 @@ export function peakOf(channels: Float32Array[]) {
     for (const x of c) peak = Math.max(peak, Math.abs(x));
   return peak;
 }
+
+/**
+ * Bake a loop crossfade into sample data. The last `frames` frames before
+ * `end` are faded linearly into the frames just before `start`, so when
+ * playback jumps from end back to start the waveform continues where the
+ * approach to the loop start left off. Linear (equal-gain) suits the
+ * period-aligned loops of tonal sustains, whose two regions are correlated;
+ * "equal-power" suits uncorrelated regions such as chorused ensembles.
+ * The fade is clamped to the material available before the loop start.
+ */
+export function bakeLoopCrossfade(
+  channels: Float32Array[],
+  start: number,
+  end: number,
+  frames: number,
+  shape: "linear" | "equal-power" = "linear",
+): Float32Array[] {
+  const n = Math.min(frames, start, Math.floor((end - start) / 2));
+  if (n <= 0) return channels;
+  return channels.map((channel) => {
+    const out = Float32Array.from(channel);
+    for (let i = 0; i < n; i++) {
+      const t = (i + 1) / n;
+      const [fadeOut, fadeIn] =
+        shape === "equal-power"
+          ? [Math.cos((t * Math.PI) / 2), Math.sin((t * Math.PI) / 2)]
+          : [1 - t, t];
+      out[end - n + i] =
+        channel[end - n + i]! * fadeOut + channel[start - n + i]! * fadeIn;
+    }
+    return out;
+  });
+}

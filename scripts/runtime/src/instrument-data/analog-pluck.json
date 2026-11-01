@@ -1,0 +1,36 @@
+{
+  "id": "analog-pluck",
+  "engine": "subtractive",
+  "role": "arp",
+  "range": [
+    48,
+    96
+  ],
+  "attack": 0.002,
+  "release": 0.25,
+  "description": "Short detuned saw pluck: the filter snaps shut within a quarter second. For arpeggios and glassy ostinatos.",
+  "synthesis": {
+    "sustain": 0,
+    "decaySeconds": 0.4,
+    "volumeDb": -12
+  },
+  "subtractive": {
+    "oscillator": "sawtooth",
+    "unison": {
+      "voices": 2,
+      "detuneCents": 7
+    },
+    "filter": {
+      "type": "lowpass",
+      "cutoffHz": 500,
+      "resonance": 2.5,
+      "rolloff": -24,
+      "envelopeOctaves": 3.5,
+      "attack": 0.001,
+      "decay": 0.22,
+      "sustain": 0,
+      "release": 0.2
+    }
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

@@ -1,0 +1,2677 @@
+{
+  "id": "orchestra",
+  "name": "Orchestra & Mallets — VSCO 2 CE and VCSL selection",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "source": "https://github.com/sgossner/VSCO-2-CE",
+  "instruments": [
+    {
+      "instrument": {
+        "id": "orch-strings",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          36,
+          88
+        ],
+        "attack": 0.12,
+        "release": 0.4,
+        "description": "String ensemble: Legato string section with vibrato: cello section below G3, violas to F4, violins above. Looped sustain for pads and long lines.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-strings-36-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 38,
+              "rootMidi": 36,
+              "tuningCents": 1,
+              "loopStartFrame": 41390,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-strings-40-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 39,
+              "highMidi": 41,
+              "rootMidi": 40,
+              "tuningCents": -7,
+              "loopStartFrame": 41175,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-43-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 42,
+              "highMidi": 45,
+              "rootMidi": 43,
+              "tuningCents": 1,
+              "loopStartFrame": 42137,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-47-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 46,
+              "highMidi": 48,
+              "rootMidi": 47,
+              "tuningCents": 0,
+              "loopStartFrame": 43186,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-strings-50-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 49,
+              "highMidi": 51,
+              "rootMidi": 50,
+              "tuningCents": -2,
+              "loopStartFrame": 40939,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-53-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 55,
+              "rootMidi": 53,
+              "tuningCents": -2,
+              "loopStartFrame": 47150,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-57-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 56,
+              "highMidi": 59,
+              "rootMidi": 57,
+              "tuningCents": -1,
+              "loopStartFrame": 44646,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-62-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 60,
+              "highMidi": 63,
+              "rootMidi": 62,
+              "tuningCents": -3,
+              "loopStartFrame": 47300,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-65-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 64,
+              "highMidi": 67,
+              "rootMidi": 65,
+              "tuningCents": 0,
+              "loopStartFrame": 42891,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-69-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 68,
+              "highMidi": 70,
+              "rootMidi": 69,
+              "tuningCents": 5,
+              "loopStartFrame": 46930,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-72-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": 1,
+              "loopStartFrame": 47157,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-strings-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 77,
+              "rootMidi": 76,
+              "tuningCents": 1,
+              "loopStartFrame": 41968,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-79-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 78,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": 6,
+              "loopStartFrame": 41522,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-strings-83-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 83,
+              "tuningCents": 1,
+              "loopStartFrame": 41455,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-strings-86-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 85,
+              "highMidi": 88,
+              "rootMidi": 86,
+              "tuningCents": 3,
+              "loopStartFrame": 45041,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-strings-36-all-1",
+          "file": "samples/orch-strings-36-all-1.wav",
+          "sha256": "ff0630b50dd1e5f54b2e301ae528759d6aa9796db6f5e916cb290109681aef56",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_C1_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-40-all-1",
+          "file": "samples/orch-strings-40-all-1.wav",
+          "sha256": "f4d82dba4950e0d04ceb86ac090fbad47ea9c03d99fb809d0f3cbdbf2b0a9251",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_E1_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-43-all-1",
+          "file": "samples/orch-strings-43-all-1.wav",
+          "sha256": "b591e71c0da22fb4c9318be8fbf8c55b416fbe6cce5b2e738d6ad07a95e976d5",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_G1_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-47-all-1",
+          "file": "samples/orch-strings-47-all-1.wav",
+          "sha256": "9ae7ad4350d300a0b334ee28fa1454bc3e75d2903da18e1ba27a4ca687c53e7a",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_B1_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-50-all-1",
+          "file": "samples/orch-strings-50-all-1.wav",
+          "sha256": "6fcc79cbfe76139733c1e100fcac1e1a3e0e6d6bc62f58b2b97e293fc49c2344",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_D2_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-53-all-1",
+          "file": "samples/orch-strings-53-all-1.wav",
+          "sha256": "06bf3a660d5c12db55f8f433c544fbcbad88f369dce822b7c5e7ccde13058c59",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_F2_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-57-all-1",
+          "file": "samples/orch-strings-57-all-1.wav",
+          "sha256": "3098ffe50fb0d125422ca7b0ac9a0766c28cbe71f475ebb5d122d2a8d372f2e9",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/susvib/susvib_A2_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-62-all-1",
+          "file": "samples/orch-strings-62-all-1.wav",
+          "sha256": "679312d6f6de82d6e4f04695a73e5104bfaa31fb2fb3f752f979b1d4b316ddf2",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Viola Section/susvib/ViolaEns_susvib_D3_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-65-all-1",
+          "file": "samples/orch-strings-65-all-1.wav",
+          "sha256": "c558f025c50863508b947d8e7435b4e477bc94e3cfa84b6f3e375fd1d58cd59d",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Viola Section/susvib/ViolaEns_susvib_F3_v1_1.wav"
+        },
+        {
+          "id": "orch-strings-69-all-1",
+          "file": "samples/orch-strings-69-all-1.wav",
+          "sha256": "654e84f6b596a5d4ae630b2cbcd92f544ce4f97c15b25073efd5f008719273ce",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_A3_v1.wav"
+        },
+        {
+          "id": "orch-strings-72-all-1",
+          "file": "samples/orch-strings-72-all-1.wav",
+          "sha256": "6d1c50bf3143ccbd6e450e0a48f2ed43c83f44e8b84a46402147a963a86d6366",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_C4_v1.wav"
+        },
+        {
+          "id": "orch-strings-76-all-1",
+          "file": "samples/orch-strings-76-all-1.wav",
+          "sha256": "829b8c16c58fced5b8b4700ceff380f21ab13adbec3b04ef77623d1aee678615",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_E4_v1.wav"
+        },
+        {
+          "id": "orch-strings-79-all-1",
+          "file": "samples/orch-strings-79-all-1.wav",
+          "sha256": "7410a52c16c7041a9aba998c5e8cf158b8c5ac5193944883657c69d5a878c387",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_G4_v1.wav"
+        },
+        {
+          "id": "orch-strings-83-all-1",
+          "file": "samples/orch-strings-83-all-1.wav",
+          "sha256": "d8f17278921a582878906139f4c80b1ce385a60a504418eca0d5a14fb434f5b4",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_B4_v1.wav"
+        },
+        {
+          "id": "orch-strings-86-all-1",
+          "file": "samples/orch-strings-86-all-1.wav",
+          "sha256": "4b99945a4652f309175d980e288f2f0e0bf192df73d0ce1b087f34a3372b2ffd",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/susVib/VlnEns_susVib_D5_v1.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-pizzicato",
+        "engine": "sample",
+        "role": "arp",
+        "range": [
+          36,
+          88
+        ],
+        "attack": 0.001,
+        "release": 0.15,
+        "description": "String pizzicato: Plucked string section, cello below G3 and violins above, two round robins for ostinatos.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-pizzicato-36-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 38,
+              "rootMidi": 36,
+              "tuningCents": 2
+            },
+            {
+              "assetId": "orch-pizzicato-36-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 36,
+              "highMidi": 38,
+              "rootMidi": 36,
+              "tuningCents": 2
+            },
+            {
+              "assetId": "orch-pizzicato-40-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 39,
+              "highMidi": 41,
+              "rootMidi": 40,
+              "tuningCents": -7
+            },
+            {
+              "assetId": "orch-pizzicato-40-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 39,
+              "highMidi": 41,
+              "rootMidi": 40,
+              "tuningCents": -7
+            },
+            {
+              "assetId": "orch-pizzicato-43-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 42,
+              "highMidi": 45,
+              "rootMidi": 43,
+              "tuningCents": 4
+            },
+            {
+              "assetId": "orch-pizzicato-43-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 42,
+              "highMidi": 45,
+              "rootMidi": 43,
+              "tuningCents": 4
+            },
+            {
+              "assetId": "orch-pizzicato-47-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 46,
+              "highMidi": 48,
+              "rootMidi": 47,
+              "tuningCents": -12
+            },
+            {
+              "assetId": "orch-pizzicato-47-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 46,
+              "highMidi": 48,
+              "rootMidi": 47,
+              "tuningCents": -12
+            },
+            {
+              "assetId": "orch-pizzicato-50-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 49,
+              "highMidi": 51,
+              "rootMidi": 50,
+              "tuningCents": 6
+            },
+            {
+              "assetId": "orch-pizzicato-50-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 49,
+              "highMidi": 51,
+              "rootMidi": 50,
+              "tuningCents": 6
+            },
+            {
+              "assetId": "orch-pizzicato-53-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 54,
+              "rootMidi": 53,
+              "tuningCents": 12
+            },
+            {
+              "assetId": "orch-pizzicato-53-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 52,
+              "highMidi": 54,
+              "rootMidi": 53,
+              "tuningCents": 12
+            },
+            {
+              "assetId": "orch-pizzicato-55-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 55,
+              "highMidi": 57,
+              "rootMidi": 55,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-pizzicato-55-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 55,
+              "highMidi": 57,
+              "rootMidi": 55,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-pizzicato-59-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 58,
+              "highMidi": 60,
+              "rootMidi": 59,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-pizzicato-59-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 58,
+              "highMidi": 60,
+              "rootMidi": 59,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-pizzicato-62-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 61,
+              "highMidi": 64,
+              "rootMidi": 62,
+              "tuningCents": -12
+            },
+            {
+              "assetId": "orch-pizzicato-62-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 61,
+              "highMidi": 64,
+              "rootMidi": 62,
+              "tuningCents": -12
+            },
+            {
+              "assetId": "orch-pizzicato-66-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 65,
+              "highMidi": 67,
+              "rootMidi": 66,
+              "tuningCents": -5
+            },
+            {
+              "assetId": "orch-pizzicato-66-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 65,
+              "highMidi": 67,
+              "rootMidi": 66,
+              "tuningCents": -5
+            },
+            {
+              "assetId": "orch-pizzicato-69-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 68,
+              "highMidi": 70,
+              "rootMidi": 69,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-pizzicato-69-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 68,
+              "highMidi": 70,
+              "rootMidi": 69,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-pizzicato-72-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": 6
+            },
+            {
+              "assetId": "orch-pizzicato-72-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": 6
+            },
+            {
+              "assetId": "orch-pizzicato-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 77,
+              "rootMidi": 76,
+              "tuningCents": -7
+            },
+            {
+              "assetId": "orch-pizzicato-76-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 75,
+              "highMidi": 77,
+              "rootMidi": 76,
+              "tuningCents": -7
+            },
+            {
+              "assetId": "orch-pizzicato-79-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 78,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": 13
+            },
+            {
+              "assetId": "orch-pizzicato-79-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 78,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": 13
+            },
+            {
+              "assetId": "orch-pizzicato-83-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 83,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-pizzicato-83-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 83,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-pizzicato-86-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 85,
+              "highMidi": 88,
+              "rootMidi": 86,
+              "tuningCents": 9
+            },
+            {
+              "assetId": "orch-pizzicato-86-all-2",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 2,
+              "lowMidi": 85,
+              "highMidi": 88,
+              "rootMidi": 86,
+              "tuningCents": 9
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-pizzicato-36-all-1",
+          "file": "samples/orch-pizzicato-36-all-1.wav",
+          "sha256": "9409c2a4536b1825ff3ea6e6ad19015f9ffbce4daeff3071c9502c51751f8514",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_C1_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-36-all-2",
+          "file": "samples/orch-pizzicato-36-all-2.wav",
+          "sha256": "5661a658fb8acce0bde307b49404a64fb3cc85b50b1f7930e84f976e41b130c8",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_C1_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-40-all-1",
+          "file": "samples/orch-pizzicato-40-all-1.wav",
+          "sha256": "7abd1a850595310881f305a446115afea3677d736a48cd6604ca3f791edeab06",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_E1_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-40-all-2",
+          "file": "samples/orch-pizzicato-40-all-2.wav",
+          "sha256": "ef01f113fd53a46cb22f378bf247bc4f6f71d90cb020b0c0c4f06f53e484f00e",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_E1_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-43-all-1",
+          "file": "samples/orch-pizzicato-43-all-1.wav",
+          "sha256": "812bce0bfbb4ef4cac8abb8991552eff8d0e53967151bc56d4eaaf9952a4781e",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_G1_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-43-all-2",
+          "file": "samples/orch-pizzicato-43-all-2.wav",
+          "sha256": "c1200f37d938ca6dd355ce98cef655bb643923d900b319b5b5346c987dfe5050",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_G1_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-47-all-1",
+          "file": "samples/orch-pizzicato-47-all-1.wav",
+          "sha256": "9c5d9c572ff62fd457b2725a35c7c41c2357d2cca4153bde0e0862576cc5ff5d",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_B1_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-47-all-2",
+          "file": "samples/orch-pizzicato-47-all-2.wav",
+          "sha256": "2d048400aab72a18287f1cd20c2bb1a12eb797173d47c9cf18e6265c1ba463de",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_B1_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-50-all-1",
+          "file": "samples/orch-pizzicato-50-all-1.wav",
+          "sha256": "d5a7f58c8f8809cecfe3987e45d8c8630e0c3ecd6e66a353af447601c1471526",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_D2_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-50-all-2",
+          "file": "samples/orch-pizzicato-50-all-2.wav",
+          "sha256": "6be9d93b1a56dfc113f54e6263127010580e7adbf3eac90a29f731f205f3a7bb",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_D2_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-53-all-1",
+          "file": "samples/orch-pizzicato-53-all-1.wav",
+          "sha256": "6677d4d6aac6aa8047d7bde3417108eb5131ce467d5ab3f2ad56b570f499b661",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_F2_v2_RR1.wav"
+        },
+        {
+          "id": "orch-pizzicato-53-all-2",
+          "file": "samples/orch-pizzicato-53-all-2.wav",
+          "sha256": "4987fc32f7aa82781c970be4fb00f8fb8b8d406ef0a63b4055b58275f282ec81",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Cello Section/pizzT/pizzT_F2_v2_RR2.wav"
+        },
+        {
+          "id": "orch-pizzicato-55-all-1",
+          "file": "samples/orch-pizzicato-55-all-1.wav",
+          "sha256": "bb13c36e8130803739fdf0e444f6c5f5de218b178c2a16e3fbf81d6bf0152ef3",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_G2_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-55-all-2",
+          "file": "samples/orch-pizzicato-55-all-2.wav",
+          "sha256": "e94047cbf4fc659babeca9a0b9de99ee83fd6a7479e5b17b32faaf629138d706",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_G2_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-59-all-1",
+          "file": "samples/orch-pizzicato-59-all-1.wav",
+          "sha256": "1e942625e778872ca6abf15ab63dd3b30e6731bf0dffc3309c506ef01c07a73c",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_B2_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-59-all-2",
+          "file": "samples/orch-pizzicato-59-all-2.wav",
+          "sha256": "c964c67c81004a6ceaa8af1e1c13ee58185d52fb597cb4da6a4aed57e46dde22",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_B2_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-62-all-1",
+          "file": "samples/orch-pizzicato-62-all-1.wav",
+          "sha256": "fddc1edfdae92cfb2ed521f1ae73e74acd0d9a27a01451a3cfefb89aea88d379",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_D3_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-62-all-2",
+          "file": "samples/orch-pizzicato-62-all-2.wav",
+          "sha256": "1113545681dd449586201641c7f3d76829793e3069fabd018ad51e41e8b21c27",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_D3_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-66-all-1",
+          "file": "samples/orch-pizzicato-66-all-1.wav",
+          "sha256": "cac5b524a74f962cbdb33943410ec62cd20ed6650b8fba9a1e9e24c192ea8e9b",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_F#3_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-66-all-2",
+          "file": "samples/orch-pizzicato-66-all-2.wav",
+          "sha256": "a4e01af5b06ef3301a81182b7bd40ad5053875895f63564878a3c2e5cbf3bc56",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_F#3_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-69-all-1",
+          "file": "samples/orch-pizzicato-69-all-1.wav",
+          "sha256": "883706eba7a4a027745d59b088a37eef8929b586e7838a5f71fa5a1cc13d8589",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_A3_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-69-all-2",
+          "file": "samples/orch-pizzicato-69-all-2.wav",
+          "sha256": "47e3a4d1c448ee57ac8b4f5acfab64ba095d7b12e331961115589ad6fd402db5",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_A3_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-72-all-1",
+          "file": "samples/orch-pizzicato-72-all-1.wav",
+          "sha256": "658bc9fee82f90588281f41f6f9530880a48090bcc36e4dd811706ee5661b4c6",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_C4_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-72-all-2",
+          "file": "samples/orch-pizzicato-72-all-2.wav",
+          "sha256": "7f4fd07e0ebf0ccb61d52b192e991ea26a503b9531af3b16c1edbbed4632b6cc",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_C4_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-76-all-1",
+          "file": "samples/orch-pizzicato-76-all-1.wav",
+          "sha256": "84da68141a2544b4e9350699f36206b2128650c04696302a1a06131c7605e515",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_E4_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-76-all-2",
+          "file": "samples/orch-pizzicato-76-all-2.wav",
+          "sha256": "1d15a03e8eae27e7aa016a18afe256c80b7893f837224d236fc7a3360ed437b4",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_E4_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-79-all-1",
+          "file": "samples/orch-pizzicato-79-all-1.wav",
+          "sha256": "1b63a7cb277ca86df9e0c388b7599f5a0c442df60893b418794cecc29f4520a1",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_G4_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-79-all-2",
+          "file": "samples/orch-pizzicato-79-all-2.wav",
+          "sha256": "57158fd309d0021b84c21b5d4a9549ff15b95919a3496afb8791c5df92928909",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_G4_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-83-all-1",
+          "file": "samples/orch-pizzicato-83-all-1.wav",
+          "sha256": "e00a9285de04140db3b6ea28767c8f7a501314155084003741bd8c3e03a88402",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_B4_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-83-all-2",
+          "file": "samples/orch-pizzicato-83-all-2.wav",
+          "sha256": "6df0d52de7a3ce7635af56f84219acaef4fa18487ef9af5de2a3122d87fd48b3",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_B4_v2_rr2.wav"
+        },
+        {
+          "id": "orch-pizzicato-86-all-1",
+          "file": "samples/orch-pizzicato-86-all-1.wav",
+          "sha256": "0fbf2b627c814c8d2c56da1ea1e28955d108a81ed286f796fec3cd7e6cb8ab21",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_D5_v2_rr1.wav"
+        },
+        {
+          "id": "orch-pizzicato-86-all-2",
+          "file": "samples/orch-pizzicato-86-all-2.wav",
+          "sha256": "d1656ded41d808867b2c0599afe58db4c116bb017db43305030eb1f490113f3f",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Violin Section/Pizz/VlnEns_Pizz_D5_v2_rr2.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-flute",
+        "engine": "sample",
+        "role": "melody",
+        "range": [
+          60,
+          96
+        ],
+        "attack": 0.04,
+        "release": 0.2,
+        "description": "Flute: Concert flute without vibrato; looped sustain, C4–C7.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-flute-60-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 60,
+              "highMidi": 62,
+              "rootMidi": 60,
+              "tuningCents": -3,
+              "loopStartFrame": 46156,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-64-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 63,
+              "highMidi": 66,
+              "rootMidi": 64,
+              "tuningCents": 0,
+              "loopStartFrame": 47229,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-69-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 67,
+              "highMidi": 70,
+              "rootMidi": 69,
+              "tuningCents": 0,
+              "loopStartFrame": 45978,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-72-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": 0,
+              "loopStartFrame": 43625,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 78,
+              "rootMidi": 76,
+              "tuningCents": 0,
+              "loopStartFrame": 46113,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-81-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 79,
+              "highMidi": 82,
+              "rootMidi": 81,
+              "tuningCents": 0,
+              "loopStartFrame": 40960,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-84-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 83,
+              "highMidi": 86,
+              "rootMidi": 84,
+              "tuningCents": 0,
+              "loopStartFrame": 41239,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-88-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 87,
+              "highMidi": 90,
+              "rootMidi": 88,
+              "tuningCents": 0,
+              "loopStartFrame": 46016,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-93-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 91,
+              "highMidi": 94,
+              "rootMidi": 93,
+              "tuningCents": 0,
+              "loopStartFrame": 43741,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-flute-96-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 95,
+              "highMidi": 96,
+              "rootMidi": 96,
+              "tuningCents": 0,
+              "loopStartFrame": 43288,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-flute-60-all-1",
+          "file": "samples/orch-flute-60-all-1.wav",
+          "sha256": "ea43ba7a624cc7ac2d01f2d65de86eee33df615b9926e5a9b5ddd50d5f11d810",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_C3_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-64-all-1",
+          "file": "samples/orch-flute-64-all-1.wav",
+          "sha256": "733fac8803d5313b8e39e294d1f87342d422b37184a1e0e0718e1eeffcae3fcc",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_E3_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-69-all-1",
+          "file": "samples/orch-flute-69-all-1.wav",
+          "sha256": "3b76934048ca810d839baaa96ccd86c9cfce351d387357ec7e7b31ad233e53ed",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_A3_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-72-all-1",
+          "file": "samples/orch-flute-72-all-1.wav",
+          "sha256": "658842f750cdcd78a1a3de14ae2f0fbd8e2f8bd7acc06c1fe599383fbd882940",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_C4_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-76-all-1",
+          "file": "samples/orch-flute-76-all-1.wav",
+          "sha256": "9ea34cbef8d83629906be6dedcebe2b8d72c852de12b12000f0c3bef215f38f2",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_E4_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-81-all-1",
+          "file": "samples/orch-flute-81-all-1.wav",
+          "sha256": "8fbdacfea4646ed00b93edb12ee9b4676be9851b50713b53b5d1426ebaf93c44",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_A4_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-84-all-1",
+          "file": "samples/orch-flute-84-all-1.wav",
+          "sha256": "c094ca7adf00b01f16ec03f780ddf8b095759fe7ea31e83732f37139c2be58da",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_C5_v2_1.wav"
+        },
+        {
+          "id": "orch-flute-88-all-1",
+          "file": "samples/orch-flute-88-all-1.wav",
+          "sha256": "ca1a840542c97887bc996ed07a3ef7647a1ab284b1f5cbe2c2d1844e6bc1609a",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_E5_v2_1.wav"
+        },
+        {
+          "id": "orch-flute-93-all-1",
+          "file": "samples/orch-flute-93-all-1.wav",
+          "sha256": "310def0fcf71304c8b98254d8049394432c93ef98ea064b47e34f8b9b7dc0aec",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_A5_v3_1.wav"
+        },
+        {
+          "id": "orch-flute-96-all-1",
+          "file": "samples/orch-flute-96-all-1.wav",
+          "sha256": "9588e1c11b2d9cf7d2730eaf4a6473b5f27ad2b751886be92bb13737207cd1d9",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Flute/susNV/LDFlute_susNV_C6_v1_1.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-clarinet",
+        "engine": "sample",
+        "role": "melody",
+        "range": [
+          50,
+          91
+        ],
+        "attack": 0.03,
+        "release": 0.18,
+        "description": "Clarinet: Clarinet in B♭ (sounding pitch), looped sustain, D3–G6.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-clarinet-50-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 50,
+              "highMidi": 51,
+              "rootMidi": 50,
+              "tuningCents": 1,
+              "loopStartFrame": 46960,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-53-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 55,
+              "rootMidi": 53,
+              "tuningCents": 0,
+              "loopStartFrame": 47206,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-58-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 56,
+              "highMidi": 60,
+              "rootMidi": 58,
+              "tuningCents": 1,
+              "loopStartFrame": 47347,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-62-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 61,
+              "highMidi": 63,
+              "rootMidi": 62,
+              "tuningCents": 0,
+              "loopStartFrame": 41496,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-65-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 64,
+              "highMidi": 67,
+              "rootMidi": 65,
+              "tuningCents": 2,
+              "loopStartFrame": 47327,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-70-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 68,
+              "highMidi": 72,
+              "rootMidi": 70,
+              "tuningCents": 1,
+              "loopStartFrame": 47266,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-74-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 73,
+              "highMidi": 75,
+              "rootMidi": 74,
+              "tuningCents": 1,
+              "loopStartFrame": 41035,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-77-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 79,
+              "rootMidi": 77,
+              "tuningCents": 2,
+              "loopStartFrame": 47270,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-82-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 80,
+              "highMidi": 84,
+              "rootMidi": 82,
+              "tuningCents": 1,
+              "loopStartFrame": 41024,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-86-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 85,
+              "highMidi": 87,
+              "rootMidi": 86,
+              "tuningCents": 4,
+              "loopStartFrame": 47086,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-clarinet-89-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 88,
+              "highMidi": 91,
+              "rootMidi": 89,
+              "tuningCents": -1,
+              "loopStartFrame": 47173,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-clarinet-50-all-1",
+          "file": "samples/orch-clarinet-50-all-1.wav",
+          "sha256": "f82b2f63356dc95561ca91baac14676d9b907db5002b4c481146e9aba0aa8176",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_D2_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-53-all-1",
+          "file": "samples/orch-clarinet-53-all-1.wav",
+          "sha256": "f7b2dc9f73748e024258643ef887302b0ec4b421e8d866304228787551bf12c8",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_F2_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-58-all-1",
+          "file": "samples/orch-clarinet-58-all-1.wav",
+          "sha256": "ce9889e701f3d9a3698751c1240c975e440b22207d321e39de03a4a16adf98bb",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_A#2_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-62-all-1",
+          "file": "samples/orch-clarinet-62-all-1.wav",
+          "sha256": "07bcb0b49474a29cea629884c9f2fb0dceaa75e095f60ea0ba72eb52d9dbf8bc",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_D3_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-65-all-1",
+          "file": "samples/orch-clarinet-65-all-1.wav",
+          "sha256": "f21a88fcfa677853fb5635576d10bc64d6935b49f119b300dbc362ed834d3528",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_F3_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-70-all-1",
+          "file": "samples/orch-clarinet-70-all-1.wav",
+          "sha256": "495a00b7025b56746f0270c66f899f3c180662e980196a5bef77214046a29098",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_A#3_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-74-all-1",
+          "file": "samples/orch-clarinet-74-all-1.wav",
+          "sha256": "8dcd7ba588ad9ab1f76391d2714f49e3583c51d058979bb8bd7ed77371ec6e00",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_D4_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-77-all-1",
+          "file": "samples/orch-clarinet-77-all-1.wav",
+          "sha256": "2d28db36eb92f9e4a3c4b540a1333ec0097301ddd680592b2beedb6bd0a12325",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_F4_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-82-all-1",
+          "file": "samples/orch-clarinet-82-all-1.wav",
+          "sha256": "c32b09aecaa901a905e7149686f211b41c9589e39b213a975f8a845f9de3e9f3",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_A#4_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-86-all-1",
+          "file": "samples/orch-clarinet-86-all-1.wav",
+          "sha256": "8caf733aff612bf5884508c95ef9bfe0bf43e4cf0c39798a4f888e710153eeaf",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_D5_v2_rr1_sum.wav"
+        },
+        {
+          "id": "orch-clarinet-89-all-1",
+          "file": "samples/orch-clarinet-89-all-1.wav",
+          "sha256": "5251b82cc0384e5a55f7a2092d445660abc2820122d3d15c7cd4ba578bd1c9a5",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Woodwinds/Clarinet/susLong/DCClar_susLong_F#5_v2_rr1_sum.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-horn",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          36,
+          63
+        ],
+        "attack": 0.06,
+        "release": 0.3,
+        "description": "French horn: Warm French horn, looped sustain. Range stops at E♭4 because the source has no sustained samples between C4 and D5.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-horn-36-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 37,
+              "rootMidi": 36,
+              "tuningCents": 2,
+              "loopStartFrame": 41475,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-39-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 38,
+              "highMidi": 41,
+              "rootMidi": 39,
+              "tuningCents": -4,
+              "loopStartFrame": 46130,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-43-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 42,
+              "highMidi": 44,
+              "rootMidi": 43,
+              "tuningCents": -14,
+              "loopStartFrame": 45741,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000,
+              "loopCrossfadeShape": "equal-power"
+            },
+            {
+              "assetId": "orch-horn-46-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 48,
+              "rootMidi": 46,
+              "tuningCents": 0,
+              "loopStartFrame": 41468,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-50-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 49,
+              "highMidi": 51,
+              "rootMidi": 50,
+              "tuningCents": -3,
+              "loopStartFrame": 41694,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-53-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 55,
+              "rootMidi": 53,
+              "tuningCents": -1,
+              "loopStartFrame": 47192,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-57-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 56,
+              "highMidi": 58,
+              "rootMidi": 57,
+              "tuningCents": 0,
+              "loopStartFrame": 47206,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-horn-60-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 63,
+              "rootMidi": 60,
+              "tuningCents": -2,
+              "loopStartFrame": 41526,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-horn-36-all-1",
+          "file": "samples/orch-horn-36-all-1.wav",
+          "sha256": "9b1f14682c74c50e74a6f4c4b44370edcf70cb8ffd0215318da4127bb83e8a77",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_C1_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-39-all-1",
+          "file": "samples/orch-horn-39-all-1.wav",
+          "sha256": "6cda31dd6f4e272fec462d93c8139186336e950d53e5bd14f758d40ab49a70de",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_D#1_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-43-all-1",
+          "file": "samples/orch-horn-43-all-1.wav",
+          "sha256": "2dc87f9f9945cd01df64d34807f147e017990c10ab4c76f7ab3f97f27fbc5976",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_G1_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-46-all-1",
+          "file": "samples/orch-horn-46-all-1.wav",
+          "sha256": "88abfda40c5c2c0ba1c381d16d8cd437132e8dd0a5e18f5fa863f5c9ed0e83fe",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_A#1_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-50-all-1",
+          "file": "samples/orch-horn-50-all-1.wav",
+          "sha256": "5b26dc4bb61d9e2a4bce9270bb0c80cd181e1dd3304adbb0a6827444cd86e046",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_D2_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-53-all-1",
+          "file": "samples/orch-horn-53-all-1.wav",
+          "sha256": "1b15d6ece8aa790ac1258a9775988d4c1b739b0ff5198d526f2ad61903b103c0",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_F2_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-57-all-1",
+          "file": "samples/orch-horn-57-all-1.wav",
+          "sha256": "7d03a25ee753645ac7a188d70918695564ed3234a2f195c8e94d31143d5c6bd8",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_A2_v2_1.wav"
+        },
+        {
+          "id": "orch-horn-60-all-1",
+          "file": "samples/orch-horn-60-all-1.wav",
+          "sha256": "62a06e4951bc4ba435e2a7f50650c7de5b949def4838b71396b63ee732255acf",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Brass/F Horn/sus/MOHorn_sus_C3_v2_1.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-harp",
+        "engine": "sample",
+        "role": "arp",
+        "range": [
+          36,
+          96
+        ],
+        "attack": 0.001,
+        "release": 0.5,
+        "description": "Concert harp: Concert harp, natural decay; for arpeggios and glissando-like runs.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-harp-35-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 36,
+              "rootMidi": 35,
+              "tuningCents": -16
+            },
+            {
+              "assetId": "orch-harp-38-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 37,
+              "highMidi": 39,
+              "rootMidi": 38,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-harp-41-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 40,
+              "highMidi": 43,
+              "rootMidi": 41,
+              "tuningCents": -8
+            },
+            {
+              "assetId": "orch-harp-45-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 44,
+              "highMidi": 46,
+              "rootMidi": 45,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-harp-48-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 47,
+              "highMidi": 50,
+              "rootMidi": 48,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harp-52-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 51,
+              "highMidi": 53,
+              "rootMidi": 52,
+              "tuningCents": -4
+            },
+            {
+              "assetId": "orch-harp-55-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 54,
+              "highMidi": 57,
+              "rootMidi": 55,
+              "tuningCents": -7
+            },
+            {
+              "assetId": "orch-harp-59-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 58,
+              "highMidi": 60,
+              "rootMidi": 59,
+              "tuningCents": -10
+            },
+            {
+              "assetId": "orch-harp-62-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 61,
+              "highMidi": 63,
+              "rootMidi": 62,
+              "tuningCents": -11
+            },
+            {
+              "assetId": "orch-harp-65-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 64,
+              "highMidi": 67,
+              "rootMidi": 65,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harp-69-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 68,
+              "highMidi": 70,
+              "rootMidi": 69,
+              "tuningCents": -10
+            },
+            {
+              "assetId": "orch-harp-72-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": -11
+            },
+            {
+              "assetId": "orch-harp-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 77,
+              "rootMidi": 76,
+              "tuningCents": -12
+            },
+            {
+              "assetId": "orch-harp-79-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 78,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": -6
+            },
+            {
+              "assetId": "orch-harp-83-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 84,
+              "rootMidi": 83,
+              "tuningCents": -8
+            },
+            {
+              "assetId": "orch-harp-86-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 85,
+              "highMidi": 87,
+              "rootMidi": 86,
+              "tuningCents": -8
+            },
+            {
+              "assetId": "orch-harp-89-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 88,
+              "highMidi": 91,
+              "rootMidi": 89,
+              "tuningCents": -6
+            },
+            {
+              "assetId": "orch-harp-93-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 92,
+              "highMidi": 94,
+              "rootMidi": 93,
+              "tuningCents": -19
+            },
+            {
+              "assetId": "orch-harp-95-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 95,
+              "highMidi": 96,
+              "rootMidi": 95,
+              "tuningCents": -11
+            }
+          ]
+        },
+        "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-harp-35-all-1",
+          "file": "samples/orch-harp-35-all-1.wav",
+          "sha256": "ed4496c20053440e3562c689adaef857143e24a3f52337e269a65286e7186802",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_B1_mf.wav"
+        },
+        {
+          "id": "orch-harp-38-all-1",
+          "file": "samples/orch-harp-38-all-1.wav",
+          "sha256": "ebca254583e40b333620b5eb722ea6a671bb9aae5557cb1b4310bc6581a1bbc3",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_D2_mf.wav"
+        },
+        {
+          "id": "orch-harp-41-all-1",
+          "file": "samples/orch-harp-41-all-1.wav",
+          "sha256": "27164684161fa046f2f93c783ea87eda748c0bc6bddd12a5b1b87af88e7fbc73",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_F2_mf.wav"
+        },
+        {
+          "id": "orch-harp-45-all-1",
+          "file": "samples/orch-harp-45-all-1.wav",
+          "sha256": "a8edf66dcd3dbb641bdc36e66294391ba37d75c0d725a7cc9689460858322fa4",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_A2_mf.wav"
+        },
+        {
+          "id": "orch-harp-48-all-1",
+          "file": "samples/orch-harp-48-all-1.wav",
+          "sha256": "95d27aa5b6c97ef8e2a1c555a1004dfefb752777d142b4641901dc456b5ab93a",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_C3_mf.wav"
+        },
+        {
+          "id": "orch-harp-52-all-1",
+          "file": "samples/orch-harp-52-all-1.wav",
+          "sha256": "625da21f02d78eb4b414db08a4f2a824c062c37bb56a76de0a5c700413c9aa53",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_E3_mf.wav"
+        },
+        {
+          "id": "orch-harp-55-all-1",
+          "file": "samples/orch-harp-55-all-1.wav",
+          "sha256": "a396058cd938571b25a53b8f5585631b51f1c3dd6d1fe8a6fde3e59f86055dda",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_G3_mf.wav"
+        },
+        {
+          "id": "orch-harp-59-all-1",
+          "file": "samples/orch-harp-59-all-1.wav",
+          "sha256": "eee64febbfa37429a8ba029d3c196670644b1e741feada8cf71db66a1f256f00",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_B3_mf.wav"
+        },
+        {
+          "id": "orch-harp-62-all-1",
+          "file": "samples/orch-harp-62-all-1.wav",
+          "sha256": "d42e1fdd8e300aa4a3903844b24461b73257ebe12814f40181fd8ec4a0bc3bf4",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_D4_mf.wav"
+        },
+        {
+          "id": "orch-harp-65-all-1",
+          "file": "samples/orch-harp-65-all-1.wav",
+          "sha256": "14210ffd34a04b1de2a9eb219ddca6abc9109ef0d45db8c0743bfc02453863b9",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_F4_mf.wav"
+        },
+        {
+          "id": "orch-harp-69-all-1",
+          "file": "samples/orch-harp-69-all-1.wav",
+          "sha256": "df236ded5f7c4a2b2db0dbd8b64dc365208e13f2717700c6cbcb8bed72532f1c",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_A4_mf.wav"
+        },
+        {
+          "id": "orch-harp-72-all-1",
+          "file": "samples/orch-harp-72-all-1.wav",
+          "sha256": "6b7b01490291ade27dd277dc44a21bb69cb37117c1aa2b60ba6b7a69d4cba60e",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_C5_mf.wav"
+        },
+        {
+          "id": "orch-harp-76-all-1",
+          "file": "samples/orch-harp-76-all-1.wav",
+          "sha256": "b4037da0f5ed0dd2e395bf89d5ff0665c7d73c050595655d3dbb7dcfc48eaaca",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_E5_mf.wav"
+        },
+        {
+          "id": "orch-harp-79-all-1",
+          "file": "samples/orch-harp-79-all-1.wav",
+          "sha256": "1ac8b622f7789ac46ef104b77d066055d4bbe67f558bc67fe8c8f5f7b5e513f9",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_G5_mf.wav"
+        },
+        {
+          "id": "orch-harp-83-all-1",
+          "file": "samples/orch-harp-83-all-1.wav",
+          "sha256": "75a5ac951dcd139d7bc8dd61eb3cf95a2fa02a156c12c48a1c324ceed7b58b54",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_B5_mf.wav"
+        },
+        {
+          "id": "orch-harp-86-all-1",
+          "file": "samples/orch-harp-86-all-1.wav",
+          "sha256": "cf256741fb3a63eaa0cda5f8d0446b6f883ef325865f511827c6e5b3352920a2",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_D6_mf.wav"
+        },
+        {
+          "id": "orch-harp-89-all-1",
+          "file": "samples/orch-harp-89-all-1.wav",
+          "sha256": "d3db56a63d06c4f71690ac1e9766d2bed102ca998f0d80568b928e0d5511d990",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_F6_mf.wav"
+        },
+        {
+          "id": "orch-harp-93-all-1",
+          "file": "samples/orch-harp-93-all-1.wav",
+          "sha256": "ccdcabc0b40a8905d021e8ce63732841291959f1511a13a9b4da8a5cc50882dd",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_A6_mf.wav"
+        },
+        {
+          "id": "orch-harp-95-all-1",
+          "file": "samples/orch-harp-95-all-1.wav",
+          "sha256": "5b1bf6edea066d124c4db82971323e0bcbb2aadc9adca942d3d1dd9f5329c5bf",
+          "provenance": "VSCO 2 Community Edition / Versilian Studios, CC0-1.0; 440300901dfe9275fd84e0b7763af1f8443ae62e; Strings/Harp/KSHarp_B6_mf.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-marimba",
+        "engine": "sample",
+        "role": "arp",
+        "range": [
+          41,
+          96
+        ],
+        "attack": 0.001,
+        "release": 0.2,
+        "description": "Marimba: Marimba with soft (medium) and hard (loud) velocity layers.",
+        "velocityCrossfade": 24,
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-marimba-41-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 41,
+              "highMidi": 44,
+              "rootMidi": 41,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-41-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 41,
+              "highMidi": 44,
+              "rootMidi": 41,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-48-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 51,
+              "rootMidi": 48,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-48-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 45,
+              "highMidi": 51,
+              "rootMidi": 48,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-55-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 57,
+              "rootMidi": 55,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-55-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 52,
+              "highMidi": 57,
+              "rootMidi": 55,
+              "tuningCents": -3
+            },
+            {
+              "assetId": "orch-marimba-59-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 58,
+              "highMidi": 62,
+              "rootMidi": 59,
+              "tuningCents": 3
+            },
+            {
+              "assetId": "orch-marimba-59-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 58,
+              "highMidi": 62,
+              "rootMidi": 59,
+              "tuningCents": 3
+            },
+            {
+              "assetId": "orch-marimba-65-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 63,
+              "highMidi": 68,
+              "rootMidi": 65,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-marimba-65-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 63,
+              "highMidi": 68,
+              "rootMidi": 65,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-marimba-72-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 69,
+              "highMidi": 75,
+              "rootMidi": 72,
+              "tuningCents": 4
+            },
+            {
+              "assetId": "orch-marimba-72-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 69,
+              "highMidi": 75,
+              "rootMidi": 72,
+              "tuningCents": 4
+            },
+            {
+              "assetId": "orch-marimba-79-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-marimba-79-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 81,
+              "rootMidi": 79,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-marimba-83-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 86,
+              "rootMidi": 83,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-marimba-83-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 82,
+              "highMidi": 86,
+              "rootMidi": 83,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-marimba-89-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 87,
+              "highMidi": 92,
+              "rootMidi": 89,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-marimba-89-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 87,
+              "highMidi": 92,
+              "rootMidi": 89,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-marimba-96-soft-1",
+              "lowVelocity": 1,
+              "highVelocity": 79,
+              "roundRobin": 1,
+              "lowMidi": 93,
+              "highMidi": 96,
+              "rootMidi": 96,
+              "tuningCents": 1
+            },
+            {
+              "assetId": "orch-marimba-96-hard-1",
+              "lowVelocity": 80,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 93,
+              "highMidi": 96,
+              "rootMidi": 96,
+              "tuningCents": 1
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-marimba-41-soft-1",
+          "file": "samples/orch-marimba-41-soft-1.wav",
+          "sha256": "667325bfd86ac518787d4895882b810fd1cd89f7537d03a042d0a3ab4b31a2f9",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F1_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-41-hard-1",
+          "file": "samples/orch-marimba-41-hard-1.wav",
+          "sha256": "8a5d1d9ee60b078898bce7e1f4fcd9c868fb46df50ba8997b837aac0e905ff09",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F1_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-48-soft-1",
+          "file": "samples/orch-marimba-48-soft-1.wav",
+          "sha256": "6dd4d26ed62370292ec9d5f0e93f4323e8f4f117841a04cf720f214773c942dd",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C2_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-48-hard-1",
+          "file": "samples/orch-marimba-48-hard-1.wav",
+          "sha256": "3dc0025104cb9b928328a3f7c8ba68dca72fdc04161b374d18344e5d7a42f8b6",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C2_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-55-soft-1",
+          "file": "samples/orch-marimba-55-soft-1.wav",
+          "sha256": "63d4c26ddadd8978de0f10dc0729b53287def2e84a181d2489b57c528f4a3340",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_G2_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-55-hard-1",
+          "file": "samples/orch-marimba-55-hard-1.wav",
+          "sha256": "fe2510457525f0a057c2857b323e141baba6024b6cbd8dc2467142731c9af49f",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_G2_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-59-soft-1",
+          "file": "samples/orch-marimba-59-soft-1.wav",
+          "sha256": "0c9c826ef82921de2954501e25f6bb316db2ecc94d73596f8c8f1df6fd6b47bb",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_B2_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-59-hard-1",
+          "file": "samples/orch-marimba-59-hard-1.wav",
+          "sha256": "3c699e1a39ab56450e730b72dc7cc3a8886557a2b4f04745fd06e07c1b9f4830",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_B2_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-65-soft-1",
+          "file": "samples/orch-marimba-65-soft-1.wav",
+          "sha256": "002c993ee36aa86b105d2e89cb2a407f7bb326e2d74827b4b56b67649368d404",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F3_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-65-hard-1",
+          "file": "samples/orch-marimba-65-hard-1.wav",
+          "sha256": "26f44528cf088acd417e1307c8f958f52d6b09db605b3d07c1fb8719a610d7ad",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F3_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-72-soft-1",
+          "file": "samples/orch-marimba-72-soft-1.wav",
+          "sha256": "7010a1b799eab432b7977f57552d06d654f67e00bf4a6c5c256ffc463b63d9ff",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C4_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-72-hard-1",
+          "file": "samples/orch-marimba-72-hard-1.wav",
+          "sha256": "1ef8d208f53716866162e644f15bdffca8c1d1b449f255bd55688e52232eea8c",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C4_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-79-soft-1",
+          "file": "samples/orch-marimba-79-soft-1.wav",
+          "sha256": "01dbe88c2af6d4b22ffe98ff217f9981d592a8ce0b4cb4a82c4f681468c6c592",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_G4_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-79-hard-1",
+          "file": "samples/orch-marimba-79-hard-1.wav",
+          "sha256": "af94c777168d91f0f147c91bfc7bbd9c7a5e1ec43a8fd879de8f0b6a82f2f4df",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_G4_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-83-soft-1",
+          "file": "samples/orch-marimba-83-soft-1.wav",
+          "sha256": "be586b650aad60aff134a3d3159f4e51a92f4581f5e6ec501beacdce87e596f7",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_B4_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-83-hard-1",
+          "file": "samples/orch-marimba-83-hard-1.wav",
+          "sha256": "39e3540173b93bfdc65730777eb7fa5a9080c07bdfaed0af37e04bdd9dbed5df",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_B4_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-89-soft-1",
+          "file": "samples/orch-marimba-89-soft-1.wav",
+          "sha256": "953f35c328f32baa1047973422ae491d2c6b281139d5180f96a77e476358eafe",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F5_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-89-hard-1",
+          "file": "samples/orch-marimba-89-hard-1.wav",
+          "sha256": "9c87a1bdd432dcc29b2f8628d3bd229fdeff0a18adfcae78b0778a65f32dcaaf",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_F5_loud_01.wav"
+        },
+        {
+          "id": "orch-marimba-96-soft-1",
+          "file": "samples/orch-marimba-96-soft-1.wav",
+          "sha256": "fb3630a0f5f1648ee66f9a5ab6f047f40fa4685ae4fc740d4706441bf405be07",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C6_med_01.wav"
+        },
+        {
+          "id": "orch-marimba-96-hard-1",
+          "file": "samples/orch-marimba-96-hard-1.wav",
+          "sha256": "1194ffdd787b015cab996aeb6b6d70145487842b6c393645f04c50929486fa11",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Marimba/Marimba_hit_Outrigger_C6_loud_01.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-vibraphone",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          53,
+          89
+        ],
+        "attack": 0.001,
+        "release": 0.6,
+        "description": "Vibraphone: Vibraphone with soft mallets and a long natural ring.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-vibraphone-53-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 53,
+              "highMidi": 55,
+              "rootMidi": 53,
+              "tuningCents": 2
+            },
+            {
+              "assetId": "orch-vibraphone-57-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 56,
+              "highMidi": 58,
+              "rootMidi": 57,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-60-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 62,
+              "rootMidi": 60,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-vibraphone-64-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 63,
+              "highMidi": 65,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-67-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 66,
+              "highMidi": 69,
+              "rootMidi": 67,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-71-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 70,
+              "highMidi": 72,
+              "rootMidi": 71,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-74-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 73,
+              "highMidi": 75,
+              "rootMidi": 74,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-77-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 76,
+              "highMidi": 79,
+              "rootMidi": 77,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-81-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 80,
+              "highMidi": 82,
+              "rootMidi": 81,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-84-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 83,
+              "highMidi": 86,
+              "rootMidi": 84,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-vibraphone-88-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 87,
+              "highMidi": 89,
+              "rootMidi": 88,
+              "tuningCents": 0
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-vibraphone-53-all-1",
+          "file": "samples/orch-vibraphone-53-all-1.wav",
+          "sha256": "439a58d2a0b91db267ba0381bdaab97c1d7df06ba436e4fb562c54bda95f2bc8",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_F2_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-57-all-1",
+          "file": "samples/orch-vibraphone-57-all-1.wav",
+          "sha256": "ed01b210a86e45b01ec00f1372b8ea66f14a64182c3ffaadf4a74c9a3efaa29e",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_A2_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-60-all-1",
+          "file": "samples/orch-vibraphone-60-all-1.wav",
+          "sha256": "5f77dce8e113c96ca3b9db02d74ba6a08d384c018da43060fb94b2fed3e99449",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_C3_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-64-all-1",
+          "file": "samples/orch-vibraphone-64-all-1.wav",
+          "sha256": "c06f18e2acccb138143b4abe4d05976848a933a22054b22c0f9da42b3b98a2a0",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_E3_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-67-all-1",
+          "file": "samples/orch-vibraphone-67-all-1.wav",
+          "sha256": "231d4339568d81b720cbf25cebdadd993f171211b712d95a68d2e32ff9ceffef",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_G3_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-71-all-1",
+          "file": "samples/orch-vibraphone-71-all-1.wav",
+          "sha256": "01458242ad880c633c6289ff7dc20c553b19c96c81e5f6f364adfb809d20293b",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_B3_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-74-all-1",
+          "file": "samples/orch-vibraphone-74-all-1.wav",
+          "sha256": "e528236d3e61700ae391e14340a555172deb81af898d7a2330f72cf43960c40e",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_D4_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-77-all-1",
+          "file": "samples/orch-vibraphone-77-all-1.wav",
+          "sha256": "4d0308621c95b923826e7a5a102ca9d8b98f20e74f8d0948f5e07f3ff5638236",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_F4_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-81-all-1",
+          "file": "samples/orch-vibraphone-81-all-1.wav",
+          "sha256": "bf0bcf5c7c8d6e442096deca142ee695229f2f9e75d3ae73bd488ecdca12c223",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_A4_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-84-all-1",
+          "file": "samples/orch-vibraphone-84-all-1.wav",
+          "sha256": "a71a6a0f69ab762f0bbc80b2dff8b25a618209ec0210d0653c736b7eec344845",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_C5_v2_rr1_Main.wav"
+        },
+        {
+          "id": "orch-vibraphone-88-all-1",
+          "file": "samples/orch-vibraphone-88-all-1.wav",
+          "sha256": "f30bf93ac825ea78c9229dfaf532ac690be6200fa021a9e6fe5a9f223e8cb70a",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Idiophones/Struck Idiophones/Vibraphone/Soft Mallets/Vibes_soft_E5_v2_rr1_Main.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-ocarina",
+        "engine": "sample",
+        "role": "melody",
+        "range": [
+          67,
+          87
+        ],
+        "attack": 0.03,
+        "release": 0.15,
+        "description": "Ocarina: Typical alto ocarina, looped sustain without vibrato, G4–D♯6.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-ocarina-69-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 67,
+              "highMidi": 71,
+              "rootMidi": 69,
+              "tuningCents": 3,
+              "loopStartFrame": 41024,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-ocarina-73-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 72,
+              "highMidi": 74,
+              "rootMidi": 73,
+              "tuningCents": -5,
+              "loopStartFrame": 42990,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-ocarina-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 78,
+              "rootMidi": 76,
+              "tuningCents": -1,
+              "loopStartFrame": 41089,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-ocarina-80-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 79,
+              "highMidi": 82,
+              "rootMidi": 80,
+              "tuningCents": 5,
+              "loopStartFrame": 46102,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            },
+            {
+              "assetId": "orch-ocarina-84-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 83,
+              "highMidi": 87,
+              "rootMidi": 84,
+              "tuningCents": 7,
+              "loopStartFrame": 42459,
+              "loopEndFrame": 76160,
+              "loopCrossfadeFrames": 8000
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-ocarina-69-all-1",
+          "file": "samples/orch-ocarina-69-all-1.wav",
+          "sha256": "21d409e5580c1db615686b4740aafa557801dd5c4e7f4881d94d966cd27ffa04",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Ocarina, Typical/Sustains/Sus/StdOcarina_Sus_A3.wav"
+        },
+        {
+          "id": "orch-ocarina-73-all-1",
+          "file": "samples/orch-ocarina-73-all-1.wav",
+          "sha256": "d74f39e2151f85ba6ee19dc9e711a78494f8ad47183867964076e501ae262769",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Ocarina, Typical/Sustains/Sus/StdOcarina_Sus_C#4.wav"
+        },
+        {
+          "id": "orch-ocarina-76-all-1",
+          "file": "samples/orch-ocarina-76-all-1.wav",
+          "sha256": "51c4fe04d40b17d99d4aafb51142596c3ae6687c56fa749ad7c1f4d692daa5b1",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Ocarina, Typical/Sustains/Sus/StdOcarina_Sus_E4.wav"
+        },
+        {
+          "id": "orch-ocarina-80-all-1",
+          "file": "samples/orch-ocarina-80-all-1.wav",
+          "sha256": "683968491c73cb098c1e11c76419c0fdeb5213dd5d1eada99203ed98d15aeae0",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Ocarina, Typical/Sustains/Sus/StdOcarina_Sus_G#4.wav"
+        },
+        {
+          "id": "orch-ocarina-84-all-1",
+          "file": "samples/orch-ocarina-84-all-1.wav",
+          "sha256": "3cff1967e3ecc29d5482e6604a155ce46ad5875f806b3ba7fa2319727943d1c0",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Aerophones/Edge-blown Aerophones/Ocarina, Typical/Sustains/Sus/StdOcarina_Sus_C5.wav"
+        }
+      ]
+    },
+    {
+      "instrument": {
+        "id": "orch-harpsichord",
+        "engine": "sample",
+        "role": "harmony",
+        "range": [
+          36,
+          83
+        ],
+        "attack": 0.001,
+        "release": 0.25,
+        "description": "Harpsichord: Flemish harpsichord, 8′ register; plucked with natural decay.",
+        "sample": {
+          "kind": "zones",
+          "zones": [
+            {
+              "assetId": "orch-harpsichord-36-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 36,
+              "highMidi": 38,
+              "rootMidi": 36,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-40-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 39,
+              "highMidi": 42,
+              "rootMidi": 40,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-44-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 43,
+              "highMidi": 46,
+              "rootMidi": 44,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-48-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 47,
+              "highMidi": 50,
+              "rootMidi": 48,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-harpsichord-52-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 51,
+              "highMidi": 54,
+              "rootMidi": 52,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-56-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 55,
+              "highMidi": 58,
+              "rootMidi": 56,
+              "tuningCents": -2
+            },
+            {
+              "assetId": "orch-harpsichord-60-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 59,
+              "highMidi": 62,
+              "rootMidi": 60,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-64-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 63,
+              "highMidi": 66,
+              "rootMidi": 64,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-harpsichord-68-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 67,
+              "highMidi": 70,
+              "rootMidi": 68,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-harpsichord-72-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 71,
+              "highMidi": 74,
+              "rootMidi": 72,
+              "tuningCents": 0
+            },
+            {
+              "assetId": "orch-harpsichord-76-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 75,
+              "highMidi": 78,
+              "rootMidi": 76,
+              "tuningCents": -1
+            },
+            {
+              "assetId": "orch-harpsichord-80-all-1",
+              "lowVelocity": 1,
+              "highVelocity": 127,
+              "roundRobin": 1,
+              "lowMidi": 79,
+              "highMidi": 83,
+              "rootMidi": 80,
+              "tuningCents": -1
+            }
+          ]
+        },
+        "provenance": "VCSL / Versilian Studios, CC0-1.0; compact curated derivatives."
+      },
+      "assets": [
+        {
+          "id": "orch-harpsichord-36-all-1",
+          "file": "samples/orch-harpsichord-36-all-1.wav",
+          "sha256": "1277280d6a6ee467b0698d8a2c8c06f9fad844ab492ccf049734530579c91690",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_C1_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-40-all-1",
+          "file": "samples/orch-harpsichord-40-all-1.wav",
+          "sha256": "2f3519d660c7ce207d113c71757d0d20eb399e8d5290b9cd402f0aff8ed93afb",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_E1_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-44-all-1",
+          "file": "samples/orch-harpsichord-44-all-1.wav",
+          "sha256": "c7ec3eba03ba41e53b7ccbd9e32594a8912944f9674c5381062ab0f62b9b1984",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_G#1_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-48-all-1",
+          "file": "samples/orch-harpsichord-48-all-1.wav",
+          "sha256": "1349eb7e684e330f83c0ce27e6de91cc10704c9f907fed92a957b93b9fa533fb",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_C2_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-52-all-1",
+          "file": "samples/orch-harpsichord-52-all-1.wav",
+          "sha256": "d9ec4b9b8b21ccb45f2df3d94ab0d7ec4b375c4c505fb935a78f6b6b9db80960",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_E2_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-56-all-1",
+          "file": "samples/orch-harpsichord-56-all-1.wav",
+          "sha256": "43fb8d996ff8bb3289446e5b94c688e188bd86bfa699a5274991804f828d0996",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_G#2_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-60-all-1",
+          "file": "samples/orch-harpsichord-60-all-1.wav",
+          "sha256": "0530c196817173a3df3ed7f60bbb89de063c9b56b14855359020475681aca1d3",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_C3_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-64-all-1",
+          "file": "samples/orch-harpsichord-64-all-1.wav",
+          "sha256": "49b4d81b8f526ee046d5cf0f7c0c035e42d567f2d60eb4844552aa7429a9be89",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_E3_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-68-all-1",
+          "file": "samples/orch-harpsichord-68-all-1.wav",
+          "sha256": "2928ea3d62a19c12a3f7b9ac9fc5ab7c912411771c2de2334404fe923d288259",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_G#3_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-72-all-1",
+          "file": "samples/orch-harpsichord-72-all-1.wav",
+          "sha256": "3268bed6f98f2763bb5513806c5f1c85665bd9cbc81256f8e28355e4e4badd3d",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_C4_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-76-all-1",
+          "file": "samples/orch-harpsichord-76-all-1.wav",
+          "sha256": "7207d8ce81b01f21eead86f982835154329847bfe6f9610e6bf2d24c8936a2ea",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_E4_rr1.wav"
+        },
+        {
+          "id": "orch-harpsichord-80-all-1",
+          "file": "samples/orch-harpsichord-80-all-1.wav",
+          "sha256": "d06db3bbf1490ee863692b4d3960ee8d7d68cb0881fe873fa30a10324d2d5a88",
+          "provenance": "VCSL / Versilian Studios, CC0-1.0; c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e; Chordophones/Zithers/Harpsichord, Flemish/Sustains/Low/HarpsiRH_Low_Far_G#4_rr1.wav"
+        }
+      ]
+    }
+  ]
+}

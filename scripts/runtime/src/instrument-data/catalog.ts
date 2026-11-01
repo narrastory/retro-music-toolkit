@@ -9,4 +9,24 @@ import p7 from "./sample-flute.json" with { type: "json" };
 import p8 from "./sample-strings.json" with { type: "json" };
 import p9 from "./sample-bass.json" with { type: "json" };
 import p10 from "./sample-pluck.json" with { type: "json" };
-export const catalog = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
+import p11 from "./analog-pad.json" with { type: "json" };
+import p12 from "./analog-lead.json" with { type: "json" };
+import p13 from "./analog-bass.json" with { type: "json" };
+import p14 from "./analog-pluck.json" with { type: "json" };
+export const catalog = [
+  p0,
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  p7,
+  p8,
+  p9,
+  p10,
+  p11,
+  p12,
+  p13,
+  p14,
+];

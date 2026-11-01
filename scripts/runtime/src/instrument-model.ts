@@ -35,6 +35,11 @@ export const SampleZoneSchema = z.strictObject({
   loopEndFrame: z.number().int().positive().optional(),
   /** Fade length in source frames applied at the loop point to hide a click. */
   loopCrossfadeFrames: z.number().int().min(0).max(20000).default(0),
+  /**
+   * Linear suits period-aligned, correlated loop regions; equal-power avoids
+   * a level dip when the regions are uncorrelated (ensembles with vibrato).
+   */
+  loopCrossfadeShape: z.enum(["linear", "equal-power"]).optional(),
 });
 /** One sampled drum piece. `sound` selects which hit event triggers it. */
 export const DrumKitSlotSchema = z.strictObject({
@@ -49,9 +54,57 @@ export const DrumKitSlotSchema = z.strictObject({
 export const DrumKitSchema = z.strictObject({
   slots: z.array(DrumKitSlotSchema).min(1).max(64),
 });
+export const SubtractiveSchema = z.strictObject({
+  oscillator: z
+    .enum(["sawtooth", "square", "triangle", "sine"])
+    .default("sawtooth"),
+  /** Detuned copies of the oscillator, spread evenly across detuneCents. */
+  unison: z
+    .strictObject({
+      voices: z.number().int().min(1).max(7).default(1),
+      detuneCents: z.number().min(0).max(100).default(0),
+    })
+    .default({ voices: 1, detuneCents: 0 }),
+  filter: z
+    .strictObject({
+      type: z.enum(["lowpass", "highpass", "bandpass"]).default("lowpass"),
+      /** Resting cutoff; the track brightness control scales it ±1 octave. */
+      cutoffHz: z.number().min(20).max(20000).default(2000),
+      resonance: z.number().min(0.1).max(20).default(1),
+      rolloff: z.union([z.literal(-12), z.literal(-24)]).default(-24),
+      /** How far the filter envelope opens above cutoffHz, in octaves. */
+      envelopeOctaves: z.number().min(0).max(8).default(0),
+      attack: z.number().min(0).max(4).default(0.005),
+      decay: z.number().min(0).max(8).default(0.3),
+      sustain: z.number().min(0).max(1).default(0),
+      release: z.number().min(0).max(8).default(0.3),
+    })
+    .default({
+      type: "lowpass",
+      cutoffHz: 2000,
+      resonance: 1,
+      rolloff: -24,
+      envelopeOctaves: 0,
+      attack: 0.005,
+      decay: 0.3,
+      sustain: 0,
+      release: 0.3,
+    }),
+  /** One free-running LFO per voice; each depth is 0 (off) by default. */
+  lfo: z
+    .strictObject({
+      rateHz: z.number().min(0.05).max(20).default(5),
+      pitchCents: z.number().min(0).max(100).default(0),
+      filterOctaves: z.number().min(0).max(4).default(0),
+      /** Tremolo depth: 0.3 swings the level between 0.7 and 1. */
+      amplitude: z.number().min(0).max(1).default(0),
+    })
+    .optional(),
+});
+export type SubtractiveSettings = z.infer<typeof SubtractiveSchema>;
 export const InstrumentDefinitionSchema = z.strictObject({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),
-  engine: z.enum(["pulse", "triangle", "fm", "sample", "drums"]),
+  engine: z.enum(["pulse", "triangle", "fm", "sample", "drums", "subtractive"]),
   role: z.enum(["melody", "bass", "harmony", "arp", "drums", "texture"]),
   range: z.tuple([midi, midi]),
   attack: z.number().min(0).max(3),
@@ -67,6 +120,12 @@ export const InstrumentDefinitionSchema = z.strictObject({
       volumeDb: z.number().min(-36).max(0).default(-7),
     })
     .optional(),
+  /**
+   * Subtractive (analog-style) voice: oscillator stack → filter with its own
+   * envelope → amplitude envelope, plus one free-running LFO. Only valid on
+   * the subtractive engine; amplitude sustain/decay/volume stay in synthesis.
+   */
+  subtractive: SubtractiveSchema.optional(),
   sample: z
     .discriminatedUnion("kind", [
       z.strictObject({

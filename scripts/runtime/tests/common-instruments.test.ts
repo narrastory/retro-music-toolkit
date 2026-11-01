@@ -15,7 +15,7 @@ test("common packs import all six usable instruments without any material-direct
   const available = await listBundledCollections();
   assert.deepEqual(
     available.map((p) => p.id),
-    ["band", "drums", "piano", "starter"],
+    ["band", "drums", "orchestra", "piano", "starter"],
   );
   let score: any = fixture();
   let count = 0,

@@ -4,6 +4,8 @@ import {
   decodeSampleAsset,
   findZone,
   findDrumSlot,
+  SubtractiveSchema,
+  type SampleZone,
 } from "./instrument-model.js";
 import { performanceGroups, frequencyAt, interpolate } from "./performance.js";
 import { createReverbImpulse } from "./reverb.js";
@@ -20,6 +22,7 @@ import { RenderOptionsSchema, type RenderOptions } from "./render-options.js";
 import { normalizeChannels } from "./normalization.js";
 import {
   applyDither,
+  bakeLoopCrossfade,
   applyPeakLimiter,
   crossfadeLoop,
   seededRandom,
@@ -328,14 +331,31 @@ export async function renderInBrowser(
               ? sampleWave(p.sample.wave, sr)
               : undefined;
           if (procedural) own(procedural.buffer);
+          // Keyed by asset and loop: the loop crossfade is baked into the
+          // buffer, so zones sharing an asset with different loops differ.
           const external = new Map<string, Tone.ToneAudioBuffer>();
+          const bufferKey = (zone: SampleZone) =>
+            zone.loopStartFrame !== undefined && zone.loopCrossfadeFrames
+              ? `${zone.assetId}|${zone.loopStartFrame}|${zone.loopEndFrame}|${zone.loopCrossfadeFrames}|${zone.loopCrossfadeShape ?? "linear"}`
+              : zone.assetId;
           if (p.sample?.kind === "zones")
             for (const zone of p.sample.zones) {
-              if (external.has(zone.assetId)) continue;
+              const key = bufferKey(zone);
+              if (external.has(key)) continue;
               const asset = decodeSampleAsset(s.sampleAssets![zone.assetId]!);
+              const channels =
+                key === zone.assetId
+                  ? asset.channels
+                  : bakeLoopCrossfade(
+                      asset.channels,
+                      zone.loopStartFrame!,
+                      zone.loopEndFrame!,
+                      zone.loopCrossfadeFrames,
+                      zone.loopCrossfadeShape,
+                    );
               external.set(
-                zone.assetId,
-                own(toneBufferFromChannels(asset.channels, asset.sampleRate)),
+                key,
+                own(toneBufferFromChannels(channels, asset.sampleRate)),
               );
             }
           // Physical-layer constraints. A 2A03 pulse channel has exactly three
@@ -391,6 +411,70 @@ export async function renderInBrowser(
                 ),
                 synth: undefined,
               };
+            if (p.engine === "subtractive") {
+              const sub = SubtractiveSchema.parse(p.subtractive ?? {});
+              const stacked = sub.unison.voices > 1;
+              const synth = own(
+                new Tone.MonoSynth({
+                  oscillator: stacked
+                    ? {
+                        type: `fat${sub.oscillator}`,
+                        count: sub.unison.voices,
+                        spread: sub.unison.detuneCents,
+                      }
+                    : { type: sub.oscillator },
+                  filter: {
+                    type: sub.filter.type,
+                    Q: sub.filter.resonance,
+                    rolloff: sub.filter.rolloff,
+                  },
+                  filterEnvelope: {
+                    attack: sub.filter.attack,
+                    decay: sub.filter.decay,
+                    sustain: sub.filter.sustain,
+                    release: sub.filter.release,
+                    // Track brightness 0..1 moves the cutoff ±1 octave.
+                    baseFrequency:
+                      sub.filter.cutoffHz *
+                      2 ** ((t.controls.brightness - 0.5) * 2),
+                    octaves: sub.filter.envelopeOctaves,
+                  },
+                  envelope: env,
+                  volume: volumeStep(p.synthesis?.volumeDb ?? -7),
+                } as ConstructorParameters<typeof Tone.MonoSynth>[0]),
+              );
+              const lfo = sub.lfo;
+              // Each target gets its own LFO at the same rate; all start at
+              // time 0, so they stay in phase and render deterministically.
+              const oscillate = (min: number, max: number) =>
+                own(new Tone.LFO({ frequency: lfo!.rateHz, min, max })).start(
+                  0,
+                );
+              let output: Tone.ToneAudioNode = synth;
+              if (lfo?.amplitude) {
+                const tremolo = own(new Tone.Gain(1));
+                oscillate(1 - lfo.amplitude, 1).connect(tremolo.gain);
+                synth.connect(tremolo);
+                output = tremolo;
+              }
+              output.connect(expressionGain);
+              if (lfo?.pitchCents)
+                oscillate(-lfo.pitchCents, lfo.pitchCents).connect(
+                  synth.detune,
+                );
+              if (lfo?.filterOctaves)
+                oscillate(
+                  -lfo.filterOctaves * 1200,
+                  lfo.filterOctaves * 1200,
+                ).connect(synth.filter.detune);
+              return {
+                guard,
+                velocityFilter,
+                expressionGain,
+                synth,
+                envelope: undefined,
+              };
+            }
             const synth =
               p.engine === "fm"
                 ? own(
@@ -488,7 +572,7 @@ export async function renderInBrowser(
               }[] = [];
               for (const [layer, weight] of layers) {
                 const buffer = layer
-                  ? external.get(layer.assetId)
+                  ? external.get(bufferKey(layer))
                   : procedural?.buffer;
                 if (!buffer) continue;
                 const rootFreq = layer

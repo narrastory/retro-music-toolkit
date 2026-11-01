@@ -1,0 +1,36 @@
+{
+  "id": "analog-lead",
+  "engine": "subtractive",
+  "role": "melody",
+  "range": [
+    55,
+    91
+  ],
+  "attack": 0.008,
+  "release": 0.18,
+  "description": "Bright square lead with light three-voice unison and a quick filter bite; add score vibrato for long notes.",
+  "synthesis": {
+    "sustain": 0.75,
+    "decaySeconds": 0.25,
+    "volumeDb": -12
+  },
+  "subtractive": {
+    "oscillator": "square",
+    "unison": {
+      "voices": 3,
+      "detuneCents": 8
+    },
+    "filter": {
+      "type": "lowpass",
+      "cutoffHz": 1800,
+      "resonance": 1.6,
+      "rolloff": -24,
+      "envelopeOctaves": 1.8,
+      "attack": 0.004,
+      "decay": 0.25,
+      "sustain": 0.3,
+      "release": 0.2
+    }
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}

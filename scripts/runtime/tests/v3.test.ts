@@ -45,8 +45,13 @@ function legato() {
   ];
   return s;
 }
-test("built-in instrument JSON catalog preserves eleven IDs and explicit parameters", () => {
-  assert.equal(INSTRUMENTS.length, 11);
+test("built-in instrument JSON catalog preserves its IDs and explicit parameters", () => {
+  // Eleven chip/FM/procedural presets plus four subtractive presets.
+  assert.equal(INSTRUMENTS.length, 15);
+  assert.deepEqual(
+    INSTRUMENTS.filter((p) => p.engine === "subtractive").map((p) => p.id),
+    ["analog-pad", "analog-lead", "analog-bass", "analog-pluck"],
+  );
   assert.equal(
     INSTRUMENTS.find((p) => p.id === "pulse-pluck")!.synthesis!.pulseWidth,
     -0.5,

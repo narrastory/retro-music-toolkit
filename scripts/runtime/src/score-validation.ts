@@ -68,6 +68,11 @@ export function validateExtensions(
         "DRUM_DEFINITION",
         `drumKit is only valid on the drums engine: ${p.id}`,
       );
+    if (p.subtractive && p.engine !== "subtractive")
+      error(
+        "SUBTRACTIVE_DEFINITION",
+        `subtractive settings are only valid on the subtractive engine: ${p.id}`,
+      );
     if (p.engine === "drums" && !p.drumKit && p.sample)
       error(
         "DRUM_DEFINITION",

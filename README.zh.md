@@ -10,7 +10,7 @@
 
 **完全本地，零 API。同一份乐谱，永远导出同一段音频。**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![143 tests](https://img.shields.io/badge/tests-143%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![155 tests](https://img.shields.io/badge/tests-155%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 在线试听](https://narrastory.github.io/retro-music-toolkit/) · [快速开始](#快速开始) · [和音乐大模型的区别](#和音乐生成大模型有什么不同) · [技术细节](#技术细节)
 
@@ -137,7 +137,7 @@ Sections:
 <td valign="top">
 
 **🔊 发声**
-- NES / Genesis / SNES 三种风格，11 个程序音色 + 10 件采样乐器
+- NES / Genesis / SNES 三种风格，15 个合成音色（含 4 个减法合成）+ 20 件采样乐器
 - `hardware` 模式：无滤波脉冲、三档占空比、16 级音量
 - 单声部和弦轮换：三音和弦只占一个声部
 - SNES 八抽头 FIR 回声，8 种鼓件 + 采样鼓组
@@ -167,6 +167,12 @@ cat song.json | node dist/cli.js validate - --compact
 ```
 
 ---
+
+## 减法合成与管弦音色
+
+新增 `subtractive` 引擎，提供模拟合成器风格的声音：可叠加多个失谐振荡器，滤波器带独立包络，另有一个可调制音高、滤波器和音量的 LFO。附 4 个预设：`analog-pad`、`analog-lead`、`analog-bass`、`analog-pluck`。新增 CC0 `orchestra` 包（约 16.6 MB，来自 VSCO 2 CE 与 VCSL）：弦乐合奏、拨奏、长笛、单簧管、圆号、竖琴、马林巴、颤音琴、陶笛、羽管键琴。每个根音都经过音高校验，长音乐器带交叉淡化的无缝循环。
+
+[减法合成与管弦音色指南](references/synth-and-orchestra.zh-CN.md)
 
 ## 1.3：常用音色扩充
 
@@ -235,7 +241,7 @@ node dist/cli.js compare v1.wav v2.wav --out ab.wav   # 两版等响对比
 - **release 尾音与按音冲突分开报告**。前者常见且无害，后者才需要改。
 - **可复现性**：鼓噪声、humanize、random 琶音全部由 seed 派生，禁止运行期 `Math.random`。浏览器 DSP 差异仍可能导致逐样本不一致，不宣称 bit-exact。
 
-**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；143 项自动化测试（112 单元 + 29 真实音频 + 2 网页），另有试听页专项检查。
+**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；155 项自动化测试（117 单元 + 36 真实音频 + 2 网页），另有试听页专项检查。
 
 </details>
 

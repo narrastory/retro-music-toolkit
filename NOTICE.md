@@ -72,6 +72,24 @@ these samples, embedded score copies or derivative material. In particular,
 use the credited piano; the first and third also use the credited drums. These recordings are
 not relicensed under the code's MIT license; no endorsement is implied.
 
+## Orchestral sampled instruments (CC0)
+
+The `orchestra` directory under `scripts/runtime/instruments/` contains curated
+derivatives of two Versilian Studios libraries, both released under CC0 1.0:
+
+- **VSCO 2 Community Edition** (strings, pizzicato, flute, clarinet, French
+  horn, harp): https://github.com/sgossner/VSCO-2-CE, commit
+  440300901dfe9275fd84e0b7763af1f8443ae62e
+- **VCSL** (marimba, vibraphone, ocarina, harpsichord):
+  https://github.com/sgossner/VCSL, commit
+  c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e
+
+Changes: selected root notes and dynamics, leading-silence trim, mono 32 kHz
+PCM16, bounded length with end fade, one shared peak gain per root, measured
+tuning offsets and sustain loop points. Upstream paths, original/processed
+hashes and loop correlations are in `SOURCES.json`; both license texts are
+included alongside the manifest. Attribution is not required but appreciated.
+
 ## npm dependencies
 
 `tone`, `zod`, `playwright` and `esbuild` are used under their own licences,

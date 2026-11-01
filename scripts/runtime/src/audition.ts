@@ -18,7 +18,9 @@ export function instrumentGuidance(id: string, source?: Score) {
           ? "Check register extremes, loop texture and fast passages; verify sample provenance."
           : p.engine === "drums"
             ? "Keep noise tails and hit density restrained."
-            : "Check high-register harshness and melody/accompaniment masking.",
+            : p.engine === "subtractive"
+              ? "Check resonance peaks, low-end build-up in stacked chords and how the filter envelope reads at the track tempo."
+              : "Check high-register harshness and melody/accompaniment masking.",
     auditionStatus: "reference available; human listening review pending",
   };
 }
@@ -80,7 +82,7 @@ export function createAuditionScore(id: string, source?: Score) {
     sampleAssets: source?.sampleAssets,
     title: `Audition: ${id}`,
     profile:
-      p.engine === "fm"
+      p.engine === "fm" || p.engine === "subtractive"
         ? "genesis-inspired"
         : p.engine === "sample"
           ? "snes-inspired"

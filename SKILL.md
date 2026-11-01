@@ -17,6 +17,7 @@ Create an original, editable musical work, not just a WAV. Use the deterministic
 - Read `references/v1.2-guide.zh-CN.md` for bundled sampled instruments, portable collection imports and deterministic stereo reverb. For acoustic timbres, inspect `cli instrument-packs` and import the selected starter instruments before writing tracks.
 - Read `references/v1.3-guide.zh-CN.md` for common band/piano/drum collections, velocity-layer selection and deterministic round robin. Use `instrument-packs --all` to discover packs, and `import-pack --pack ID` to embed only the instruments needed. If `validate` reports `STALE_PACK_INSTRUMENT`, re-import that instrument with `import-pack --pack ID --instrument ID --replace`. Preserve CC BY attribution when using piano/drum packs.
 - Read `references/architecture.zh-CN.md` when changing the engine.
+- Read `references/synth-and-orchestra.zh-CN.md` for the `subtractive` engine (analog pads, leads, basses, plucks; presets `analog-*`) and the CC0 `orchestra` pack (strings, pizzicato, flute, clarinet, horn, harp, marimba, vibraphone, ocarina, harpsichord). Import only the orchestra instruments a cue needs: the whole pack exceeds one score's sample budget.
 - Read `references/v0.2-guide.zh-CN.md` / `references/v0.3-guide.zh-CN.md` only for historical context on audition calibration, diagnostics, instrument packages and expression.
 - Inspect `scripts/runtime/examples/` for valid full scores. Do not present a renamed example as a new composition.
 - For deeper craft, read the corresponding guide in `references/source-guides/`. Search headings first; do not load all guides into every task.
@@ -109,7 +110,7 @@ Complete the user-requested musical scope, validate the source, render the final
 
 ## Audition before choosing presets
 
-Run `node dist/cli.js audition --out AUDITION_DIR` to generate all 11 reference WAVs, a listening page, measured normalisation reports and an unreviewed listening form. Use `--instrument ID` for one preset. RMS matching is signal-level calibration, not human listening approval.
+Run `node dist/cli.js audition --out AUDITION_DIR` to generate all 15 preset reference WAVs, a listening page, measured normalisation reports and an unreviewed listening form. Use `--instrument ID` for one preset. RMS matching is signal-level calibration, not human listening approval.
 
 ## Revise without inventing
 

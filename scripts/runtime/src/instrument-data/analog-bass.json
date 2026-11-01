@@ -1,0 +1,36 @@
+{
+  "id": "analog-bass",
+  "engine": "subtractive",
+  "role": "bass",
+  "range": [
+    28,
+    60
+  ],
+  "attack": 0.004,
+  "release": 0.08,
+  "description": "Resonant mono saw bass with a plucky filter envelope; firm low end that stays out of the lead's register.",
+  "synthesis": {
+    "sustain": 0.7,
+    "decaySeconds": 0.2,
+    "volumeDb": -10
+  },
+  "subtractive": {
+    "oscillator": "sawtooth",
+    "unison": {
+      "voices": 1,
+      "detuneCents": 0
+    },
+    "filter": {
+      "type": "lowpass",
+      "cutoffHz": 260,
+      "resonance": 3.5,
+      "rolloff": -24,
+      "envelopeOctaves": 2.8,
+      "attack": 0.002,
+      "decay": 0.18,
+      "sustain": 0.15,
+      "release": 0.1
+    }
+  },
+  "provenance": "Procedural toolkit preset; no original-game assets."
+}
