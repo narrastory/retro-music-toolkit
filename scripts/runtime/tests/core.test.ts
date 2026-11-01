@@ -8,6 +8,7 @@ import { analyzeChannels } from "../src/analysis.js";
 import { fixture } from "./helpers.js";
 import { bakeLoopCrossfade } from "../src/dsp.js";
 import { findSustainLoop } from "../src/loop.js";
+import { nesPulseWidth } from "../src/synthesis.js";
 test("pitch, flats and tick accuracy", () => {
   assert.equal(midi("A4"), 69);
   assert.equal(midi("Bb3"), 58);
@@ -255,4 +256,14 @@ test("sustain loop finder lands on whole periods with in-phase fade regions", ()
   const step = Math.abs(baked![loop.start]! - baked![loop.end - 1]!);
   const typical = Math.abs(x[loop.start]! - x[loop.start - 1]!);
   assert.ok(step < typical * 1.5 + 1e-3, `${step} vs ${typical}`);
+});
+
+test("hardware mode snaps pulse width to the 2A03 duty cycles", () => {
+  // Tone width w has duty (1 + w) / 2: 0 → 50 %, -0.5 → 25 %, -0.75 → 12.5 %.
+  assert.equal(nesPulseWidth(0), 0);
+  assert.equal(nesPulseWidth(-0.5), -0.5);
+  assert.equal(nesPulseWidth(-0.7), -0.75);
+  // 75 % sounds like 25 %; it folds to the same channel setting.
+  assert.equal(nesPulseWidth(0.5), -0.5);
+  assert.equal(nesPulseWidth(0.1), 0);
 });

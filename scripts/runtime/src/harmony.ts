@@ -217,7 +217,10 @@ export function harmonyFindings(c: CompiledScore): HarmonyFinding[] {
   const barBeats = beatsPerBar(s.meter);
   const key = keyOf(s);
   const scale = key ? scaleOf(key) : undefined;
-  const beatOf = (e: CompiledEvent) => e.tick / c.ppq;
+  // Judge notes where they were written: humanize jitter of a few ticks must
+  // not move a downbeat note into the previous chord.
+  const beatOf = (e: CompiledEvent) =>
+    (e.tick - (e.humanizeShiftTicks ?? 0)) / c.ppq;
   const barOf = (beat: number) => Math.floor(beat / barBeats) + 1;
   const emit = (
     rule: HarmonyRule,

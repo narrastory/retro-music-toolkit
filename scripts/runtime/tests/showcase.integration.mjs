@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 import { compileScore } from "../dist/compiler.js";
 import { chromium } from "playwright";
 
-test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and responsive layout", async () => {
+test("showcase: cave scene, exclusive playback, seeking, section jumps, prompts, scanlines and responsive layout", async () => {
   const root = new URL("../../../docs/", import.meta.url);
   const mime = {
     html: "text/html; charset=utf-8",
@@ -122,6 +122,30 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
         .evaluate((audio) => audio.paused),
       true,
     );
+    // Section buttons seek within their own track.
+    await page.locator(".track").first().locator(".jump").nth(2).click();
+    await page.waitForFunction(() => {
+      const audio = document.querySelector("audio");
+      return !audio.paused && audio.currentTime > 40;
+    });
+    // The pixel cave is drawn (non-empty canvas) and accepts biome changes.
+    assert.ok(
+      await page.evaluate(() => {
+        const canvas = document.querySelector("#cave");
+        const data = canvas
+          .getContext("2d")
+          .getImageData(0, 0, canvas.width, canvas.height).data;
+        let lit = 0;
+        for (let i = 0; i < data.length; i += 4)
+          if (data[i] + data[i + 1] + data[i + 2] > 60) lit++;
+        return (
+          canvas.width > 50 &&
+          lit > 100 &&
+          typeof window.caveScene?.play === "function"
+        );
+      }),
+    );
+    await page.locator(".prompt summary").first().click();
     await page.locator(".copy").first().click();
     assert.equal(
       await page.evaluate(() => navigator.clipboard.readText()),
@@ -171,7 +195,7 @@ test("showcase: media, exclusive playback, seeking, loop, prompts, CRT and respo
       0,
     );
     console.log(
-      "All three new MP3s played; downloads resolved; desktop/mobile layouts checked.",
+      "All three MP3s played; section jumps, cave scene, downloads and layouts checked.",
     );
   } finally {
     await browser?.close();

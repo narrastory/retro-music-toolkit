@@ -5,108 +5,102 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="三首原创游戏场景配乐：雨后探索、室内叙事与轻快冒险。用 Retro Music Toolkit 离线创作，试听并下载 WAV 与乐谱。"
+      content="三首原创游戏配乐：苔光集市、晶脉潜流、熔芯守卫。全部由 Retro Music Toolkit 从 JSON 乐谱离线渲染，可试听、下载 WAV 与完整乐谱。"
     />
-    <meta name="theme-color" content="#210d13" />
-    <title>Retro Music Toolkit · 点燃下一场冒险</title>
+    <meta name="theme-color" content="#0e0c16" />
+    <title>Retro Music Toolkit：地底三首歌</title>
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=new-cues-2" />
-    <script src="showcase.js?v=new-cues-2" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css?v=cave-1" />
+    <script src="scene.js?v=cave-1" defer></script>
+    <script src="showcase.js?v=cave-1" defer></script>
   </head>
   <body class="crt">
-    <a class="skip" href="#collection">跳到音乐选集</a>
-    <div class="pixel-sky" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-    </div>
+    <a class="skip" href="#collection">跳到曲目</a>
+    <canvas id="cave" aria-hidden="true"></canvas>
     <div class="page">
       <header class="masthead">
-        <a class="brand" href="./"
-          ><span class="brand-icon" aria-hidden="true">♫</span
-          ><span>Retro Music <b>Toolkit</b></span></a
-        >
+        <a class="brand" href="./">
+          <svg class="brand-mark" viewBox="0 0 8 8" aria-hidden="true">
+            <path d="M3 0h2v1h1v2h1v2h-1v2h-1v1h-2v-1h-1v-2h-1v-2h1v-2h1z" />
+            <path class="spark" d="M4 2h1v1h-1z" />
+          </svg>
+          <span>Retro Music Toolkit</span>
+        </a>
         <nav aria-label="主导航">
-          <a href="#collection">试听选集</a
-          ><a href="https://github.com/narrastory/retro-music-toolkit"
-            >GitHub ↗</a
-          ><button id="crt-toggle" aria-pressed="true">CRT 效果：开</button>
+          <a href="#collection">曲目</a>
+          <a href="https://github.com/narrastory/retro-music-toolkit">GitHub</a>
+          <button id="crt-toggle" type="button" aria-pressed="true">
+            扫描线：开
+          </button>
         </nav>
       </header>
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <p class="eyebrow">
-            <span></span> 原创游戏配乐 / Original game soundtracks
+          <h1 id="hero-title">地底深处，<br />有三首歌在发光。</h1>
+          <p class="intro">
+            一座集市、一条晶脉、一位守卫。三首原创游戏配乐，每一个音符都写在
+            JSON 乐谱里，由 Retro Music Toolkit
+            在本机离线渲染成可无缝循环的音频。
           </p>
-          <h1 id="hero-title">
-            让旋律，<br />陪着故事走<span class="cursor" aria-hidden="true"
-              >_</span
-            >
-          </h1>
-          <div class="hero-bottom">
-            <p class="intro">
-              雨停以后的小径，夜里仍亮着的窗，<br />还有通向远方的路。<br />三首为游戏场景重新写起的旋律。
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#collection">▶ 听见新的世界</a
-              ><span>3 首原创 / 可循环 / 附完整乐谱</span>
-            </div>
+          <div class="hero-actions">
+            <button class="button" id="start-listening" type="button">
+              <span aria-hidden="true">▶</span> 从苔光集市听起
+            </button>
+            <p>播放时，背景的洞穴会换成那首曲子的地貌，核心随节拍跳动。</p>
           </div>
-          <div class="horizon" aria-hidden="true"></div>
         </section>
+
         <section id="collection" aria-labelledby="collection-title">
           <div class="section-heading">
-            <div>
-              <p class="eyebrow">探索 · 叙事 · 冒险</p>
-              <h2 id="collection-title">你的故事，从哪一首开始？</h2>
-            </div>
-            <p>每首附创作 Prompt<br />WAV 音频与完整乐谱</p>
+            <h2 id="collection-title">三层矿脉，三种写法</h2>
+            <p>
+              同一个工具，三套完全不同的声音：采样管弦、减法合成、NES
+              四通道。每首都附创作提示词、完整乐谱和渲染报告。
+            </p>
           </div>
-          <div id="tracks"><p class="loading">正在载入音乐选集…</p></div>
-          <noscript
-            ><p>
-              启用 JavaScript 查看完整选集。直接试听：<a
-                href="audio/after-the-rain.mp3"
-                >雨后小径</a
-              >、<a href="audio/lit-window.mp3">窗灯未眠</a>、<a
-                href="audio/copper-sky.mp3"
-                >铜色天际</a
-              >。
-            </p></noscript
-          >
+          <div id="tracks"><p class="loading">正在挖掘曲目…</p></div>
+          <noscript>
+            <p class="noscript">
+              启用 JavaScript 查看完整曲目。直接试听：
+              <a href="audio/mossglow-market.mp3">苔光集市</a>、
+              <a href="audio/crystal-undercurrent.mp3">晶脉潜流</a>、
+              <a href="audio/molten-core-warden.mp3">熔芯守卫</a>。
+            </p>
+          </noscript>
         </section>
-        <section class="take-home" aria-labelledby="take-title">
-          <span class="pixel-note" aria-hidden="true">♫</span>
-          <div>
-            <h2 id="take-title">把喜欢的声音，带进你的游戏。</h2>
-            <p>
-              三首配乐可用于个人与商业项目；所用采样含署名许可，发布时请保留适用署名与许可说明。下载
-              WAV 即可使用，循环时长可在渲染报告中查看；乐谱也一并留给你。
-            </p>
-            <a
-              href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md#generated-audio"
-              >查看音频使用说明 ↗</a
-            >
-          </div>
-          <div class="tool-note">
-            <h3>由 Retro Music Toolkit 创作与渲染</h3>
 
+        <section class="take-home" aria-labelledby="take-title">
+          <h2 id="take-title">把它们带进你的游戏</h2>
+          <div class="take-columns">
             <p>
-              钢琴、吉他与复古合成音色，各自融入场景。离线渲染，也能继续调整旋律、音色与编配。
+              三首曲子都可用于个人和商业项目。WAV
+              首尾相接即可无缝循环；乐谱是普通
+              JSON，可以改旋律、换音色，再用同一个工具重新渲染。
             </p>
-            <a href="https://github.com/narrastory/retro-music-toolkit"
-              >了解工具 ↗</a
-            >
+            <p>
+              苔光集市和晶脉潜流用到了署名许可的采样（钢琴 CC BY 3.0、鼓组 CC BY
+              4.0），发布时请保留每首曲目下方列出的署名。熔芯守卫全部是合成音色，无需署名。
+              <a
+                href="https://github.com/narrastory/retro-music-toolkit/blob/main/NOTICE.md"
+                >查看完整出处与许可</a
+              >
+            </p>
           </div>
         </section>
       </main>
       <footer>
-        <a
-          class="brand"
-          href="https://github.com/narrastory/retro-music-toolkit"
-          >Retro Music Toolkit</a
-        >
-        <p>有限的声音，无限的故事。</p>
-        <small
-          >MP3 用于预览，WAV 用于游戏交付。<br />风格参考仅涉及创作思路，不使用原作旋律或采样。</small
+        <p>
+          旋律与编曲均为原创，不使用任何商业游戏的旋律或采样。MP3 用于试听，WAV
+          用于交付。
+        </p>
+        <a href="https://github.com/narrastory/retro-music-toolkit"
+          >在 GitHub 上查看 Retro Music Toolkit</a
         >
       </footer>
     </div>

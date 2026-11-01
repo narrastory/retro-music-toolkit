@@ -117,3 +117,31 @@ test("motif heuristic distinguishes exact transposed repetition from varying int
   });
   assert.ok(!diagnoseScore(s).findings.some((f) => f.rule === "MOTIF_VARIETY"));
 });
+
+test("harmony checks judge humanized notes at their written beat", () => {
+  const s: any = fixture();
+  s.schemaVersion = "1.3";
+  s.lengthBeats = 8;
+  s.harmony = [
+    { at: 0, chord: "C" },
+    { at: 4, chord: "F" },
+  ];
+  s.tracks[0].role = "bass";
+  s.tracks[0].instrument = "triangle-bass";
+  s.tracks[0].humanize = { timingBeats: 0.01, velocity: 0 };
+  s.tracks[0].patterns.a = {
+    lengthBeats: 8,
+    events: [
+      { id: "c", kind: "note", at: 0, pitch: "C3", duration: 3.5 },
+      { id: "f", kind: "note", at: 4, pitch: "F2", duration: 3.5 },
+    ],
+  };
+  // Any seed whose jitter pulls the F early would have been judged against C.
+  for (let seed = 1; seed <= 20; seed++) {
+    s.seed = seed;
+    const findings = diagnoseScore(s).findings.filter(
+      (f: any) => f.rule === "BASS_NON_CHORD_TONE",
+    );
+    assert.deepEqual(findings, [], `seed ${seed}`);
+  }
+});

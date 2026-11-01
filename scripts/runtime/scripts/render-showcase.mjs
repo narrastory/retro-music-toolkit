@@ -21,7 +21,8 @@ for (const track of manifest) {
     execFileSync(
       process.execPath,
       [cli, "render", score, "--out", wav, "--force"],
-      { stdio: "pipe", timeout: 180000 },
+      // The renderer enforces its own length-scaled timeout; this is a backstop.
+      { stdio: "pipe", timeout: 1800000 },
     );
   }
   const report = JSON.parse(await readFile(wav + ".report.json", "utf8"));

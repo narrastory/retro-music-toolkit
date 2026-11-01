@@ -281,6 +281,8 @@ export type CompiledEvent = {
   endTick: number;
   cutTick?: number;
   swingShiftTicks?: number;
+  /** Timing jitter added by track humanize; analysis reads the written beat. */
+  humanizeShiftTicks?: number;
   humanizeVelocity?: number;
   /** Compiled once so crop, solo and repeated loop renders use identical samples. */
   sampleZoneIndex?: number;

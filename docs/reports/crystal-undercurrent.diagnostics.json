@@ -1,0 +1,2016 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "piano",
+      "path": "tracks.5"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pad: 188 release tails truncated by the next note (first at beat 4, last at beat 188). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pad",
+      "beat": 4,
+      "eventIds": [
+        "pad-p0-0",
+        "pad-p0-1",
+        "pad-p0-2",
+        "pad-p0-3",
+        "pad-p0-4",
+        "pad-p0-5",
+        "pad-p0-6",
+        "pad-p0-7",
+        "pad-p0-10",
+        "pad-p0-11",
+        "pad-p0-8",
+        "pad-p0-9",
+        "pad-p0-12",
+        "pad-p0-13",
+        "pad-p0-14",
+        "pad-p0-15",
+        "pad-p0-16",
+        "pad-p0-17",
+        "pad-p0-18",
+        "pad-p0-19",
+        "pad-p0-20",
+        "pad-p0-21",
+        "pad-p0-22",
+        "pad-p0-23",
+        "pad-p0-24",
+        "pad-p0-25",
+        "pad-p0-26",
+        "pad-p0-27",
+        "pad-p0-28",
+        "pad-p0-29",
+        "pad-p0-30",
+        "pad-p0-31"
+      ],
+      "suggestion": {
+        "count": 188,
+        "exampleSourceIds": [
+          "pad-p0-0",
+          "pad-p0-1",
+          "pad-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "bass: 167 release tails truncated by the next note (first at beat 32.75, last at beat 191.5). The notes themselves finished; only the tails are clipped.",
+      "trackId": "bass",
+      "beat": 32.75,
+      "eventIds": [
+        "bass-p0-0",
+        "bass-p0-2",
+        "bass-p0-4",
+        "bass-p0-5",
+        "bass-p0-6",
+        "bass-p0-7",
+        "bass-p0-9",
+        "bass-p0-11",
+        "bass-p0-12",
+        "bass-p0-13",
+        "bass-p0-14",
+        "bass-p0-16",
+        "bass-p0-18",
+        "bass-p0-19",
+        "bass-p0-20",
+        "bass-p0-21",
+        "bass-p0-23",
+        "bass-p0-25",
+        "bass-p0-26",
+        "bass-p0-27",
+        "bass-p0-28",
+        "bass-p0-30",
+        "bass-p0-32",
+        "bass-p0-33",
+        "bass-p0-34",
+        "bass-p0-35",
+        "bass-p0-37",
+        "bass-p0-39",
+        "bass-p0-40",
+        "bass-p0-41",
+        "bass-p0-42",
+        "bass-p0-44"
+      ],
+      "suggestion": {
+        "count": 167,
+        "exampleSourceIds": [
+          "bass-p0-0",
+          "bass-p0-2",
+          "bass-p0-4"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: 84 release tails truncated by the next note (first at beat 33.5, last at beat 191). The notes themselves finished; only the tails are clipped.",
+      "trackId": "lead",
+      "beat": 33.5,
+      "eventIds": [
+        "lead-p0-0",
+        "lead-p0-1",
+        "lead-p0-2",
+        "lead-p0-3",
+        "lead-p0-4",
+        "lead-p0-5",
+        "lead-p0-6",
+        "lead-p0-7",
+        "lead-p0-8",
+        "lead-p0-9",
+        "lead-p0-10",
+        "lead-p0-11",
+        "lead-p0-12",
+        "lead-p0-14",
+        "lead-p0-15",
+        "lead-p0-16",
+        "lead-p0-17",
+        "lead-p0-18",
+        "lead-p0-19",
+        "lead-p0-20",
+        "lead-p0-21",
+        "lead-p0-22",
+        "lead-p0-23",
+        "lead-p0-24",
+        "lead-p0-25",
+        "lead-p0-26",
+        "lead-p0-27",
+        "lead-p0-28",
+        "lead-p1-0",
+        "lead-p1-1",
+        "lead-p1-2",
+        "lead-p1-3"
+      ],
+      "suggestion": {
+        "count": 84,
+        "exampleSourceIds": [
+          "lead-p0-0",
+          "lead-p0-1",
+          "lead-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 0",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-188",
+        "pad-cp0/0/pad-p0-0"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 1",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-189",
+        "pad-cp0/0/pad-p0-1"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 2",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-190",
+        "pad-cp0/0/pad-p0-2"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 3",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-191",
+        "pad-cp0/0/pad-p0-3"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pluck: tail overlaps the next loop on voice 0",
+      "trackId": "pluck",
+      "eventIds": [
+        "pluck-cp0/0/pluck-p0-639",
+        "pluck-cp0/0/pluck-p0-0"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "lead",
+        "bass"
+      ],
+      "fromBeat": 75,
+      "toBeat": 78.7,
+      "bar": 19,
+      "sourceEventIds": [
+        "lead-p1-12",
+        "lead-p1-13",
+        "bass-p0-75",
+        "bass-p0-77"
+      ],
+      "evidence": {
+        "first": "G5/G2",
+        "second": "F#5/F#1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "lead",
+        "bass"
+      ],
+      "fromBeat": 76,
+      "toBeat": 80.9,
+      "bar": 20,
+      "sourceEventIds": [
+        "lead-p1-13",
+        "lead-p1-14",
+        "bass-p0-77",
+        "bass-p0-84"
+      ],
+      "evidence": {
+        "first": "F#5/F#1",
+        "second": "E5/E1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "lead",
+        "bass"
+      ],
+      "fromBeat": 171,
+      "toBeat": 174.7,
+      "bar": 43,
+      "sourceEventIds": [
+        "lead-p3-12",
+        "lead-p3-13",
+        "bass-p0-203",
+        "bass-p0-205"
+      ],
+      "evidence": {
+        "first": "G5/G2",
+        "second": "F#5/F#1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "lead",
+        "bass"
+      ],
+      "fromBeat": 172,
+      "toBeat": 176.9,
+      "bar": 44,
+      "sourceEventIds": [
+        "lead-p3-13",
+        "lead-p3-14",
+        "bass-p0-205",
+        "bass-p0-212"
+      ],
+      "evidence": {
+        "first": "F#5/F#1",
+        "second": "E5/E1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "chip",
+        "bass"
+      ],
+      "fromBeat": 171,
+      "toBeat": 174.1,
+      "bar": 43,
+      "sourceEventIds": [
+        "chip-p0-12",
+        "chip-p0-13",
+        "bass-p0-203",
+        "bass-p0-205"
+      ],
+      "evidence": {
+        "first": "G4/G2",
+        "second": "F#4/F#1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "chip",
+        "bass"
+      ],
+      "fromBeat": 172,
+      "toBeat": 176.7,
+      "bar": 44,
+      "sourceEventIds": [
+        "chip-p0-13",
+        "chip-p0-14",
+        "bass-p0-205",
+        "bass-p0-212"
+      ],
+      "evidence": {
+        "first": "F#4/F#1",
+        "second": "E4/E1"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "lead"
+      ],
+      "fromBeat": 39,
+      "toBeat": 41,
+      "bar": 10,
+      "sourceEventIds": [
+        "lead-p0-7",
+        "lead-p0-8",
+        "lead-p0-9"
+      ],
+      "evidence": {
+        "leapSemitones": 10,
+        "nextMove": 2,
+        "gapBeats": 1
+      },
+      "message": "Leap of 10 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 96,
+      "toBeat": 97,
+      "bar": 25,
+      "sourceEventIds": [
+        "piano-p1-0",
+        "piano-p1-1",
+        "piano-p0-1"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 16,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 96,
+      "toBeat": 98,
+      "bar": 25,
+      "sourceEventIds": [
+        "piano-p1-1",
+        "piano-p0-1",
+        "piano-p0-2"
+      ],
+      "evidence": {
+        "leapSemitones": 16,
+        "nextMove": 5,
+        "gapBeats": 1
+      },
+      "message": "Leap of 16 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 100,
+      "toBeat": 101.5,
+      "bar": 26,
+      "sourceEventIds": [
+        "piano-p1-2",
+        "piano-p1-3",
+        "piano-p0-4"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 19,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 104,
+      "toBeat": 105,
+      "bar": 27,
+      "sourceEventIds": [
+        "piano-p1-4",
+        "piano-p1-5",
+        "piano-p0-7"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 17,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 108,
+      "toBeat": 109,
+      "bar": 28,
+      "sourceEventIds": [
+        "piano-p1-6",
+        "piano-p1-7",
+        "piano-p0-10"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 24,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 108,
+      "toBeat": 110,
+      "bar": 28,
+      "sourceEventIds": [
+        "piano-p1-7",
+        "piano-p0-10",
+        "piano-p0-11"
+      ],
+      "evidence": {
+        "leapSemitones": 24,
+        "nextMove": 5,
+        "gapBeats": 1
+      },
+      "message": "Leap of 24 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 112,
+      "toBeat": 113.5,
+      "bar": 29,
+      "sourceEventIds": [
+        "piano-p1-8",
+        "piano-p1-9",
+        "piano-p0-14"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 19,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 116,
+      "toBeat": 117,
+      "bar": 30,
+      "sourceEventIds": [
+        "piano-p1-10",
+        "piano-p1-11",
+        "piano-p0-17"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 12,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 116,
+      "toBeat": 118,
+      "bar": 30,
+      "sourceEventIds": [
+        "piano-p1-11",
+        "piano-p0-17",
+        "piano-p0-18"
+      ],
+      "evidence": {
+        "leapSemitones": 12,
+        "nextMove": 5,
+        "gapBeats": 1
+      },
+      "message": "Leap of 12 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 120,
+      "toBeat": 121,
+      "bar": 31,
+      "sourceEventIds": [
+        "piano-p1-12",
+        "piano-p1-13",
+        "piano-p0-20"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 24,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 120,
+      "toBeat": 122,
+      "bar": 31,
+      "sourceEventIds": [
+        "piano-p1-13",
+        "piano-p0-20",
+        "piano-p0-21"
+      ],
+      "evidence": {
+        "leapSemitones": 24,
+        "nextMove": 4,
+        "gapBeats": 1
+      },
+      "message": "Leap of 24 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 124,
+      "toBeat": 126,
+      "bar": 32,
+      "sourceEventIds": [
+        "piano-p1-14",
+        "piano-p1-15",
+        "piano-p0-23"
+      ],
+      "evidence": {
+        "leapSemitones": 7,
+        "nextMove": 24,
+        "gapBeats": 0
+      },
+      "message": "Leap of 7 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 124,
+      "toBeat": 127,
+      "bar": 32,
+      "sourceEventIds": [
+        "piano-p1-15",
+        "piano-p0-23",
+        "piano-p0-24"
+      ],
+      "evidence": {
+        "leapSemitones": 24,
+        "nextMove": 3,
+        "gapBeats": 2
+      },
+      "message": "Leap of 24 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "pad"
+      ],
+      "fromBeat": 28,
+      "toBeat": 192,
+      "bar": 8,
+      "sourceEventIds": [
+        "pad-p0-31",
+        "pad-p0-63",
+        "pad-p0-95",
+        "pad-p0-125",
+        "pad-p0-159",
+        "pad-p0-191"
+      ],
+      "evidence": {
+        "count": 6,
+        "ratio": 0.03125,
+        "key": "E minor",
+        "pitches": [
+          "D#4"
+        ]
+      },
+      "message": "6 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "pluck"
+      ],
+      "fromBeat": 28.75,
+      "toBeat": 191.4,
+      "bar": 8,
+      "sourceEventIds": [
+        "pluck-p0-115",
+        "pluck-p0-118",
+        "pluck-p0-123",
+        "pluck-p0-125",
+        "pluck-p0-243",
+        "pluck-p0-246",
+        "pluck-p0-251",
+        "pluck-p0-253",
+        "pluck-p0-371",
+        "pluck-p0-374",
+        "pluck-p0-379",
+        "pluck-p0-381",
+        "pluck-p0-499",
+        "pluck-p0-502",
+        "pluck-p0-507",
+        "pluck-p0-509",
+        "pluck-p0-627",
+        "pluck-p0-630",
+        "pluck-p0-635",
+        "pluck-p0-637"
+      ],
+      "evidence": {
+        "count": 20,
+        "ratio": 0.03125,
+        "key": "E minor",
+        "pitches": [
+          "D#6"
+        ]
+      },
+      "message": "20 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "bass"
+      ],
+      "fromBeat": 47.5,
+      "toBeat": 175.9,
+      "bar": 12,
+      "sourceEventIds": [
+        "bass-p0-27",
+        "bass-p0-83",
+        "bass-p0-155",
+        "bass-p0-211"
+      ],
+      "evidence": {
+        "count": 4,
+        "ratio": 0.016666666666666666,
+        "key": "E minor",
+        "pitches": [
+          "C#2"
+        ]
+      },
+      "message": "4 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "lead"
+      ],
+      "fromBeat": 62.5,
+      "toBeat": 190.9,
+      "bar": 16,
+      "sourceEventIds": [
+        "lead-p0-27",
+        "lead-p1-28",
+        "lead-p3-28"
+      ],
+      "evidence": {
+        "count": 3,
+        "ratio": 0.03333333333333333,
+        "key": "E minor",
+        "pitches": [
+          "D#5"
+        ]
+      },
+      "message": "3 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 124,
+      "toBeat": 125.8,
+      "bar": 32,
+      "sourceEventIds": [
+        "piano-p0-22"
+      ],
+      "evidence": {
+        "count": 1,
+        "ratio": 0.024390243902439025,
+        "key": "E minor",
+        "pitches": [
+          "D#5"
+        ]
+      },
+      "message": "1 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "chip"
+      ],
+      "fromBeat": 190,
+      "toBeat": 190.7,
+      "bar": 48,
+      "sourceEventIds": [
+        "chip-p0-28"
+      ],
+      "evidence": {
+        "count": 1,
+        "ratio": 0.03333333333333333,
+        "key": "E minor",
+        "pitches": [
+          "D#4"
+        ]
+      },
+      "message": "1 notes outside the declared E minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pad",
+        "lead"
+      ],
+      "fromBeat": 52,
+      "toBeat": 184,
+      "bar": 14,
+      "sourceEventIds": [
+        "pad-p0-54",
+        "lead-p0-20",
+        "pad-p0-86",
+        "lead-p1-20",
+        "pad-p0-98",
+        "lead-p1-29",
+        "pad-p0-182",
+        "lead-p3-20"
+      ],
+      "evidence": {
+        "pairs": 4
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pad",
+        "piano"
+      ],
+      "fromBeat": 96,
+      "toBeat": 124,
+      "bar": 25,
+      "sourceEventIds": [
+        "pad-p0-98",
+        "piano-p0-1",
+        "pad-p0-108",
+        "piano-p0-8",
+        "pad-p0-113",
+        "piano-p0-14",
+        "pad-p0-122",
+        "piano-p0-21"
+      ],
+      "evidence": {
+        "pairs": 4
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pad",
+        "chip"
+      ],
+      "fromBeat": 176,
+      "toBeat": 184,
+      "bar": 45,
+      "sourceEventIds": [
+        "pad-p0-177",
+        "chip-p0-16",
+        "pad-p0-182",
+        "chip-p0-20"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pluck",
+        "lead"
+      ],
+      "fromBeat": 37.5,
+      "toBeat": 189.8,
+      "bar": 10,
+      "sourceEventIds": [
+        "pluck-p0-150",
+        "lead-p0-5",
+        "pluck-p0-214",
+        "lead-p0-20",
+        "pluck-p0-219",
+        "pluck-p0-239",
+        "lead-p0-26",
+        "pluck-p0-283",
+        "lead-p1-7",
+        "pluck-p0-285",
+        "pluck-p0-327",
+        "lead-p1-16",
+        "pluck-p0-342",
+        "lead-p1-20",
+        "pluck-p0-347",
+        "pluck-p0-367",
+        "lead-p1-27",
+        "pluck-p0-539",
+        "lead-p3-7",
+        "pluck-p0-541",
+        "pluck-p0-583",
+        "lead-p3-16",
+        "pluck-p0-598",
+        "lead-p3-20",
+        "pluck-p0-603",
+        "pluck-p0-623",
+        "lead-p3-27"
+      ],
+      "evidence": {
+        "pairs": 16
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pluck",
+        "chip"
+      ],
+      "fromBeat": 177.5,
+      "toBeat": 189.4,
+      "bar": 45,
+      "sourceEventIds": [
+        "pluck-p0-583",
+        "chip-p0-16",
+        "pluck-p0-623",
+        "chip-p0-27"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 124,
+      "toBeat": 192,
+      "bar": 32,
+      "sourceEventIds": [
+        "piano-p0-24"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 65,
+        "lastPitch": "A5"
+      },
+      "message": "Melody goes quiet for the last 65.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "chip"
+      ],
+      "fromBeat": 0,
+      "toBeat": 192,
+      "bar": 1,
+      "sourceEventIds": [
+        "chip-p0-0",
+        "chip-p0-1",
+        "chip-p0-2",
+        "chip-p0-3",
+        "chip-p0-4",
+        "chip-p0-5",
+        "chip-p0-6",
+        "chip-p0-7",
+        "chip-p0-8",
+        "chip-p0-9",
+        "chip-p0-10",
+        "chip-p0-11",
+        "chip-p0-12",
+        "chip-p0-13",
+        "chip-p0-14",
+        "chip-p0-15",
+        "chip-p0-16",
+        "chip-p0-17",
+        "chip-p0-18",
+        "chip-p0-19",
+        "chip-p0-20",
+        "chip-p0-21",
+        "chip-p0-22",
+        "chip-p0-23",
+        "chip-p0-24",
+        "chip-p0-25",
+        "chip-p0-26",
+        "chip-p0-27",
+        "chip-p0-28",
+        "chip-p0-29"
+      ],
+      "clipIds": [
+        "chip-cp0"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 7
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "piano"
+      ],
+      "fromBeat": 0,
+      "toBeat": 192,
+      "bar": 1,
+      "sourceEventIds": [
+        "piano-p0-0",
+        "piano-p1-0",
+        "piano-p1-1",
+        "piano-p0-1",
+        "piano-p0-2",
+        "piano-p0-3",
+        "piano-p1-2",
+        "piano-p1-3",
+        "piano-p0-4",
+        "piano-p0-5",
+        "piano-p0-6",
+        "piano-p1-4",
+        "piano-p1-5",
+        "piano-p0-7",
+        "piano-p0-8",
+        "piano-p0-9",
+        "piano-p1-6",
+        "piano-p1-7",
+        "piano-p0-10",
+        "piano-p0-11",
+        "piano-p0-12",
+        "piano-p0-13",
+        "piano-p1-8",
+        "piano-p1-9",
+        "piano-p0-14",
+        "piano-p0-15",
+        "piano-p0-16",
+        "piano-p1-10",
+        "piano-p1-11",
+        "piano-p0-17",
+        "piano-p0-18",
+        "piano-p0-19",
+        "piano-p1-12",
+        "piano-p1-13",
+        "piano-p0-20",
+        "piano-p0-21",
+        "piano-p0-22",
+        "piano-p1-14",
+        "piano-p1-15",
+        "piano-p0-23",
+        "piano-p0-24"
+      ],
+      "clipIds": [
+        "piano-cp0",
+        "piano-cp1"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 8
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 56,
+      "toBeat": 60,
+      "bar": 15,
+      "sourceEventIds": [
+        "lead-p0-22",
+        "lead-p0-23",
+        "lead-p0-24",
+        "lead-p0-25",
+        "pluck-p0-224",
+        "pluck-p0-225",
+        "pluck-p0-226",
+        "pluck-p0-227",
+        "pluck-p0-228",
+        "pluck-p0-229",
+        "pluck-p0-230",
+        "pluck-p0-231",
+        "pluck-p0-232",
+        "pluck-p0-233",
+        "pluck-p0-234",
+        "pluck-p0-235",
+        "pluck-p0-236",
+        "pluck-p0-237",
+        "pluck-p0-238",
+        "pluck-p0-239"
+      ],
+      "clipIds": [
+        "lead-cp0",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 72,
+      "toBeat": 76,
+      "bar": 19,
+      "sourceEventIds": [
+        "lead-p1-8",
+        "lead-p1-9",
+        "lead-p1-10",
+        "lead-p1-11",
+        "lead-p1-12",
+        "pluck-p0-288",
+        "pluck-p0-289",
+        "pluck-p0-290",
+        "pluck-p0-291",
+        "pluck-p0-292",
+        "pluck-p0-293",
+        "pluck-p0-294",
+        "pluck-p0-295",
+        "pluck-p0-296",
+        "pluck-p0-297",
+        "pluck-p0-298",
+        "pluck-p0-299",
+        "pluck-p0-300",
+        "pluck-p0-301",
+        "pluck-p0-302",
+        "pluck-p0-303"
+      ],
+      "clipIds": [
+        "lead-cp1",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 80,
+      "toBeat": 84,
+      "bar": 21,
+      "sourceEventIds": [
+        "lead-p1-14",
+        "lead-p1-15",
+        "lead-p1-16",
+        "lead-p1-17",
+        "lead-p1-18",
+        "pluck-p0-320",
+        "pluck-p0-321",
+        "pluck-p0-322",
+        "pluck-p0-323",
+        "pluck-p0-324",
+        "pluck-p0-325",
+        "pluck-p0-326",
+        "pluck-p0-327",
+        "pluck-p0-328",
+        "pluck-p0-329",
+        "pluck-p0-330",
+        "pluck-p0-331",
+        "pluck-p0-332",
+        "pluck-p0-333",
+        "pluck-p0-334",
+        "pluck-p0-335"
+      ],
+      "clipIds": [
+        "lead-cp1",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 88,
+      "toBeat": 92,
+      "bar": 23,
+      "sourceEventIds": [
+        "lead-p1-22",
+        "lead-p1-23",
+        "lead-p1-24",
+        "lead-p1-25",
+        "lead-p1-26",
+        "pluck-p0-352",
+        "pluck-p0-353",
+        "pluck-p0-354",
+        "pluck-p0-355",
+        "pluck-p0-356",
+        "pluck-p0-357",
+        "pluck-p0-358",
+        "pluck-p0-359",
+        "pluck-p0-360",
+        "pluck-p0-361",
+        "pluck-p0-362",
+        "pluck-p0-363",
+        "pluck-p0-364",
+        "pluck-p0-365",
+        "pluck-p0-366",
+        "pluck-p0-367"
+      ],
+      "clipIds": [
+        "lead-cp1",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 168,
+      "toBeat": 172,
+      "bar": 43,
+      "sourceEventIds": [
+        "lead-p3-8",
+        "lead-p3-9",
+        "lead-p3-10",
+        "lead-p3-11",
+        "lead-p3-12",
+        "pluck-p0-544",
+        "pluck-p0-545",
+        "pluck-p0-546",
+        "pluck-p0-547",
+        "pluck-p0-548",
+        "pluck-p0-549",
+        "pluck-p0-550",
+        "pluck-p0-551",
+        "pluck-p0-552",
+        "pluck-p0-553",
+        "pluck-p0-554",
+        "pluck-p0-555",
+        "pluck-p0-556",
+        "pluck-p0-557",
+        "pluck-p0-558",
+        "pluck-p0-559"
+      ],
+      "clipIds": [
+        "lead-cp3",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 176,
+      "toBeat": 180,
+      "bar": 45,
+      "sourceEventIds": [
+        "lead-p3-14",
+        "lead-p3-15",
+        "lead-p3-16",
+        "lead-p3-17",
+        "lead-p3-18",
+        "pluck-p0-576",
+        "pluck-p0-577",
+        "pluck-p0-578",
+        "pluck-p0-579",
+        "pluck-p0-580",
+        "pluck-p0-581",
+        "pluck-p0-582",
+        "pluck-p0-583",
+        "pluck-p0-584",
+        "pluck-p0-585",
+        "pluck-p0-586",
+        "pluck-p0-587",
+        "pluck-p0-588",
+        "pluck-p0-589",
+        "pluck-p0-590",
+        "pluck-p0-591"
+      ],
+      "clipIds": [
+        "lead-cp3",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "lead",
+        "pluck"
+      ],
+      "fromBeat": 184,
+      "toBeat": 188,
+      "bar": 47,
+      "sourceEventIds": [
+        "lead-p3-22",
+        "lead-p3-23",
+        "lead-p3-24",
+        "lead-p3-25",
+        "lead-p3-26",
+        "pluck-p0-608",
+        "pluck-p0-609",
+        "pluck-p0-610",
+        "pluck-p0-611",
+        "pluck-p0-612",
+        "pluck-p0-613",
+        "pluck-p0-614",
+        "pluck-p0-615",
+        "pluck-p0-616",
+        "pluck-p0-617",
+        "pluck-p0-618",
+        "pluck-p0-619",
+        "pluck-p0-620",
+        "pluck-p0-621",
+        "pluck-p0-622",
+        "pluck-p0-623"
+      ],
+      "clipIds": [
+        "lead-cp3",
+        "pluck-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 4
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 160,
+      "toBeat": 164,
+      "bar": 41,
+      "sourceEventIds": [
+        "chip-p0-0",
+        "chip-p0-1",
+        "chip-p0-2",
+        "chip-p0-3",
+        "pad-p0-160",
+        "pad-p0-161",
+        "pad-p0-162",
+        "pad-p0-163"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 164,
+      "toBeat": 168,
+      "bar": 42,
+      "sourceEventIds": [
+        "chip-p0-4",
+        "chip-p0-5",
+        "chip-p0-6",
+        "chip-p0-7",
+        "pad-p0-164",
+        "pad-p0-165",
+        "pad-p0-166",
+        "pad-p0-167"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 168,
+      "toBeat": 172,
+      "bar": 43,
+      "sourceEventIds": [
+        "chip-p0-8",
+        "chip-p0-9",
+        "chip-p0-10",
+        "chip-p0-11",
+        "chip-p0-12",
+        "pad-p0-168",
+        "pad-p0-169",
+        "pad-p0-170",
+        "pad-p0-171"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 176,
+      "toBeat": 180,
+      "bar": 45,
+      "sourceEventIds": [
+        "chip-p0-14",
+        "chip-p0-15",
+        "chip-p0-16",
+        "chip-p0-17",
+        "chip-p0-18",
+        "pad-p0-176",
+        "pad-p0-177",
+        "pad-p0-178",
+        "pad-p0-179"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 180,
+      "toBeat": 184,
+      "bar": 46,
+      "sourceEventIds": [
+        "chip-p0-19",
+        "chip-p0-20",
+        "chip-p0-21",
+        "pad-p0-180",
+        "pad-p0-181",
+        "pad-p0-182",
+        "pad-p0-183"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 1.5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "chip",
+        "pad"
+      ],
+      "fromBeat": 188,
+      "toBeat": 192,
+      "bar": 48,
+      "sourceEventIds": [
+        "chip-p0-27",
+        "chip-p0-28",
+        "chip-p0-29",
+        "pad-p0-188",
+        "pad-p0-189",
+        "pad-p0-190",
+        "pad-p0-191"
+      ],
+      "clipIds": [
+        "chip-cp0",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "piano",
+        "pad"
+      ],
+      "fromBeat": 104,
+      "toBeat": 108,
+      "bar": 27,
+      "sourceEventIds": [
+        "piano-p0-6",
+        "piano-p1-4",
+        "piano-p1-5",
+        "piano-p0-7",
+        "piano-p0-8",
+        "pad-p0-104",
+        "pad-p0-105",
+        "pad-p0-106",
+        "pad-p0-107"
+      ],
+      "clipIds": [
+        "piano-cp0",
+        "piano-cp1",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "piano",
+        "pad"
+      ],
+      "fromBeat": 112,
+      "toBeat": 116,
+      "bar": 29,
+      "sourceEventIds": [
+        "piano-p0-13",
+        "piano-p1-8",
+        "piano-p1-9",
+        "piano-p0-14",
+        "piano-p0-15",
+        "pad-p0-112",
+        "pad-p0-113",
+        "pad-p0-114",
+        "pad-p0-115"
+      ],
+      "clipIds": [
+        "piano-cp0",
+        "piano-cp1",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "piano",
+        "pad"
+      ],
+      "fromBeat": 116,
+      "toBeat": 120,
+      "bar": 30,
+      "sourceEventIds": [
+        "piano-p0-16",
+        "piano-p1-10",
+        "piano-p1-11",
+        "piano-p0-17",
+        "piano-p0-18",
+        "pad-p0-116",
+        "pad-p0-117",
+        "pad-p0-118",
+        "pad-p0-119"
+      ],
+      "clipIds": [
+        "piano-cp0",
+        "piano-cp1",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 0.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "piano",
+        "pad"
+      ],
+      "fromBeat": 120,
+      "toBeat": 124,
+      "bar": 31,
+      "sourceEventIds": [
+        "piano-p0-19",
+        "piano-p1-12",
+        "piano-p1-13",
+        "piano-p0-20",
+        "piano-p0-21",
+        "pad-p0-120",
+        "pad-p0-121",
+        "pad-p0-122",
+        "pad-p0-123"
+      ],
+      "clipIds": [
+        "piano-cp0",
+        "piano-cp1",
+        "pad-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 1
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "pad",
+        "role": "harmony",
+        "instrument": "analog-pad",
+        "eventCount": 192,
+        "notesPerBeat": 1,
+        "medianMidi": 59
+      },
+      {
+        "trackId": "pluck",
+        "role": "arp",
+        "instrument": "analog-pluck",
+        "eventCount": 640,
+        "notesPerBeat": 3.3333333333333335,
+        "medianMidi": 83
+      },
+      {
+        "trackId": "bass",
+        "role": "bass",
+        "instrument": "analog-bass",
+        "eventCount": 240,
+        "notesPerBeat": 1.25,
+        "medianMidi": 36
+      },
+      {
+        "trackId": "lead",
+        "role": "melody",
+        "instrument": "analog-lead",
+        "eventCount": 93,
+        "notesPerBeat": 0.484375,
+        "medianMidi": 76
+      },
+      {
+        "trackId": "chip",
+        "role": "melody",
+        "instrument": "chip-tenor",
+        "eventCount": 30,
+        "notesPerBeat": 0.15625,
+        "medianMidi": 64
+      },
+      {
+        "trackId": "piano",
+        "role": "melody",
+        "instrument": "keys-grand",
+        "eventCount": 41,
+        "notesPerBeat": 0.21354166666666666,
+        "medianMidi": 69
+      },
+      {
+        "trackId": "drums",
+        "role": "drums",
+        "instrument": "drums-acoustic",
+        "eventCount": 520,
+        "notesPerBeat": 2.7083333333333335,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Descent",
+        "fromBeat": 0,
+        "toBeat": 64,
+        "eventsPerBeat": 8.78125,
+        "activeTrackIds": [
+          "bass",
+          "drums",
+          "lead",
+          "pad",
+          "pluck"
+        ],
+        "medianMidi": 79
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Veins",
+        "fromBeat": 64,
+        "toBeat": 96,
+        "eventsPerBeat": 11.53125,
+        "activeTrackIds": [
+          "bass",
+          "drums",
+          "lead",
+          "pad",
+          "pluck"
+        ],
+        "medianMidi": 78
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Still water",
+        "fromBeat": 96,
+        "toBeat": 160,
+        "eventsPerBeat": 7.03125,
+        "activeTrackIds": [
+          "bass",
+          "drums",
+          "lead",
+          "pad",
+          "piano",
+          "pluck"
+        ],
+        "medianMidi": 71
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Surge",
+        "fromBeat": 160,
+        "toBeat": 192,
+        "eventsPerBeat": 11.71875,
+        "activeTrackIds": [
+          "bass",
+          "chip",
+          "drums",
+          "lead",
+          "pad",
+          "pluck"
+        ],
+        "medianMidi": 76
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "E minor",
+    "chordCount": 48
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

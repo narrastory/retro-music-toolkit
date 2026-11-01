@@ -124,3 +124,18 @@ export function toneBufferFromChannels(
   );
   return new Tone.ToneAudioBuffer(buffer);
 }
+
+/**
+ * Snap a Tone.js pulse width (-1..1, 0 = square) to the nearest 2A03 duty
+ * cycle. Tone's width w gives a duty of (1 + w) / 2; duties d and 1 - d sound
+ * the same, so the duty is folded to ≤ 50 % before snapping to 12.5 / 25 /
+ * 50 % and converted back (widths -0.75, -0.5, 0).
+ */
+export function nesPulseWidth(width: number) {
+  const duty = (1 + width) / 2;
+  const folded = Math.min(duty, 1 - duty);
+  const snapped = [0.5, 0.25, 0.125].reduce((best, d) =>
+    Math.abs(d - folded) < Math.abs(best - folded) ? d : best,
+  );
+  return 2 * snapped - 1;
+}

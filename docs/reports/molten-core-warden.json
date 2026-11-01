@@ -1,0 +1,742 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 2910600,
+  "durationSeconds": 66,
+  "peak": 0.6295624375343323,
+  "peakDbfs": -4.019223835921841,
+  "truePeakDbfs": -3.926765240340166,
+  "rms": 0.13746302911178573,
+  "rmsDbfs": -17.23628180565264,
+  "loudnessLufs": -16.01,
+  "dcMean": -0.08094711129185214,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.001679830253124237,
+  "maxAdjacentStep": 0.4462805241346359,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.0420535784928315,
+  "cycleComparison": {
+    "differenceRms": 0.0420535784928315,
+    "signalRms": 0.13746302911178573,
+    "relativeDifference": 0.3059264644796477
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": {
+    "enabled": true,
+    "ceilingDbfs": -1.5,
+    "lookaheadSeconds": 0.005,
+    "triggeredSamples": 0,
+    "maxGainReductionDb": 0
+  },
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 176,
+    "warmupCycles": 2,
+    "loopFrames": 2910600,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": {
+      "enabled": true,
+      "ceilingDbfs": -1.5,
+      "lookaheadSeconds": 0.005,
+      "triggeredSamples": 0,
+      "maxGainReductionDb": 0
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 80",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-0",
+        "pulse-2-cp3/0/pulse-2-p3-0"
+      ],
+      "beat": 80,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 80.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-1",
+        "pulse-2-cp3/0/pulse-2-p3-1"
+      ],
+      "beat": 80.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 81",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-2",
+        "pulse-2-cp3/0/pulse-2-p3-2"
+      ],
+      "beat": 81,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 81.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-3",
+        "pulse-2-cp3/0/pulse-2-p3-3"
+      ],
+      "beat": 81.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 82",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-4",
+        "pulse-2-cp3/0/pulse-2-p3-4"
+      ],
+      "beat": 82,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 83",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-5",
+        "pulse-2-cp3/0/pulse-2-p3-5"
+      ],
+      "beat": 83,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 84",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-6",
+        "pulse-2-cp3/0/pulse-2-p3-6"
+      ],
+      "beat": 84,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 84.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-7",
+        "pulse-2-cp3/0/pulse-2-p3-7"
+      ],
+      "beat": 84.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 85",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-8",
+        "pulse-2-cp3/0/pulse-2-p3-8"
+      ],
+      "beat": 85,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 85.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-9",
+        "pulse-2-cp3/0/pulse-2-p3-9"
+      ],
+      "beat": 85.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 86",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-10",
+        "pulse-2-cp3/0/pulse-2-p3-10"
+      ],
+      "beat": 86,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 87",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-11",
+        "pulse-2-cp3/0/pulse-2-p3-11"
+      ],
+      "beat": 87,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 88",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-12",
+        "pulse-2-cp3/0/pulse-2-p3-12"
+      ],
+      "beat": 88,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 88.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-13",
+        "pulse-2-cp3/0/pulse-2-p3-13"
+      ],
+      "beat": 88.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 89",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-14",
+        "pulse-2-cp3/0/pulse-2-p3-14"
+      ],
+      "beat": 89,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 89.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-15",
+        "pulse-2-cp3/0/pulse-2-p3-15"
+      ],
+      "beat": 89.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 90",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-16",
+        "pulse-2-cp3/0/pulse-2-p3-16"
+      ],
+      "beat": 90,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 91",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-17",
+        "pulse-2-cp3/0/pulse-2-p3-17"
+      ],
+      "beat": 91,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 92",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-18",
+        "pulse-2-cp3/0/pulse-2-p3-18"
+      ],
+      "beat": 92,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 92.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-19",
+        "pulse-2-cp3/0/pulse-2-p3-19"
+      ],
+      "beat": 92.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 93",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-20",
+        "pulse-2-cp3/0/pulse-2-p3-20"
+      ],
+      "beat": 93,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 93.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-21",
+        "pulse-2-cp3/0/pulse-2-p3-21"
+      ],
+      "beat": 93.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 94",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-22",
+        "pulse-2-cp3/0/pulse-2-p3-22"
+      ],
+      "beat": 94,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 95",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-23",
+        "pulse-2-cp3/0/pulse-2-p3-23"
+      ],
+      "beat": 95,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 96",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-24",
+        "pulse-2-cp3/0/pulse-2-p3-24"
+      ],
+      "beat": 96,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 96.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-25",
+        "pulse-2-cp3/0/pulse-2-p3-25"
+      ],
+      "beat": 96.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 97",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-26",
+        "pulse-2-cp3/0/pulse-2-p3-26"
+      ],
+      "beat": 97,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 97.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-27",
+        "pulse-2-cp3/0/pulse-2-p3-27"
+      ],
+      "beat": 97.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 98",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-28",
+        "pulse-2-cp3/0/pulse-2-p3-28"
+      ],
+      "beat": 98,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 99",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-29",
+        "pulse-2-cp3/0/pulse-2-p3-29"
+      ],
+      "beat": 99,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 100",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-30",
+        "pulse-2-cp3/0/pulse-2-p3-30"
+      ],
+      "beat": 100,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 100.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-31",
+        "pulse-2-cp3/0/pulse-2-p3-31"
+      ],
+      "beat": 100.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 101",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-32",
+        "pulse-2-cp3/0/pulse-2-p3-32"
+      ],
+      "beat": 101,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 101.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-33",
+        "pulse-2-cp3/0/pulse-2-p3-33"
+      ],
+      "beat": 101.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 102",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-34",
+        "pulse-2-cp3/0/pulse-2-p3-34"
+      ],
+      "beat": 102,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 103",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-35",
+        "pulse-2-cp3/0/pulse-2-p3-35"
+      ],
+      "beat": 103,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 104",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-36",
+        "pulse-2-cp3/0/pulse-2-p3-36"
+      ],
+      "beat": 104,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 104.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-37",
+        "pulse-2-cp3/0/pulse-2-p3-37"
+      ],
+      "beat": 104.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 105",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-38",
+        "pulse-2-cp3/0/pulse-2-p3-38"
+      ],
+      "beat": 105,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 105.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-39",
+        "pulse-2-cp3/0/pulse-2-p3-39"
+      ],
+      "beat": 105.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 106",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-40",
+        "pulse-2-cp3/0/pulse-2-p3-40"
+      ],
+      "beat": 106,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 107",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-41",
+        "pulse-2-cp3/0/pulse-2-p3-41"
+      ],
+      "beat": 107,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 108",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-42",
+        "pulse-2-cp3/0/pulse-2-p3-42"
+      ],
+      "beat": 108,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 108.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-43",
+        "pulse-2-cp3/0/pulse-2-p3-43"
+      ],
+      "beat": 108.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 109",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-44",
+        "pulse-2-cp3/0/pulse-2-p3-44"
+      ],
+      "beat": 109,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 109.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-45",
+        "pulse-2-cp3/0/pulse-2-p3-45"
+      ],
+      "beat": 109.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 110",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-46",
+        "pulse-2-cp3/0/pulse-2-p3-46"
+      ],
+      "beat": 110,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 111",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-47",
+        "pulse-2-cp3/0/pulse-2-p3-47"
+      ],
+      "beat": 111,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pulse-1: 79 release tails truncated by the next note (first at beat 12.5, last at beat 174). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pulse-1",
+      "beat": 12.5,
+      "eventIds": [
+        "pulse-1-p0-0",
+        "pulse-1-p0-1",
+        "pulse-1-p0-2",
+        "pulse-1-p0-3",
+        "pulse-1-p1-0",
+        "pulse-1-p1-1",
+        "pulse-1-p1-3",
+        "pulse-1-p1-4",
+        "pulse-1-p1-6",
+        "pulse-1-p1-7",
+        "pulse-1-p1-9",
+        "pulse-1-p1-10",
+        "pulse-1-p1-12",
+        "pulse-1-p1-13",
+        "pulse-1-p1-15",
+        "pulse-1-p1-16",
+        "pulse-1-p1-19",
+        "pulse-1-p1-21",
+        "pulse-1-p1-22",
+        "pulse-1-p1-23",
+        "pulse-1-p1-24",
+        "pulse-1-p1-27",
+        "pulse-1-p1-28",
+        "pulse-1-p1-30",
+        "pulse-1-p1-31",
+        "pulse-1-p1-34",
+        "pulse-1-p1-35",
+        "pulse-1-p1-39",
+        "pulse-1-p2-0",
+        "pulse-1-p2-1",
+        "pulse-1-p2-3",
+        "pulse-1-p2-4"
+      ],
+      "suggestion": {
+        "count": 79,
+        "exampleSourceIds": [
+          "pulse-1-p0-0",
+          "pulse-1-p0-1",
+          "pulse-1-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pulse-2: 1056 release tails truncated by the next note (first at beat 0.083, last at beat 175.75). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pulse-2",
+      "beat": 0.08333333333333333,
+      "eventIds": [
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0"
+      ],
+      "suggestion": {
+        "count": 1056,
+        "exampleSourceIds": [
+          "pulse-2-p0-0",
+          "pulse-2-p0-0",
+          "pulse-2-p0-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "title": "Molten Core Warden",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261262,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "bf92a685942d58490eae500977770771bb3729e8434e95a697548fccb35d26e4",
+  "audioHash": "27dc7afb59ea68fc8ae81ef98541cf3f50964d00cc580ca7b5289aa1387c9e51",
+  "sourceFile": "docs/scores/molten-core-warden.json"
+}

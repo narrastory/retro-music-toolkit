@@ -367,11 +367,14 @@ export function compileScore(input: unknown): CompiledScore {
             : undefined;
           let tick = clipStart + relativeTick;
           const swingShiftTicks = shift || undefined;
+          let humanizeShiftTicks: number | undefined;
           if (t.humanize && t.humanize.timingBeats > 0 && humanRng) {
             const jitter = Math.round(
               (humanRng() * 2 - 1) * t.humanize.timingBeats * PPQ,
             );
-            tick = Math.max(0, tick + jitter);
+            const shifted = Math.max(0, tick + jitter);
+            humanizeShiftTicks = shifted - tick || undefined;
+            tick = shifted;
           }
 
           let durationTicks: number;
@@ -447,6 +450,7 @@ export function compileScore(input: unknown): CompiledScore {
             keyEndTick,
             endTick,
             ...(swingShiftTicks !== undefined ? { swingShiftTicks } : {}),
+            ...(humanizeShiftTicks !== undefined ? { humanizeShiftTicks } : {}),
             ...(humanVelocity !== undefined
               ? { humanizeVelocity: humanVelocity }
               : {}),

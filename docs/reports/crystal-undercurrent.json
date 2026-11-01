@@ -1,0 +1,273 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 4233600,
+  "durationSeconds": 96,
+  "peak": 0.8413951396942139,
+  "peakDbfs": -1.5000000201403676,
+  "truePeakDbfs": -1.4474478813444212,
+  "rms": 0.11895624983914899,
+  "rmsDbfs": -18.4922547128283,
+  "loudnessLufs": -15.96,
+  "dcMean": -0.0022924940635843357,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.03212747722864151,
+  "maxAdjacentStep": 0.2524348944425583,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.08014376326246488,
+  "cycleComparison": {
+    "differenceRms": 0.08014376326246488,
+    "signalRms": 0.11899932569087915,
+    "relativeDifference": 0.6734808184598612
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": {
+    "enabled": true,
+    "ceilingDbfs": -1.5,
+    "lookaheadSeconds": 0.005,
+    "triggeredSamples": 97955,
+    "maxGainReductionDb": -1.5675251110629995
+  },
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 192,
+    "warmupCycles": 2,
+    "loopFrames": 4233600,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": {
+      "enabled": true,
+      "ceilingDbfs": -1.5,
+      "lookaheadSeconds": 0.005,
+      "triggeredSamples": 97955,
+      "maxGainReductionDb": -1.5675251110629995
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for keys-grand",
+      "trackId": "piano",
+      "path": "tracks.5"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pad: 188 release tails truncated by the next note (first at beat 4, last at beat 188). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pad",
+      "beat": 4,
+      "eventIds": [
+        "pad-p0-0",
+        "pad-p0-1",
+        "pad-p0-2",
+        "pad-p0-3",
+        "pad-p0-4",
+        "pad-p0-5",
+        "pad-p0-6",
+        "pad-p0-7",
+        "pad-p0-10",
+        "pad-p0-11",
+        "pad-p0-8",
+        "pad-p0-9",
+        "pad-p0-12",
+        "pad-p0-13",
+        "pad-p0-14",
+        "pad-p0-15",
+        "pad-p0-16",
+        "pad-p0-17",
+        "pad-p0-18",
+        "pad-p0-19",
+        "pad-p0-20",
+        "pad-p0-21",
+        "pad-p0-22",
+        "pad-p0-23",
+        "pad-p0-24",
+        "pad-p0-25",
+        "pad-p0-26",
+        "pad-p0-27",
+        "pad-p0-28",
+        "pad-p0-29",
+        "pad-p0-30",
+        "pad-p0-31"
+      ],
+      "suggestion": {
+        "count": 188,
+        "exampleSourceIds": [
+          "pad-p0-0",
+          "pad-p0-1",
+          "pad-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "bass: 167 release tails truncated by the next note (first at beat 32.75, last at beat 191.5). The notes themselves finished; only the tails are clipped.",
+      "trackId": "bass",
+      "beat": 32.75,
+      "eventIds": [
+        "bass-p0-0",
+        "bass-p0-2",
+        "bass-p0-4",
+        "bass-p0-5",
+        "bass-p0-6",
+        "bass-p0-7",
+        "bass-p0-9",
+        "bass-p0-11",
+        "bass-p0-12",
+        "bass-p0-13",
+        "bass-p0-14",
+        "bass-p0-16",
+        "bass-p0-18",
+        "bass-p0-19",
+        "bass-p0-20",
+        "bass-p0-21",
+        "bass-p0-23",
+        "bass-p0-25",
+        "bass-p0-26",
+        "bass-p0-27",
+        "bass-p0-28",
+        "bass-p0-30",
+        "bass-p0-32",
+        "bass-p0-33",
+        "bass-p0-34",
+        "bass-p0-35",
+        "bass-p0-37",
+        "bass-p0-39",
+        "bass-p0-40",
+        "bass-p0-41",
+        "bass-p0-42",
+        "bass-p0-44"
+      ],
+      "suggestion": {
+        "count": 167,
+        "exampleSourceIds": [
+          "bass-p0-0",
+          "bass-p0-2",
+          "bass-p0-4"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "lead: 84 release tails truncated by the next note (first at beat 33.5, last at beat 191). The notes themselves finished; only the tails are clipped.",
+      "trackId": "lead",
+      "beat": 33.5,
+      "eventIds": [
+        "lead-p0-0",
+        "lead-p0-1",
+        "lead-p0-2",
+        "lead-p0-3",
+        "lead-p0-4",
+        "lead-p0-5",
+        "lead-p0-6",
+        "lead-p0-7",
+        "lead-p0-8",
+        "lead-p0-9",
+        "lead-p0-10",
+        "lead-p0-11",
+        "lead-p0-12",
+        "lead-p0-14",
+        "lead-p0-15",
+        "lead-p0-16",
+        "lead-p0-17",
+        "lead-p0-18",
+        "lead-p0-19",
+        "lead-p0-20",
+        "lead-p0-21",
+        "lead-p0-22",
+        "lead-p0-23",
+        "lead-p0-24",
+        "lead-p0-25",
+        "lead-p0-26",
+        "lead-p0-27",
+        "lead-p0-28",
+        "lead-p1-0",
+        "lead-p1-1",
+        "lead-p1-2",
+        "lead-p1-3"
+      ],
+      "suggestion": {
+        "count": 84,
+        "exampleSourceIds": [
+          "lead-p0-0",
+          "lead-p0-1",
+          "lead-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 0",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-188",
+        "pad-cp0/0/pad-p0-0"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 1",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-189",
+        "pad-cp0/0/pad-p0-1"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 2",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-190",
+        "pad-cp0/0/pad-p0-2"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pad: tail overlaps the next loop on voice 3",
+      "trackId": "pad",
+      "eventIds": [
+        "pad-cp0/0/pad-p0-191",
+        "pad-cp0/0/pad-p0-3"
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pluck: tail overlaps the next loop on voice 0",
+      "trackId": "pluck",
+      "eventIds": [
+        "pluck-cp0/0/pluck-p0-639",
+        "pluck-cp0/0/pluck-p0-0"
+      ]
+    }
+  ],
+  "title": "Crystal Undercurrent",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261222,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "136000bea5f6a373cb103d9bec423742b9a2f10e5d09e38004a55a6c8ddb8d5b",
+  "audioHash": "0f4ac71f9c13b3e76453bf765eea5759c2d936e3ff3a9ab905c097cc125f6d7b",
+  "sourceFile": "docs/scores/crystal-undercurrent.json"
+}

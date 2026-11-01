@@ -16,6 +16,7 @@ import {
   sampleWave,
   drumBuffer,
   toneBufferFromChannels,
+  nesPulseWidth,
 } from "./synthesis.js";
 import { analyzeChannels, compareCycles, cycleMetrics } from "./analysis.js";
 import { RenderOptionsSchema, type RenderOptions } from "./render-options.js";
@@ -361,15 +362,9 @@ export async function renderInBrowser(
           // Physical-layer constraints. A 2A03 pulse channel has exactly three
           // duty cycles (12.5 / 25 / 50 %) and 16 discrete volume levels, so
           // hardware mode snaps to those steps; modern mode keeps them smooth.
-          const dutyCycle = (() => {
-            const w = p.synthesis?.pulseWidth ?? 0;
-            if (!hardware) return w;
-            const options = [0.5, 0.25, 0.125];
-            return options.reduce(
-              (best, o) => (Math.abs(o - w) < Math.abs(best - w) ? o : best),
-              options[0]!,
-            );
-          })();
+          const dutyCycle = hardware
+            ? nesPulseWidth(p.synthesis?.pulseWidth ?? 0)
+            : (p.synthesis?.pulseWidth ?? 0);
           const volumeStep = (db: number) => {
             if (!hardware) return db;
             // 16 linear steps over the full range; quantise in dB space with a

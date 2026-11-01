@@ -10,7 +10,7 @@
 
 **完全本地，零 API。同一份乐谱，永远导出同一段音频。**
 
-[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![155 tests](https://img.shields.io/badge/tests-155%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![100% offline](https://img.shields.io/badge/100%25-offline-2f855a?style=flat-square)](#它替你做什么) [![no API key](https://img.shields.io/badge/API%20key-not%20needed-2f855a?style=flat-square)](#它替你做什么) [![reproducible](https://img.shields.io/badge/output-reproducible-ef3b4c?style=flat-square)](#它替你做什么) [![160 tests](https://img.shields.io/badge/tests-160%20passing-339933?style=flat-square)](#技术细节) [![macOS · Linux · Windows](https://img.shields.io/badge/macOS%20·%20Linux%20·%20Windows-supported-6b7280?style=flat-square)](#快速开始) [![MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
 
 [🎧 在线试听](https://narrastory.github.io/retro-music-toolkit/) · [快速开始](#快速开始) · [和音乐大模型的区别](#和音乐生成大模型有什么不同) · [技术细节](#技术细节)
 
@@ -43,7 +43,7 @@ node dist/cli.js example --out song.json && node dist/cli.js render song.json --
 强拍上的非和弦音、低音与和弦冲突、平行五度、没解决的大跳、循环接缝没回到主和弦——诊断会给出小节号和音符 ID，有的还直接附上修复值。
 
 > [!TIP]
-> 想先听听效果？👉 **[在线试听页](https://narrastory.github.io/retro-music-toolkit/)**（3 首全新原创：田园探索、室内钢琴与轻快冒险）
+> 想先听听效果？👉 **[在线试听页](https://narrastory.github.io/retro-music-toolkit/)**（3 首原创：管弦采样的洞穴集市、减法合成的晶脉探索、NES 四通道首领战）
 > 所有示例都由仓库里的 JSON 乐谱离线渲染，声音合成不调用音乐生成服务。
 
 ---
@@ -241,7 +241,7 @@ node dist/cli.js compare v1.wav v2.wav --out ab.wav   # 两版等响对比
 - **release 尾音与按音冲突分开报告**。前者常见且无害，后者才需要改。
 - **可复现性**：鼓噪声、humanize、random 琶音全部由 seed 派生，禁止运行期 `Math.random`。浏览器 DSP 差异仍可能导致逐样本不一致，不宣称 bit-exact。
 
-**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；155 项自动化测试（117 单元 + 36 真实音频 + 2 网页），另有试听页专项检查。
+**统计**：约 7 500 行 TypeScript；运行时依赖 4 个（`tone`、`zod`、`playwright`、`esbuild`）；160 项自动化测试（119 单元 + 37 真实音频 + 2 网页），另有试听页专项检查。
 
 </details>
 

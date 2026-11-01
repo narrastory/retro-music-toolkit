@@ -1,0 +1,305 @@
+{
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 4233600,
+  "durationSeconds": 96,
+  "peak": 0.7163381576538086,
+  "peakDbfs": -2.897638287532103,
+  "truePeakDbfs": -2.897638287532103,
+  "rms": 0.11533127191597725,
+  "rmsDbfs": -18.761058367702486,
+  "loudnessLufs": -16.04,
+  "dcMean": -0.000028043169356410784,
+  "clippedSamples": 0,
+  "nonFiniteSamples": 0,
+  "silent": false,
+  "boundaryJump": 0.0009742211550474167,
+  "maxAdjacentStep": 0.12273291498422623,
+  "boundarySuspicious": false,
+  "limitations": "Sample-peak, inter-sample peak estimate and BS.1770 gated loudness. Not an aesthetic evaluation; boundary metrics alone cannot prove seamlessness.",
+  "cycleDifferenceRms": 0.000031264362188144714,
+  "cycleComparison": {
+    "differenceRms": 0.000031264362188144714,
+    "signalRms": 0.11533127191597725,
+    "relativeDifference": 0.00027108313008913893
+  },
+  "cycleMeasurementStage": "before-normalization",
+  "normalization": null,
+  "limiter": {
+    "enabled": true,
+    "ceilingDbfs": -1.5,
+    "lookaheadSeconds": 0.005,
+    "triggeredSamples": 0,
+    "maxGainReductionDb": 0
+  },
+  "dither": true,
+  "loopCrossfadeBeats": 0,
+  "render": {
+    "mode": "loop",
+    "fromBeat": 0,
+    "toBeat": 160,
+    "warmupCycles": 2,
+    "loopFrames": 4233600,
+    "seamPreview": false,
+    "effects": "mix",
+    "loopCrossfadeBeats": 0,
+    "dither": true,
+    "limiter": {
+      "enabled": true,
+      "ceilingDbfs": -1.5,
+      "lookaheadSeconds": 0.005,
+      "triggeredSamples": 0,
+      "maxGainReductionDb": 0
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-strings",
+      "trackId": "cantabile",
+      "path": "tracks.3"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"bass\" differs from preset role \"arp\" for orch-pizzicato",
+      "trackId": "pizzicato",
+      "path": "tracks.4"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "flute: 108 release tails truncated by the next note (first at beat 17, last at beat 148). The notes themselves finished; only the tails are clipped.",
+      "trackId": "flute",
+      "beat": 17,
+      "eventIds": [
+        "flute-p0-0",
+        "flute-p0-1",
+        "flute-p0-2",
+        "flute-p0-3",
+        "flute-p0-4",
+        "flute-p0-5",
+        "flute-p0-6",
+        "flute-p0-8",
+        "flute-p0-9",
+        "flute-p0-10",
+        "flute-p0-11",
+        "flute-p0-12",
+        "flute-p0-13",
+        "flute-p0-14",
+        "flute-p0-15",
+        "flute-p0-17",
+        "flute-p0-18",
+        "flute-p0-19",
+        "flute-p0-20",
+        "flute-p0-21",
+        "flute-p0-22",
+        "flute-p0-23",
+        "flute-p0-24",
+        "flute-p0-25",
+        "flute-p0-26",
+        "flute-p0-27",
+        "flute-p0-28",
+        "flute-p0-29",
+        "flute-p0-30",
+        "flute-p0-31",
+        "flute-p0-32",
+        "flute-p0-33"
+      ],
+      "suggestion": {
+        "count": 108,
+        "exampleSourceIds": [
+          "flute-p0-0",
+          "flute-p0-1",
+          "flute-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "clarinet: 53 release tails truncated by the next note (first at beat 50, last at beat 143). The notes themselves finished; only the tails are clipped.",
+      "trackId": "clarinet",
+      "beat": 50,
+      "eventIds": [
+        "clarinet-p0-0",
+        "clarinet-p0-1",
+        "clarinet-p0-3",
+        "clarinet-p0-4",
+        "clarinet-p0-5",
+        "clarinet-p0-6",
+        "clarinet-p0-7",
+        "clarinet-p0-8",
+        "clarinet-p0-9",
+        "clarinet-p0-10",
+        "clarinet-p0-11",
+        "clarinet-p0-13",
+        "clarinet-p1-0",
+        "clarinet-p1-1",
+        "clarinet-p1-3",
+        "clarinet-p1-4",
+        "clarinet-p1-6",
+        "clarinet-p1-7",
+        "clarinet-p1-8",
+        "clarinet-p2-0",
+        "clarinet-p2-1",
+        "clarinet-p2-2",
+        "clarinet-p2-3",
+        "clarinet-p2-4",
+        "clarinet-p2-5",
+        "clarinet-p2-6",
+        "clarinet-p2-8",
+        "clarinet-p2-9",
+        "clarinet-p2-10",
+        "clarinet-p2-11",
+        "clarinet-p2-12",
+        "clarinet-p2-13"
+      ],
+      "suggestion": {
+        "count": 53,
+        "exampleSourceIds": [
+          "clarinet-p0-0",
+          "clarinet-p0-1",
+          "clarinet-p0-3"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings: 56 release tails truncated by the next note (first at beat 12, last at beat 156). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings",
+      "beat": 12,
+      "eventIds": [
+        "strings-p0-0",
+        "strings-p0-1",
+        "strings-p1-0",
+        "strings-p1-1",
+        "strings-p1-4",
+        "strings-p1-5",
+        "strings-p1-7",
+        "strings-p1-8",
+        "strings-p1-11",
+        "strings-p1-9",
+        "strings-p1-13",
+        "strings-p1-14",
+        "strings-p1-16",
+        "strings-p1-17",
+        "strings-p1-19",
+        "strings-p1-20",
+        "strings-p1-22",
+        "strings-p1-23",
+        "strings-p2-1",
+        "strings-p2-2",
+        "strings-p2-4",
+        "strings-p2-5",
+        "strings-p2-7",
+        "strings-p2-8",
+        "strings-p2-11",
+        "strings-p2-9",
+        "strings-p2-13",
+        "strings-p2-14",
+        "strings-p2-16",
+        "strings-p2-17",
+        "strings-p2-19",
+        "strings-p2-20"
+      ],
+      "suggestion": {
+        "count": 56,
+        "exampleSourceIds": [
+          "strings-p0-0",
+          "strings-p0-1",
+          "strings-p1-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "cantabile: 20 release tails truncated by the next note (first at beat 82, last at beat 108). The notes themselves finished; only the tails are clipped.",
+      "trackId": "cantabile",
+      "beat": 82,
+      "eventIds": [
+        "cantabile-p0-0",
+        "cantabile-p0-1",
+        "cantabile-p0-2",
+        "cantabile-p0-3",
+        "cantabile-p0-4",
+        "cantabile-p0-5",
+        "cantabile-p0-6",
+        "cantabile-p0-7",
+        "cantabile-p0-8",
+        "cantabile-p0-10",
+        "cantabile-p0-11",
+        "cantabile-p0-12",
+        "cantabile-p0-13",
+        "cantabile-p0-14",
+        "cantabile-p0-15",
+        "cantabile-p0-16",
+        "cantabile-p0-17",
+        "cantabile-p0-18",
+        "cantabile-p0-19",
+        "cantabile-p0-20"
+      ],
+      "suggestion": {
+        "count": 20,
+        "exampleSourceIds": [
+          "cantabile-p0-0",
+          "cantabile-p0-1",
+          "cantabile-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "harp: 4 release tails truncated by the next note (first at beat 16.064, last at beat 112.118). The notes themselves finished; only the tails are clipped.",
+      "trackId": "harp",
+      "beat": 16.063541666666666,
+      "eventIds": [
+        "harp-p0-29",
+        "harp-p0-30",
+        "harp-p0-117",
+        "harp-p0-118"
+      ],
+      "suggestion": {
+        "count": 4,
+        "exampleSourceIds": [
+          "harp-p0-29",
+          "harp-p0-30",
+          "harp-p0-117"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pizzicato: tail overlaps the next loop on voice 0",
+      "trackId": "pizzicato",
+      "eventIds": [
+        "pizzicato-cp0/0/pizzicato-p0-151",
+        "pizzicato-cp0/0/pizzicato-p0-0"
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "title": "Mossglow Market",
+  "engine": "Tone.js / Chromium / PCM16",
+  "seed": 20261202,
+  "toolkitVersion": "1.3.0",
+  "schemaVersion": "1.3",
+  "loopDiagnostics": null,
+  "sourceHash": "91add60f206976790514a24a66a20b8d1de453fb6898d5e0ab1050fe1eb02163",
+  "audioHash": "a2d2a85ba83f25ac5cffc423f6643880a7d9570e55622207078d61708d8c62ee",
+  "sourceFile": "docs/scores/mossglow-market.json"
+}

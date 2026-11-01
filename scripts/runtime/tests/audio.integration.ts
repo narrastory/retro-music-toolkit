@@ -158,3 +158,44 @@ test("one-shot override bypasses loop-only voice conflicts and rejects invalid o
   assert.equal(r.score.export.mode, "one-shot");
   await assert.rejects(() => renderScore(s, { effects: "typo" as any }));
 });
+
+test("hardware pulse renders the requested NES duty cycle", async () => {
+  for (const [pulseWidth, duty] of [
+    [-0.75, 0.125],
+    [-0.5, 0.25],
+    [0, 0.5],
+  ] as const) {
+    const s: any = fixture();
+    s.schemaVersion = "1.3";
+    s.authenticity = "hardware";
+    s.instrumentDefinitions = [
+      {
+        id: "duty-test",
+        engine: "pulse",
+        role: "melody",
+        range: [36, 96],
+        attack: 0.001,
+        release: 0.01,
+        description: "Duty test",
+        synthesis: { pulseWidth, sustain: 1, volumeDb: -12 },
+      },
+    ];
+    s.tracks[0].instrument = "duty-test";
+    s.tracks[0].patterns.a.events = [
+      { id: "n", kind: "note", at: 0, pitch: "A3", duration: 1.5, gate: 1 },
+    ];
+    const x = decodeWav(
+      (await renderScore(s, { mode: "one-shot", dither: false })).wav,
+    ).channels[0]!;
+    const from = Math.round(0.2 * 44100),
+      to = Math.round(0.6 * 44100);
+    let mean = 0;
+    for (let i = from; i < to; i++) mean += x[i]! / (to - from);
+    let high = 0;
+    for (let i = from; i < to; i++) if (x[i]! > mean) high++;
+    const measured = high / (to - from);
+    // Either polarity is the same channel setting.
+    const folded = Math.min(measured, 1 - measured);
+    assert.ok(Math.abs(folded - duty) < 0.03, `${duty}: measured ${folded}`);
+  }
+});

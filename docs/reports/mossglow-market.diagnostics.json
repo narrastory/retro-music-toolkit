@@ -1,0 +1,2026 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"melody\" differs from preset role \"harmony\" for orch-strings",
+      "trackId": "cantabile",
+      "path": "tracks.3"
+    },
+    {
+      "severity": "info",
+      "code": "ROLE_MISMATCH",
+      "message": "Track role \"bass\" differs from preset role \"arp\" for orch-pizzicato",
+      "trackId": "pizzicato",
+      "path": "tracks.4"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "flute: 108 release tails truncated by the next note (first at beat 17, last at beat 148). The notes themselves finished; only the tails are clipped.",
+      "trackId": "flute",
+      "beat": 17,
+      "eventIds": [
+        "flute-p0-0",
+        "flute-p0-1",
+        "flute-p0-2",
+        "flute-p0-3",
+        "flute-p0-4",
+        "flute-p0-5",
+        "flute-p0-6",
+        "flute-p0-8",
+        "flute-p0-9",
+        "flute-p0-10",
+        "flute-p0-11",
+        "flute-p0-12",
+        "flute-p0-13",
+        "flute-p0-14",
+        "flute-p0-15",
+        "flute-p0-17",
+        "flute-p0-18",
+        "flute-p0-19",
+        "flute-p0-20",
+        "flute-p0-21",
+        "flute-p0-22",
+        "flute-p0-23",
+        "flute-p0-24",
+        "flute-p0-25",
+        "flute-p0-26",
+        "flute-p0-27",
+        "flute-p0-28",
+        "flute-p0-29",
+        "flute-p0-30",
+        "flute-p0-31",
+        "flute-p0-32",
+        "flute-p0-33"
+      ],
+      "suggestion": {
+        "count": 108,
+        "exampleSourceIds": [
+          "flute-p0-0",
+          "flute-p0-1",
+          "flute-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "clarinet: 53 release tails truncated by the next note (first at beat 50, last at beat 143). The notes themselves finished; only the tails are clipped.",
+      "trackId": "clarinet",
+      "beat": 50,
+      "eventIds": [
+        "clarinet-p0-0",
+        "clarinet-p0-1",
+        "clarinet-p0-3",
+        "clarinet-p0-4",
+        "clarinet-p0-5",
+        "clarinet-p0-6",
+        "clarinet-p0-7",
+        "clarinet-p0-8",
+        "clarinet-p0-9",
+        "clarinet-p0-10",
+        "clarinet-p0-11",
+        "clarinet-p0-13",
+        "clarinet-p1-0",
+        "clarinet-p1-1",
+        "clarinet-p1-3",
+        "clarinet-p1-4",
+        "clarinet-p1-6",
+        "clarinet-p1-7",
+        "clarinet-p1-8",
+        "clarinet-p2-0",
+        "clarinet-p2-1",
+        "clarinet-p2-2",
+        "clarinet-p2-3",
+        "clarinet-p2-4",
+        "clarinet-p2-5",
+        "clarinet-p2-6",
+        "clarinet-p2-8",
+        "clarinet-p2-9",
+        "clarinet-p2-10",
+        "clarinet-p2-11",
+        "clarinet-p2-12",
+        "clarinet-p2-13"
+      ],
+      "suggestion": {
+        "count": 53,
+        "exampleSourceIds": [
+          "clarinet-p0-0",
+          "clarinet-p0-1",
+          "clarinet-p0-3"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "strings: 56 release tails truncated by the next note (first at beat 12, last at beat 156). The notes themselves finished; only the tails are clipped.",
+      "trackId": "strings",
+      "beat": 12,
+      "eventIds": [
+        "strings-p0-0",
+        "strings-p0-1",
+        "strings-p1-0",
+        "strings-p1-1",
+        "strings-p1-4",
+        "strings-p1-5",
+        "strings-p1-7",
+        "strings-p1-8",
+        "strings-p1-11",
+        "strings-p1-9",
+        "strings-p1-13",
+        "strings-p1-14",
+        "strings-p1-16",
+        "strings-p1-17",
+        "strings-p1-19",
+        "strings-p1-20",
+        "strings-p1-22",
+        "strings-p1-23",
+        "strings-p2-1",
+        "strings-p2-2",
+        "strings-p2-4",
+        "strings-p2-5",
+        "strings-p2-7",
+        "strings-p2-8",
+        "strings-p2-11",
+        "strings-p2-9",
+        "strings-p2-13",
+        "strings-p2-14",
+        "strings-p2-16",
+        "strings-p2-17",
+        "strings-p2-19",
+        "strings-p2-20"
+      ],
+      "suggestion": {
+        "count": 56,
+        "exampleSourceIds": [
+          "strings-p0-0",
+          "strings-p0-1",
+          "strings-p1-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "cantabile: 20 release tails truncated by the next note (first at beat 82, last at beat 108). The notes themselves finished; only the tails are clipped.",
+      "trackId": "cantabile",
+      "beat": 82,
+      "eventIds": [
+        "cantabile-p0-0",
+        "cantabile-p0-1",
+        "cantabile-p0-2",
+        "cantabile-p0-3",
+        "cantabile-p0-4",
+        "cantabile-p0-5",
+        "cantabile-p0-6",
+        "cantabile-p0-7",
+        "cantabile-p0-8",
+        "cantabile-p0-10",
+        "cantabile-p0-11",
+        "cantabile-p0-12",
+        "cantabile-p0-13",
+        "cantabile-p0-14",
+        "cantabile-p0-15",
+        "cantabile-p0-16",
+        "cantabile-p0-17",
+        "cantabile-p0-18",
+        "cantabile-p0-19",
+        "cantabile-p0-20"
+      ],
+      "suggestion": {
+        "count": 20,
+        "exampleSourceIds": [
+          "cantabile-p0-0",
+          "cantabile-p0-1",
+          "cantabile-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "harp: 4 release tails truncated by the next note (first at beat 16.064, last at beat 112.118). The notes themselves finished; only the tails are clipped.",
+      "trackId": "harp",
+      "beat": 16.063541666666666,
+      "eventIds": [
+        "harp-p0-29",
+        "harp-p0-30",
+        "harp-p0-117",
+        "harp-p0-118"
+      ],
+      "suggestion": {
+        "count": 4,
+        "exampleSourceIds": [
+          "harp-p0-29",
+          "harp-p0-30",
+          "harp-p0-117"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "LOOP_VOICE_STEAL",
+      "message": "pizzicato: tail overlaps the next loop on voice 0",
+      "trackId": "pizzicato",
+      "eventIds": [
+        "pizzicato-cp0/0/pizzicato-p0-151",
+        "pizzicato-cp0/0/pizzicato-p0-0"
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "STYLE_BUDGET",
+      "message": "SNES-inspired declared voice capacity exceeds 8; no hardware compatibility implied"
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "pizzicato"
+      ],
+      "fromBeat": 116,
+      "toBeat": 117.9,
+      "bar": 30,
+      "sourceEventIds": [
+        "clarinet-p2-5",
+        "clarinet-p2-6",
+        "pizzicato-p0-107",
+        "pizzicato-p0-108"
+      ],
+      "evidence": {
+        "first": "G4/C3",
+        "second": "E4/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "UNRESOLVED_LEAP",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 68,
+      "toBeat": 72,
+      "bar": 18,
+      "sourceEventIds": [
+        "clarinet-p0-10",
+        "clarinet-p0-11",
+        "clarinet-p0-12"
+      ],
+      "evidence": {
+        "leapSemitones": 8,
+        "nextMove": 2,
+        "gapBeats": 2
+      },
+      "message": "Leap of 8 semitones continues instead of resolving by step",
+      "suggestions": [
+        "Step back toward the previous pitch, or make the leap the deliberate high point of the phrase."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 76,
+      "toBeat": 95.9,
+      "bar": 20,
+      "sourceEventIds": [
+        "clarinet-p0-13",
+        "clarinet-p1-4"
+      ],
+      "evidence": {
+        "count": 2,
+        "ratio": 0.03225806451612903,
+        "key": "F major",
+        "pitches": [
+          "C#5"
+        ]
+      },
+      "message": "2 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 76,
+      "toBeat": 111.95,
+      "bar": 20,
+      "sourceEventIds": [
+        "flute-p1-30",
+        "flute-p2-3"
+      ],
+      "evidence": {
+        "count": 2,
+        "ratio": 0.017241379310344827,
+        "key": "F major",
+        "pitches": [
+          "C#5",
+          "B4"
+        ]
+      },
+      "message": "2 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "strings"
+      ],
+      "fromBeat": 76,
+      "toBeat": 95.91979166666667,
+      "bar": 20,
+      "sourceEventIds": [
+        "strings-p1-22",
+        "strings-p2-11"
+      ],
+      "evidence": {
+        "count": 2,
+        "ratio": 0.022222222222222223,
+        "key": "F major",
+        "pitches": [
+          "C#4"
+        ]
+      },
+      "message": "2 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "marimba"
+      ],
+      "fromBeat": 76.5,
+      "toBeat": 79.95,
+      "bar": 20,
+      "sourceEventIds": [
+        "marimba-p0-120",
+        "marimba-p0-122",
+        "marimba-p0-124",
+        "marimba-p0-126"
+      ],
+      "evidence": {
+        "count": 4,
+        "ratio": 0.016129032258064516,
+        "key": "F major",
+        "pitches": [
+          "C#4"
+        ]
+      },
+      "message": "4 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "pizzicato"
+      ],
+      "fromBeat": 79.5,
+      "toBeat": 95.95,
+      "bar": 20,
+      "sourceEventIds": [
+        "pizzicato-p0-79",
+        "pizzicato-p0-91"
+      ],
+      "evidence": {
+        "count": 2,
+        "ratio": 0.013157894736842105,
+        "key": "F major",
+        "pitches": [
+          "C#3"
+        ]
+      },
+      "message": "2 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "cantabile"
+      ],
+      "fromBeat": 92,
+      "toBeat": 94.7,
+      "bar": 24,
+      "sourceEventIds": [
+        "cantabile-p0-9"
+      ],
+      "evidence": {
+        "count": 1,
+        "ratio": 0.045454545454545456,
+        "key": "F major",
+        "pitches": [
+          "C#5"
+        ]
+      },
+      "message": "1 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "harp"
+      ],
+      "fromBeat": 93,
+      "toBeat": 95.9,
+      "bar": 24,
+      "sourceEventIds": [
+        "harp-p0-82",
+        "harp-p0-86"
+      ],
+      "evidence": {
+        "count": 2,
+        "ratio": 0.012195121951219513,
+        "key": "F major",
+        "pitches": [
+          "C#4"
+        ]
+      },
+      "message": "2 notes outside the declared F major",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "pizzicato"
+      ],
+      "fromBeat": 7.5,
+      "toBeat": 121.8,
+      "bar": 2,
+      "sourceEventIds": [
+        "harp-p0-15",
+        "pizzicato-p0-7",
+        "harp-p0-35",
+        "pizzicato-p0-23",
+        "harp-p0-47",
+        "pizzicato-p0-55",
+        "harp-p0-78",
+        "pizzicato-p0-88",
+        "harp-p0-123",
+        "pizzicato-p0-111"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "strings"
+      ],
+      "fromBeat": 6.5,
+      "toBeat": 152.4,
+      "bar": 2,
+      "sourceEventIds": [
+        "harp-p0-13",
+        "strings-p0-0",
+        "harp-p0-15",
+        "strings-p0-1",
+        "harp-p0-16",
+        "harp-p0-19",
+        "harp-p0-21",
+        "strings-p0-3",
+        "harp-p0-34",
+        "harp-p0-47",
+        "strings-p1-7",
+        "harp-p0-49",
+        "strings-p1-3",
+        "harp-p0-56",
+        "strings-p1-21",
+        "harp-p0-65",
+        "strings-p2-4",
+        "harp-p0-68",
+        "harp-p0-71",
+        "harp-p0-77",
+        "strings-p2-11",
+        "harp-p0-78",
+        "strings-p2-10",
+        "harp-p0-88",
+        "strings-p2-9",
+        "harp-p0-97",
+        "strings-p2-16",
+        "harp-p0-100",
+        "harp-p0-103",
+        "harp-p0-119",
+        "strings-p3-1",
+        "harp-p0-122",
+        "strings-p2-21",
+        "harp-p0-123",
+        "strings-p3-7",
+        "harp-p0-125",
+        "strings-p3-3",
+        "harp-p0-132",
+        "strings-p3-21",
+        "strings-p4-0",
+        "harp-p0-135",
+        "harp-p0-137",
+        "harp-p0-140",
+        "harp-p0-141",
+        "strings-p4-4",
+        "harp-p0-144",
+        "harp-p0-147"
+      ],
+      "evidence": {
+        "pairs": 31
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "flute"
+      ],
+      "fromBeat": 15.5,
+      "toBeat": 137.86041666666668,
+      "bar": 4,
+      "sourceEventIds": [
+        "harp-p0-31",
+        "flute-p0-1",
+        "harp-p0-42",
+        "flute-p0-28",
+        "harp-p0-118",
+        "flute-p2-3",
+        "harp-p0-119",
+        "flute-p3-1",
+        "harp-p0-130",
+        "flute-p3-28"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "marimba"
+      ],
+      "fromBeat": 15.5,
+      "toBeat": 112.95,
+      "bar": 4,
+      "sourceEventIds": [
+        "harp-p0-31",
+        "marimba-p0-1",
+        "harp-p0-119",
+        "marimba-p0-129"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "clarinet"
+      ],
+      "fromBeat": 56,
+      "toBeat": 122.9,
+      "bar": 15,
+      "sourceEventIds": [
+        "harp-p0-47",
+        "clarinet-p0-5",
+        "harp-p0-99",
+        "clarinet-p1-7",
+        "harp-p0-101",
+        "harp-p0-122",
+        "clarinet-p2-2",
+        "harp-p0-123",
+        "clarinet-p2-11"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "harp",
+        "cantabile"
+      ],
+      "fromBeat": 81.5,
+      "toBeat": 107.45,
+      "bar": 21,
+      "sourceEventIds": [
+        "harp-p0-59",
+        "cantabile-p0-2",
+        "harp-p0-61",
+        "harp-p0-67",
+        "cantabile-p0-4",
+        "harp-p0-69",
+        "harp-p0-77",
+        "cantabile-p0-9",
+        "harp-p0-100",
+        "cantabile-p0-14",
+        "harp-p0-108",
+        "cantabile-p0-19"
+      ],
+      "evidence": {
+        "pairs": 7
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pizzicato",
+        "strings"
+      ],
+      "fromBeat": 8,
+      "toBeat": 151.91979166666667,
+      "bar": 3,
+      "sourceEventIds": [
+        "pizzicato-p0-8",
+        "strings-p0-0",
+        "pizzicato-p0-10",
+        "pizzicato-p0-16",
+        "strings-p0-3",
+        "pizzicato-p0-56",
+        "strings-p1-4",
+        "strings-p1-7",
+        "pizzicato-p0-58",
+        "pizzicato-p0-59",
+        "pizzicato-p0-82",
+        "strings-p2-1",
+        "strings-p2-4",
+        "pizzicato-p0-84",
+        "pizzicato-p0-92",
+        "strings-p2-11",
+        "pizzicato-p0-94",
+        "strings-p2-16",
+        "pizzicato-p0-96",
+        "pizzicato-p0-104",
+        "strings-p2-21",
+        "pizzicato-p0-112",
+        "strings-p3-7",
+        "pizzicato-p0-114",
+        "pizzicato-p0-115",
+        "pizzicato-p0-124",
+        "strings-p3-13",
+        "strings-p3-16",
+        "pizzicato-p0-126",
+        "pizzicato-p0-136",
+        "strings-p3-21",
+        "strings-p4-0",
+        "pizzicato-p0-138",
+        "pizzicato-p0-140",
+        "strings-p4-4",
+        "pizzicato-p0-142"
+      ],
+      "evidence": {
+        "pairs": 25
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pizzicato",
+        "flute"
+      ],
+      "fromBeat": 39,
+      "toBeat": 135.9,
+      "bar": 10,
+      "sourceEventIds": [
+        "pizzicato-p0-38",
+        "flute-p0-26",
+        "pizzicato-p0-102",
+        "flute-p2-3",
+        "pizzicato-p0-126",
+        "flute-p3-26"
+      ],
+      "evidence": {
+        "pairs": 3
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "strings",
+        "flute"
+      ],
+      "fromBeat": 108,
+      "toBeat": 139.91979166666667,
+      "bar": 28,
+      "sourceEventIds": [
+        "strings-p2-22",
+        "flute-p2-1",
+        "strings-p2-23",
+        "flute-p2-3",
+        "strings-p3-10",
+        "flute-p3-17",
+        "strings-p3-17",
+        "flute-p3-26",
+        "strings-p3-20",
+        "flute-p3-28"
+      ],
+      "evidence": {
+        "pairs": 5
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "strings",
+        "marimba"
+      ],
+      "fromBeat": 12,
+      "toBeat": 83.91979166666667,
+      "bar": 4,
+      "sourceEventIds": [
+        "strings-p0-4",
+        "marimba-p0-1",
+        "strings-p2-2",
+        "marimba-p0-126"
+      ],
+      "evidence": {
+        "pairs": 2
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "strings",
+        "clarinet"
+      ],
+      "fromBeat": 56,
+      "toBeat": 135.91979166666667,
+      "bar": 15,
+      "sourceEventIds": [
+        "strings-p1-8",
+        "clarinet-p0-5",
+        "strings-p1-10",
+        "clarinet-p0-8",
+        "strings-p3-0",
+        "clarinet-p2-2",
+        "strings-p3-6",
+        "clarinet-p2-14",
+        "strings-p3-8",
+        "clarinet-p2-11",
+        "strings-p3-12",
+        "clarinet-p2-18",
+        "strings-p3-15",
+        "clarinet-p2-24"
+      ],
+      "evidence": {
+        "pairs": 7
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "marimba",
+        "clarinet"
+      ],
+      "fromBeat": 57.5,
+      "toBeat": 133.95,
+      "bar": 15,
+      "sourceEventIds": [
+        "marimba-p0-82",
+        "clarinet-p0-5",
+        "marimba-p0-84",
+        "marimba-p0-86",
+        "marimba-p0-150",
+        "clarinet-p2-11",
+        "marimba-p0-152",
+        "marimba-p0-157",
+        "clarinet-p2-14",
+        "marimba-p0-169",
+        "clarinet-p2-18",
+        "marimba-p0-181",
+        "clarinet-p2-24"
+      ],
+      "evidence": {
+        "pairs": 8
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 148,
+      "toBeat": 160,
+      "bar": 38,
+      "sourceEventIds": [
+        "flute-p4-4"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 12,
+        "lastPitch": "D5"
+      },
+      "message": "Melody goes quiet for the last 12.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 140,
+      "toBeat": 160,
+      "bar": 36,
+      "sourceEventIds": [
+        "clarinet-p2-36"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 17,
+        "lastPitch": "A#3"
+      },
+      "message": "Melody goes quiet for the last 17.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "LOOP_MELODY_UNRESOLVED",
+      "severity": "info",
+      "trackIds": [
+        "cantabile"
+      ],
+      "fromBeat": 108,
+      "toBeat": 160,
+      "bar": 28,
+      "sourceEventIds": [
+        "cantabile-p0-21"
+      ],
+      "evidence": {
+        "silenceAtEndBeats": 52,
+        "lastPitch": "E5"
+      },
+      "message": "Melody goes quiet for the last 52.00 beats before the loop point",
+      "suggestions": [
+        "Write a phrase ending that hands back to the opening motif, or make the silence deliberate."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 40,
+      "toBeat": 48,
+      "bar": 11,
+      "sourceEventIds": [
+        "flute-p0-27",
+        "flute-p0-28",
+        "flute-p0-29",
+        "flute-p0-30",
+        "flute-p0-31",
+        "flute-p0-32",
+        "flute-p0-33",
+        "flute-p0-34",
+        "flute-p0-35",
+        "flute-p0-36"
+      ],
+      "clipIds": [
+        "flute-cp0"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.10000000000000142,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 64,
+      "toBeat": 72,
+      "bar": 17,
+      "sourceEventIds": [
+        "flute-p1-18",
+        "flute-p1-19",
+        "flute-p1-20",
+        "flute-p1-21",
+        "flute-p1-22",
+        "flute-p1-23",
+        "flute-p1-24",
+        "flute-p1-25",
+        "flute-p1-26",
+        "flute-p1-27"
+      ],
+      "clipIds": [
+        "flute-cp1"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "flute"
+      ],
+      "fromBeat": 136,
+      "toBeat": 144,
+      "bar": 35,
+      "sourceEventIds": [
+        "flute-p3-27",
+        "flute-p3-28",
+        "flute-p3-29",
+        "flute-p3-30",
+        "flute-p3-31",
+        "flute-p3-32",
+        "flute-p3-33",
+        "flute-p3-34",
+        "flute-p3-35",
+        "flute-p3-36"
+      ],
+      "clipIds": [
+        "flute-cp3"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "clarinet"
+      ],
+      "fromBeat": 136,
+      "toBeat": 144,
+      "bar": 35,
+      "sourceEventIds": [
+        "clarinet-p2-27",
+        "clarinet-p2-28",
+        "clarinet-p2-29",
+        "clarinet-p2-30",
+        "clarinet-p2-31",
+        "clarinet-p2-32",
+        "clarinet-p2-33",
+        "clarinet-p2-34",
+        "clarinet-p2-35",
+        "clarinet-p2-36"
+      ],
+      "clipIds": [
+        "clarinet-cp2"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MOTIF_VARIETY",
+      "severity": "info",
+      "trackIds": [
+        "cantabile"
+      ],
+      "fromBeat": 0,
+      "toBeat": 160,
+      "bar": 1,
+      "sourceEventIds": [
+        "cantabile-p0-0",
+        "cantabile-p0-1",
+        "cantabile-p0-2",
+        "cantabile-p0-3",
+        "cantabile-p0-4",
+        "cantabile-p0-5",
+        "cantabile-p0-6",
+        "cantabile-p0-7",
+        "cantabile-p0-8",
+        "cantabile-p0-9",
+        "cantabile-p0-10",
+        "cantabile-p0-11",
+        "cantabile-p0-12",
+        "cantabile-p0-13",
+        "cantabile-p0-14",
+        "cantabile-p0-15",
+        "cantabile-p0-16",
+        "cantabile-p0-17",
+        "cantabile-p0-18",
+        "cantabile-p0-19",
+        "cantabile-p0-20",
+        "cantabile-p0-21"
+      ],
+      "clipIds": [
+        "cantabile-cp0"
+      ],
+      "evidence": {
+        "nonEmptyFourBeatWindows": 6
+      },
+      "message": "No exact transposition-invariant four-beat motif repetition was found.",
+      "suggestions": [
+        "Check whether the rhythmic identity is memorable; transformed motifs can intentionally evade this heuristic."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "flute",
+        "marimba"
+      ],
+      "fromBeat": 28,
+      "toBeat": 32,
+      "bar": 8,
+      "sourceEventIds": [
+        "flute-p0-14",
+        "flute-p0-15",
+        "flute-p0-16",
+        "marimba-p0-24",
+        "marimba-p0-25",
+        "marimba-p0-27",
+        "marimba-p0-26",
+        "marimba-p0-28",
+        "marimba-p0-29",
+        "marimba-p0-30",
+        "marimba-p0-31"
+      ],
+      "clipIds": [
+        "flute-cp0",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6.5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 2
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "flute",
+        "marimba"
+      ],
+      "fromBeat": 40,
+      "toBeat": 44,
+      "bar": 11,
+      "sourceEventIds": [
+        "flute-p0-27",
+        "flute-p0-28",
+        "flute-p0-29",
+        "flute-p0-30",
+        "flute-p0-31",
+        "marimba-p0-48",
+        "marimba-p0-49",
+        "marimba-p0-51",
+        "marimba-p0-50",
+        "marimba-p0-52",
+        "marimba-p0-53",
+        "marimba-p0-55",
+        "marimba-p0-54"
+      ],
+      "clipIds": [
+        "flute-cp0",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 2
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "flute",
+        "marimba"
+      ],
+      "fromBeat": 124,
+      "toBeat": 128,
+      "bar": 32,
+      "sourceEventIds": [
+        "flute-p3-14",
+        "flute-p3-15",
+        "flute-p3-16",
+        "marimba-p0-158",
+        "marimba-p0-159",
+        "marimba-p0-161",
+        "marimba-p0-160",
+        "marimba-p0-162",
+        "marimba-p0-163",
+        "marimba-p0-164",
+        "marimba-p0-165",
+        "marimba-p0-166",
+        "marimba-p0-167"
+      ],
+      "clipIds": [
+        "flute-cp3",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6.5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "flute",
+        "marimba"
+      ],
+      "fromBeat": 136,
+      "toBeat": 140,
+      "bar": 35,
+      "sourceEventIds": [
+        "flute-p3-27",
+        "flute-p3-28",
+        "flute-p3-29",
+        "flute-p3-30",
+        "flute-p3-31",
+        "marimba-p0-188",
+        "marimba-p0-189",
+        "marimba-p0-190",
+        "marimba-p0-191",
+        "marimba-p0-192",
+        "marimba-p0-193",
+        "marimba-p0-194",
+        "marimba-p0-195",
+        "marimba-p0-197",
+        "marimba-p0-196"
+      ],
+      "clipIds": [
+        "flute-cp3",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "strings"
+      ],
+      "fromBeat": 116,
+      "toBeat": 120,
+      "bar": 30,
+      "sourceEventIds": [
+        "clarinet-p2-5",
+        "clarinet-p2-6",
+        "clarinet-p2-7",
+        "strings-p3-3",
+        "strings-p3-4",
+        "strings-p3-5"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "strings-cp3"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "strings"
+      ],
+      "fromBeat": 124,
+      "toBeat": 128,
+      "bar": 32,
+      "sourceEventIds": [
+        "clarinet-p2-14",
+        "clarinet-p2-15",
+        "clarinet-p2-16",
+        "strings-p3-10",
+        "strings-p3-11",
+        "strings-p3-9"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "strings-cp3"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 4,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "strings"
+      ],
+      "fromBeat": 132,
+      "toBeat": 136,
+      "bar": 34,
+      "sourceEventIds": [
+        "clarinet-p2-23",
+        "clarinet-p2-24",
+        "clarinet-p2-25",
+        "clarinet-p2-26",
+        "strings-p3-15",
+        "strings-p3-16",
+        "strings-p3-17"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "strings-cp3"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 6,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "strings"
+      ],
+      "fromBeat": 136,
+      "toBeat": 140,
+      "bar": 35,
+      "sourceEventIds": [
+        "clarinet-p2-27",
+        "clarinet-p2-28",
+        "clarinet-p2-29",
+        "clarinet-p2-30",
+        "clarinet-p2-31",
+        "strings-p3-18",
+        "strings-p3-19",
+        "strings-p3-20"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "strings-cp3"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 7,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "harp"
+      ],
+      "fromBeat": 112,
+      "toBeat": 116,
+      "bar": 29,
+      "sourceEventIds": [
+        "clarinet-p2-0",
+        "clarinet-p2-1",
+        "clarinet-p2-2",
+        "clarinet-p2-3",
+        "clarinet-p2-4",
+        "harp-p0-120",
+        "harp-p0-121",
+        "harp-p0-122"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "harp-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "harp"
+      ],
+      "fromBeat": 120,
+      "toBeat": 124,
+      "bar": 31,
+      "sourceEventIds": [
+        "clarinet-p2-8",
+        "clarinet-p2-9",
+        "clarinet-p2-10",
+        "clarinet-p2-11",
+        "clarinet-p2-12",
+        "clarinet-p2-13",
+        "harp-p0-123",
+        "harp-p0-124",
+        "harp-p0-125"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "harp-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 3,
+        "leadNotesPerBeat": 1.5,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "harp"
+      ],
+      "fromBeat": 136,
+      "toBeat": 140,
+      "bar": 35,
+      "sourceEventIds": [
+        "clarinet-p2-27",
+        "clarinet-p2-28",
+        "clarinet-p2-29",
+        "clarinet-p2-30",
+        "clarinet-p2-31",
+        "harp-p0-129",
+        "harp-p0-130",
+        "harp-p0-131"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "harp-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 4,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 0.75
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 112,
+      "toBeat": 116,
+      "bar": 29,
+      "sourceEventIds": [
+        "clarinet-p2-0",
+        "clarinet-p2-1",
+        "clarinet-p2-2",
+        "clarinet-p2-3",
+        "clarinet-p2-4",
+        "marimba-p0-129",
+        "marimba-p0-128",
+        "marimba-p0-131",
+        "marimba-p0-130",
+        "marimba-p0-132",
+        "marimba-p0-133",
+        "marimba-p0-135",
+        "marimba-p0-134",
+        "marimba-p0-136",
+        "marimba-p0-137"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 0.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 116,
+      "toBeat": 120,
+      "bar": 30,
+      "sourceEventIds": [
+        "clarinet-p2-5",
+        "clarinet-p2-6",
+        "clarinet-p2-7",
+        "marimba-p0-138",
+        "marimba-p0-139",
+        "marimba-p0-141",
+        "marimba-p0-140",
+        "marimba-p0-142",
+        "marimba-p0-143",
+        "marimba-p0-145",
+        "marimba-p0-144",
+        "marimba-p0-146",
+        "marimba-p0-147"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 0.5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 120,
+      "toBeat": 124,
+      "bar": 31,
+      "sourceEventIds": [
+        "clarinet-p2-8",
+        "clarinet-p2-9",
+        "clarinet-p2-10",
+        "clarinet-p2-11",
+        "clarinet-p2-12",
+        "clarinet-p2-13",
+        "marimba-p0-148",
+        "marimba-p0-149",
+        "marimba-p0-151",
+        "marimba-p0-150",
+        "marimba-p0-153",
+        "marimba-p0-152",
+        "marimba-p0-154",
+        "marimba-p0-155",
+        "marimba-p0-157",
+        "marimba-p0-156"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 3.5,
+        "leadNotesPerBeat": 1.5,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 124,
+      "toBeat": 128,
+      "bar": 32,
+      "sourceEventIds": [
+        "clarinet-p2-14",
+        "clarinet-p2-15",
+        "clarinet-p2-16",
+        "marimba-p0-158",
+        "marimba-p0-159",
+        "marimba-p0-161",
+        "marimba-p0-160",
+        "marimba-p0-162",
+        "marimba-p0-163",
+        "marimba-p0-164",
+        "marimba-p0-165",
+        "marimba-p0-166",
+        "marimba-p0-167"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 1.5,
+        "leadNotesPerBeat": 0.75,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 128,
+      "toBeat": 132,
+      "bar": 33,
+      "sourceEventIds": [
+        "clarinet-p2-17",
+        "clarinet-p2-18",
+        "clarinet-p2-19",
+        "clarinet-p2-20",
+        "clarinet-p2-21",
+        "clarinet-p2-22",
+        "marimba-p0-168",
+        "marimba-p0-169",
+        "marimba-p0-171",
+        "marimba-p0-170",
+        "marimba-p0-172",
+        "marimba-p0-173",
+        "marimba-p0-174",
+        "marimba-p0-175",
+        "marimba-p0-177",
+        "marimba-p0-176"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 2.5,
+        "leadNotesPerBeat": 1.5,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 132,
+      "toBeat": 136,
+      "bar": 34,
+      "sourceEventIds": [
+        "clarinet-p2-23",
+        "clarinet-p2-24",
+        "clarinet-p2-25",
+        "clarinet-p2-26",
+        "marimba-p0-178",
+        "marimba-p0-179",
+        "marimba-p0-180",
+        "marimba-p0-181",
+        "marimba-p0-182",
+        "marimba-p0-183",
+        "marimba-p0-184",
+        "marimba-p0-185",
+        "marimba-p0-186",
+        "marimba-p0-187"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 1.5,
+        "leadNotesPerBeat": 1,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 136,
+      "toBeat": 140,
+      "bar": 35,
+      "sourceEventIds": [
+        "clarinet-p2-27",
+        "clarinet-p2-28",
+        "clarinet-p2-29",
+        "clarinet-p2-30",
+        "clarinet-p2-31",
+        "marimba-p0-188",
+        "marimba-p0-189",
+        "marimba-p0-190",
+        "marimba-p0-191",
+        "marimba-p0-192",
+        "marimba-p0-193",
+        "marimba-p0-194",
+        "marimba-p0-195",
+        "marimba-p0-197",
+        "marimba-p0-196"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 2.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    },
+    {
+      "rule": "REGISTER_CROWDING",
+      "severity": "warning",
+      "trackIds": [
+        "clarinet",
+        "marimba"
+      ],
+      "fromBeat": 140,
+      "toBeat": 144,
+      "bar": 36,
+      "sourceEventIds": [
+        "clarinet-p2-32",
+        "clarinet-p2-33",
+        "clarinet-p2-34",
+        "clarinet-p2-35",
+        "clarinet-p2-36",
+        "marimba-p0-198",
+        "marimba-p0-199",
+        "marimba-p0-201",
+        "marimba-p0-200",
+        "marimba-p0-202",
+        "marimba-p0-203",
+        "marimba-p0-204",
+        "marimba-p0-205",
+        "marimba-p0-207",
+        "marimba-p0-206"
+      ],
+      "clipIds": [
+        "clarinet-cp2",
+        "marimba-cp0"
+      ],
+      "evidence": {
+        "medianDistanceSemitones": 0.5,
+        "leadNotesPerBeat": 1.25,
+        "otherNotesPerBeat": 2.5
+      },
+      "message": "Dense melody and accompaniment occupy nearby registers.",
+      "suggestions": [
+        "Solo these tracks; move accompaniment, shorten its gates, or leave the melody downbeats clear."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "flute",
+        "role": "melody",
+        "instrument": "orch-flute",
+        "eventCount": 116,
+        "notesPerBeat": 0.725,
+        "medianMidi": 72.5
+      },
+      {
+        "trackId": "clarinet",
+        "role": "melody",
+        "instrument": "orch-clarinet",
+        "eventCount": 62,
+        "notesPerBeat": 0.3875,
+        "medianMidi": 65
+      },
+      {
+        "trackId": "strings",
+        "role": "harmony",
+        "instrument": "orch-strings",
+        "eventCount": 90,
+        "notesPerBeat": 0.5625,
+        "medianMidi": 57
+      },
+      {
+        "trackId": "cantabile",
+        "role": "melody",
+        "instrument": "orch-strings",
+        "eventCount": 22,
+        "notesPerBeat": 0.1375,
+        "medianMidi": 76
+      },
+      {
+        "trackId": "pizzicato",
+        "role": "bass",
+        "instrument": "orch-pizzicato",
+        "eventCount": 152,
+        "notesPerBeat": 0.95,
+        "medianMidi": 49
+      },
+      {
+        "trackId": "harp",
+        "role": "arp",
+        "instrument": "orch-harp",
+        "eventCount": 164,
+        "notesPerBeat": 1.025,
+        "medianMidi": 60
+      },
+      {
+        "trackId": "marimba",
+        "role": "arp",
+        "instrument": "orch-marimba",
+        "eventCount": 248,
+        "notesPerBeat": 1.55,
+        "medianMidi": 65
+      },
+      {
+        "trackId": "drums",
+        "role": "drums",
+        "instrument": "drums-acoustic",
+        "eventCount": 368,
+        "notesPerBeat": 2.3,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Lanterns",
+        "fromBeat": 0,
+        "toBeat": 48,
+        "eventsPerBeat": 6.166666666666667,
+        "activeTrackIds": [
+          "drums",
+          "flute",
+          "harp",
+          "marimba",
+          "pizzicato",
+          "strings"
+        ],
+        "medianMidi": 60
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Stalls",
+        "fromBeat": 48,
+        "toBeat": 80,
+        "eventsPerBeat": 8.59375,
+        "activeTrackIds": [
+          "clarinet",
+          "drums",
+          "flute",
+          "harp",
+          "marimba",
+          "pizzicato",
+          "strings"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Old well",
+        "fromBeat": 80,
+        "toBeat": 112,
+        "eventsPerBeat": 5.28125,
+        "activeTrackIds": [
+          "cantabile",
+          "clarinet",
+          "drums",
+          "flute",
+          "harp",
+          "pizzicato",
+          "strings"
+        ],
+        "medianMidi": 61.5
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Closing bell",
+        "fromBeat": 112,
+        "toBeat": 160,
+        "eventsPerBeat": 10.041666666666666,
+        "activeTrackIds": [
+          "clarinet",
+          "drums",
+          "flute",
+          "harp",
+          "marimba",
+          "pizzicato",
+          "strings"
+        ],
+        "medianMidi": 60
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "F major",
+    "chordCount": 40
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

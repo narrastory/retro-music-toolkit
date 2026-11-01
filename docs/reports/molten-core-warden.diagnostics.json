@@ -1,0 +1,1641 @@
+{
+  "schemaVersion": "diagnostics-1.1",
+  "sourceDiagnostics": [
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 80",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-0",
+        "pulse-2-cp3/0/pulse-2-p3-0"
+      ],
+      "beat": 80,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 80.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-1",
+        "pulse-2-cp3/0/pulse-2-p3-1"
+      ],
+      "beat": 80.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 81",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-2",
+        "pulse-2-cp3/0/pulse-2-p3-2"
+      ],
+      "beat": 81,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 81.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-3",
+        "pulse-2-cp3/0/pulse-2-p3-3"
+      ],
+      "beat": 81.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 82",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-4",
+        "pulse-2-cp3/0/pulse-2-p3-4"
+      ],
+      "beat": 82,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 83",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-5",
+        "pulse-2-cp3/0/pulse-2-p3-5"
+      ],
+      "beat": 83,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 84",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-6",
+        "pulse-2-cp3/0/pulse-2-p3-6"
+      ],
+      "beat": 84,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 84.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-7",
+        "pulse-2-cp3/0/pulse-2-p3-7"
+      ],
+      "beat": 84.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 85",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-8",
+        "pulse-2-cp3/0/pulse-2-p3-8"
+      ],
+      "beat": 85,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 85.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-9",
+        "pulse-2-cp3/0/pulse-2-p3-9"
+      ],
+      "beat": 85.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 86",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-10",
+        "pulse-2-cp3/0/pulse-2-p3-10"
+      ],
+      "beat": 86,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 87",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-11",
+        "pulse-2-cp3/0/pulse-2-p3-11"
+      ],
+      "beat": 87,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 88",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-12",
+        "pulse-2-cp3/0/pulse-2-p3-12"
+      ],
+      "beat": 88,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 88.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-13",
+        "pulse-2-cp3/0/pulse-2-p3-13"
+      ],
+      "beat": 88.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 89",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-14",
+        "pulse-2-cp3/0/pulse-2-p3-14"
+      ],
+      "beat": 89,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 89.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-15",
+        "pulse-2-cp3/0/pulse-2-p3-15"
+      ],
+      "beat": 89.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 90",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-16",
+        "pulse-2-cp3/0/pulse-2-p3-16"
+      ],
+      "beat": 90,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 91",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-17",
+        "pulse-2-cp3/0/pulse-2-p3-17"
+      ],
+      "beat": 91,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 92",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-18",
+        "pulse-2-cp3/0/pulse-2-p3-18"
+      ],
+      "beat": 92,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 92.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-19",
+        "pulse-2-cp3/0/pulse-2-p3-19"
+      ],
+      "beat": 92.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 93",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-20",
+        "pulse-2-cp3/0/pulse-2-p3-20"
+      ],
+      "beat": 93,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 93.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-21",
+        "pulse-2-cp3/0/pulse-2-p3-21"
+      ],
+      "beat": 93.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 94",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-22",
+        "pulse-2-cp3/0/pulse-2-p3-22"
+      ],
+      "beat": 94,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 95",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-23",
+        "pulse-2-cp3/0/pulse-2-p3-23"
+      ],
+      "beat": 95,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 96",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-24",
+        "pulse-2-cp3/0/pulse-2-p3-24"
+      ],
+      "beat": 96,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 96.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-25",
+        "pulse-2-cp3/0/pulse-2-p3-25"
+      ],
+      "beat": 96.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 97",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-26",
+        "pulse-2-cp3/0/pulse-2-p3-26"
+      ],
+      "beat": 97,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 97.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-27",
+        "pulse-2-cp3/0/pulse-2-p3-27"
+      ],
+      "beat": 97.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 98",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-28",
+        "pulse-2-cp3/0/pulse-2-p3-28"
+      ],
+      "beat": 98,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 99",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-29",
+        "pulse-2-cp3/0/pulse-2-p3-29"
+      ],
+      "beat": 99,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 100",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-30",
+        "pulse-2-cp3/0/pulse-2-p3-30"
+      ],
+      "beat": 100,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 100.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-31",
+        "pulse-2-cp3/0/pulse-2-p3-31"
+      ],
+      "beat": 100.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 101",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-32",
+        "pulse-2-cp3/0/pulse-2-p3-32"
+      ],
+      "beat": 101,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 101.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-33",
+        "pulse-2-cp3/0/pulse-2-p3-33"
+      ],
+      "beat": 101.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 102",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-34",
+        "pulse-2-cp3/0/pulse-2-p3-34"
+      ],
+      "beat": 102,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 103",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-35",
+        "pulse-2-cp3/0/pulse-2-p3-35"
+      ],
+      "beat": 103,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 104",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-36",
+        "pulse-2-cp3/0/pulse-2-p3-36"
+      ],
+      "beat": 104,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 104.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-37",
+        "pulse-2-cp3/0/pulse-2-p3-37"
+      ],
+      "beat": 104.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 105",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-38",
+        "pulse-2-cp3/0/pulse-2-p3-38"
+      ],
+      "beat": 105,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 105.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-39",
+        "pulse-2-cp3/0/pulse-2-p3-39"
+      ],
+      "beat": 105.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 106",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-40",
+        "pulse-2-cp3/0/pulse-2-p3-40"
+      ],
+      "beat": 106,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 107",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-41",
+        "pulse-2-cp3/0/pulse-2-p3-41"
+      ],
+      "beat": 107,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 108",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-42",
+        "pulse-2-cp3/0/pulse-2-p3-42"
+      ],
+      "beat": 108,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 108.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-43",
+        "pulse-2-cp3/0/pulse-2-p3-43"
+      ],
+      "beat": 108.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 109",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-44",
+        "pulse-2-cp3/0/pulse-2-p3-44"
+      ],
+      "beat": 109,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 109.5",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-45",
+        "pulse-2-cp3/0/pulse-2-p3-45"
+      ],
+      "beat": 109.5,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 110",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-46",
+        "pulse-2-cp3/0/pulse-2-p3-46"
+      ],
+      "beat": 110,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "VOICE_STEAL",
+      "message": "pulse-2: voice 0 still held at beat 111",
+      "trackId": "pulse-2",
+      "eventIds": [
+        "pulse-2-cp3/0/pulse-2-p3-47",
+        "pulse-2-cp3/0/pulse-2-p3-47"
+      ],
+      "beat": 111,
+      "suggestion": "shorten the following note or raise maxVoices"
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pulse-1: 79 release tails truncated by the next note (first at beat 12.5, last at beat 174). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pulse-1",
+      "beat": 12.5,
+      "eventIds": [
+        "pulse-1-p0-0",
+        "pulse-1-p0-1",
+        "pulse-1-p0-2",
+        "pulse-1-p0-3",
+        "pulse-1-p1-0",
+        "pulse-1-p1-1",
+        "pulse-1-p1-3",
+        "pulse-1-p1-4",
+        "pulse-1-p1-6",
+        "pulse-1-p1-7",
+        "pulse-1-p1-9",
+        "pulse-1-p1-10",
+        "pulse-1-p1-12",
+        "pulse-1-p1-13",
+        "pulse-1-p1-15",
+        "pulse-1-p1-16",
+        "pulse-1-p1-19",
+        "pulse-1-p1-21",
+        "pulse-1-p1-22",
+        "pulse-1-p1-23",
+        "pulse-1-p1-24",
+        "pulse-1-p1-27",
+        "pulse-1-p1-28",
+        "pulse-1-p1-30",
+        "pulse-1-p1-31",
+        "pulse-1-p1-34",
+        "pulse-1-p1-35",
+        "pulse-1-p1-39",
+        "pulse-1-p2-0",
+        "pulse-1-p2-1",
+        "pulse-1-p2-3",
+        "pulse-1-p2-4"
+      ],
+      "suggestion": {
+        "count": 79,
+        "exampleSourceIds": [
+          "pulse-1-p0-0",
+          "pulse-1-p0-1",
+          "pulse-1-p0-2"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "RELEASE_CUT",
+      "message": "pulse-2: 1056 release tails truncated by the next note (first at beat 0.083, last at beat 175.75). The notes themselves finished; only the tails are clipped.",
+      "trackId": "pulse-2",
+      "beat": 0.08333333333333333,
+      "eventIds": [
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0",
+        "pulse-2-p0-0"
+      ],
+      "suggestion": {
+        "count": 1056,
+        "exampleSourceIds": [
+          "pulse-2-p0-0",
+          "pulse-2-p0-0",
+          "pulse-2-p0-0"
+        ],
+        "fix": "Shorten gate, raise maxVoices, or accept the cut as part of the articulation"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 14,
+      "toBeat": 16.45,
+      "bar": 4,
+      "sourceEventIds": [
+        "pulse-1-p0-4",
+        "pulse-1-p1-0",
+        "triangle-p0-14",
+        "triangle-p0-18"
+      ],
+      "evidence": {
+        "first": "A5/A2",
+        "second": "D5/D2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 30,
+      "toBeat": 32.45,
+      "bar": 8,
+      "sourceEventIds": [
+        "pulse-1-p1-20",
+        "pulse-1-p1-21",
+        "triangle-p0-46",
+        "triangle-p0-50"
+      ],
+      "evidence": {
+        "first": "A5/A2",
+        "second": "D5/D2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 35,
+      "toBeat": 36.45,
+      "bar": 9,
+      "sourceEventIds": [
+        "pulse-1-p1-26",
+        "pulse-1-p1-27",
+        "triangle-p0-56",
+        "triangle-p0-58"
+      ],
+      "evidence": {
+        "first": "A5/D2",
+        "second": "C6/F2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 43,
+      "toBeat": 45.35,
+      "bar": 11,
+      "sourceEventIds": [
+        "pulse-1-p1-37",
+        "pulse-1-p1-38",
+        "triangle-p0-72",
+        "triangle-p0-74"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 67,
+      "toBeat": 68.45,
+      "bar": 17,
+      "sourceEventIds": [
+        "pulse-1-p2-28",
+        "pulse-1-p2-29",
+        "triangle-p0-120",
+        "triangle-p0-122"
+      ],
+      "evidence": {
+        "first": "A5/D2",
+        "second": "C6/F2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 79,
+      "toBeat": 81.8,
+      "bar": 20,
+      "sourceEventIds": [
+        "pulse-1-p2-42",
+        "pulse-1-p3-0",
+        "triangle-p0-144",
+        "triangle-p0-146"
+      ],
+      "evidence": {
+        "first": "E5/A2",
+        "second": "F5/A#2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 83,
+      "toBeat": 85.8,
+      "bar": 21,
+      "sourceEventIds": [
+        "pulse-1-p3-2",
+        "pulse-1-p3-3",
+        "triangle-p0-152",
+        "triangle-p0-154"
+      ],
+      "evidence": {
+        "first": "F5/A#2",
+        "second": "G5/C3"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 92,
+      "toBeat": 97.8,
+      "bar": 24,
+      "sourceEventIds": [
+        "pulse-1-p3-10",
+        "pulse-1-p3-11",
+        "triangle-p0-170",
+        "triangle-p0-178"
+      ],
+      "evidence": {
+        "first": "D5/D2",
+        "second": "A#5/A#2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 99,
+      "toBeat": 101.8,
+      "bar": 25,
+      "sourceEventIds": [
+        "pulse-1-p3-13",
+        "pulse-1-p3-14",
+        "triangle-p0-184",
+        "triangle-p0-186"
+      ],
+      "evidence": {
+        "first": "F5/A#2",
+        "second": "G5/C3"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 111,
+      "toBeat": 115.6,
+      "bar": 28,
+      "sourceEventIds": [
+        "pulse-1-p3-22",
+        "pulse-1-p4-0",
+        "triangle-p0-208",
+        "triangle-p0-210"
+      ],
+      "evidence": {
+        "first": "E5/A2",
+        "second": "D5/G2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 138,
+      "toBeat": 141.8,
+      "bar": 35,
+      "sourceEventIds": [
+        "pulse-1-p4-9",
+        "pulse-1-p4-10",
+        "triangle-p0-223",
+        "triangle-p0-224"
+      ],
+      "evidence": {
+        "first": "F5/A#3",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_OCTAVES",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 158,
+      "toBeat": 160.45,
+      "bar": 40,
+      "sourceEventIds": [
+        "pulse-1-p5-20",
+        "pulse-1-p5-21",
+        "triangle-p0-254",
+        "triangle-p0-258"
+      ],
+      "evidence": {
+        "first": "A5/A2",
+        "second": "D5/D2"
+      },
+      "message": "Parallel octaves between melody and bass",
+      "suggestions": [
+        "Change one voice's pitch; deliberate octave doubling is common in 8bit writing."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 163,
+      "toBeat": 164.45,
+      "bar": 41,
+      "sourceEventIds": [
+        "pulse-1-p5-26",
+        "pulse-1-p5-27",
+        "triangle-p0-264",
+        "triangle-p0-266"
+      ],
+      "evidence": {
+        "first": "A5/D2",
+        "second": "C6/F2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "PARALLEL_FIFTHS",
+      "severity": "warning",
+      "trackIds": [
+        "pulse-1",
+        "triangle"
+      ],
+      "fromBeat": 171,
+      "toBeat": 173.35,
+      "bar": 43,
+      "sourceEventIds": [
+        "pulse-1-p5-37",
+        "pulse-1-p5-38",
+        "triangle-p0-280",
+        "triangle-p0-282"
+      ],
+      "evidence": {
+        "first": "D5/G2",
+        "second": "E5/A2"
+      },
+      "message": "Parallel perfect fifths between melody and bass",
+      "suggestions": [
+        "Move one voice to another chord tone; parallel fifths can be intentional in chiptune doubling, so audition it."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "pulse-2"
+      ],
+      "fromBeat": 12,
+      "toBeat": 159.83333333333334,
+      "bar": 4,
+      "sourceEventIds": [
+        "pulse-2-p0-10",
+        "pulse-2-p1-36",
+        "pulse-2-p1-39",
+        "pulse-2-p1-42",
+        "pulse-2-p1-45",
+        "pulse-2-p2-36",
+        "pulse-2-p2-39",
+        "pulse-2-p2-42",
+        "pulse-2-p2-45",
+        "pulse-2-p3-37",
+        "pulse-2-p3-38",
+        "pulse-2-p3-39",
+        "pulse-2-p3-42",
+        "pulse-2-p3-46",
+        "pulse-2-p4-10",
+        "pulse-2-p5-36",
+        "pulse-2-p5-39",
+        "pulse-2-p5-42",
+        "pulse-2-p5-45"
+      ],
+      "evidence": {
+        "count": 73,
+        "ratio": 0.05793650793650794,
+        "key": "D minor",
+        "pitches": [
+          "C#4",
+          "G#5",
+          "B5",
+          "C#5"
+        ]
+      },
+      "message": "73 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "OUT_OF_KEY",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 12.5,
+      "toBeat": 175.9,
+      "bar": 4,
+      "sourceEventIds": [
+        "pulse-1-p0-1",
+        "pulse-1-p1-18",
+        "pulse-1-p1-41",
+        "pulse-1-p2-18",
+        "pulse-1-p2-21",
+        "pulse-1-p3-17",
+        "pulse-1-p3-18",
+        "pulse-1-p3-20",
+        "pulse-1-p4-11",
+        "pulse-1-p5-18",
+        "pulse-1-p5-41"
+      ],
+      "evidence": {
+        "count": 11,
+        "ratio": 0.06547619047619048,
+        "key": "D minor",
+        "pitches": [
+          "C#5",
+          "C#6",
+          "G#5",
+          "B5"
+        ]
+      },
+      "message": "11 notes outside the declared D minor",
+      "suggestions": [
+        "Check for typos; chromatic passing tones and modal borrowing are valid if intended."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MINOR_SECOND_CLASH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-2",
+        "pulse-1"
+      ],
+      "fromBeat": 18.5,
+      "toBeat": 146.95,
+      "bar": 5,
+      "sourceEventIds": [
+        "pulse-2-p1-6",
+        "pulse-1-p1-4",
+        "pulse-2-p2-6",
+        "pulse-1-p2-4",
+        "pulse-2-p5-6",
+        "pulse-1-p5-4"
+      ],
+      "evidence": {
+        "pairs": 6
+      },
+      "message": "Repeated semitone collisions between two tracks",
+      "suggestions": [
+        "Separate the registers or move one part to a chord tone."
+      ],
+      "clipIds": []
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 16,
+      "toBeat": 24,
+      "bar": 5,
+      "sourceEventIds": [
+        "pulse-1-p1-0",
+        "pulse-1-p1-1",
+        "pulse-1-p1-2",
+        "pulse-1-p1-3",
+        "pulse-1-p1-4",
+        "pulse-1-p1-5",
+        "pulse-1-p1-6",
+        "pulse-1-p1-7",
+        "pulse-1-p1-8",
+        "pulse-1-p1-9",
+        "pulse-1-p1-10",
+        "pulse-1-p1-11"
+      ],
+      "clipIds": [
+        "pulse-1-cp1"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.10000000000000142,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 32,
+      "toBeat": 40,
+      "bar": 9,
+      "sourceEventIds": [
+        "pulse-1-p1-21",
+        "pulse-1-p1-22",
+        "pulse-1-p1-23",
+        "pulse-1-p1-24",
+        "pulse-1-p1-25",
+        "pulse-1-p1-26",
+        "pulse-1-p1-27",
+        "pulse-1-p1-28",
+        "pulse-1-p1-29",
+        "pulse-1-p1-30",
+        "pulse-1-p1-31",
+        "pulse-1-p1-32"
+      ],
+      "clipIds": [
+        "pulse-1-cp1"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.10000000000000142,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 48,
+      "toBeat": 56,
+      "bar": 13,
+      "sourceEventIds": [
+        "pulse-1-p2-0",
+        "pulse-1-p2-1",
+        "pulse-1-p2-2",
+        "pulse-1-p2-3",
+        "pulse-1-p2-4",
+        "pulse-1-p2-5",
+        "pulse-1-p2-6",
+        "pulse-1-p2-7",
+        "pulse-1-p2-8",
+        "pulse-1-p2-9",
+        "pulse-1-p2-10",
+        "pulse-1-p2-11"
+      ],
+      "clipIds": [
+        "pulse-1-cp2"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.10000000000000142,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 64,
+      "toBeat": 72,
+      "bar": 17,
+      "sourceEventIds": [
+        "pulse-1-p2-23",
+        "pulse-1-p2-24",
+        "pulse-1-p2-25",
+        "pulse-1-p2-26",
+        "pulse-1-p2-27",
+        "pulse-1-p2-28",
+        "pulse-1-p2-29",
+        "pulse-1-p2-30",
+        "pulse-1-p2-31",
+        "pulse-1-p2-32",
+        "pulse-1-p2-33",
+        "pulse-1-p2-34"
+      ],
+      "clipIds": [
+        "pulse-1-cp2"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 144,
+      "toBeat": 152,
+      "bar": 37,
+      "sourceEventIds": [
+        "pulse-1-p5-0",
+        "pulse-1-p5-1",
+        "pulse-1-p5-2",
+        "pulse-1-p5-3",
+        "pulse-1-p5-4",
+        "pulse-1-p5-5",
+        "pulse-1-p5-6",
+        "pulse-1-p5-7",
+        "pulse-1-p5-8",
+        "pulse-1-p5-9",
+        "pulse-1-p5-10",
+        "pulse-1-p5-11"
+      ],
+      "clipIds": [
+        "pulse-1-cp5"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "MELODY_NO_BREATH",
+      "severity": "info",
+      "trackIds": [
+        "pulse-1"
+      ],
+      "fromBeat": 160,
+      "toBeat": 168,
+      "bar": 41,
+      "sourceEventIds": [
+        "pulse-1-p5-21",
+        "pulse-1-p5-22",
+        "pulse-1-p5-23",
+        "pulse-1-p5-24",
+        "pulse-1-p5-25",
+        "pulse-1-p5-26",
+        "pulse-1-p5-27",
+        "pulse-1-p5-28",
+        "pulse-1-p5-29",
+        "pulse-1-p5-30",
+        "pulse-1-p5-31",
+        "pulse-1-p5-32"
+      ],
+      "clipIds": [
+        "pulse-1-cp5"
+      ],
+      "evidence": {
+        "maxGapBeats": 0.09999999999999432,
+        "spanBeats": 8
+      },
+      "message": "The melody has little key-release space in this span.",
+      "suggestions": [
+        "Try a phrase-ending rest; sustained or legato intent may justify keeping it."
+      ]
+    },
+    {
+      "rule": "SECTION_SIMILARITY",
+      "severity": "info",
+      "trackIds": [
+        "noise",
+        "pulse-1",
+        "pulse-2",
+        "triangle"
+      ],
+      "fromBeat": 48,
+      "toBeat": 80,
+      "bar": 13,
+      "sourceEventIds": [
+        "noise-p1-106",
+        "noise-p1-111",
+        "pulse-1-p2-0",
+        "pulse-2-p2-0",
+        "triangle-p0-82",
+        "noise-p1-112",
+        "pulse-1-p2-1",
+        "triangle-p0-83",
+        "noise-p1-109",
+        "noise-p1-113",
+        "pulse-1-p2-2",
+        "triangle-p0-84",
+        "noise-p1-107",
+        "noise-p1-114",
+        "pulse-2-p2-3",
+        "triangle-p0-85",
+        "noise-p1-108",
+        "noise-p1-115",
+        "pulse-1-p2-3",
+        "triangle-p0-86",
+        "noise-p1-116",
+        "pulse-1-p2-4",
+        "pulse-2-p2-6",
+        "triangle-p0-87",
+        "noise-p1-110",
+        "noise-p1-117",
+        "pulse-1-p2-5",
+        "pulse-2-p2-10",
+        "triangle-p0-88",
+        "noise-p1-118",
+        "triangle-p0-89",
+        "noise-p1-119",
+        "noise-p1-124",
+        "pulse-1-p2-6",
+        "pulse-2-p2-12",
+        "triangle-p0-90",
+        "noise-p1-125",
+        "pulse-1-p2-7",
+        "triangle-p0-91",
+        "noise-p1-122",
+        "noise-p1-126",
+        "pulse-1-p2-8",
+        "triangle-p0-92",
+        "noise-p1-120",
+        "noise-p1-127",
+        "pulse-2-p2-15",
+        "triangle-p0-93",
+        "noise-p1-121",
+        "noise-p1-128",
+        "pulse-1-p2-9",
+        "triangle-p0-94",
+        "noise-p1-129",
+        "pulse-1-p2-10",
+        "pulse-2-p2-18",
+        "triangle-p0-95",
+        "noise-p1-123",
+        "noise-p1-130",
+        "pulse-1-p2-11",
+        "pulse-2-p2-21",
+        "triangle-p0-96",
+        "noise-p1-131",
+        "triangle-p0-97",
+        "noise-p1-132",
+        "noise-p1-137",
+        "pulse-1-p2-12",
+        "pulse-2-p2-24",
+        "triangle-p0-98",
+        "noise-p1-138",
+        "pulse-1-p2-13",
+        "triangle-p0-99",
+        "noise-p1-135",
+        "noise-p1-139",
+        "pulse-1-p2-14",
+        "triangle-p0-100",
+        "noise-p1-133",
+        "noise-p1-140",
+        "pulse-2-p2-27",
+        "triangle-p0-101",
+        "noise-p1-134",
+        "noise-p1-141",
+        "pulse-1-p2-15",
+        "triangle-p0-102",
+        "noise-p1-142",
+        "pulse-1-p2-16",
+        "pulse-2-p2-30",
+        "triangle-p0-103",
+        "noise-p1-136",
+        "noise-p1-143",
+        "pulse-1-p2-17",
+        "pulse-2-p2-33",
+        "triangle-p0-104",
+        "noise-p1-144",
+        "triangle-p0-105",
+        "noise-p1-145",
+        "noise-p1-150",
+        "pulse-1-p2-18",
+        "pulse-2-p2-36",
+        "triangle-p0-106",
+        "noise-p1-151",
+        "pulse-1-p2-19",
+        "triangle-p0-107",
+        "noise-p1-148",
+        "noise-p1-152",
+        "pulse-1-p2-20",
+        "triangle-p0-108",
+        "noise-p1-146",
+        "noise-p1-153",
+        "pulse-1-p2-21",
+        "pulse-2-p2-39",
+        "triangle-p0-109",
+        "noise-p1-147",
+        "noise-p1-154",
+        "pulse-1-p2-22",
+        "triangle-p0-110",
+        "noise-p1-155",
+        "pulse-2-p2-42",
+        "triangle-p0-111",
+        "noise-p1-149",
+        "noise-p1-156",
+        "pulse-2-p2-45",
+        "triangle-p0-112",
+        "noise-p1-157",
+        "triangle-p0-113",
+        "noise-p1-158",
+        "noise-p1-163",
+        "pulse-1-p2-23",
+        "pulse-2-p2-48",
+        "triangle-p0-114"
+      ],
+      "clipIds": [
+        "noise-cp1",
+        "pulse-1-cp2",
+        "pulse-2-cp2",
+        "triangle-cp0"
+      ],
+      "evidence": {
+        "sectionIds": [
+          "section-0",
+          "section-1"
+        ],
+        "densityRelativeDifference": 0.008547008547008591
+      },
+      "message": "Adjacent sections use similar density, active tracks and median register.",
+      "suggestions": [
+        "If contrast is intended, remove one layer or change rhythm/register; repetition may also be intentional."
+      ]
+    }
+  ],
+  "metrics": {
+    "tracks": [
+      {
+        "trackId": "pulse-1",
+        "role": "melody",
+        "instrument": "nes-lead",
+        "eventCount": 168,
+        "notesPerBeat": 0.9545454545454546,
+        "medianMidi": 77
+      },
+      {
+        "trackId": "pulse-2",
+        "role": "arp",
+        "instrument": "nes-harmony",
+        "eventCount": 1164,
+        "notesPerBeat": 6.613636363636363,
+        "medianMidi": 64
+      },
+      {
+        "trackId": "triangle",
+        "role": "bass",
+        "instrument": "triangle-bass",
+        "eventCount": 290,
+        "notesPerBeat": 1.6477272727272727,
+        "medianMidi": 48
+      },
+      {
+        "trackId": "noise",
+        "role": "drums",
+        "instrument": "chip-drums",
+        "eventCount": 501,
+        "notesPerBeat": 2.846590909090909,
+        "medianMidi": null
+      }
+    ],
+    "sections": [
+      {
+        "sectionId": "section-0",
+        "label": "Awakening",
+        "fromBeat": 0,
+        "toBeat": 48,
+        "eventsPerBeat": 13.291666666666666,
+        "activeTrackIds": [
+          "noise",
+          "pulse-1",
+          "pulse-2",
+          "triangle"
+        ],
+        "medianMidi": 64
+      },
+      {
+        "sectionId": "section-1",
+        "label": "Clash",
+        "fromBeat": 48,
+        "toBeat": 80,
+        "eventsPerBeat": 13.40625,
+        "activeTrackIds": [
+          "noise",
+          "pulse-1",
+          "pulse-2",
+          "triangle"
+        ],
+        "medianMidi": 64
+      },
+      {
+        "sectionId": "section-2",
+        "label": "Second phase",
+        "fromBeat": 80,
+        "toBeat": 144,
+        "eventsPerBeat": 9.8125,
+        "activeTrackIds": [
+          "noise",
+          "pulse-1",
+          "pulse-2",
+          "triangle"
+        ],
+        "medianMidi": 62
+      },
+      {
+        "sectionId": "section-3",
+        "label": "Final blow",
+        "fromBeat": 144,
+        "toBeat": 176,
+        "eventsPerBeat": 13.375,
+        "activeTrackIds": [
+          "noise",
+          "pulse-1",
+          "pulse-2",
+          "triangle"
+        ],
+        "medianMidi": 63
+      }
+    ],
+    "barBeats": 4,
+    "windowBeats": 4,
+    "key": "D minor",
+    "chordCount": 44
+  },
+  "configuration": {
+    "disabledRules": [],
+    "thresholds": {
+      "crowdingSemitones": 7,
+      "crowdingNotesPerBeat": 0.75,
+      "hatHitsPerBeat": 3,
+      "breathGapBeats": 0.125,
+      "sectionSimilarityThreshold": 0.1
+    },
+    "resolvedWindowBeats": 4,
+    "resolvedSpanBeats": 8
+  },
+  "limitations": "Heuristics identify places to audition, not musical errors or an aesthetic quality score. Harmony rules only run when `harmony` markers exist; key rules only when `key` is declared."
+}

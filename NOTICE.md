@@ -68,8 +68,9 @@ included alongside the manifest.
 
 Retain applicable attribution, license links and change notices when sharing
 these samples, embedded score copies or derivative material. In particular,
-`after-the-rain`, `lit-window` and `copper-sky` in `docs/audio/`
-use the credited piano; the first and third also use the credited drums. These recordings are
+in `docs/audio/`, `crystal-undercurrent` uses the credited piano and drums,
+and `mossglow-market` uses the credited drums (plus CC0 orchestral samples);
+`molten-core-warden` is entirely original synthesis. These recordings are
 not relicensed under the code's MIT license; no endorsement is implied.
 
 ## Orchestral sampled instruments (CC0)

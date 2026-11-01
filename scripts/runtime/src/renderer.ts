@@ -39,6 +39,19 @@ export async function renderScore(input: unknown, options: RenderOptions = {}) {
     });
     bundle = result.outputFiles[0]!.contents;
   }
+  // Offline rendering time grows with the audio actually rendered: loop mode
+  // renders warm-up cycles before the exported one, and dense tracks render
+  // slower than real time (WebAudio keeps every scheduled note node in the
+  // graph). Allow 3 s of wall time
+  // per rendered second (at least 120 s); RETRO_RENDER_TIMEOUT_MS overrides.
+  const cycleSeconds = (compiled.score.lengthBeats * 60) / compiled.score.tempo;
+  const renderedSeconds =
+    compiled.score.export.mode === "loop"
+      ? cycleSeconds * (compiled.score.export.warmupCycles + 1)
+      : cycleSeconds + compiled.score.export.tailSeconds;
+  const timeoutMs =
+    Number(process.env.RETRO_RENDER_TIMEOUT_MS) ||
+    Math.max(120000, Math.ceil(renderedSeconds * 3000));
   let browser: Awaited<ReturnType<typeof chromium.launch>> | undefined;
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
@@ -50,7 +63,7 @@ export async function renderScore(input: unknown, options: RenderOptions = {}) {
       args: process.getuid?.() === 0 ? ["--no-sandbox"] : [],
     });
     const page = await browser.newPage();
-    page.setDefaultTimeout(120000);
+    page.setDefaultTimeout(timeoutMs);
     await page.goto("about:blank");
     await page.addScriptTag({ content: new TextDecoder().decode(bundle) });
     const evaluate = async (renderOptions: RenderOptions) => {
@@ -63,8 +76,13 @@ export async function renderScore(input: unknown, options: RenderOptions = {}) {
           ) as Promise<RenderResult>,
           new Promise<never>((_, reject) => {
             timer = setTimeout(
-              () => reject(new Error("Render timed out after 120 seconds")),
-              120000,
+              () =>
+                reject(
+                  new Error(
+                    `Render timed out after ${Math.round(timeoutMs / 1000)} seconds`,
+                  ),
+                ),
+              timeoutMs,
             );
             timer.unref();
           }),
