@@ -5,256 +5,508 @@
   "processing": "Trim leading silence at -55 dB, mono 32 kHz PCM16, short non-looped edits with 40 ms end fade. One shared peak gain per root note or drum sound preserves relative layer and RR dynamics while balancing registers. Curated subsets expand selected layers to cover velocities 1–127; not a complete SFZ emulation.",
   "files": [
     {
-      "file": "samples/band-bass-40-soft-1.wav",
+      "file": "samples/band-bass-28-soft-1.wav",
       "originalPath": "Growlybass/sustain/e2_p_rr1.wav",
       "originalSha256": "f70a409ffe1c217faf793366063f5bd62f562d6add7da1a023867dd862436299",
       "sha256": "f564d6026ba0698a4f100b41ceeb725813277f1f9c618721c39fefc564ad14bf",
       "bytes": 96044,
       "sharedGainDb": -3.6869803544221402,
-      "assetId": "band-bass-40-soft-1",
+      "assetId": "band-bass-28-soft-1",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 1,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 24
     },
     {
-      "file": "samples/band-bass-40-soft-2.wav",
+      "file": "samples/band-bass-28-soft-2.wav",
       "originalPath": "Growlybass/sustain/e2_p_rr2.wav",
       "originalSha256": "a48cab9526f7684d495e856c2afa2a30c595ab647073acce2f0ff35b7f0b696e",
       "sha256": "4765a3ee5543cb526b0af4842c423f73c4bd60ea2d359b3ba03aed835973b4b6",
       "bytes": 96044,
       "sharedGainDb": -3.6869803544221402,
-      "assetId": "band-bass-40-soft-2",
+      "assetId": "band-bass-28-soft-2",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 2,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 24
     },
     {
-      "file": "samples/band-bass-40-hard-1.wav",
+      "file": "samples/band-bass-28-hard-1.wav",
       "originalPath": "Growlybass/sustain/e2_f_rr1.wav",
       "originalSha256": "ab8ea422e3a4210390977d750e7e441bb5d9d3fabcbed5e6702c058ca106e058",
       "sha256": "81847897c6350458476a21ffeeae954e6357281fbee46069553838893db79d75",
       "bytes": 96044,
       "sharedGainDb": -3.6869803544221402,
-      "assetId": "band-bass-40-hard-1",
+      "assetId": "band-bass-28-hard-1",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 24
     },
     {
-      "file": "samples/band-bass-40-hard-2.wav",
+      "file": "samples/band-bass-28-hard-2.wav",
       "originalPath": "Growlybass/sustain/e2_f_rr2.wav",
       "originalSha256": "fd6a79ccccebda2b80f7b9dfabb6f953a6a060062fba484590784aa066d473f8",
       "sha256": "d76c9f809740b262a6648ae94d85c961d92c8a939d33e3af5773c183a16dd94a",
       "bytes": 96044,
       "sharedGainDb": -3.6869803544221402,
-      "assetId": "band-bass-40-hard-2",
+      "assetId": "band-bass-28-hard-2",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 24
     },
     {
-      "file": "samples/band-bass-48-soft-1.wav",
-      "originalPath": "Growlybass/sustain/c3_p_rr1.wav",
-      "originalSha256": "c9d7757254ab3587a76e0e3da2791b13784a93611fd7713158cda817c5ae3baf",
-      "sha256": "13dfa6730230de321c3a626d15f37428b5720c3c121d6cad6ff839ee74ac5def",
+      "file": "samples/band-bass-33-soft-1.wav",
+      "originalPath": "Growlybass/sustain/a2_p_rr1.wav",
+      "originalSha256": "090a7c3ad84997af92d41b9176d35ab45db0a663e6087ce7966b9649df1e62f1",
+      "sha256": "9552cfab0024c39ac375108e7648565d43bb388cad6d4a0c4c6986d929ab8320",
       "bytes": 96044,
-      "sharedGainDb": -4.331095044840188,
-      "assetId": "band-bass-48-soft-1",
+      "sharedGainDb": -2.6974166656796275,
+      "assetId": "band-bass-33-soft-1",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 1,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -5
     },
     {
-      "file": "samples/band-bass-48-soft-2.wav",
-      "originalPath": "Growlybass/sustain/c3_p_rr2.wav",
-      "originalSha256": "b603fddd4be5918a668931fb29de65431236bbb0402e4f1d62c4c243a5179e02",
-      "sha256": "dcc830c2f69595afe11c3dc7209a25d12d3bb33be6bb88bf673acf7526a4edf6",
+      "file": "samples/band-bass-33-soft-2.wav",
+      "originalPath": "Growlybass/sustain/a2_p_rr2.wav",
+      "originalSha256": "c6e02ac73fd17cc054295920f1428ed11b51d833d2c585b473907543e8e6c401",
+      "sha256": "71aa1c2c54d9ec6ff3fef029de4d229e57bdcaf026bef2f593f2e10d752c5ea9",
       "bytes": 96044,
-      "sharedGainDb": -4.331095044840188,
-      "assetId": "band-bass-48-soft-2",
+      "sharedGainDb": -2.6974166656796275,
+      "assetId": "band-bass-33-soft-2",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 2,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -5
     },
     {
-      "file": "samples/band-bass-48-hard-1.wav",
-      "originalPath": "Growlybass/sustain/c3_f_rr1.wav",
-      "originalSha256": "aecf86a56cca457c330e04fab89f1008be44d3d31e48912943ace153089009fb",
-      "sha256": "fa74ab6f859e9b152815e9d83d763909b0bed2cbc07679b85d2d22f3c69c8892",
+      "file": "samples/band-bass-33-hard-1.wav",
+      "originalPath": "Growlybass/sustain/a2_f_rr1.wav",
+      "originalSha256": "a82372dfddf56c39ea5879adec1bde79d2f40902fa8fcb75ad2d6f5d90db3bf3",
+      "sha256": "2578bf5a8190cb3d2ee8b6dc10297510e61cd901e95b6acfce712c996785b281",
       "bytes": 96044,
-      "sharedGainDb": -4.331095044840188,
-      "assetId": "band-bass-48-hard-1",
+      "sharedGainDb": -2.6974166656796275,
+      "assetId": "band-bass-33-hard-1",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -5
     },
     {
-      "file": "samples/band-bass-48-hard-2.wav",
-      "originalPath": "Growlybass/sustain/c3_f_rr2.wav",
-      "originalSha256": "031ca0f31e42974332aff6ec13318aae37460fdefa3a6cb065de5e9e1cee3d59",
-      "sha256": "429e417ff13fca7d62a13eb2cc66e74c6710da01b7637e83a2a27aa51258fb92",
+      "file": "samples/band-bass-33-hard-2.wav",
+      "originalPath": "Growlybass/sustain/a2_f_rr2.wav",
+      "originalSha256": "c2acdaee792a99df5076df43b81f45b8de110aa95e27aed7ca99a7d447439440",
+      "sha256": "f8ee66e59b179133bacd24006c7ae7b55dccc7abc3211a8b5e76d75ad83dded5",
       "bytes": 96044,
-      "sharedGainDb": -4.331095044840188,
-      "assetId": "band-bass-48-hard-2",
+      "sharedGainDb": -2.6974166656796275,
+      "assetId": "band-bass-33-hard-2",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -5
     },
     {
-      "file": "samples/band-bass-60-soft-1.wav",
-      "originalPath": "Growlybass/sustain/c4_p_rr1.wav",
-      "originalSha256": "780976fab1a39299733f4a264c2a08a538bfdb77b35812e275e71c60ecff76fd",
-      "sha256": "e19112cbb94e0781735e4fbd2ee02e146548e9ba75025afa518c3945a62fbd17",
+      "file": "samples/band-bass-39-soft-1.wav",
+      "originalPath": "Growlybass/sustain/eb3_p_rr1.wav",
+      "originalSha256": "d687b3b29d292bc68a46ebecc5fd783b2636cfb3195bf8e871da82a806ec8d35",
+      "sha256": "49ba9074f14442584257ab28cf83a4cd4bcf186fe719558be03e5b9db155f6bf",
       "bytes": 96044,
-      "sharedGainDb": -3.0846687518029703,
-      "assetId": "band-bass-60-soft-1",
+      "sharedGainDb": -3.593191147563532,
+      "assetId": "band-bass-39-soft-1",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 1,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 1
     },
     {
-      "file": "samples/band-bass-60-soft-2.wav",
-      "originalPath": "Growlybass/sustain/c4_p_rr2.wav",
-      "originalSha256": "31a5b620677da8310a0db0f2900a2ec986066c2314023097d47953c895d2d75a",
-      "sha256": "45a4e19a60d601b277c229f40f38d3ea880298b796be61650e51ab214b814a57",
+      "file": "samples/band-bass-39-soft-2.wav",
+      "originalPath": "Growlybass/sustain/eb3_p_rr2.wav",
+      "originalSha256": "0342fc152b2215ad657bcd2617d634ad338095c88cc11dec328ca4ab0d1d98ea",
+      "sha256": "38b94ecd228949d0eed4da9c406e9a00185f180e308408ff0e028701f14aed29",
       "bytes": 96044,
-      "sharedGainDb": -3.0846687518029703,
-      "assetId": "band-bass-60-soft-2",
+      "sharedGainDb": -3.593191147563532,
+      "assetId": "band-bass-39-soft-2",
       "lowVelocity": 1,
       "highVelocity": 79,
       "roundRobin": 2,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 1
     },
     {
-      "file": "samples/band-bass-60-hard-1.wav",
-      "originalPath": "Growlybass/sustain/c4_f_rr1.wav",
-      "originalSha256": "80659acdf74f7d6fc39ff3d6d864a5aa3367f5ed25b966093e369367c3f8311b",
-      "sha256": "59fab41a669f9087b2f84ca99f8c43b27a752a1972e13728ea0f4de9169787c6",
+      "file": "samples/band-bass-39-hard-1.wav",
+      "originalPath": "Growlybass/sustain/eb3_f_rr1.wav",
+      "originalSha256": "3271914e197edf34a1c366b22be633e0aaac24cb83f653afdb246ffff48ff178",
+      "sha256": "2c5a0aa4232301435ef14550615a351754a61994d701026ce65f198443740a2c",
       "bytes": 96044,
-      "sharedGainDb": -3.0846687518029703,
-      "assetId": "band-bass-60-hard-1",
+      "sharedGainDb": -3.593191147563532,
+      "assetId": "band-bass-39-hard-1",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 1
     },
     {
-      "file": "samples/band-bass-60-hard-2.wav",
-      "originalPath": "Growlybass/sustain/c4_f_rr2.wav",
-      "originalSha256": "1a7c5a459607c4918d2108837d11b30dc74639478529ce59475fea68c7123bec",
-      "sha256": "f5f72235cd64db46168869676fd704a2a43d03881ea509bf28bc7f4fc0c6d05f",
+      "file": "samples/band-bass-39-hard-2.wav",
+      "originalPath": "Growlybass/sustain/eb3_f_rr2.wav",
+      "originalSha256": "43fc7e28552e256f094fae3fe7cac260c0cb5a6145a25515915cc11d58abfcdd",
+      "sha256": "8c8731c977acfdcbbeb3b98b1c1eab7ccc98fdcc9c25d17b0dee18c3d242c1a5",
       "bytes": 96044,
-      "sharedGainDb": -3.0846687518029703,
-      "assetId": "band-bass-60-hard-2",
+      "sharedGainDb": -3.593191147563532,
+      "assetId": "band-bass-39-hard-2",
       "lowVelocity": 80,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 1
     },
     {
-      "file": "samples/band-bass-short-40-all-1.wav",
+      "file": "samples/band-bass-45-soft-1.wav",
+      "originalPath": "Growlybass/sustain/a3_p_rr1.wav",
+      "originalSha256": "dcc8e08275c55d4ec3cdd9ed2aed4ce3a64f53d815384f968c1f1cf8657b5350",
+      "sha256": "d9c5245e86bfda165ffcc703554d9f08d6e5a91106f1b9f31a642d087547e394",
+      "bytes": 96044,
+      "sharedGainDb": -4.8400980507948645,
+      "assetId": "band-bass-45-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 45,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-45-soft-2.wav",
+      "originalPath": "Growlybass/sustain/a3_p_rr2.wav",
+      "originalSha256": "3f127d3ab2758d5c6ced1b2a546881c036bd8bd180b63df1dd0d8ddf115055dc",
+      "sha256": "73e3fcc85c69defbb30fe2829a9847b2ad119ba4a296f20c643d64df83f8f38e",
+      "bytes": 96044,
+      "sharedGainDb": -4.8400980507948645,
+      "assetId": "band-bass-45-soft-2",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 2,
+      "rootMidi": 45,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-45-hard-1.wav",
+      "originalPath": "Growlybass/sustain/a3_f_rr1.wav",
+      "originalSha256": "990d071388e30c550391c245957c89109437c8bdc1c6fdc94e3d1cf3ce99443d",
+      "sha256": "a3c249f4e3dce6d5e244b57faf03477cacf39af5c98a17de56d27c8f0b1f61ce",
+      "bytes": 96044,
+      "sharedGainDb": -4.8400980507948645,
+      "assetId": "band-bass-45-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 45,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-45-hard-2.wav",
+      "originalPath": "Growlybass/sustain/a3_f_rr2.wav",
+      "originalSha256": "4c4487ebe094efa2fe4a1545c4de8f0e9f5e1458da4b78ae059884ea718e7d69",
+      "sha256": "a8d7399f363e36c61b2e5abbd6a1ca2d8b0150840b7e09767420aab531e0c5bb",
+      "bytes": 96044,
+      "sharedGainDb": -4.8400980507948645,
+      "assetId": "band-bass-45-hard-2",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 45,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-51-soft-1.wav",
+      "originalPath": "Growlybass/sustain/eb4_p_rr1.wav",
+      "originalSha256": "b5351c47618ef30833fd379937c78365a427c88482454dfe005ba41a350011ad",
+      "sha256": "bad44d73a80905bfc69b48b4e89c66b576645012c56430df203364648d50b2eb",
+      "bytes": 96044,
+      "sharedGainDb": -0.7085473528737863,
+      "assetId": "band-bass-51-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 51,
+      "tuningCents": 2
+    },
+    {
+      "file": "samples/band-bass-51-soft-2.wav",
+      "originalPath": "Growlybass/sustain/eb4_p_rr2.wav",
+      "originalSha256": "f40e23eb2bc397de0d6db3bd7ae6327a50bf813cecead0726b562a7f250f9cce",
+      "sha256": "2378ccb46619e8214a50de3168c0d81f35c1e69e33394888c12893d2efcc58c8",
+      "bytes": 96044,
+      "sharedGainDb": -0.7085473528737863,
+      "assetId": "band-bass-51-soft-2",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 2,
+      "rootMidi": 51,
+      "tuningCents": 2
+    },
+    {
+      "file": "samples/band-bass-51-hard-1.wav",
+      "originalPath": "Growlybass/sustain/eb4_f_rr1.wav",
+      "originalSha256": "3435959e638aadf6b9e0af6bdbad5f11b32a4cfa00d86267bdcaf8a06883ee1d",
+      "sha256": "c7048306b776e2de73d8e54f0db4bdfc5daa7cba36d33ea39440042b9af5c05d",
+      "bytes": 96044,
+      "sharedGainDb": -0.7085473528737863,
+      "assetId": "band-bass-51-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 51,
+      "tuningCents": 2
+    },
+    {
+      "file": "samples/band-bass-51-hard-2.wav",
+      "originalPath": "Growlybass/sustain/eb4_f_rr2.wav",
+      "originalSha256": "acd7612a8e368c36f9465046c318c2b81784bef16ee4862cd04c45b018d3262c",
+      "sha256": "d213afe5484763c80d7920ca25924024d55c565d512369911c35345d57a419be",
+      "bytes": 96044,
+      "sharedGainDb": -0.7085473528737863,
+      "assetId": "band-bass-51-hard-2",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 51,
+      "tuningCents": 2
+    },
+    {
+      "file": "samples/band-bass-57-soft-1.wav",
+      "originalPath": "Growlybass/sustain/a4_p_rr1.wav",
+      "originalSha256": "e3575876019acdf6f9eab992cea47bfa411fae59ee0c6e7f8818a91d3e5c888d",
+      "sha256": "ade7d9d9838ab3a19d6a37fc439f8c150f64c895584d6519ac4baac68cb8b6d3",
+      "bytes": 96044,
+      "sharedGainDb": -4.110981292465389,
+      "assetId": "band-bass-57-soft-1",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 1,
+      "rootMidi": 57,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-57-soft-2.wav",
+      "originalPath": "Growlybass/sustain/a4_p_rr2.wav",
+      "originalSha256": "7b3437c21d36c7d6af6a5af9c1cbc14d87678ceea7e2d4de4e821d4e7d7e13e0",
+      "sha256": "2ed1c9c630f15f700744f9b314bd66269caaf7179c8208715a2cb9ec7a95aad5",
+      "bytes": 96044,
+      "sharedGainDb": -4.110981292465389,
+      "assetId": "band-bass-57-soft-2",
+      "lowVelocity": 1,
+      "highVelocity": 79,
+      "roundRobin": 2,
+      "rootMidi": 57,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-57-hard-1.wav",
+      "originalPath": "Growlybass/sustain/a4_f_rr1.wav",
+      "originalSha256": "4b4898bb072ca44eb65ebe76dbb3a1e416919d97a69699711d3a8c2e1d65399c",
+      "sha256": "8320732d76e402234c88c53f9f9e0dfed030a150631a3d8f97f35c126a5b97aa",
+      "bytes": 96044,
+      "sharedGainDb": -4.110981292465389,
+      "assetId": "band-bass-57-hard-1",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 57,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-57-hard-2.wav",
+      "originalPath": "Growlybass/sustain/a4_f_rr2.wav",
+      "originalSha256": "be5b4117d8cd76db24447ed9315db7c7f3f6dd9ff058fe9e2c8942e330e28372",
+      "sha256": "fdaa38ec4f3b4589058c6b35e205fd6b536c47e126a7849264e71a16310d4679",
+      "bytes": 96044,
+      "sharedGainDb": -4.110981292465389,
+      "assetId": "band-bass-57-hard-2",
+      "lowVelocity": 80,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 57,
+      "tuningCents": -3
+    },
+    {
+      "file": "samples/band-bass-short-28-all-1.wav",
       "originalPath": "Growlybass/staccato/e2_staccato_rr1.wav",
       "originalSha256": "8b20b77e9b54e437806a5b8a7784121a220e04c4510984f111c02b0d1b2a6d08",
       "sha256": "d61a8c2ff0e48e9d6f09e3bbe77e5b15d3a206b5ea219557cb869fd3554d0998",
       "bytes": 28844,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-40-all-1",
+      "assetId": "band-bass-short-28-all-1",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 46
     },
     {
-      "file": "samples/band-bass-short-40-all-2.wav",
+      "file": "samples/band-bass-short-28-all-2.wav",
       "originalPath": "Growlybass/staccato/e2_staccato_rr2.wav",
       "originalSha256": "4a541298b1be13ab0a5fc0acc5c853a5c04cbf9991b591883ac86e43c5e572d8",
       "sha256": "dbd0bc8280d07d4212dedeac3e064976e6c072ddeba4d26b107821a3ff41d9b0",
       "bytes": 28844,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-40-all-2",
+      "assetId": "band-bass-short-28-all-2",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 40,
-      "tuningCents": 0
+      "rootMidi": 28,
+      "tuningCents": 46
     },
     {
-      "file": "samples/band-bass-short-48-all-1.wav",
-      "originalPath": "Growlybass/staccato/c3_staccato_rr1.wav",
-      "originalSha256": "6464cbb0f4bf425fb8f0b2ee3064b7d4140b0b118f97a4711dab253a0f612f40",
-      "sha256": "6d1e0f6b569725b226db0b2f7c4502bf21246cf7709aa066dc41fbc1924b97ee",
+      "file": "samples/band-bass-short-33-all-1.wav",
+      "originalPath": "Growlybass/staccato/a2_staccato_rr4.wav",
+      "originalSha256": "2d122fd047d6d5c61e80fbce0ba03cc5e32ae7e3535fbc544e8677d294d0e38b",
+      "sha256": "b184e8663ec60971f27dd3d351c0941175e33f95321e84d60e765d426f8ec4c3",
       "bytes": 27632,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-48-all-1",
+      "assetId": "band-bass-short-33-all-1",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -3
     },
     {
-      "file": "samples/band-bass-short-48-all-2.wav",
-      "originalPath": "Growlybass/staccato/c3_staccato_rr2.wav",
-      "originalSha256": "0557677da6c23d71730107e7acdb7b72efc021b13dffae8a238a3c52aee54944",
-      "sha256": "74043d621a980882dde8078806b95be1049293aaaa6a9bdcfe32bde36eb70e35",
+      "file": "samples/band-bass-short-33-all-2.wav",
+      "originalPath": "Growlybass/staccato/a2_staccato_rr5.wav",
+      "originalSha256": "181a7a7218284be62fd89cc7f46e050173837b481adf714aff6d238e6b864a05",
+      "sha256": "455ebb87377a9142b738ca11918782043cb0cca5b9c0579cc559d5614921ad0b",
       "bytes": 27632,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-48-all-2",
+      "assetId": "band-bass-short-33-all-2",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 48,
-      "tuningCents": 0
+      "rootMidi": 33,
+      "tuningCents": -3
     },
     {
-      "file": "samples/band-bass-short-60-all-1.wav",
-      "originalPath": "Growlybass/staccato/c4_staccato_rr1.wav",
-      "originalSha256": "bf4b624140c71327c83c01f6e6611d037679da8e89ea77968bab8147fdbeefe1",
-      "sha256": "715081fc362bb0d42fd49f5398d192abc4154dd0d712a8561b1e6504d6e2a961",
-      "bytes": 27632,
+      "file": "samples/band-bass-short-39-all-1.wav",
+      "originalPath": "Growlybass/staccato/eb3_staccato_rr2.wav",
+      "originalSha256": "0ca8d0960ed439a0f49ffe3a79cbfb337242ec1b94f75758b17bf0ba5c1c36b8",
+      "sha256": "f9b5cfa2e11bb581005cf6e0b3332e6ad6ad4919e96c893dfb4d8fca49ea6f9e",
+      "bytes": 27630,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-60-all-1",
+      "assetId": "band-bass-short-39-all-1",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 1,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 8
     },
     {
-      "file": "samples/band-bass-short-60-all-2.wav",
-      "originalPath": "Growlybass/staccato/c4_staccato_rr2.wav",
-      "originalSha256": "04fa93efd0e5925aad1f28b2418ff636437b0838037061642f94151ceac68330",
-      "sha256": "d1477684404d191760582321d6db12dfe45192d724b75862ab0735a457b8485b",
+      "file": "samples/band-bass-short-39-all-2.wav",
+      "originalPath": "Growlybass/staccato/eb3_staccato_rr3.wav",
+      "originalSha256": "41c21dfacfd2f8bc48f405a1d5723d8bfeae96fbaa74752cab46d8eadf37b0b2",
+      "sha256": "b2e350915cb870724ae9e310c4495355f275fc18b9740ad5d9b3072b7bd2a1f7",
       "bytes": 27632,
       "sharedGainDb": -6.020599913279624,
-      "assetId": "band-bass-short-60-all-2",
+      "assetId": "band-bass-short-39-all-2",
       "lowVelocity": 1,
       "highVelocity": 127,
       "roundRobin": 2,
-      "rootMidi": 60,
-      "tuningCents": 0
+      "rootMidi": 39,
+      "tuningCents": 8
+    },
+    {
+      "file": "samples/band-bass-short-45-all-1.wav",
+      "originalPath": "Growlybass/staccato/a3_staccato_rr3.wav",
+      "originalSha256": "8f6e6cb9ecf2d5aa6a4196f75e6797aa0fd3fcc8b35ac875ca8fd1afc1fc755c",
+      "sha256": "8d2320d9f3a81bf2fea5ff6c25429a1e2d16efbe23348f81bd49eeb34f62e60f",
+      "bytes": 27632,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-45-all-1",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 45,
+      "tuningCents": 15
+    },
+    {
+      "file": "samples/band-bass-short-45-all-2.wav",
+      "originalPath": "Growlybass/staccato/a3_staccato_rr4.wav",
+      "originalSha256": "0489e4aad0d9f4d33453bee4ce4764894a26da413bb0a3ec2f87dd578d11ff31",
+      "sha256": "0299432f8ea2d6cad46b17923ce2d043f5544ee2878d7e52ba63fc5d40e5db64",
+      "bytes": 27632,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-45-all-2",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 45,
+      "tuningCents": 15
+    },
+    {
+      "file": "samples/band-bass-short-51-all-1.wav",
+      "originalPath": "Growlybass/staccato/eb4_staccato_rr3.wav",
+      "originalSha256": "a9e77663cedefa345d991aa62c6df79c878958b56a397daeca059dc26231d4bd",
+      "sha256": "197afeed8ce97c90106b5df476c85bc9b3da4bce9adac79432795a235c084989",
+      "bytes": 27632,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-51-all-1",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 51,
+      "tuningCents": 11
+    },
+    {
+      "file": "samples/band-bass-short-51-all-2.wav",
+      "originalPath": "Growlybass/staccato/eb4_staccato_rr4.wav",
+      "originalSha256": "e21f8f55abcffc76908b8d71a7059808e9cfe8c05312d0f9c55dfacaac173377",
+      "sha256": "bd2be29998bd8ed9419eb91728d6fd5cda2c081be94d25b22f33a0e531f0f01f",
+      "bytes": 27632,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-51-all-2",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 51,
+      "tuningCents": 11
+    },
+    {
+      "file": "samples/band-bass-short-57-all-1.wav",
+      "originalPath": "Growlybass/staccato/a4_staccato_rr4.wav",
+      "originalSha256": "3dab3c3e8f8ad1245eb55896ed2cb84c6b2675c062b936b940e2553950630cb3",
+      "sha256": "17e8719a2bf4066fab05447cc71ecbc4b56d694a9c86dad67363021aa690c2ee",
+      "bytes": 27630,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-57-all-1",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 1,
+      "rootMidi": 57,
+      "tuningCents": 3
+    },
+    {
+      "file": "samples/band-bass-short-57-all-2.wav",
+      "originalPath": "Growlybass/staccato/a4_staccato_rr5.wav",
+      "originalSha256": "8bfedc8a72ee80252b1b79153fb252b21be571fb94649de8383c5027aa72e5eb",
+      "sha256": "ac29cca3b09375edca1149ee84e4aa74b3e2f3a463d5ad2abb05078836ba853c",
+      "bytes": 27632,
+      "sharedGainDb": -6.020599913279624,
+      "assetId": "band-bass-short-57-all-2",
+      "lowVelocity": 1,
+      "highVelocity": 127,
+      "roundRobin": 2,
+      "rootMidi": 57,
+      "tuningCents": 3
     },
     {
       "file": "samples/band-guitar-40-soft-1.wav",
@@ -268,7 +520,7 @@
       "highVelocity": 79,
       "roundRobin": 1,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 3
     },
     {
       "file": "samples/band-guitar-40-soft-2.wav",
@@ -282,7 +534,7 @@
       "highVelocity": 79,
       "roundRobin": 2,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 3
     },
     {
       "file": "samples/band-guitar-40-hard-1.wav",
@@ -296,7 +548,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 3
     },
     {
       "file": "samples/band-guitar-40-hard-2.wav",
@@ -310,7 +562,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 3
     },
     {
       "file": "samples/band-guitar-52-soft-1.wav",
@@ -324,7 +576,7 @@
       "highVelocity": 79,
       "roundRobin": 1,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": 9
     },
     {
       "file": "samples/band-guitar-52-soft-2.wav",
@@ -338,7 +590,7 @@
       "highVelocity": 79,
       "roundRobin": 2,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": 9
     },
     {
       "file": "samples/band-guitar-52-hard-1.wav",
@@ -352,7 +604,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": 9
     },
     {
       "file": "samples/band-guitar-52-hard-2.wav",
@@ -366,7 +618,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": 9
     },
     {
       "file": "samples/band-guitar-64-soft-1.wav",
@@ -380,7 +632,7 @@
       "highVelocity": 79,
       "roundRobin": 1,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     },
     {
       "file": "samples/band-guitar-64-soft-2.wav",
@@ -394,7 +646,7 @@
       "highVelocity": 79,
       "roundRobin": 2,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     },
     {
       "file": "samples/band-guitar-64-hard-1.wav",
@@ -408,7 +660,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     },
     {
       "file": "samples/band-guitar-64-hard-2.wav",
@@ -422,7 +674,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     },
     {
       "file": "samples/band-guitar-short-40-all-1.wav",
@@ -436,7 +688,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 21
     },
     {
       "file": "samples/band-guitar-short-40-all-2.wav",
@@ -450,7 +702,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 40,
-      "tuningCents": 0
+      "tuningCents": 21
     },
     {
       "file": "samples/band-guitar-short-52-all-1.wav",
@@ -464,7 +716,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": -4
     },
     {
       "file": "samples/band-guitar-short-52-all-2.wav",
@@ -478,7 +730,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 52,
-      "tuningCents": 0
+      "tuningCents": -4
     },
     {
       "file": "samples/band-guitar-short-64-all-1.wav",
@@ -492,7 +744,7 @@
       "highVelocity": 127,
       "roundRobin": 1,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     },
     {
       "file": "samples/band-guitar-short-64-all-2.wav",
@@ -506,7 +758,7 @@
       "highVelocity": 127,
       "roundRobin": 2,
       "rootMidi": 64,
-      "tuningCents": 0
+      "tuningCents": 5
     }
   ]
 }

@@ -16,6 +16,7 @@ import {
 import { importInstrument } from "./instrument-pack.js";
 import {
   importInstrumentCollection,
+  packFreshnessDiagnostics,
   InstrumentCollectionSchema,
   bundledCollectionManifest,
   listBundledCollections,
@@ -45,7 +46,7 @@ Usage: retro-music COMMAND [FILE] [options]
 Commands
   instruments                       list presets with guidance
   instrument-packs [--all|--pack ID] list bundled sampled instruments
-  import-pack SCORE.json --out NEW.json [--instrument ID,...]
+  import-pack SCORE.json --out NEW.json [--instrument ID,...] [--replace]
                                     --definition MANIFEST.json for a local pack
   validate SCORE.json               full compile check
   compile SCORE.json --out FILE     expanded integer-tick events
@@ -108,6 +109,7 @@ const { positionals, values } = (() => {
         definition: { type: "string" },
         pack: { type: "string" },
         all: { type: "boolean" },
+        replace: { type: "boolean" },
         from: { type: "string" },
         to: { type: "string" },
         bars: { type: "string" },
@@ -549,6 +551,7 @@ async function main() {
       definition.data,
       dirname(resolve(path)),
       splitList(values.instrument),
+      { replace: values.replace },
     );
     await output(values.out, JSON.stringify(score, null, 2) + "\n");
     print({
@@ -561,6 +564,7 @@ async function main() {
   if (command === "diagnose") {
     const rules = values.rules ? (await load(values.rules)).data : {};
     const result = diagnoseScore(data, rules);
+    result.sourceDiagnostics.push(...(await packFreshnessDiagnostics(data)));
     if (values.out && !wantsStdout)
       await output(values.out, JSON.stringify(result, null, 2) + "\n");
     print(result);
@@ -574,7 +578,10 @@ async function main() {
         sourceHash: sha(text),
         schemaVersion: c.score.schemaVersion,
         eventCount: c.events.length,
-        diagnostics: c.diagnostics,
+        diagnostics: [
+          ...c.diagnostics,
+          ...(await packFreshnessDiagnostics(data)),
+        ],
       });
     } catch (e) {
       if (e instanceof ScoreError) {

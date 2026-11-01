@@ -15,7 +15,7 @@ Create an original, editable musical work, not just a WAV. Use the deterministic
 - Read `references/composition-playbook.zh-CN.md` to plan and revise music.
 - Read `references/v1.1-guide.zh-CN.md` for hold/tie, swing, humanize, key and harmony, motif operators, sampled drum kits, true-peak and loudness measurement, and the A/B export.
 - Read `references/v1.2-guide.zh-CN.md` for bundled sampled instruments, portable collection imports and deterministic stereo reverb. For acoustic timbres, inspect `cli instrument-packs` and import the selected starter instruments before writing tracks.
-- Read `references/v1.3-guide.zh-CN.md` for common band/piano/drum collections, velocity-layer selection and deterministic round robin. Use `instrument-packs --all` to discover packs, and `import-pack --pack ID` to embed only the instruments needed. Preserve CC BY attribution when using piano/drum packs.
+- Read `references/v1.3-guide.zh-CN.md` for common band/piano/drum collections, velocity-layer selection and deterministic round robin. Use `instrument-packs --all` to discover packs, and `import-pack --pack ID` to embed only the instruments needed. If `validate` reports `STALE_PACK_INSTRUMENT`, re-import that instrument with `import-pack --pack ID --instrument ID --replace`. Preserve CC BY attribution when using piano/drum packs.
 - Read `references/architecture.zh-CN.md` when changing the engine.
 - Read `references/v0.2-guide.zh-CN.md` / `references/v0.3-guide.zh-CN.md` only for historical context on audition calibration, diagnostics, instrument packages and expression.
 - Inspect `scripts/runtime/examples/` for valid full scores. Do not present a renamed example as a new composition.

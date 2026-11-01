@@ -6,6 +6,7 @@ import {
   listBundledCollections,
   bundledCollectionManifest,
   importInstrumentCollection,
+  packFreshnessDiagnostics,
 } from "../src/instrument-collection.js";
 import { fixture } from "./helpers.js";
 import { compileScore } from "../src/compiler.js";
@@ -41,11 +42,14 @@ test("common packs import all six usable instruments without any material-direct
       "curated samples must not be silent",
     );
   }
-  assert.ok(bytes < 5_000_000);
+  // 1.1.0 bass: six roots (max shift 3 semitones) at 2 layers x 2 RR.
+  assert.ok(bytes < 6_500_000, `${bytes} bytes`);
   const bass = score.instrumentDefinitions.find(
     (p: any) => p.id === "band-bass",
   );
-  assert.equal(bass.sample.zones.length, 12);
+  assert.equal(bass.sample.zones.length, 24);
+  assert.deepEqual(bass.range, [28, 60]);
+  assert.deepEqual(bass.pack.id, "band");
   assert.equal(
     new Set(bass.sample.zones.map((z: any) => z.roundRobin)).size,
     2,
@@ -55,4 +59,65 @@ test("common packs import all six usable instruments without any material-direct
       .drumKit.slots.length,
     20,
   );
+});
+
+test("pack freshness flags stale copies but not author gain tweaks", async () => {
+  const path = bundledCollectionManifest("band"),
+    pack = JSON.parse(await readFile(path, "utf8"));
+  let score: any = await importInstrumentCollection(
+    fixture(),
+    pack,
+    dirname(path),
+    ["band-bass"],
+  );
+  assert.deepEqual(await packFreshnessDiagnostics(score), []);
+  // Score authors rebalance imported zones; that is not staleness.
+  score.instrumentDefinitions[0].sample.zones[0].gainDb = 3;
+  assert.deepEqual(await packFreshnessDiagnostics(score), []);
+  // A copy imported from an older pack release carries an older digest.
+  score.instrumentDefinitions[0].pack.digest = "0".repeat(64);
+  const [stale] = await packFreshnessDiagnostics(score);
+  assert.equal(stale?.code, "STALE_PACK_INSTRUMENT");
+  assert.match(
+    String(stale?.suggestion),
+    /--pack band --instrument band-bass --replace/,
+  );
+  // Unstamped legacy copies are compared by sample mapping: the pre-1.1.0
+  // bass declared root 40 for a recording of E1 (MIDI 28).
+  delete score.instrumentDefinitions[0].pack;
+  score.instrumentDefinitions[0].sample.zones[0].rootMidi = 40;
+  assert.equal((await packFreshnessDiagnostics(score)).length, 1);
+});
+
+test("import-pack replace swaps a stale instrument and drops orphaned samples", async () => {
+  const path = bundledCollectionManifest("band"),
+    pack = JSON.parse(await readFile(path, "utf8"));
+  let score: any = await importInstrumentCollection(
+    fixture(),
+    pack,
+    dirname(path),
+    ["band-bass", "band-guitar"],
+  );
+  score.sampleAssets["band-bass-40-soft-1"] =
+    score.sampleAssets["band-bass-28-soft-1"];
+  score.instrumentDefinitions[0].sample.zones[0].assetId =
+    "band-bass-40-soft-1";
+  await assert.rejects(
+    importInstrumentCollection(score, pack, dirname(path), ["band-bass"]),
+    /INSTRUMENT_ALREADY_EXISTS/,
+  );
+  score = await importInstrumentCollection(
+    score,
+    pack,
+    dirname(path),
+    ["band-bass"],
+    { replace: true },
+  );
+  assert.deepEqual(score.instrumentDefinitions.map((p: any) => p.id).sort(), [
+    "band-bass",
+    "band-guitar",
+  ]);
+  assert.ok(!("band-bass-40-soft-1" in score.sampleAssets));
+  assert.ok("band-guitar-40-soft-1" in score.sampleAssets);
+  assert.deepEqual(await packFreshnessDiagnostics(score), []);
 });

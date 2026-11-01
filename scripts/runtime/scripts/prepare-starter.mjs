@@ -86,7 +86,8 @@ const specs = [
 const manifest = {
   id: "starter",
   name: "Retro Starter — VCSL selection",
-  version: "1.0.0",
+  // 1.1.0: asset IDs and files named by sounding root (were library numbers).
+  version: "1.1.0",
   license: "CC0-1.0",
   source: "https://github.com/sgossner/VCSL",
   instruments: [],
@@ -145,7 +146,9 @@ for (const spec of specs) {
     const [root, path] = spec.samples[i];
     const sourceFile = new URL(spec.id + "-" + root + ".wav", cache);
     const original = await download(path, sourceFile);
-    const file = `samples/${spec.id}-${root}.wav`,
+    // Name files by sounding root (VCSL numbers recorder/piano/kalimba/glock
+    // samples one octave below their sounding pitch; see midiOffset).
+    const file = `samples/${spec.id}-${roots[i]}.wav`,
       target = new URL(file, destination);
     execFileSync(
       "ffmpeg",
@@ -182,7 +185,7 @@ for (const spec of specs) {
       Buffer.from(encodeWav([normalized], decoded.sampleRate)),
     );
     const bytes = await readFile(target),
-      id = `${spec.id}-${root}`;
+      id = `${spec.id}-${roots[i]}`;
     const provenance = `VCSL / Versilian Studios, CC0-1.0; ${commit}; ${path}`;
     assets.push({ id, file, sha256: hash(bytes), provenance });
     const zone = {

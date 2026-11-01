@@ -1,11 +1,44 @@
 // Optional authoring tool. Runtime uses only the copied instrument packs.
 // Usage: node scripts/prepare-common-instruments.mjs [--source PATH_TO_MATERIAL]
-import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
-import { resolve, dirname } from "node:path";
+import {
+  readFile,
+  writeFile,
+  mkdir,
+  copyFile,
+  mkdtemp,
+  rm,
+} from "node:fs/promises";
+import { resolve, dirname, join } from "node:path";
+import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { decodeWav, encodeWav } from "../dist/wav.js";
+import { checkRootPitch } from "../dist/pitch.js";
+/**
+ * File-name note for a sounding MIDI pitch. Karoryfer names bass and guitar
+ * files by keyboard key (written pitch), one octave above the sounding pitch,
+ * so those callers pass writtenOffset 12. Every root is verified against the
+ * audio below, so a wrong offset fails the build instead of shipping.
+ */
+const NOTE_NAMES = [
+  "c",
+  "db",
+  "d",
+  "eb",
+  "e",
+  "f",
+  "gb",
+  "g",
+  "ab",
+  "a",
+  "bb",
+  "b",
+];
+const noteFile = (soundingMidi, writtenOffset = 0) => {
+  const m = soundingMidi + writtenOffset;
+  return `${NOTE_NAMES[m % 12]}${Math.floor(m / 12) - 1}`;
+};
 const argument = process.argv.indexOf("--source");
 const source =
   argument >= 0
@@ -20,6 +53,8 @@ const bass = "Growlybass",
 const packs = [
   {
     id: "band",
+    // 1.1.0: bass roots corrected to sounding pitch (were one octave high).
+    version: "1.1.0",
     name: "Common Band — bass and clean guitar",
     license: "CC0-1.0",
     url: "https://www.karoryfer.com/",
@@ -34,6 +69,7 @@ const packs = [
   },
   {
     id: "piano",
+    version: "1.0.0",
     name: "Common Keys — compact Salamander piano",
     license: "CC-BY-3.0",
     url: "https://archive.org/details/SalamanderGrandPianoV3",
@@ -44,6 +80,7 @@ const packs = [
   },
   {
     id: "drums",
+    version: "1.0.0",
     name: "Common Drums — compact acoustic kit",
     license: "CC-BY-4.0",
     url: "https://www.karoryfer.com/",
@@ -59,7 +96,7 @@ function tonal(id, name, role, roots, range, seconds, attack, release, paths) {
   const items = [];
   for (let n = 0; n < roots.length; n++)
     for (const layer of paths.layers)
-      for (let rr = 1; rr <= paths.rr; rr++) {
+      for (let rr = 1; rr <= (paths.candidates ?? paths.rr); rr++) {
         const path = paths.file(n, layer, rr);
         items.push({
           path,
@@ -70,14 +107,28 @@ function tonal(id, name, role, roots, range, seconds, attack, release, paths) {
               ? range[1]
               : Math.floor((roots[n] + roots[n + 1]) / 2),
           rootMidi: roots[n],
-          tuningCents: paths.tuning?.[n] ?? 0,
+          tuningCents: paths.tuning?.[n],
           lowVelocity: layer.low,
           highVelocity: layer.high,
           roundRobin: rr,
         });
       }
-  return { id, name, role, range, seconds, attack, release, items };
+  return {
+    id,
+    name,
+    role,
+    range,
+    seconds,
+    attack,
+    release,
+    items,
+    candidates: paths.candidates,
+    keepRoundRobins: paths.rr,
+  };
 }
+// Growlybass is sampled every minor third; take every other sample from the
+// open low E so no note is shifted more than three semitones (was up to +7).
+const BASS_ROOTS = [28, 33, 39, 45, 51, 57];
 const two = [
     { name: "soft", low: 1, high: 79 },
     { name: "hard", low: 80, high: 127 },
@@ -88,8 +139,8 @@ packs[0].instruments.push(
     "band-bass",
     "Fingered electric bass",
     "bass",
-    [40, 48, 60],
-    [36, 67],
+    BASS_ROOTS,
+    [28, 60],
     1.5,
     0.004,
     0.08,
@@ -97,23 +148,24 @@ packs[0].instruments.push(
       layers: two,
       rr: 2,
       file: (n, l, r) =>
-        `${bass}/sustain/${["e2", "c3", "c4"][n]}_${l.name === "soft" ? "p" : "f"}_rr${r}.wav`,
+        `${bass}/sustain/${noteFile(BASS_ROOTS[n], 12)}_${l.name === "soft" ? "p" : "f"}_rr${r}.wav`,
     },
   ),
   tonal(
     "band-bass-short",
     "Short electric bass",
     "bass",
-    [40, 48, 60],
-    [36, 67],
+    BASS_ROOTS,
+    [28, 60],
     0.45,
     0.003,
     0.045,
     {
       layers: one,
       rr: 2,
+      candidates: 5,
       file: (n, l, r) =>
-        `${bass}/staccato/${["e2", "c3", "c4"][n]}_staccato_rr${r}.wav`,
+        `${bass}/staccato/${noteFile(BASS_ROOTS[n], 12)}_staccato_rr${r}.wav`,
     },
   ),
   tonal(
@@ -129,7 +181,7 @@ packs[0].instruments.push(
       layers: two,
       rr: 2,
       file: (n, l, r) =>
-        `${guitar}/Samples/green/ord/twang_${["e3", "e4", "e5"][n]}_${l.name === "soft" ? "p" : "mf"}_rr${r}.wav`,
+        `${guitar}/Samples/green/ord/twang_${noteFile([40, 52, 64][n], 12)}_${l.name === "soft" ? "p" : "mf"}_rr${r}.wav`,
     },
   ),
   tonal(
@@ -145,7 +197,7 @@ packs[0].instruments.push(
       layers: one,
       rr: 2,
       file: (n, l, r) =>
-        `${guitar}/Samples/green/stac/staccato_${["e3", "e4", "e5"][n]}_rr${r}.wav`,
+        `${guitar}/Samples/green/stac/staccato_${noteFile([40, 52, 64][n], 12)}_rr${r}.wav`,
     },
   ),
 );
@@ -162,6 +214,8 @@ packs[1].instruments.push(
     {
       layers: two,
       rr: 1,
+      // Explicit stretch tuning from SalamanderGrandPianoV3Retuned.sfz (tune
+      // -9/0/-6/-8 cents); auto-measurement only verifies it.
       tuning: [9, 0, 6, 8],
       file: (n, l) =>
         `${piano}/44.1khz16bit/C${n + 2}v${l.name === "soft" ? 6 : 12}.wav`,
@@ -196,6 +250,81 @@ for (const [sound, prefix, mic, seconds, hard] of [
         roundRobin: rr,
       });
 packs[2].instruments.push(kit);
+/** Trim, mono 32 kHz PCM16 and fade: the edit applied to every pack sample. */
+function convert(input, output, seconds) {
+  execFileSync(
+    "ffmpeg",
+    [
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-y",
+      "-i",
+      input,
+      "-ac",
+      "1",
+      "-ar",
+      "32000",
+      "-af",
+      `silenceremove=start_periods=1:start_duration=0:start_threshold=-55dB,atrim=duration=${seconds},afade=t=out:st=${seconds - 0.04}:d=0.04`,
+      "-c:a",
+      "pcm_s16le",
+      "-map_metadata",
+      "-1",
+      output,
+    ],
+    { stdio: "pipe" },
+  );
+}
+/**
+ * Keep the round robins with the clearest pitch. Some short staccato takes
+ * are dominated by fret noise or bend away from the note (Growlybass a2 rr1
+ * measures half a semitone flat with an ambiguous octave); with several
+ * candidates per note we ship the cleanest ones, renumbered from 1.
+ */
+async function keepClearestRoundRobins(spec) {
+  if (!spec.candidates) return;
+  const scratch = await mkdtemp(join(tmpdir(), "rmt-rr-"));
+  const groups = new Map();
+  for (const item of spec.items) {
+    const key = `${item.rootMidi}/${item.lowVelocity}`;
+    groups.set(key, [...(groups.get(key) ?? []), item]);
+  }
+  const kept = [];
+  try {
+    for (const items of groups.values()) {
+      const scored = [];
+      for (const item of items) {
+        const temp = join(scratch, "candidate.wav");
+        convert(resolve(source, item.path), temp, spec.seconds);
+        const decoded = decodeWav(await readFile(temp));
+        const check = checkRootPitch(
+          decoded.channels[0],
+          decoded.sampleRate,
+          item.rootMidi,
+        );
+        scored.push({
+          item,
+          score: (check.octaveError ? 10 : 0) + check.lowerRatio,
+        });
+      }
+      scored
+        .sort((a, b) => a.score - b.score)
+        .slice(0, spec.keepRoundRobins)
+        .sort((a, b) => a.item.roundRobin - b.item.roundRobin)
+        .forEach(({ item }, index) => {
+          item.roundRobin = index + 1;
+          item.id = item.id.replace(/-\d+$/, `-${index + 1}`);
+          kept.push(item);
+        });
+    }
+  } finally {
+    await rm(scratch, { recursive: true, force: true });
+  }
+  spec.items = kept;
+}
+for (const pack of packs)
+  for (const spec of pack.instruments) await keepClearestRoundRobins(spec);
 for (const pack of packs) {
   const licenseUrl =
     pack.license === "CC0-1.0"
@@ -206,7 +335,7 @@ for (const pack of packs) {
   const manifest = {
     id: pack.id,
     name: pack.name,
-    version: "1.0.0",
+    version: pack.version,
     license: pack.license,
     source: pack.url,
     instruments: [],
@@ -230,29 +359,7 @@ for (const pack of packs) {
         output = new URL(file, dest),
         seconds = item.seconds ?? spec.seconds;
       const original = await readFile(input);
-      execFileSync(
-        "ffmpeg",
-        [
-          "-hide_banner",
-          "-loglevel",
-          "error",
-          "-y",
-          "-i",
-          input,
-          "-ac",
-          "1",
-          "-ar",
-          "32000",
-          "-af",
-          `silenceremove=start_periods=1:start_duration=0:start_threshold=-55dB,atrim=duration=${seconds},afade=t=out:st=${seconds - 0.04}:d=0.04`,
-          "-c:a",
-          "pcm_s16le",
-          "-map_metadata",
-          "-1",
-          fileURLToPath(output),
-        ],
-        { stdio: "pipe" },
-      );
+      convert(input, fileURLToPath(output), seconds);
       const decoded = decodeWav(await readFile(output));
       let filePeak = 0;
       for (const v of decoded.channels[0])
@@ -269,6 +376,36 @@ for (const pack of packs) {
       });
     }
     if (peak < 0.0001) throw new Error("Silent instrument: " + spec.id);
+    // Verify every tonal sample against its declared root. An octave error
+    // aborts the build; otherwise roots without explicit tuning get the mean
+    // measured offset of their layers and round robins.
+    const measured = new Map();
+    for (const { item, decoded } of prepared) {
+      if (item.sound) continue;
+      const check = checkRootPitch(
+        decoded.channels[0],
+        decoded.sampleRate,
+        item.rootMidi,
+      );
+      if (check.octaveError)
+        throw new Error(
+          `${item.path} sounds ${check.octaveError > 0 ? "above" : "below"} declared root ${item.rootMidi}`,
+        );
+      measured.set(item.rootMidi, [
+        ...(measured.get(item.rootMidi) ?? []),
+        check.centsOffset,
+      ]);
+    }
+    for (const { item } of prepared) {
+      if (item.sound) continue;
+      const cents = measured.get(item.rootMidi);
+      const mean = cents.reduce((a, b) => a + b, 0) / cents.length;
+      item.tuningCents ??= Math.round(mean);
+      if (Math.abs(mean - item.tuningCents) > 25)
+        throw new Error(
+          `${spec.id} root ${item.rootMidi}: measured ${mean.toFixed(1)} cents, declared ${item.tuningCents}`,
+        );
+    }
     const assets = [],
       zones = [],
       slots = [];

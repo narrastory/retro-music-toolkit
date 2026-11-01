@@ -5,7 +5,7 @@
   "processing": "ffmpeg: leading-silence trim (-55 dB), mono PCM16 at 32000 Hz, bounded length and 60 ms end fade. Peak normalized to 0.4 (-7.96 dBFS). Root notes calibrated for the library octave convention; measured small tuning offsets applied. Sustained recorder loop crossfades at playback.",
   "files": [
     {
-      "file": "samples/starter-recorder-60.wav",
+      "file": "samples/starter-recorder-84.wav",
       "upstreamPath": "Aerophones/Edge-blown Aerophones/Baroque Alto Recorder/Sustain/AltRecorder_Sus_C4_rr1_Main.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Aerophones/Edge-blown%20Aerophones/Baroque%20Alto%20Recorder/Sustain/AltRecorder_Sus_C4_rr1_Main.wav",
       "originalSha256": "aaa4f42f850758a034db08cd42641f85adcb30a99db2fe790db03325c7f78b29",
@@ -25,7 +25,7 @@
       "bytes": 128044
     },
     {
-      "file": "samples/starter-piano-48.wav",
+      "file": "samples/starter-piano-60.wav",
       "upstreamPath": "Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_C3_v2_rr1.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Grand%20Piano%2C%20Kawai%20-%20Legacy/Sustains/GrandPno_Main_Sus_C3_v2_rr1.wav",
       "originalSha256": "43637b8c0bb1b72aeabee193b1c13f2c5d3c3a457bf6810cbd56a54a46c9e458",
@@ -35,7 +35,7 @@
       "bytes": 192044
     },
     {
-      "file": "samples/starter-piano-55.wav",
+      "file": "samples/starter-piano-67.wav",
       "upstreamPath": "Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_G3_v2_rr1.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Grand%20Piano%2C%20Kawai%20-%20Legacy/Sustains/GrandPno_Main_Sus_G3_v2_rr1.wav",
       "originalSha256": "dfa5922e2e84be32268eadec8b3f50cc54e61ab8f7f140836651bfe51d78893d",
@@ -45,7 +45,7 @@
       "bytes": 192044
     },
     {
-      "file": "samples/starter-piano-62.wav",
+      "file": "samples/starter-piano-74.wav",
       "upstreamPath": "Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_D4_v2_rr1.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Grand%20Piano%2C%20Kawai%20-%20Legacy/Sustains/GrandPno_Main_Sus_D4_v2_rr1.wav",
       "originalSha256": "22fcf5768df6a198155bb43c1a64230834bbaa5d9420aeb3abdb95af64fe4f0e",
@@ -55,7 +55,7 @@
       "bytes": 192044
     },
     {
-      "file": "samples/starter-piano-69.wav",
+      "file": "samples/starter-piano-81.wav",
       "upstreamPath": "Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_A4_v2_rr1.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Grand%20Piano%2C%20Kawai%20-%20Legacy/Sustains/GrandPno_Main_Sus_A4_v2_rr1.wav",
       "originalSha256": "5f21bc70abb7037bdd276b4bee6295be14c72bd4fb8950b40fb2a4c088896a23",
@@ -65,7 +65,7 @@
       "bytes": 192044
     },
     {
-      "file": "samples/starter-piano-72.wav",
+      "file": "samples/starter-piano-84.wav",
       "upstreamPath": "Chordophones/Zithers/Grand Piano, Kawai - Legacy/Sustains/GrandPno_Main_Sus_C5_v2_rr1.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Grand%20Piano%2C%20Kawai%20-%20Legacy/Sustains/GrandPno_Main_Sus_C5_v2_rr1.wav",
       "originalSha256": "5ef94af9855c3355611b09f8fc87918d6871a8cb80ba1d0e0d4f7deb40a0a5d7",
@@ -75,7 +75,7 @@
       "bytes": 192044
     },
     {
-      "file": "samples/starter-kalimba-47.wav",
+      "file": "samples/starter-kalimba-71.wav",
       "upstreamPath": "Idiophones/Plucked Idiophones/Kalimba, Kenya/Mbira6_Normal_MainSpirit_B2_k8_vl3_rr2.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Plucked%20Idiophones/Kalimba%2C%20Kenya/Mbira6_Normal_MainSpirit_B2_k8_vl3_rr2.wav",
       "originalSha256": "b4bd2db5c868be7398e2028ec818a3edc3979e49df620f2250b786f2e45b3905",
@@ -95,7 +95,7 @@
       "bytes": 128044
     },
     {
-      "file": "samples/starter-kalimba-63.wav",
+      "file": "samples/starter-kalimba-75.wav",
       "upstreamPath": "Idiophones/Plucked Idiophones/Kalimba, Kenya/Mbira6_Normal_MainSpirit_D#4_k13_vl3_rr2.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Plucked%20Idiophones/Kalimba%2C%20Kenya/Mbira6_Normal_MainSpirit_D%234_k13_vl3_rr2.wav",
       "originalSha256": "25cee2aabafa43a0acac052a93f95e43b61f12686c0b0f47176f80a06e10deee",
@@ -105,7 +105,7 @@
       "bytes": 128044
     },
     {
-      "file": "samples/starter-glock-72.wav",
+      "file": "samples/starter-glock-96.wav",
       "upstreamPath": "Idiophones/Struck Idiophones/Glockenspiel/glock_medium_C5_01.wav",
       "upstreamUrl": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Idiophones/Struck%20Idiophones/Glockenspiel/glock_medium_C5_01.wav",
       "originalSha256": "635f898e0bcb6975b96b18efd9c896f6f1b97ff12174a339ada4814e49675660",

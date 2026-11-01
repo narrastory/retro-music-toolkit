@@ -88,6 +88,18 @@ export const InstrumentDefinitionSchema = z.strictObject({
     })
     .optional(),
   provenance: z.string().max(1000).optional(),
+  /**
+   * Pack this definition was copied from by import-pack. Scores embed a full
+   * copy, so this is what lets tooling notice when the pack has since changed.
+   */
+  pack: z
+    .strictObject({
+      id: z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),
+      version: z.string().min(1).max(40),
+      /** sha256 of the pack's definition and sample hashes at import time. */
+      digest: z.string().regex(/^[a-f0-9]{64}$/),
+    })
+    .optional(),
 });
 export const SampleAssetSchema = z.strictObject({
   format: z.literal("wav-pcm16"),

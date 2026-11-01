@@ -6,7 +6,13 @@ import { fileURLToPath } from "node:url";
 import { InstrumentPackageSchema } from "./instrument-pack.js";
 import { ScoreSchema, ToolkitError } from "./model.js";
 import { compileScore } from "./compiler.js";
-import { decodeSampleAsset } from "./instrument-model.js";
+import {
+  decodeSampleAsset,
+  referencedAssets,
+  InstrumentDefinitionSchema,
+  type InstrumentDefinition,
+} from "./instrument-model.js";
+import type { Diagnostic } from "./model.js";
 
 const AssetSchema = z.strictObject({
   id: z.string().min(1).max(80),
@@ -71,6 +77,7 @@ export async function importInstrumentCollection(
   manifest: unknown,
   baseDirectory: string,
   selection?: string[],
+  options: { replace?: boolean } = {},
 ) {
   const pack = InstrumentCollectionSchema.parse(manifest);
   const score = ScoreSchema.parse(input);
@@ -85,6 +92,25 @@ export async function importInstrumentCollection(
     if (!ids.includes(id)) fail("PACK_INSTRUMENT_NOT_FOUND", id);
   score.instrumentDefinitions ??= [];
   score.sampleAssets ??= {};
+  if (options.replace) {
+    // Drop the old copies and any assets only they referenced, so a refreshed
+    // pack replaces stale zones instead of failing on duplicate IDs. Orphaned
+    // assets that the incoming pack is about to write are dropped as well.
+    const removed = score.instrumentDefinitions.filter((p) =>
+      requested.has(p.id),
+    );
+    score.instrumentDefinitions = score.instrumentDefinitions.filter(
+      (p) => !requested.has(p.id),
+    );
+    const stillUsed = new Set(
+      score.instrumentDefinitions.flatMap(referencedAssets),
+    );
+    const incoming = pack.instruments
+      .filter((p) => requested.has(p.instrument.id))
+      .flatMap((p) => p.assets.map((a) => a.id));
+    for (const id of [...removed.flatMap(referencedAssets), ...incoming])
+      if (!stillUsed.has(id)) delete score.sampleAssets[id];
+  }
   let totalBytes = Object.values(score.sampleAssets).reduce(
     (sum, a) => sum + Math.ceil((a.dataBase64.length * 3) / 4),
     0,
@@ -154,8 +180,134 @@ export async function importInstrumentCollection(
       decodeSampleAsset(embedded);
       score.sampleAssets[asset.id] = embedded;
     }
-    score.instrumentDefinitions.push(item.instrument);
+    score.instrumentDefinitions.push({
+      ...item.instrument,
+      pack: { id: pack.id, version: pack.version, digest: packDigest(item) },
+    });
   }
   score.schemaVersion = "1.3";
   return compileScore(score).score;
+}
+
+/** JSON with sorted keys, so equal definitions compare equal regardless of key order. */
+function canonical(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
+  if (value && typeof value === "object")
+    return `{${Object.keys(value)
+      .filter((k) => (value as Record<string, unknown>)[k] !== undefined)
+      .sort()
+      .map(
+        (k) =>
+          `${JSON.stringify(k)}:${canonical((value as Record<string, unknown>)[k])}`,
+      )
+      .join(",")}}`;
+  return JSON.stringify(value);
+}
+type PackItem = z.infer<
+  typeof InstrumentCollectionSchema
+>["instruments"][number];
+/** Identity of a pack instrument: its definition plus every sample hash. */
+export function packDigest(item: PackItem) {
+  return createHash("sha256")
+    .update(
+      canonical({
+        instrument: {
+          ...InstrumentDefinitionSchema.parse(item.instrument),
+          pack: undefined,
+        },
+        assets: item.assets.map((a) => [a.id, a.sha256]),
+      }),
+    )
+    .digest("hex");
+}
+/**
+ * The parts of a definition that decide which sample plays at which pitch.
+ * Gain, envelope and description are left out because score authors tune
+ * those after importing; a difference there is a choice, not a stale copy.
+ */
+function sampleMapping(p: InstrumentDefinition) {
+  const parsed = InstrumentDefinitionSchema.parse(p);
+  return canonical({
+    zones:
+      parsed.sample?.kind === "zones"
+        ? parsed.sample.zones.map((z) => [
+            z.assetId,
+            z.rootMidi,
+            z.tuningCents,
+            z.lowMidi,
+            z.highMidi,
+            z.lowVelocity,
+            z.highVelocity,
+            z.roundRobin,
+          ])
+        : null,
+    slots: parsed.drumKit?.slots.map((d) => [
+      d.assetId,
+      d.sound,
+      d.lowVelocity,
+      d.highVelocity,
+      d.roundRobin,
+    ]),
+  });
+}
+
+/**
+ * Warn when an embedded instrument no longer matches the bundled pack it came
+ * from. Scores carry a full copy of each definition and its samples, so pack
+ * fixes (for example band 1.1.0 correcting the bass octave) never reach an
+ * existing score until it is re-imported. Definitions without a `pack` stamp
+ * (imported before packs were stamped) are matched by sample mapping.
+ */
+export async function packFreshnessDiagnostics(
+  input: unknown,
+): Promise<Diagnostic[]> {
+  const score = ScoreSchema.parse(input);
+  const definitions = score.instrumentDefinitions ?? [];
+  if (!definitions.length) return [];
+  const bundled = new Map<
+    string,
+    { pack: z.infer<typeof InstrumentCollectionSchema>; item: PackItem }
+  >();
+  for (const summary of await listBundledCollections()) {
+    const pack = InstrumentCollectionSchema.parse(
+      JSON.parse(await readFile(summary.manifest, "utf8")),
+    );
+    for (const item of pack.instruments)
+      bundled.set(item.instrument.id, { pack, item });
+  }
+  const findings: Diagnostic[] = [];
+  for (const definition of definitions) {
+    const match = bundled.get(definition.id);
+    if (!match || (definition.pack && definition.pack.id !== match.pack.id))
+      continue;
+    if (definition.pack) {
+      if (definition.pack.digest === packDigest(match.item)) continue;
+    } else {
+      const expected = new Map(match.item.assets.map((a) => [a.id, a.sha256]));
+      const assetsDiffer = referencedAssets(definition).some((id) => {
+        const asset = score.sampleAssets?.[id];
+        return (
+          !asset ||
+          createHash("sha256")
+            .update(Buffer.from(asset.dataBase64, "base64"))
+            .digest("hex") !== expected.get(id)
+        );
+      });
+      if (
+        !assetsDiffer &&
+        sampleMapping(definition) === sampleMapping(match.item.instrument)
+      )
+        continue;
+    }
+    const from = definition.pack
+      ? `${definition.pack.id} ${definition.pack.version}`
+      : "an earlier pack release";
+    findings.push({
+      severity: "warning",
+      code: "STALE_PACK_INSTRUMENT",
+      message: `${definition.id} was imported from ${from} and differs from bundled ${match.pack.id} ${match.pack.version}; re-import it to pick up pack fixes.`,
+      suggestion: `import-pack SCORE.json --pack ${match.pack.id} --instrument ${definition.id} --replace --out SCORE.json`,
+    });
+  }
+  return findings;
 }
